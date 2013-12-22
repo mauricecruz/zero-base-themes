@@ -1,0 +1,185 @@
+// Global Settings
+@text-height           : 14px;
+@global-background     : #222;
+@global-accent         : #89f5a2;
+@global-hover          : lighten(@global-background, 10%);
+@global-selected       : #364c3b;
+@global-text           : #ccc;
+@navigation-arrow-color: #AAB0AF;
+
+// Javascript 
+@js-atom      : #89f5a2;
+@js-attribute : #4e87bf;
+@js-builtin   : #8da6ce;
+@js-comment   : #676767;
+@js-def       : #49a6d2;
+@js-error     : #f8f8f8;
+@js-header    : #ff6400;
+@js-hr        : #aeaeae;
+@js-keyword   : #8b6ccf;
+@js-link      : #8da6ce;
+@js-meta      : #d8fa3c;
+@js-number    : #89f5a2;
+@js-operator  : #cdb943;
+@js-property  : #cdb943;
+@js-string    : #f07b3c;
+@js-tag       : #49a6d2;
+@js-variable  : #ccc;
+@js-variable-2: #ccc;
+
+// Javascript Objects
+@js-obj-name     : #77a8c6;
+@js-obj-array    : #7c7c7c;
+@js-obj-function : #8b6ccf;
+@js-obj-number   : #89f5a2;
+@js-obj-boolean  : #89f5a2;
+@js-obj-preview  : #ddd;
+@js-obj-regexp   : #ff54e8;
+@js-obj-string   : #ff8737;
+@js-obj-undefined: #ad4e4e;
+
+// CSS 
+@css-at-rule   : #b094bb;
+@css-atom      : #ccc;
+@css-builtin   : #ff9635;
+@css-def       : #ff9635;
+@css-comment   : #676767;
+@css-important : #f00;
+@css-meta      : #6aedff;
+@css-number    : #ccc;
+@css-operator  : #ccc;
+@css-property  : #6aedff;
+@css-qualifier : #ff9635;
+@css-string    : #e3b959;
+@css-string-2  : #ccc;
+@css-tag       : #ff9635;
+@css-variable  : #ff9635;
+@css-variable-2: #ff9635;
+
+// HTML highlighting
+@xml-comment           : #7c7c7c;
+@xml-error             : #bf4c4c;
+@xml-string            : #f0874f;
+@xml-tag               : #49a6d2;
+@xml-attribute         : #88aed5;
+@xml-link              : #e3b959;
+@xml-pseudo            : #49a5d2;
+@xml-pseudo-highlighted: #a6371a;
+@xml-js-node           : #c2c3c3;
+
+
+// Tabbed Header Configuration
+@tab-base-color     : @global-background;
+@tab-style          : light; // (light | dark)
+@tab-top-contrast   : 18%;
+@tab-bottom-contrast: 8%;
+@tab-label          : #999;
+@tab-label-selected : #f8f8f8;
+@tab-highlighted    : @global-accent;
+
+// Main Toolbar 
+@tab-main-toolbar-height: 34px;
+@tab-main-icons-padding : 6px;
+
+// Sub Toolbars
+@tab-sub-toolbar-height: 25px;
+@tab-sub-icons-padding : 0;
+
+//Tab Rendering
+.tb-render(dark) {
+	@gradient-top: darken(@tab-base-color, @tab-top-contrast);
+	@gradient-bottom: darken(@tab-base-color, @tab-bottom-contrast);
+}
+
+.tb-render(light) {
+	@gradient-top: lighten(@tab-base-color, @tab-top-contrast);
+	@gradient-bottom: lighten(@tab-base-color, @tab-bottom-contrast);
+}
+
+.tb-render(@tab-style);
+
+// Glyphs
+@glyph-inactive: lighten(@global-background, 35%);
+@glyph-active: @global-accent;
+@buttonGlyphs: url(chrome-devtools://devtools/bundled/Images/statusbarButtonGlyphs.png);
+
+// Filters
+@filter-background: lighten(@global-background,5%);
+@filter-item-hover: lighten(@global-background, 10%);
+@filter-item-selected: lighten(@global-background, 15%);
+
+// Element Highlighter
+@eh-base-color          : @global-background;
+@eh-children-shadow     : darken(@global-background, 10%);
+@eh-editing-outline     : @global-accent;
+@eh-highlight-outline   : lighten(@eh-base-color, 20%);
+@eh-highlight-background: lighten(@eh-base-color, 10%);
+@eh-hover               : lighten(@eh-base-color, 5%);
+
+// Elements Sidebar
+@style-separator              : lighten(@global-background, 10%);
+@style-value                  : #ccc;
+@style-selector-text          : #ccc;
+@style-edit-mode-selector-text: #999;
+
+// Crumbs
+@crumb-text               : @global-text;
+@crumb-selected-label     : #f8f8f8;
+@crumb-selected-background: @global-selected;
+
+// Scrollbars
+@sb-thickness      : 12px;
+@sb-thumb-roundness: 8px;
+@sb-thumb-color    : lighten(@global-background, 20%);
+@sb-thumb-border   : darken(@global-background, 10%);
+
+// Console
+@console-input-text  : #f1f1f1;
+@console-default-text: @global-text;
+@console-log-msg     : #49a6d2;
+@console-warning-msg : #db0;
+@console-error-msg   : #f66;
+@console-link        : #888;
+
+// Console Bubbles (# indicator for repeated console items)
+@console-log-bubble    : #49a6d2;
+@console-warning-bubble: #e8a400;
+@console-error-bubble  : #d82323;
+
+// Table/Sidebar Selections | Breakpoints
+@selection-background: @global-selected;
+@selection-border    : lighten(@global-selected, 15%);
+
+//Tables
+@table-primary  : @global-background;
+@table-secondary: lighten(@global-background,2%);
+
+// Editor Properties
+@cm-gutter             : lighten(@global-background, 4%);
+@cm-gutter-border      : lighten(@global-background, 5%);
+@cm-gutter-lines       : lighten(@global-background, 40%);
+@cm-matching-bracket   : #15ca1a;
+@cm-nonmatching-bracket: #db0404;
+
+// Find
+@find-header-bg      : lighten(@global-background, 3%);
+@find-header-text    : #888;
+@find-highlight-bg   : @global-accent;
+@find-hightlight-text: #000;
+
+
+.arrow-styles() {
+	background-color: @navigation-arrow-color !important;
+	background-image: none !important;
+	-webkit-mask-image: @buttonGlyphs !important;
+	-webkit-mask-position: -4px -96px !important;			
+	-webkit-mask-repeat: no-repeat !important;
+	color: rgba(0,0,0,0) !important;
+	opacity: 1 !important;
+}
+
+.animate-arrows() {
+	-webkit-transition: -webkit-transform .10s ease-in-out;
+}
+
+

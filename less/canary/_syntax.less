@@ -1,0 +1,127 @@
+//JAVASCRIPT
+.cm-js-atom { color: @js-atom !important; }
+.cm-js-attribute {color: @js-attribute !important; }
+.cm-js-builtin {color: @js-builtin !important; }
+.cm-js-comment {color: @js-comment !important; font-style: italic; }
+.cm-js-def {color: @js-def !important; }
+.cm-js-error { background: #9D1E15 !important; color: @js-error !important; }
+.cm-js-header {color: @js-header !important; }
+.cm-js-hr {color: @js-hr !important; }
+.cm-js-keyword {color: @js-keyword !important; font-style: italic; }
+.cm-js-link {color: @js-link !important; }
+.cm-js-meta {color: @js-meta !important; }
+.cm-js-number {color: @js-number !important; }
+.cm-js-operator {color: @js-operator !important;}
+.cm-js-property {color: @js-property !important; }
+.cm-js-string {color: @js-string !important; }
+.cm-js-string-2 { color: @js-string !important; }
+.cm-js-tag {color: @js-tag !important; }
+.cm-js-variable {color: @js-variable !important; }
+.cm-js-variable-2 { color: @js-variable !important; }
+
+.source-frame-eval-expression{ background-color: rgba(137,245,162,.4) !important; border-color: #89F5A2 !important;}
+
+//COFFEESCRIPT
+.cm-atom { .cm-js-atom }
+.cm-comment { .cm-js-comment }
+.cm-variable { .cm-js-variable }
+.cm-string { .cm-js-string }
+.cm-keyword { .cm-js-keyword }
+.cm-number { .cm-js-number }
+.cm-operator { .cm-js-operator }
+.cm-error { .cm-js-error}
+
+/*--CSS--*/
+.cm-css-atom { color: @css-atom !important; }
+.cm-css-builtin { color: @css-builtin !important; }
+.cm-css-def { color: @css-def !important; }
+.cm-css-comment { color: @css-comment !important; font-style: italic; }
+.cm-css-meta { color: @css-meta !important;}
+.cm-css-number { color: @css-number !important; }
+.cm-css-operator { color: @css-operator !important; }
+.cm-css-property { color: @css-property !important;}
+.cm-css-qualifier { color: @css-qualifier !important; }
+.cm-css-string { color: @css-string !important;}
+.cm-css-string-2 { color: @css-string-2 !important; }
+.cm-css-tag { color: @css-tag !important; }
+.cm-css-variable { color: @css-variable !important; }
+.cm-css-variable-2 { color: @css-variable-2 !important; }
+
+/*--HTML--*/
+.cm-xml-comment { color: @xml-comment !important; font-style: italic !important; }
+.cm-xml-error { color: @xml-error  !important; }
+.cm-xml-string { color: @xml-string !important; }
+.cm-xml-tag { color: @xml-tag !important; }
+.cm-xml-attribute { color: @xml-attribute !important; }
+.cm-xml-link { color: @xml-link !important; }
+
+/*--GLOBAL--*/
+.CodeMirror-code {
+	color: @global-text;
+}
+
+
+/**********************************************
+/* Code Highlighting [WEBKIT]
+/**********************************************/
+
+/*-- HTML --*/
+.webkit-html-attribute-name {color: @xml-attribute !important;}
+.webkit-html-attribute-value {color: @xml-string !important;}
+.webkit-html-comment {color:@xml-comment!important;font-style:italic;}
+.webkit-html-resource-link,
+.webkit-html-external-link {color:@xml-link!important;}
+.webkit-html-tag,
+.webkit-html-tag-name {color:@xml-tag!important;}
+.webkit-html-text-node,
+.webkit-html-css-node,
+.webkit-html-js-node {color:@xml-js-node!important;}
+.webkit-html-pseudo-element {color:@xml-pseudo !important;}
+
+/*-- CSS --*/
+.selector-matches {color:@css-builtin!important;}
+.webkit-css-selector {color:@css-def!important;}
+.webkit-css-at-rule {color:@css-at-rule!important;}
+.webkit-css-color {color:@css-def!important;}
+.webkit-css-comment {color:@css-comment!important;}
+.webkit-css-important {color:@css-important!important;}
+.webkit-css-keyword {color:@css-def!important;}
+.webkit-css-number {color:@css-number!important;}
+.webkit-css-property,
+.styles-section .properties > li .webkit-css-property {color:@css-property!important;font-weight:400;}
+.webkit-css-string {color:@css-string!important;}
+.webkit-css-url {color:@xml-link!important;}
+
+/*-- JAVASCRIPT --*/
+// .webkit-javascript-ident {color:#fff!important;}
+// .webkit-javascript-comment {color:#757160!important;}
+// .webkit-javascript-number {color:#db925f!important;}
+// .webkit-javascript-keyword {color:#9685dd!important;font-style:italic;}
+// .webkit-javascript-undef {color:#7B7B7B!important;}
+// .webkit-javascript-string {color:#ef6e19!important;}
+// .webkit-javascript-regexp {color:#c96666!important;}
+
+
+// Javascript Objects
+.section .properties .name,
+.event-properties .name,
+.console-formatted-object .name { color: @js-obj-name !important; }
+.console-formatted-object,
+.console-formatted-array { color: @js-obj-array !important; }
+.console-formatted-function { color: @js-obj-function !important; }
+.console-formatted-number { color: @js-obj-number !important; }
+.console-formatted-boolean { color: @js-obj-boolean !important; }
+.console-object-preview { color: @js-obj-preview !important; }
+.console-formatted-regexp { color: @js-obj-regexp !important; }
+.console-formatted-string { color: @js-obj-string !important; }
+.console-formatted-undefined { color: @js-obj-undefined !important; }
+.json .title { color: @global-text !important;}
+.json .separator { color: darken(@global-text, 35%) !important;}
+
+.popover .parent + .children.expanded,
+#console-messages .parent + .children.expanded,
+.sidebar-pane .parent:not(.event-category) + .children.expanded {
+	border-left: 1px dashed #444 !important;
+	position: relative;
+	left: 4.4px;
+}

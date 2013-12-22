@@ -1,0 +1,109 @@
+/**********************************************
+/* Network Tab (uses _tables.less for list of nodes)
+/**********************************************/
+#network-container:not(.brief-mode) .network-log-grid.data-grid td.name-column:hover {
+	text-decoration: none !important;
+}
+
+.data-grid {
+	
+	th.sort-ascending,
+	th.sort-descending,
+	th.sortable,
+	.timeline-column,
+	.corner {
+		border-right: 1px solid lighten(@global-background, 10%) !important;
+		border-bottom: 1px solid lighten(@global-background, 10%) !important;
+	}
+
+	.network-timeline-grid .resources-divider-label {
+		color: @global-text !important;
+	}
+
+	.network-timeline-grid .resources-divider {
+		border-right: 1px solid rgba(51,51,51,.8);
+	}
+}
+
+
+/*dropdownlist in network panel*/
+.timeline-column option {
+	color: @global-text !important;
+	background: @global-background !important;
+}
+
+//Header Contents Label
+.resource-headers-view .outline-disclosure .header-name,
+#network-views .resource-view .infoList dt {
+	color: lighten(@global-background, 25%) !important;
+}
+
+//Header Contents Values
+.resource-headers-view .outline-disclosure .header-value,
+#network-views .resource-view .infoList dd {
+	color: @global-text;
+}
+
+/* Network Timing Pane */
+.resource-timing-view table {
+	background-color: lighten(@global-background, 5%) !important;
+	padding: 20px !important;
+	border-radius: 4px;
+	margin: 20px !important;
+}
+
+.resource-timing-view table td .network-timing-bar-title {
+	color: #444 !important;
+}
+
+#network-views .resource-headers-view .parent {
+	background-color: lighten(@global-background, 2.5%);
+	color: @global-text !important;
+	border-top: 1px solid lighten(@global-background, 10%);
+	border-bottom: 1px solid darken(@global-background, 5%);
+	line-height: 18px;
+}
+
+#network-views .script-view-fallback{
+	background-color: @global-background !important;
+	color: @global-text !important;
+}
+
+.resource-headers-view .outline-disclosure {
+		.header-count,
+		.header-toggle {
+			color: @global-accent !important;
+			margin-left: 4px !important;
+		}
+
+		.header-toggle:hover {
+			text-shadow: 0 0 10px @global-accent;
+		}
+
+	}
+
+//subline under title of node
+.network-cell-subtitle {
+	color: darken(@global-text, 5%) !important;
+}
+
+.network-log-grid.data-grid th {
+	border-bottom: transparent !important;
+}
+
+/**********************************************/
+/* Elements/Network
+/**********************************************/
+.panel:not(.timeline):not(.audits):not(.profiles):not(.cpu-profiler):not(.css-profiler):not(.heap-profiler):not(.canvas-profiler) table,
+.network-graph-bar,
+.network-graph-label,
+.network-graph-bar-area {
+	color: @global-text !important;
+}
+
+//footer
+.network-summary-bar {
+	background-image: -webkit-linear-gradient(@gradient-top, @gradient-bottom);
+	border-top: 1px solid @global-background !important;
+	color: @global-text !important;
+}

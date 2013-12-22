@@ -1,0 +1,7 @@
+{
+  "name": "Chrome Devtools Zero-Base Themes",
+  "version": "0.0.1",
+  "description": "Enable DevTools experiments in about:flags, toggle \"Allow UI themes\" experiment.",
+  "devtools_page": "devtools.html",
+  "manifest_version": 2
+}

@@ -1,0 +1,60 @@
+/**********************************************
+/* Resources & Sources Sidebar
+/**********************************************/
+
+/*-- default text color --*/
+.panel.resources .base-storage-tree-element-title,
+.panel.resources .base-storage-tree-element-subtitle,
+.panel.sources .base-navigator-tree-element-title {
+	color: #999 !important;
+	top: 2px !important;
+}
+
+/*-- currently selected element --*/
+.panel.resources .selected .base-storage-tree-element-title,
+.panel.resources .selected .base-storage-tree-element-subtitle,
+.panel.sources .selected .base-navigator-tree-element-title {
+	color: #fff !important;
+}
+
+.panel.resources .outline-disclosure li.selected .selection,
+.panel.sources .outline-disclosure li.selected .selection {
+	background: #364C3B !important;
+	color: #fff !important;
+	border-top: 1px solid  #528156 !important;
+	border-bottom: 1px solid  #528156 !important;
+}
+
+.panel.resources .outline-disclosure li:hover:not(.selected) .selection,
+.panel.sources .outline-disclosure li:hover:not(.selected) .selection {
+	display: block !important;
+	background: #333 !important;
+	margin-top: 2px !important;
+}
+
+.panel.resources .outline-disclosure ol:focus li.selected .selection,
+.panel.sources .outline-disclosure ol:focus li.selected .selection {
+	background: #364C3B !important;
+	color: #fff !important;
+	border-top: 1px solid  #528156 !important;
+	border-bottom: 1px solid  #528156 !important;
+	text-shadow: none !important;
+}
+
+.panel.resources .outline-disclosure ol:focus li.selected .base-storage-tree-element-title,
+.panel.resources ol:focus .selected .base-storage-tree-element-subtitle,
+.panel.sources .outline-disclosure ol:focus li.selected .base-navigator-tree-element-title {
+	color: #fff !important;
+	text-shadow: none !important;
+}
+
+.sidebar li.selected .selection {
+	background-image: none !important;
+	border: none !important;
+}
+
+.panel.sources .sidebar-overlay {
+	border-right: 1px solid #282828 !important;
+	box-shadow: rgb(20,20,20) 5px 0px 22px 3px !important;
+}
+

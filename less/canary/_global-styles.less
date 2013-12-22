@@ -1,0 +1,130 @@
+/**********************************************
+/* DevTool Chrome
+/**********************************************/
+
+.event-bars .event-bar .header .title {text-shadow:none!important;color:#ccc!important;}
+.source-frame-debugger-script {background-color:#222!important;}
+.webkit-line-content {color:#ddd!important;}
+.webkit-highlighted-line,
+.webkit-execution-line.webkit-line-content {background-color: rgba(137,245,162,.2) !important; outline: 1px solid #181818 !important;}
+.webkit-highlighted-line span {color: #000 !important; font-weight:700 !important;}
+
+
+//Fix for opacity flickering
+.scroll-target {
+	 -webkit-transform: translateZ(0);
+}
+
+//GLOBAL BACKGROUND COLOR 
+#console-messages,
+.console-view-wrapper,
+#console-view,
+.CodeMirror-scroll,
+.drawer .revision-history-drawer,
+.dialog .fill,
+.help-window-main,
+.tabbed-pane-content, 
+.tabbed-pane-content.has-no-tabs,
+.sidebar-overlay,
+.styles-section.read-only,
+.split-view-vertical .sidebar-pane.composite .properties-tree,
+.panel:not(.timeline):not(.profiles),
+.panel:not(.timeline):not(.profiles) .split-view-contents,
+#network-views .CodeMirror-lines,
+#script-view-fallback {
+	background-color: @global-background !important;
+	z-index: 0;
+}
+
+// Glyph Color
+.toolbar-background button.status-bar-item .glyph, 
+.toolbar-background button.status-bar-item .long-click-glyph {
+	background-color: @glyph-inactive !important;
+}
+
+#script-view-fallback {
+	color: #ccc  !important;
+}
+
+//Don't affect timeline panel for now.
+.timeline {
+	background: #fff !important;
+}
+
+.styles-section.read-only:not(.computed-style){
+	background-color: lighten(@global-background, 5%) !important;
+	margin: 0;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
+
+/*CURSOR/INSERTION POINT*/
+.text-editor-editable:focus,
+.editing:focus {
+	color: #FFF !important;
+	background-color: @global-background !important;
+}
+
+/*--GLOBAL EDITOR STYLES--*/
+.cm-breakpoint .CodeMirror-gutter-elt { color: #000 !important; font-weight: 700 !important;}
+.CodeMirror-cursor { border-left: 1px solid #FFF !important; }
+.cm-error { background: #9D1E15 !important; border-radius: 2px !important; color: #eee !important;}
+.CodeMirror-gutter-elt { color: @cm-gutter-lines !important;}
+.CodeMirror-gutters {background: @cm-gutter !important; border-right: 2px solid @cm-gutter-border !important; }
+.CodeMirror-selected { background: #383838 !important; color: #eee !important; }
+.CodeMirror-matchingbracket { color: @cm-matching-bracket !important; text-shadow: 0 0 3px @cm-matching-bracket !important; border-bottom: none !important;}
+.CodeMirror-nonmatchingbracket { color: @cm-nonmatching-bracket !important; text-shadow: 0 0 3px @cm-nonmatching-bracket !important; border-bottom: none !important;}
+span.CodeMirror-selectedtext { background-color: #383838 !important; }
+.cm-search-highlight-start:before { border-color: #89f5a2 !important;}
+.cm-search-highlight-end:before { border-color: #89f5a2 !important;}
+.cm-search-highlight:before { border-color: #89f5a2 !important; padding: 2px !important;}
+.cm-line-with-selection .cm-column-with-selection.cm-search-highlight:before { background-color: #89f5a2 !important; border-radius: 2px !important;}
+span.cm-token-highlight { background-color: transparent !important; padding: 0px !important;}
+span.cm-token-highlight:before { border-color: #89f5a2 !important; }
+.cm-line-with-selection span.cm-column-with-selection { color: #000 !important; background-color: #89f5a2 !important; }
+.cm-whitespace:before { color: #555 !important;}
+.cm-tab:before { border-bottom: 1px solid #555 !important;}
+
+
+.cm-highlight {
+	-webkit-animation: "fadeout-revised" 3s 0s !important;
+	border-top: 1px solid #528156;
+	border-bottom: 1px solid #528156;
+}
+.cm-highlight *:not(.CodeMirror-linenumber){
+	color: #fff !important;
+}
+
+.cm-execution-line { 
+	background-color: #364c3b  !important; 
+	outline: 1px solid #528156 !important;
+}
+
+
+.CodeMirror-linenumber { border-right: none !important;}
+
+
+@-webkit-keyframes fadeout-revised {
+	0% {
+			background-color: #364c3b; 
+			border-top: 1px solid #528156; 
+			border-bottom: 1px solid #528156;			
+		}
+	50% {
+			background-color: #364c3b; 
+			border-top: 1px solid #528156; 
+			border-bottom: 1px solid #528156;			
+		}
+
+	100% { 
+		 background-color: #222;
+	     border-top: 1px solid #222; 
+		 border-bottom: 1px solid #222;		 
+	 }
+}
+
+
+body.dock-to-right.inactive:not(.undocked):not(.overlay-contents),
+body.dock-to-right:not(.undocked):not(.overlay-contents) {
+	border-left: transparent !important;
+}

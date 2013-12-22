@@ -1,0 +1,91 @@
+/**********************************************
+/* Elements/Sources Right Sidebar
+/**********************************************/
+
+.styles-section {
+	padding: 4px 0 !important;
+	margin: 0 10px;
+	border-top: 1px solid @style-separator !important;
+	border-bottom: none !important;
+	
+	&:first-child{
+		border-top: none !important;
+	}
+
+	.value {
+		color: @style-value !important;
+	}
+
+	.child-editing,
+	.header .subtitle {
+		color: @style-edit-mode-selector-text !important;
+	}
+
+	.properties {
+		
+		.overloaded,
+ 		.inactive ,
+ 		.disabled ,
+ 		.not-parsed-ok {
+			opacity: .5 !important;
+		}
+	}
+
+}
+
+.sidebar-pane .body,
+.sidebar-pane .monospace {
+	color: @style-selector-text !important;
+}
+
+.styles-section.first-styles-section,
+.sidebar-separator + .styles-section {
+ border-top: none !important;
+}
+
+.sidebar-separator {
+	background-image: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	color: @style-selector-text !important;
+	text-shadow: none !important;
+	border-top: none !important;
+	border-bottom: none !important;
+}
+
+/*-- PSEUDO STATE DISPLAY --*/
+.styles-element-state-pane {
+	background: lighten(@global-background,6%) !important;
+	padding: 4px 0 !important;
+	border-bottom: 1px solid rgba(255,255,255,.1) !important;
+}
+
+.styles-element-state-pane.expanded {
+	margin-top: 0 !important;
+}
+
+/*-- METRICS--*/
+.sidebar-pane .body .metrics {
+	color: #000 !important;
+	border-top: 1px solid lighten(@global-background, 10%);
+
+	.position,
+	.margin:not([style^=background-color]),
+	.border:not([style^=background-color]),
+	.padding:not([style^=background-color]),
+	.margin:not([style^=background-color]),
+	.content:not([style^=background-color]){
+		background-color: #888 !important;
+	}
+
+}
+
+.sidebar-pane-stack .section,
+.sidebar-pane .section,
+.sidebar-pane .event-category {
+	border-top: 1px solid lighten(@global-background, 7%) !important;
+	border-bottom: 1px solid darken(@global-background, 7%) !important;
+	margin-top: 0 !important;
+}
+
+.sidebar-pane .section:first-child {
+	border-top: none !important;
+}
