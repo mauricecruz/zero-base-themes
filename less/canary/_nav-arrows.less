@@ -14,7 +14,14 @@
 .sidebar-pane-stack .sidebar-pane-title.expanded::before,
 .timeline-expandable-expanded .timeline-expandable-arrow {
 	.arrow-styles;
-	.animate-arrows;
+	background-color: @navigation-arrow-color !important;
+	background-image: none !important;
+	-webkit-mask-image: @buttonGlyphs !important;
+	-webkit-mask-position: -4px -96px !important;
+	-webkit-mask-repeat: no-repeat !important;
+	color: rgba(0,0,0,0) !important;
+	opacity: 1 !important;
+	-webkit-transition: -webkit-transform .10s ease-in-out;
 	-webkit-transform: rotate(90deg);
 }
 
@@ -30,8 +37,14 @@
 .sidebar-pane .parent::before,
 .sidebar-pane-stack .sidebar-pane-title::before,
 .timeline-expandable-collapsed .timeline-expandable-arrow {
-	.arrow-styles;
-	.animate-arrows;
+	background-color: @navigation-arrow-color !important;
+	background-image: none !important;
+	-webkit-mask-image: @buttonGlyphs !important;
+	-webkit-mask-position: -4px -96px !important;
+	-webkit-mask-repeat: no-repeat !important;
+	color: rgba(0,0,0,0) !important;
+	opacity: 1 !important;
+	-webkit-transition: -webkit-transform .10s ease-in-out;
 	-webkit-transform: rotate(0deg);
 }
 
