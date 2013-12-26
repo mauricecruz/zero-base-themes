@@ -1,8 +1,8 @@
 /**********************************************/
 /* Navigation Arrows
 /**********************************************/
- 
- // hide/expand point arrow down 
+
+ // hide/expand point arrow down
 .styles-section.matched-styles .properties li.parent.expanded .expand-element,
 #console-messages .console-group-messages .section.expanded .header::before,
 #console-messages .properties-tree li.parent.expanded::before,
@@ -11,13 +11,14 @@
 .section.expanded > .header::before,
 .section .event-bar.expanded .header::before,
 .sidebar-pane .parent.expanded::before,
-.sidebar-pane-stack .sidebar-pane-title.expanded::before {
+.sidebar-pane-stack .sidebar-pane-title.expanded::before,
+.timeline-expandable-expanded .timeline-expandable-arrow {
 	.arrow-styles;
 	.animate-arrows;
 	-webkit-transform: rotate(90deg);
 }
 
- // hide/expand arrow point right 
+// hide/expand arrow point right
 .styles-section.matched-styles .properties li.parent .expand-element,
 #console-messages .console-group-messages .section .header::before,
 #console-messages .properties-tree li.parent::before,
@@ -27,8 +28,10 @@
 .section > .header::before,
 .section .event-bar .header::before,
 .sidebar-pane .parent::before,
-.sidebar-pane-stack .sidebar-pane-title::before {
+.sidebar-pane-stack .sidebar-pane-title::before,
+.timeline-expandable-collapsed .timeline-expandable-arrow {
 	.arrow-styles;
+	.animate-arrows;
 	-webkit-transform: rotate(0deg);
 }
 
@@ -38,7 +41,7 @@
 	-webkit-mask-position: -4px -108px !important;
 }
 
- // sort arrows point up 
+ // sort arrows point up
 .data-grid th.sort-descending > div::after {
 	.arrow-styles;
 	-webkit-mask-position: -20px -96px !important;

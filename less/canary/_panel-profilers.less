@@ -5,17 +5,47 @@
 	color: #aaa !important;
 }
 
-#profile-views .data-grid button{
+#profile-views .data-grid button {
 	color: #333 !important;
+}
+
+.profile-launcher-view label {
+	color: @global-text;
+}
+
+.resources-dividers-label-bar {
+	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	border-bottom:1px solid darken(@gradient-bottom,10%) !important;
+}
+
+.heap-snapshot-view tr:not(.selected) td.object-column span.highlight {
+	background-color: @selection-background !important;
+	border-radius: 3px;
+}
+
+.profiles-status-bar .status-bar,
+.retainers-view-header,
+.heap-snapshot-view .class-view-toolbar,
+.timeline-frame-container {
+	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%);
+	border-top: none !important;
+}
+
+.retainers-view-header {
+	color: @global-text !important;
 }
 
 .profile-launcher-view-tree-item,
 .sidebar-tree-section,
+.resources-divider-label,
 .panel:not(.timeline) .sidebar-tree-item {
-	color: #ddd !important;
+	color: @global-text !important;
 }
 
-.heap-snapshot-view tr:not(.selected) td.object-column span.highlight {
-	background-color: #2E542F !important;
-	border-radius: 3px;
+
+body.inactive .sidebar-tree-item.selected,
+:focus .sidebar-tree-item.selected,
+.sidebar-tree-item.selected {
+	background-color: @global-background !important;
 }

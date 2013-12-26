@@ -13,7 +13,7 @@
 		outline: 1px solid @eh-editing-outline !important;
 		color: @global-text !important;
 	}
-	
+
 	.outline-disclosure {
 
 		ol:focus li.selected .selection,
@@ -24,13 +24,15 @@
 
 		li.hovered:not(.selected) .selection {
 			border-radius: 0 !important;
-			background-color: @eh-hover !important;
+			background-color: @eh-hover-background !important;
+			border-top: 1px solid @eh-hover-outline !important;
+			border-bottom: 1px solid @eh-hover-outline !important;
 		}
-	
+
 	}
 
 	.parent {
-		// highlight children 
+		// highlight children
 		&.selected.expanded + .children,
 		&.hovered.expanded + .children {
 			border-bottom-left-radius: 5px;
@@ -43,12 +45,12 @@
 			> li .webkit-html-pseudo-element:first-child {
 				color: @xml-pseudo-highlighted !important;
 			}
-			
-			// fade closing tag of parent 
+
+			// fade closing tag of parent
 			> :last-child * {
 				opacity: .6;
 			}
-		}	
+		}
 	}
 }
 

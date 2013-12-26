@@ -3,25 +3,25 @@
 /**********************************************/
 .suggest-box {
 	color: #000 !important;
-	background-color: #222 !important;
+	background-color: @global-background !important;
 	border: 2px rgba(0,0,0,.2) solid !important;
 	box-shadow: 0 8px 10px 1px rgba(0,0,0,.1) !important;
 }
 
 .suggest-box-content-item.source-code:hover {
-	background-color: #444 !important;
+	background-color: @global-hover !important;
 	border: 1px solid rgba(0,0,0,0) !important;
 }
 
 .suggest-box-content-item.source-code.selected {
-	background-color: #444 !important;
+	background-color: @global-hover !important;
 }
 
 .suggest-box .source-code .prefix {
-	color: #89F5A2!important;
+	color: @global-accent !important;
 }
 
 .suggest-box .source-code .suffix {
-	color: #ddd !important;
+	color: lighten(@global-text, 5%) !important;
 }
 

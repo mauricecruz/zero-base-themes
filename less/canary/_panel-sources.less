@@ -8,13 +8,6 @@
 	color: #999 !important;
 }
 
-/*line numbers */
-.text-editor-lines {
-	background-color: #282828 !important;
-	border-right: 2px solid #2b2b2b !important;
-}
-
-
 /*-- Save Problem Overlay --*/
 .source-frame-unsaved-committed-changes {
 	background-color: rgba(255,255,255,0.2) !important;
@@ -22,23 +15,28 @@
 
 
 /* Breakpoints/Dom Breakpoints */
+.breakpoints-list-deactivated {
+	background-color: lighten(@global-background, 5%) !important;
+	opacity: 0.3 !important
+}
+
 .breakpoint-list li {
-	color: #89f5a2 !important;
-	border-top: 1px solid #282828;
-	border-bottom: 1px solid #181818;
+	color: @global-accent !important;
+	border-top: 1px solid lighten(@global-background, 7%) !important;
+	border-bottom: 1px solid darken(@global-background, 7%) !important;
 }
 
 .sidebar-pane .breakpoint-hit {
-	background: #364C3B !important;
-	border-top: 1px solid #181818 !important;
-	border-bottom: 1px solid #181818 !important;
+	background: @selection-background !important;
+	border-top: 1px solid @selection-border !important;
+	border-bottom: 1px solid @selection-border !important;
 	color: #eee !important;
 }
 
 .sidebar-pane .breakpoint-list li:not(.breakpoint-hit):hover {
-	background-color: #333!important;
-	border-bottom: 1px solid #282828;
-	border-top: 1px solid #181818;
+	background-color: @global-hover !important;
+	border-top: 1px solid lighten(@global-background, 7%) !important;
+	border-bottom: 1px solid darken(@global-background, 7%) !important;
 }
 
 .breakpoints-deactivated .breakpoint-list {
@@ -51,18 +49,18 @@
 .sidebar-label,
 .placard .title,
 .placard .subtitle {
-	color: #AAA !important;
+	color: @global-text !important;
 }
 
 .placard:nth-of-type(2n) {
-	background: #282828 !important;
+	background: lighten(@global-background, 3%) !important;
 }
 
 .placard.selected {
-	background: #364C3B !important;
-	color: #fff !important;
-	border-top: 1px solid #181818 !important;
-	border-bottom: 1px solid  #181818 !important;
+	background: @selection-background !important;
+	color: lighten(@global-text, 10%) !important;
+	border-top: 1px solid @selection-border !important;
+	border-bottom: 1px solid  @selection-border !important;
 }
 
 .placard.selected * {
@@ -70,15 +68,15 @@
 }
 
 .sidebar-pane > .body .placard + .info {
-	background: #222 !important;
+	background: @global-background !important;
 	border-top: 0 !important;
-	color: #c41a16 !important;
+	color: @global-accent !important;
 	font-style: normal !important;
 }
 
 
 .sidebar-pane .section.expanded > .header{
-	border-bottom: 1px solid #1b1b1b !important;
+	border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
 }
 
 .sidebar-pane-stack > .sidebar-pane.visible:nth-last-of-type(1){
@@ -102,10 +100,10 @@
 
 /*pane colors*/
 .sidebar-pane-title {
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(51, 51, 51)), color-stop(0.05, rgb(88,88,88)), color-stop(0.05, rgb(80,80,80)), to(rgb(45, 42, 48))) !important;
-	color: rgb(204, 204, 204);
-	border-top: #333 !important;
-	border-bottom: #333 !important;
+	background-image: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	color: @global-text;
+	border-top: 1px solid lighten(@gradient-top,7%)  !important;
+	border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
 }
 
 .pane-title-button.add,
@@ -165,7 +163,7 @@
 }
 
 .webkit-highlighted-line {
-	background-color: #89F5A2 !important;
+	background-color: @global-accent !important;
 }
 
 
@@ -175,13 +173,13 @@
 	.scripts-pause,
 	.scripts-long-resume,
 	.status-bar-item {
-		background-color: #444 !important;
-		border: 1px solid #333 !important;		
+		background-color: lighten(@global-background, 5%) !important;
+		border: 1px solid @global-background !important;
 	}
 
 	.status-bar-item.emulate-active {
-		background-color: #333 !important;
-		border: 1px solid #222 !important;		
+		background-color: @global-background !important;
+		border: 1px solid @global-hover !important;
 	}
 }
 
@@ -190,25 +188,24 @@
 .outline-disclosure li::before,
 .properties-tree li.parent {
 	background-color: inherit !important;
+	line-height: inherit !important;
 }
 
 /**********************************************
 /* Sources Panel Controls
 /**********************************************/
 .scripts-status-bar {
-	background: -webkit-linear-gradient(#505050,#383838) !important;
-	box-shadow: inset 0 1px 0 #585858;
+	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%) !important;
 	border-top: none !important;
 	overflow: none !important;
 
 }
 
 #scripts-debug-toolbar {
-	background: -webkit-linear-gradient(#505050,#383838) !important;
-	border-top: 1px solid #222 !important;
-	border-bottom: 1px solid #222 !important;
-	border-color: #222 !important;
-	box-shadow: inset 0 1px 0 #6E6E6E;
+	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
+	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%);
 }
 
 //Warning/Error Bubbles

@@ -11,7 +11,7 @@
 }
 
 .panel.sources .split-view-contents-second.split-view-sidebar {
-	-webkit-animation: slideInRightBig .2s ease-out;	
+	-webkit-animation: slideInRightBig .2s ease-out;
 }
 
 .panel.sources div:not(.split-view-horizontal) .split-view-vertical .split-view-sidebar,
@@ -93,7 +93,7 @@
 	&.bottom-left-arrow { -webkit-transform-origin: 25% 100%; }
 	&.bottom-right-arrow { -webkit-transform-origin: 75% 100%; }
 	&.left-top-arrow { -webkit-transform-origin: 0% 10%; }
-	&.left-bottom-arrow { -webkit-transform-origin: 0% 90%; }	
+	&.left-bottom-arrow { -webkit-transform-origin: 0% 90%; }
 }
 
 /* -- KEYFRAME DECLARATIONS -- */
@@ -104,9 +104,9 @@
 }
 
 @-webkit-keyframes pulsate {
-	0% { background-color: lighten(@eh-base-color, 10%);}
-	50% { background-color: lighten(@eh-base-color, 15%);}
-	100% { background-color: lighten(@eh-base-color, 10%);}
+	0% { background-color: @eh-base-color; }
+	50% { background-color: darken(@eh-base-color, 5%);}
+	100% { background-color: @eh-base-color; }
 }
 
 @-webkit-keyframes bounceInLeft {

@@ -15,29 +15,33 @@
 	 -webkit-transform: translateZ(0);
 }
 
-//GLOBAL BACKGROUND COLOR 
+//GLOBAL BACKGROUND COLOR
 #console-messages,
-.console-view-wrapper,
 #console-view,
-.CodeMirror-scroll,
-.drawer .revision-history-drawer,
-.dialog .fill,
-.help-window-main,
-.tabbed-pane-content, 
-.tabbed-pane-content.has-no-tabs,
-.sidebar-overlay,
-.styles-section.read-only,
-.split-view-vertical .sidebar-pane.composite .properties-tree,
-.panel:not(.timeline):not(.profiles),
-.panel:not(.timeline):not(.profiles) .split-view-contents,
 #network-views .CodeMirror-lines,
-#script-view-fallback {
+#script-view-fallback,
+.console-view-wrapper,
+.dialog .fill,
+.drawer .revision-history-drawer,
+.help-window-main,
+.panel .split-view-contents,
+.panel,
+.panel-enabler-view,
+.profiles-sidebar-tree-box,
+.sidebar-overlay,
+.split-view-vertical .sidebar-pane.composite .properties-tree,
+.styles-section.read-only,
+.tabbed-pane-content,
+.tabbed-pane-content.has-no-tabs
+.timeline-records-title,
+.timeline-records-list,
+#timeline-overview-sidebar {
 	background-color: @global-background !important;
 	z-index: 0;
 }
 
 // Glyph Color
-.toolbar-background button.status-bar-item .glyph, 
+.toolbar-background button.status-bar-item .glyph,
 .toolbar-background button.status-bar-item .long-click-glyph {
 	background-color: @glyph-inactive !important;
 }
@@ -49,6 +53,11 @@
 //Don't affect timeline panel for now.
 .timeline {
 	background: #fff !important;
+}
+
+//Panel text
+.panel-enabler-view {
+	color: @global-text;
 }
 
 .styles-section.read-only:not(.computed-style){
@@ -88,16 +97,15 @@ span.cm-token-highlight:before { border-color: #89f5a2 !important; }
 
 .cm-highlight {
 	-webkit-animation: "fadeout-revised" 3s 0s !important;
-	border-top: 1px solid #528156;
-	border-bottom: 1px solid #528156;
+	outline: 1px solid @selection-border;
 }
 .cm-highlight *:not(.CodeMirror-linenumber){
-	color: #fff !important;
+	color: @selection-text !important;
 }
 
-.cm-execution-line { 
-	background-color: #364c3b  !important; 
-	outline: 1px solid #528156 !important;
+.cm-execution-line {
+	background-color: @selection-background  !important;
+	outline: 1px solid @selection-border !important;
 }
 
 
@@ -106,25 +114,27 @@ span.cm-token-highlight:before { border-color: #89f5a2 !important; }
 
 @-webkit-keyframes fadeout-revised {
 	0% {
-			background-color: #364c3b; 
-			border-top: 1px solid #528156; 
-			border-bottom: 1px solid #528156;			
+			background-color: @selection-background;
+			outline: 1px solid @selection-border;
 		}
 	50% {
-			background-color: #364c3b; 
-			border-top: 1px solid #528156; 
-			border-bottom: 1px solid #528156;			
+			background-color: @selection-background;
+			outline: 1px solid @selection-border;
 		}
 
-	100% { 
-		 background-color: #222;
-	     border-top: 1px solid #222; 
-		 border-bottom: 1px solid #222;		 
-	 }
+	100% {
+			background-color: @global-background;
+			outline: 1px solid @global-background;
+	}
 }
 
 
 body.dock-to-right.inactive:not(.undocked):not(.overlay-contents),
 body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	border-left: transparent !important;
+}
+
+
+.split-view.vbox > .split-view-sidebar.split-view-contents-second:not(.maximized) {
+	border-top: none !important;
 }
