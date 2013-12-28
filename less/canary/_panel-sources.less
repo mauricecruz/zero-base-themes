@@ -214,3 +214,26 @@
 	border-radius: 2px !important;
 	padding: 2px !important;
 }
+
+// Edit Breakpoint
+.CodeMirror-linewidget {
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6) !important;
+
+	.source-frame-breakpoint-condition {
+		border: 1px solid lighten(@global-background, 30%) !important;
+		border-radius: 4px !important;
+		background-image: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	}
+
+	.source-frame-breakpoint-message {
+		color: @global-accent !important;
+	}
+
+	#source-frame-breakpoint-condition {
+		background-color: @global-background !important;
+		border: none !important;
+		height: 22px !important;
+
+	}
+
+}
