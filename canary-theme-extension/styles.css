@@ -722,6 +722,9 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 .cm-xml-link {
   color: #e3b959 !important;
 }
+.shadow-root .webkit-html-fragment.shadow-root {
+  color: #ddbb00 !important;
+}
 /*--GLOBAL--*/
 .CodeMirror-code {
   color: #cccccc;
@@ -932,7 +935,8 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 body.undocked.platform-mac-mountain-lion.inactive .toolbar-background,
 body.undocked.platform-mac-mountain-lion .toolbar-background,
 body.platform-mac-mountain-lion.inactive .toolbar-background,
-body.platform-mac-mountain-lion .toolbar-background body:not(.undocked) .toolbar-background {
+body.platform-mac-mountain-lion .toolbar-background,
+body:not(.undocked) .toolbar-background {
   background-image: -webkit-linear-gradient(#505050, #363636) !important;
 }
 .toolbar {
