@@ -72,18 +72,19 @@
 	}
 }
 
-// Drawer Toolbar 
+// Drawer Toolbar
 #drawer-contents .tabbed-pane-header,
 &.inactive #drawer-contents .tabbed-pane-header {
 	border-top: none !important;
 	border-bottom: #222 !important;
 }
 
-// Override MAC Toolbar Background 
+// Override MAC Toolbar Background
 body.undocked.platform-mac-mountain-lion.inactive .toolbar-background,
 body.undocked.platform-mac-mountain-lion .toolbar-background,
 body.platform-mac-mountain-lion.inactive .toolbar-background,
-body.platform-mac-mountain-lion .toolbar-background {
+body.platform-mac-mountain-lion .toolbar-background
+body:not(.undocked) .toolbar-background {
 	background-image: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
 }
 
@@ -167,7 +168,7 @@ body.platform-mac-mountain-lion .toolbar-background {
 	#tab-search { width: 53px !important; }
 	#tab-emulation { width: 72px !important; }
 	#tab-rendering { width: 72px !important; }
-	
+
 }
 
 .platform-mac {
@@ -176,5 +177,5 @@ body.platform-mac-mountain-lion .toolbar-background {
 	#tab-search { width: 55px !important; }
 	#tab-emulation { width: 76px !important; }
 	#tab-rendering { width: 76px !important; }
-	
+
 }

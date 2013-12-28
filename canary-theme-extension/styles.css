@@ -932,7 +932,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 body.undocked.platform-mac-mountain-lion.inactive .toolbar-background,
 body.undocked.platform-mac-mountain-lion .toolbar-background,
 body.platform-mac-mountain-lion.inactive .toolbar-background,
-body.platform-mac-mountain-lion .toolbar-background {
+body.platform-mac-mountain-lion .toolbar-background body:not(.undocked) .toolbar-background {
   background-image: -webkit-linear-gradient(#505050, #363636) !important;
 }
 .toolbar {
@@ -1062,6 +1062,7 @@ body.platform-mac-mountain-lion .toolbar-background {
   -webkit-mask-repeat: no-repeat !important;
   color: rgba(0, 0, 0, 0) !important;
   opacity: 1 !important;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
   -webkit-mask-position: -4px -108px !important;
 }
 .data-grid th.sort-descending > div::after {
@@ -1072,6 +1073,7 @@ body.platform-mac-mountain-lion .toolbar-background {
   -webkit-mask-repeat: no-repeat !important;
   color: rgba(0, 0, 0, 0) !important;
   opacity: 1 !important;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
   -webkit-mask-position: -20px -96px !important;
 }
 #search-results-pane-file-based .parent.expanded::before {
@@ -1258,6 +1260,9 @@ body.platform-mac-mountain-lion .toolbar-background {
   color: #cccccc !important;
   top: 2px !important;
 }
+.resources.panel .sidebar li {
+  color: #cccccc !important;
+}
 /*-- currently selected element --*/
 .panel.resources .selected .base-storage-tree-element-title,
 .panel.resources .selected .base-storage-tree-element-subtitle,
@@ -1270,6 +1275,7 @@ body.platform-mac-mountain-lion .toolbar-background {
   color: #e6e6e6 !important;
   border-top: 1px solid #56795e !important;
   border-bottom: 1px solid #56795e !important;
+  margin-top: -1px !important;
 }
 .panel.resources .outline-disclosure li:hover:not(.selected) .selection,
 .panel.sources .outline-disclosure li:hover:not(.selected) .selection {
@@ -1277,6 +1283,7 @@ body.platform-mac-mountain-lion .toolbar-background {
   background: #2f2f2f !important;
   border-top: 1px solid #484848 !important;
   border-bottom: 1px solid #484848 !important;
+  margin-top: -1px !important;
   height: 18px !important;
 }
 .panel.resources .outline-disclosure ol:focus li.selected .selection,
@@ -1285,6 +1292,7 @@ body.platform-mac-mountain-lion .toolbar-background {
   color: #e6e6e6 !important;
   border-top: 1px solid #56795e !important;
   border-bottom: 1px solid #56795e !important;
+  margin-top: -1px !important;
   text-shadow: none !important;
 }
 .panel.resources .outline-disclosure ol:focus li.selected .base-storage-tree-element-title,

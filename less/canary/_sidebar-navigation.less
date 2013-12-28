@@ -10,6 +10,10 @@
 	top: 2px !important;
 }
 
+.resources.panel .sidebar li {
+	color: @global-text !important;
+}
+
 /*-- currently selected element --*/
 .panel.resources .selected .base-storage-tree-element-title,
 .panel.resources .selected .base-storage-tree-element-subtitle,
@@ -23,6 +27,7 @@
 	color: @selection-text !important;
 	border-top: 1px solid  @selection-border !important;
 	border-bottom: 1px solid  @selection-border !important;
+	margin-top: -1px !important;
 }
 
 .panel.resources .outline-disclosure li:hover:not(.selected) .selection,
@@ -31,6 +36,7 @@
 	background: @hover-background !important;
 	border-top: 1px solid @hover-border !important;
 	border-bottom: 1px solid @hover-border !important;
+	margin-top: -1px !important;
 	height: 18px !important;
 }
 
@@ -40,6 +46,7 @@
 	color: @selection-text !important;
 	border-top: 1px solid  @selection-border !important;
 	border-bottom: 1px solid  @selection-border !important;
+	margin-top: -1px !important;
 	text-shadow: none !important;
 }
 
@@ -59,4 +66,5 @@
 	border-right: 1px solid lighten(@global-background, 3%) !important;
 	box-shadow: rgb(20,20,20) 5px 0px 22px 3px !important;
 }
+
 
