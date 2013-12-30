@@ -3,7 +3,7 @@
 /**********************************************/
 
 #search-results-pane-file-based {
-	
+
 	// filename header
 	.search-result {
 		background-color: @find-header-bg !important;
@@ -13,7 +13,7 @@
 		line-height: 18px !important;
 		margin: 0 !important;
 	}
-	
+
 	// link to show more matches found in file
 	.show-more-matches {
 		color: @global-accent !important;
@@ -25,7 +25,7 @@
 			background-color: lighten(@global-background, 5%) !important;
 			color: lighten(@global-text, 5%) !important;
 		}
-		
+
 		// filepath/name //
 		.search-result-file-name {
 			color: @find-header-text !important;
@@ -35,7 +35,7 @@
 		.search-result-matches-count {
 			color: darken(@global-accent, 5%) !important;
 		}
-	
+
 	}
 
 }
@@ -51,15 +51,19 @@
 	box-shadow: rgba(0, 0, 0, 0.498039) 3px 3px 4px 0px !important;
 }
 
-// hover over line 
+// hover over line
 .search-match:hover {
 	background-color: @global-hover !important;
 }
 
-// Find Module inside file in sources panel 
+// Find Module inside file in sources panel
 .inspector-footer {
 	background-color: lighten(@global-background, 15%) !important;
 	border-top: none !important;
+}
+
+.search-results-matches {
+	color: #666 !important;
 }
 
 //**********************************************/

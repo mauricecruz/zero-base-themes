@@ -1158,6 +1158,9 @@ body:not(.undocked) .toolbar-background {
   background-color: #484848 !important;
   border-top: none !important;
 }
+.search-results-matches {
+  color: #666 !important;
+}
 .search-match-content {
   color: #A3A3A3 !important;
 }
