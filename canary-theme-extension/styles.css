@@ -2096,7 +2096,8 @@ button.scripts-step-out:disabled .glyph {
   background: #3c3c3c !important;
 }
 .network-filters-header,
-.console-filters-header {
+.console-filters-header,
+.timeline-filters-header {
   background: #2f2f2f;
 }
 /*separator between all | rest of options*/
