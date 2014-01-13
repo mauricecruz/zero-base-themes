@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 				tasks: ['less:canary']
 			},
 			stable: {
-				files: ['less/stable/*.less'],
+				files: ['less/stable/*.less','themes/*.less'],
 				tasks: ['less:stable']
 			},
 
