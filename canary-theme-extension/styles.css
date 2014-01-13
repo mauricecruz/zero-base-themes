@@ -1573,15 +1573,24 @@ body:not(.undocked) .toolbar-background {
   border-bottom: 1px solid #7b7b7b !important;
 }
 .timeline-utilization-strip .timeline-graph-bar {
-  border-color: #555555 !important;
-  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(200, 200, 200, 0.3) !important;
+  background-color: rgba(200, 200, 200, 0.2) !important;
 }
 #timeline-overview-panel {
   border-bottom: 1px solid #505050 !important;
 }
-.resources-divider,
-.resources-event-divider {
+.resources-divider {
   background-color: #2a2a2a !important;
+}
+.panel:not(.network) .resources-dividers-label-bar {
+  background: transparent !important;
+  border-bottom: 1px solid #1d1d1d !important;
+}
+.panel:not(.network) #timeline-grid-header .resources-dividers-label-bar {
+  background: -webkit-linear-gradient(#505050, #363636) !important;
+}
+.overview-grid-dividers-background {
+  background-color: red !important;
 }
 #timeline-overview-container {
   background-color: rgba(0, 0, 0, 0.8) !important;
@@ -1672,10 +1681,6 @@ body:not(.undocked) .toolbar-background {
 }
 #profile-views .data-grid button {
   color: #d9d9d9 !important;
-}
-.resources-dividers-label-bar {
-  background: -webkit-linear-gradient(#505050, #363636) !important;
-  border-bottom: 1px solid #1d1d1d !important;
 }
 .heap-snapshot-view tr:not(.selected) td.object-column span.highlight {
   background-color: #364c3b !important;

@@ -135,9 +135,21 @@
 	border-bottom: 1px solid @gradient-top !important;
 }
 
-.resources-divider,
-.resources-event-divider {
+.resources-divider {
 	background-color: @timeline-resources-divider !important;
+}
+
+.panel:not(.network) .resources-dividers-label-bar {
+	background: transparent !important;
+	border-bottom:1px solid darken(@gradient-bottom,10%) !important;
+}
+
+.panel:not(.network) #timeline-grid-header .resources-dividers-label-bar {
+	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+}
+
+.overview-grid-dividers-background {
+	background-color: red !important;
 }
 
 #timeline-overview-container {
