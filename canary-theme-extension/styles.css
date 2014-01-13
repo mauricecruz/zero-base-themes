@@ -687,6 +687,9 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 .shadow-root .webkit-html-fragment.shadow-root {
   color: #ddbb00 !important;
 }
+.outline-disclosure ol li .highlight {
+  color: #ddbb00 !important;
+}
 /*--GLOBAL--*/
 .CodeMirror-code {
   color: #cccccc;
