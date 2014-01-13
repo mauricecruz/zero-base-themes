@@ -4,7 +4,7 @@
 /*****************************************/
 .tabbed-pane:not(.help-window-main) {
 
-	.tabbed-pane-header {		
+	.tabbed-pane-header {
 		background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
 		box-shadow: inset 0 1px 0 lighten(@gradient-top,7%) !important;
 		border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
@@ -14,20 +14,20 @@
 			// height: 31px;
 			border-left: none !important;
 			border-right: none !important;
-			padding: 2px 8px !important;						
-			margin: 0 4px !important; 
+			padding: 2px 8px !important;
+			margin: 0 4px !important;
 			margin-top: 0 !important;
-			border-color: transparent !important;						
+			border-color: transparent !important;
 
 			&:hover {
 				color: @tab-label-selected !important;
 			}
 
-			&.selected {			
-				background: none !important;						
-				border-top: 2px solid @tab-highlighted !important;			
+			&.selected {
+				background: none !important;
+				border-top: 2px solid @tab-highlighted !important;
 				color: @tab-label-selected !important;
-			}			
+			}
 		}
 
 		.tabbed-pane-header-contents {
@@ -44,18 +44,18 @@
 .tabbed-pane-content {
 
 	.resizer-widget,
-	button.status-bar-item.left-sidebar-show-hide-button, 
+	button.status-bar-item.left-sidebar-show-hide-button,
 	button.status-bar-item.right-sidebar-show-hide-button {
 		top: @tab-sub-icons-padding !important;
 	}
-	
+
 	.tabbed-pane-header {
 		flex: 0 0 @tab-sub-toolbar-height !important;
 
 		.tabbed-pane-header-tab  {
 			height: @tab-sub-toolbar-height !important;
 			line-height: (.75*@tab-sub-toolbar-height) !important;
-			cursor: pointer !important;		
+			cursor: pointer !important;
 		}
 	}
 }
@@ -67,24 +67,24 @@
 	flex: 0 0 @tab-main-toolbar-height !important;
 	padding: 0 !important;
 
-	.tabbed-pane-header {		
+	.tabbed-pane-header {
 
 		.tabbed-pane-header-tab  {
 			height: @tab-main-toolbar-height !important;
 			line-height: (.75*@tab-main-toolbar-height) !important;
-			padding: 2px 4px !important;	
-			cursor: pointer !important;		
-			border-image: none !important;										
+			padding: 2px 4px !important;
+			cursor: pointer !important;
+			border-image: none !important;
 		}
 
 	}
-	
+
 	.toolbar-controls-left,
 	.toolbar-controls-right {
-		padding-top: @tab-main-icons-padding !important;		
+		padding-top: @tab-main-icons-padding !important;
 		border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
-		box-shadow: inset 0 1px 0 lighten(@gradient-top,7%) !important;		
-	}	
+		box-shadow: inset 0 1px 0 lighten(@gradient-top,7%) !important;
+	}
 }
 
 // Dropdown UI
