@@ -11,8 +11,8 @@ module.exports = function(grunt) {
 		less: {
 			stable: {
 				files: {
-					//'stable-theme-extension/styles.css': 'less/stable/build.less'
-					'c:/Users/Maurice/AppData/Local/Google/Chrome/User\ Data/Profile 2/User\ StyleSheets/Custom.css': 'less/stable/build.less'
+					'stable-theme-extension/styles.css': 'less/stable/build.less',
+					'<path/to/stable/custom.css>': 'less/stable/build.less'
 				}
 			},
 			canary: {
