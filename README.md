@@ -9,7 +9,7 @@ Zero Base Themes is built on LESS. Grunt is used to listen for changes to LESS f
 ## Getting Started
 1. Clone this repo: `git clone https://github.com/mauricecruz/zero-base-themes.git`
 2. Install dependencies: `npm install`
-3. Update Stable path in Gruntfile to point to your profile's User Stylesheet directory
+3. [Update Stable path](https://github.com/mauricecruz/zero-base-themes/blob/master/Gruntfile.js#L15) in Gruntfile to point to your profile's User Stylesheet directory
 4. Listen for changes: `grunt watch`
 
 
