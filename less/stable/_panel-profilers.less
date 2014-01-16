@@ -1,0 +1,37 @@
+/**********************************************
+/* Profilers
+/**********************************************/
+
+#profile-views .data-grid td > div,
+.profile-launcher-view label,
+.retainers-view-header,
+.profile-launcher-view-tree-item,
+.sidebar-tree-section,
+.resources-divider-label,
+.panel:not(.timeline) .sidebar-tree-item {
+	color: @global-text !important;
+}
+
+#profile-views .data-grid button {
+	color: lighten(@global-text, 5%) !important;
+}
+
+.heap-snapshot-view tr:not(.selected) td.object-column span.highlight {
+	background-color: @selection-background !important;
+	border-radius: 3px;
+}
+
+.profiles-status-bar .status-bar,
+.retainers-view-header,
+.heap-snapshot-view .class-view-toolbar,
+.timeline-frame-container {
+	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%);
+	border-top: none !important;
+}
+
+body.inactive .sidebar-tree-item.selected,
+:focus .sidebar-tree-item.selected,
+.sidebar-tree-item.selected {
+	background-color: @global-background !important;
+}
