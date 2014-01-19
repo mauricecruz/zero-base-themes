@@ -9,16 +9,16 @@
 
 /*-- RESOURCES CONTENT --*/
 .resource-view.image .title {
-	color: #ccc !important;
+	color: @global-text !important;
 }
 
 .resource-view.image .infoList dt {
-	color: #666 !important;
+	color: darken(@global-text, 40%) !important;
 	margin-bottom: 5px !important;
 }
 
 .resource-view.image .infoList dd {
-	color: #888 !important;
+	color: darken(@global-text, 30%) !important;
 	margin-bottom: 5px !important;
 }
 
@@ -31,20 +31,20 @@
 /*-- WEB SQL --*/
 
 .database-query-prompt {
-	color: #eee !important;
+	color: @global-text !important;
 }
 
 .database-user-query {
-	border-top: 1px solid #2a2a2a !important;
-	border-bottom: 1px solid #1e1e1e !important;
+	border-top: 1px solid @global-background !important;
+	border-bottom: 1px solid darken(@global-background, 10%) !important;
 	padding-bottom: 10px !important;
 }
 
 .database-user-query + span {
 	padding: 2px 0 !important;
-	border-top: 1px solid #2a2a2a !important;
-	border-bottom: 1px solid #1e1e1e !important;
-	background-color: #252525 !important;
+	border-top: 1px solid @global-background !important;
+	border-bottom: 1px solid darken(@global-background, 10%) !important;
+	background-color: @resources-background !important;
 	width: 100% !important;
 }
 
