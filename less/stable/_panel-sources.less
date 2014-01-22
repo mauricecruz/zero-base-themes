@@ -5,12 +5,12 @@
 /*placeholder text when no file is open*/
 .tabbed-pane-placeholder {
 	text-shadow: 0 1px 0 @global-textshadow !important;
-	color: #999 !important;
+	color: @sources-text !important;
 }
 
 /*-- Save Problem Overlay --*/
 .source-frame-unsaved-committed-changes {
-	background-color: rgba(255,255,255,0.2) !important;
+	background-color: @sources-save-background !important;
 }
 
 
@@ -111,7 +111,7 @@
 .pane-title-button.element-state {
 	/*background-image: none !important;*/
 	-webkit-background-position: -24px 0 !important;
-	background-color: rgba(0,0,0,.8) !important;
+	background-color: @sources-pane-background !important;
 	-webkit-mask-repeat: no-repeat !important;
 }
 
@@ -141,7 +141,7 @@
 }
 
 .webkit-highlighted-line.webkit-line-content * {
-	color: #000 !important;
+	color: @sources-highlight-text !important;
 }
 
 /*exception icon state colors */
