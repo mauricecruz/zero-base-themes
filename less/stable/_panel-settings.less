@@ -30,11 +30,11 @@
 }
 
 .settings-tab-container .help-key-cell .help-key{
-	color: #111 !important;
+	color: @global-background !important;
 }
 
 .settings-tab-container .help-key-cell span {
-	color: #eee !important;
+	color: @helpSettings-text !important;
 }
 
 .help-window-main .settings-list-container {
@@ -52,8 +52,8 @@
 	border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
 }
 
-.help-window-main .settings-list-item.selected{
-	background-color: rgba(150, 255, 150, 0.2) !important;
+.help-window-main .settings-list-item.selected {
+	background-color: @helpSettings-selected !important;
 }
 
 .help-window-main .settings-list-item:nth-child(1){
