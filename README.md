@@ -6,6 +6,8 @@ An assortment of Chrome Devtools theme that use the Zero Base Template.
 # TO DO
 
 - Finish organizing unsorted code in `build.less`
+- Move all colours to hsla
+- Sort out code consistency
 - Create simple booleans and mixins to be used on a per theme basis
 - Screencast, including how to get up and running, how to contribute and how to make your own theme
 - GitHub Pages site?
