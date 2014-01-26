@@ -3,17 +3,6 @@
 An assortment of Chrome Devtools theme that use the Zero Base Template.
 
 
-# TO DO
-
-- Finish organizing unsorted code in `build.less`
-- Move all colours to hsla
-- Update paths to images such as `chrome-devtools://devtools/bundled/Images/paneAddButtons.png` to base64 incase these are removed from core
-- Sort out code consistency (create and add to CONTRIBUTING.md)
-- Create simple booleans and mixins to be used on a per theme basis
-- Screencast, including how to get up and running, how to contribute and how to make your own theme
-- GitHub Pages site?
-
-
 # Contributing
 
 Zero Base Themes is built on LESS. Grunt is used to listen for changes to LESS files and generates CSS. This means [Node](http://nodejs.org/) is required.
