@@ -83,12 +83,12 @@
 ****************************************************/
 .settings-dialog {
 	border: 1px solid @helpSettings-border !important;
-	background-color: #333 !important;
+	background-color: @helpSettings-edit-background !important;
 	border-radius: 4px !important;
 }
 
 .dialog-contents .header {
-	color: #ccc !important;
+	color: @helpSettings-text !important;
 }
 
 .dialog-contents .block-header {
@@ -96,22 +96,20 @@
 }
 
 .settings-dialog .settings-list-container {
-	background-color: rgba(0,0,0,0) !important;
+	background-color: @helpSettings-background !important;
 }
 
 .settings-dialog .settings-list {
-	border: 1px solid #484848 !important;
-	border-top: 2px solid #282828 !important;
-	border-bottom: 1px solid #585858 !important;
+	border-color: @helpSettings-background !important;
 	border-radius: 2px !important;
 }
 
 .settings-dialog .settings-list-item,
 .settings-dialog .settings-list-item:hover {
-	background-color: @helpSettings-list-background !important;
-	border-top: 1px solid #4e4e4e !important;
+	background-color: @helpSettings-background !important;
+	border-top: 1px solid @helpSettings-border !important;
 	border-bottom: none !important;
-	color: #ccc!important;
+	color: @helpSettings-text !important;
 }
 
 .settings-dialog .file-mappings-list .settings-list-item:first-child {
