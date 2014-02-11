@@ -9,26 +9,18 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: '<json:package.json>',
 		less: {
-			stable: {
+			generate: {
 				files: {
-					'stable-theme-extension/styles.css': 'less/stable/build.less',
-					'<path/to/stable/custom.css>': 'less/stable/build.less'
-				}
-			},
-			canary: {
-				files: {
-					'canary-theme-extension/styles.css': 'less/canary/build.less'
+					'stable-theme-extension/styles.css': 'less/build-stable.less',
+					'canary-theme-extension/styles.css': 'less/build-canary.less',
+					'<path/to/stable/custom.css>': 'less/build-stable.less'
 				}
 			}
 		},
 		watch: {
 			canary: {
-				files: ['less/canary/*.less','themes/*.less'],
-				tasks: ['less:canary']
-			},
-			stable: {
-				files: ['less/stable/*.less','themes/*.less'],
-				tasks: ['less:stable']
+				files: ['less/*.less','themes/*.less'],
+				tasks: ['less:generate']
 			},
 
 		}
