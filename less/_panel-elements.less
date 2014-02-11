@@ -45,26 +45,4 @@
 		}
 
 	}
-
-	.parent {
-		// highlight children
-		&.selected.expanded + .children,
-		&.hovered.expanded + .children {
-			border-bottom-left-radius: 5px;
-			border-bottom-right-radius: 5px;
-			padding-bottom: 5px !important;
-			box-shadow: inset 0 0 30px 0 @eh-children-shadow;
-			border-bottom: 1px solid lighten(@global-background, 10%) !important;
-
-			// highlight pseudo elements of selected node
-			> li .webkit-html-pseudo-element:first-child {
-				color: @xml-pseudo-highlighted !important;
-			}
-
-			// fade closing tag of parent
-			> :last-child * {
-				opacity: .6;
-			}
-		}
-	}
 }

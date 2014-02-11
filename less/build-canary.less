@@ -7,7 +7,7 @@
 @theme : "zero-dark-matrix";
 
 	//organized
-	@import "../../themes/@{theme}";
+	@import "../themes/@{theme}";
 	@import "_animations";
 	@import "_readability";
 	@import "_global-styles";
@@ -27,12 +27,11 @@
 	@import "_panel-console";
 	@import "_panel-timeline";
 	@import "_panel-elements";
+	@import "_panel-elements-child-highlighter";
 	@import "_panel-profilers";
+	@import "_panel-resources";
 
 	//unsorted
-
-
-	@import "_panel-resources";
 	@import "_panel-settings";
 	@import "_panel-sources";
 	@import "_panel-sources-controls";
@@ -42,3 +41,5 @@
 	@import "_unsure";
 
 
+	//Canary Specific
+	@import "_canary";
