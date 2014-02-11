@@ -1989,7 +1989,8 @@ body.inactive .sidebar-tree-item.selected,
   border-top: none !important;
   overflow: none !important;
 }
-#scripts-debug-toolbar {
+#scripts-debug-toolbar,
+.scripts-debug-toolbar {
   background: -webkit-linear-gradient(#505050, #363636) !important;
   border-bottom: 1px solid #1d1d1d !important;
   box-shadow: inset 0 1px 0 #626262;
