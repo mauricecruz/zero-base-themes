@@ -636,6 +636,9 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
   background: #9D1E15 !important;
   color: #f8f8f8 !important;
 }
+.cm-s-default .cm-property {
+  color: #cccccc !important;
+}
 /*--CSS--*/
 .cm-css-atom {
   color: #cccccc !important;
