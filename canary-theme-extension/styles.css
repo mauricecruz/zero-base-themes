@@ -1384,6 +1384,9 @@ body:not(.undocked) .toolbar-background {
 .network-log-grid.data-grid th {
   border-bottom: transparent !important;
 }
+.network.panel .panel-status-bar {
+  border-bottom: none !important;
+}
 /**********************************************/
 /* Elements/Network
 /**********************************************/
