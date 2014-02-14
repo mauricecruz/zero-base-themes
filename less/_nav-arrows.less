@@ -10,8 +10,9 @@
 	-webkit-mask-repeat: no-repeat !important;
 	color: rgba(0,0,0,0) !important;
 	opacity: 1 !important;
-	-webkit-transition: -webkit-transform .10s ease-in-out;
+	.arrow-animations();
 }
+
 
 
  // hide/expand point arrow down
@@ -26,7 +27,7 @@
 .sidebar-pane-stack .sidebar-pane-title.expanded::before,
 .timeline-expandable-expanded .timeline-expandable-arrow {
 	.arrow-styles;
-	-webkit-transform: rotate(90deg);
+	.arrow-animations-down();
 }
 
 // hide/expand arrow point right
@@ -42,7 +43,7 @@
 .sidebar-pane-stack .sidebar-pane-title::before,
 .timeline-expandable-collapsed .timeline-expandable-arrow {
 	.arrow-styles;
-	-webkit-transform: rotate(0deg);
+	.arrow-animations-right();
 }
 
  // sort arrows point down
