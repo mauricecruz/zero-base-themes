@@ -5,7 +5,7 @@
 /*placeholder text when no file is open*/
 .tabbed-pane-placeholder {
 	text-shadow: 0 1px 0 @global-textshadow !important;
-	color: #999 !important;
+	color: @sources-placeholder-text !important;
 }
 
 /*-- Save Problem Overlay --*/
@@ -146,17 +146,16 @@
 
 /*exception icon state colors */
 .scripts-pause-on-exceptions-status-bar-item.toggled-all .glyph {
-	background-color: rgba(180,3,3,.4) !important;
+	background-color: @sources-exception-all !important;
 }
 
 .scripts-pause-on-exceptions-status-bar-item.toggled-uncaught .glyph {
-	background-color: rgba(213,181,0,.6) !important;
+	background-color: @sources-exception-uncaught !important;
 }
 
 .webkit-highlighted-line {
 	background-color: @global-accent !important;
 }
-
 
 //Alternate Buttons
 .alternate-status-bar-buttons-bar {
