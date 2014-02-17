@@ -1,117 +1,157 @@
 /*************************************
  * Help/Settings Overlay
  *************************************/
-.settings-tab .help-section-title,
-.settings-tab-container .help-section-title {
-	color: @global-accent !important;
-}
 
-.help-window-main,
-.help-window-main label:hover,
-.settings-tab .help-block label,
-.settings-tab .help-block label:hover,
-.settings-tab .help-block td  {
+.help-window-main {
 	color: @global-text !important;
+
+	.settings-tab-container header {
+		border-bottom: 1px solid lighten(@global-background, 30%) !important;
+	}
+
+	.help-footnote {
+		border-top: 1px solid lighten(@global-background, 30%) !important;
+	}
+
+	label,
+	label:hover {
+		color: @forms-label-text !important;
+	}
+
+	.tabbed-pane-header-tab.selected {
+		color: @global-accent !important;
+	}
+
+	.help-section-title {
+		color: @global-accent !important;
+	}
+
+	.help-block {
+
+		label,
+		label:hover,
+		td {
+			color: @forms-label-text !important;
+		}
+
+	}
+
+	select,
+	input,
+	option {
+		color: @forms-input-text !important;
+	}
+
+	//disabled styles
+	fieldset:disabled label {
+		color: @forms-label-text-disabled !important;
+	}
+
+	select:disabled,
+	input:disabled,
+	.settings-tab-text-button:disabled {
+		background-image: none !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+		background-color: @forms-input-disabled !important;
+		border-color: lighten(@forms-input-disabled, 5%) !important;
+		color: lighten(@forms-input-disabled, 20%) !important;
+	}
+
+	//keyboard shortcuts display
+	.help-key-cell {
+
+		.help-key {
+			color: @global-background !important;
+		}
+		span {
+			color: @helpSettings-text !important;
+		}
+	}
+
+	/***************************************************
+	/* Workspaces Dialog Box
+	****************************************************/
+	.settings-list-container {
+		padding: 10px !important;
+		background-color: @helpSettings-folder-background !important;
+	}
+
+	.settings-list {
+		border: 1px solid @helpSettings-border !important;
+	}
+
+	.settings-list-item {
+		background-color: lighten(@global-background, 5%) !important;
+		border-top: 1px solid lighten(@gradient-top,7%) !important;
+		border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
+
+		&:hover {
+			&:extend(.settings-list-item);
+		}
+
+		&.selected {
+			background-color: @helpSettings-selected !important;
+		}
+
+		&:nth-child(1) {
+			border-top: none !important;
+		}
+
+		&:last-child{
+			border-bottom: none !important;
+		}
+	}
+
+	.file-system-path {
+		color: @global-text !important;
+	}
+
+	.file-system-path-name {
+		color: @global-accent !important;
+	}
 }
 
-.settings-tab select,
-.help-window-main .help-block select,
-.help-content option,
-.settings-tab input {
-	color: @global-input !important;
-}
-
-.help-window-main .help-block select:disabled,
-.settings-tab select:disabled,
-.settings-tab input:disabled {
-	background-color: @global-disabled !important;
-	border-color: lighten(@global-disabled, 20%) !important;
-	color: lighten(@global-disabled, 20%) !important;
-}
-
-.settings-tab-container .help-key-cell .help-key{
-	color: @global-background !important;
-}
-
-.settings-tab-container .help-key-cell span {
-	color: @helpSettings-text !important;
-}
-
-.help-window-main .settings-list-container {
-	padding: 10px !important;
-	background-color: @helpSettings-folder-background !important;
-}
-
-.help-window-main .settings-list {
-	border: 1px solid @helpSettings-border !important;
-}
-
-.help-window-main .settings-list-item,
-.help-window-main .settings-list-item:hover{
-	background-color: lighten(@global-background, 5%) !important;
-	border-top: 1px solid lighten(@gradient-top,7%) !important;
-	border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
-}
-
-.help-window-main .settings-list-item.selected {
-	background-color: @helpSettings-selected !important;
-}
-
-.help-window-main .settings-list-item:nth-child(1){
-	border-top: none !important;
-}
-
-.help-window-main .settings-list-item:last-child{
-	border-bottom: none !important;
-}
-
-
-.dialog-contents .header {
-	color: @global-accent !important;
-}
-
-.help-window-main .file-system-path {
-	color: @global-text !important;
-}
-
-.help-window-main .file-system-path-name {
-	color: @global-accent !important;
-}
-
-/***************************************************
-/* Dialog Box [Help]
-****************************************************/
 .settings-dialog {
 	border: 1px solid @helpSettings-border !important;
 	background-color: @helpSettings-edit-background !important;
 	border-radius: 4px !important;
+
+	.dialog-contents {
+
+		.header {
+			color: @helpSettings-text !important;
+		}
+
+		.block-header {
+			color: @global-accent !important;
+		}
+	}
+
+	.settings-list-container {
+		background-color: @helpSettings-background !important;
+	}
+
+	.settings-list {
+		border-color: @helpSettings-background !important;
+		border-radius: 2px !important;
+	}
+
+	.settings-list-item {
+		background-color: @helpSettings-background !important;
+		border-top: 1px solid @helpSettings-border !important;
+		border-bottom: none !important;
+		color: @helpSettings-text !important;
+
+		&:hover {
+			&:extend(.settings-list-item);
+		}
+	}
+
+	.file-mappings-list .settings-list-item:first-child {
+		border-top: none !important;
+	}
 }
 
-.dialog-contents .header {
-	color: @helpSettings-text !important;
-}
 
-.dialog-contents .block-header {
-	color: @global-accent !important;
-}
 
-.settings-dialog .settings-list-container {
-	background-color: @helpSettings-background !important;
-}
-
-.settings-dialog .settings-list {
-	border-color: @helpSettings-background !important;
-	border-radius: 2px !important;
-}
-
-.settings-dialog .settings-list-item,
-.settings-dialog .settings-list-item:hover {
-	background-color: @helpSettings-background !important;
-	border-top: 1px solid @helpSettings-border !important;
-	border-bottom: none !important;
-	color: @helpSettings-text !important;
-}
-
-.settings-dialog .file-mappings-list .settings-list-item:first-child {
-	border-top: none !important;
-}
