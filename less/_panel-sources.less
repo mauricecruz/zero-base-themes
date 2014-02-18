@@ -13,30 +13,65 @@
 	background-color: @sources-save-background !important;
 }
 
+.sidebar-pane {
 
-/* Breakpoints/Dom Breakpoints */
-.breakpoints-list-deactivated {
-	background-color: lighten(@global-background, 5%) !important;
-	opacity: 0.3 !important
-}
+	/* Breakpoints/Dom Breakpoints */
+	.breakpoints-list-deactivated {
+		background-color: lighten(@global-background, 5%) !important;
+		opacity: 0.3 !important
+	}
 
-.breakpoint-list li {
-	color: @global-accent !important;
-	border-top: 1px solid lighten(@global-background, 7%) !important;
-	border-bottom: 1px solid darken(@global-background, 7%) !important;
-}
+	.breakpoint-list li {
+		color: @global-accent !important;
+		border-top: 1px solid lighten(@global-background, 7%) !important;
+		border-bottom: 1px solid darken(@global-background, 7%) !important;
 
-.sidebar-pane .breakpoint-hit {
-	background: @selection-background !important;
-	border-top: 1px solid @selection-border !important;
-	border-bottom: 1px solid @selection-border !important;
-	color: #eee !important;
-}
+		&:not(.breakpoint-hit):hover {
+			background-color: @global-hover !important;
+			border-top: 1px solid lighten(@global-background, 7%) !important;
+			border-bottom: 1px solid darken(@global-background, 7%) !important;
+		}
+	}
 
-.sidebar-pane .breakpoint-list li:not(.breakpoint-hit):hover {
-	background-color: @global-hover !important;
-	border-top: 1px solid lighten(@global-background, 7%) !important;
-	border-bottom: 1px solid darken(@global-background, 7%) !important;
+	.breakpoint-hit {
+		background: @selection-background !important;
+		border-top: 1px solid @selection-border !important;
+		border-bottom: 1px solid @selection-border !important;
+		color: #eee !important;
+	}
+
+	/* Call Stack */
+	.placard {
+
+		.title,
+		.subtitle {
+			color: @global-text !important;
+		}
+
+		&:nth-of-type(2n) {
+			background: lighten(@global-background, 3%) !important;
+		}
+
+		&.selected {
+			background: @selection-background !important;
+			color: lighten(@global-text, 10%) !important;
+			border-top: 1px solid @selection-border !important;
+			border-bottom: 1px solid  @selection-border !important;
+
+			.title,
+			.subtitle {
+				color: lighten(@global-text, 10%) !important;
+			}
+		}
+	}
+
+	// "paused on a javascript breakpoint" node
+	> .body .placard + .info {
+		background: @global-background !important;
+		border-top: 0 !important;
+		color: @global-accent !important;
+		font-style: normal !important;
+	}
 }
 
 .breakpoints-deactivated .breakpoint-list {
@@ -44,38 +79,11 @@
 	opacity: .3 !important;
 }
 
-/* Call Stack */
-.sidebar-pane > .body .info,
-.sidebar-label,
-.placard .title,
-.placard .subtitle {
-	color: @global-text !important;
-}
-
-.placard:nth-of-type(2n) {
-	background: lighten(@global-background, 3%) !important;
-}
-
-.placard.selected {
-	background: @selection-background !important;
-	color: lighten(@global-text, 10%) !important;
-	border-top: 1px solid @selection-border !important;
-	border-bottom: 1px solid  @selection-border !important;
-}
-
-.placard.selected * {
-	color: #eee !important;
-}
-
-.sidebar-pane > .body .placard + .info {
-	background: @global-background !important;
-	border-top: 0 !important;
-	color: @global-accent !important;
-	font-style: normal !important;
-}
-
-
-.sidebar-pane .section.expanded > .header{
+/*Pane Headers*/
+.sidebar-pane-title {
+	background-image: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	color: @global-text;
+	border-top: 1px solid lighten(@gradient-top,7%)  !important;
 	border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
 }
 
@@ -85,54 +93,65 @@
 
 .sidebar-pane-stack .section .event-bars,
 .sidebar-pane .section .event-bars,
-.sidebar-pane-stack .properties-tree,
-.sidebar-pane .properties-tree {
- background-color: @global-background !important;
-
+.sidebar-pane .children.expanded {
+	background-color: lighten(@global-background, 2%) !important;
 }
 
-.sidebar-pane-stack .section .event-bars,
-.sidebar-pane-toolbar .select-settings option,
-.sidebar-pane-toolbar .sidebar-pane-subtitle,
-.sidebar-pane {
-	color: #bbb !important;
-}
-
-/*pane colors*/
-.sidebar-pane-title {
-	background-image: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
-	color: @global-text;
-	border-top: 1px solid lighten(@gradient-top,7%)  !important;
-	border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
-}
-
+// Add Button (Sources Panel)
+// Refresh Button (Watch Expressions Header)
 .pane-title-button.add,
-.sidebar-pane-toolbar > .pane-title-button.refresh,
-.pane-title-button.element-state {
+.sidebar-pane-toolbar > .pane-title-button.refresh {
 	/*background-image: none !important;*/
 	-webkit-background-position: -24px 0 !important;
-	background-color: rgba(0,0,0,.8) !important;
+	background-color: @sidebar-icon !important;
 	-webkit-mask-repeat: no-repeat !important;
 }
 
+// Mask Backgrounds
 .pane-title-button.add {
 	-webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/paneAddButtons.png) !important;
 }
 
 .sidebar-pane-toolbar > .pane-title-button.refresh {
-	 -webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/paneRefreshButtons.png) !important;
+	-webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/paneRefreshButtons.png) !important;
+
 }
 
-.panel.elements .sidebar-pane-toolbar > select.select-settings {
-	/*background-image: none !important; */
-	-webkit-background-position: -24px 0 !important;
-	background-color: rgba(0,0,0,.8) !important;
-	-webkit-mask-repeat: no-repeat !important;
-	-webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/paneSettingsButtons.png) !important;
-}
+// Elements Panel Buttons
+.panel.elements .sidebar-pane-toolbar {
 
-.pane-title-button.element-state {
-	 -webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/paneElementStateButtons.png) !important;
+	// Color Format Dropdown
+	> select {
+
+		> option,
+		> hr {
+			color: @global-text !important;
+			background-color: @global-background !important;
+		}
+
+		&.select-settings {
+			/*background-image: none !important; */
+			-webkit-background-position: -24px 0 !important;
+			background-color: @sidebar-icon !important;
+			-webkit-mask-repeat: no-repeat !important;
+			-webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/paneSettingsButtons.png) !important;
+		}
+
+	}
+
+	.pane-title-button {
+
+		// State Panel Toggle
+		&.element-state {
+			-webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/paneElementStateButtons.png) !important;
+		}
+
+		// Add Element Button
+		&.element-state,
+		&.pane-title-button.add {
+			background-color: @sidebar-icon !important;
+		}
+	}
 }
 
 /* Highlight in Scripts  */
@@ -172,7 +191,6 @@
 		border: 1px solid @global-hover !important;
 	}
 }
-
 
 .properties-tree li,
 .outline-disclosure li::before,
