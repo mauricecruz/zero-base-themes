@@ -4,16 +4,32 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-compress');
+	grunt.loadNpmTasks('grunt-bump');
 
 
 	grunt.initConfig({
 		pkg: '<json:package.json>',
+		compress: {
+			main: {
+				options: {
+					archive: 'theme-extension.zip',
+					mode: 'zip'
+				},
+				files: [
+					{
+						cwd: 'theme-extension/',
+						src: '**/*',
+						expand: true
+					}
+				]
+			}
+		},
 		less: {
 			generate: {
 				files: {
-					'stable-theme-extension/styles.css': 'less/build-stable.less',
-					'canary-theme-extension/styles.css': 'less/build-canary.less',
-					'<path/to/stable/custom.css>': 'less/build-stable.less'
+					'theme-extension/stable.css': 'less/build-stable.less',
+					'theme-extension/canary.css': 'less/build-canary.less',
 				}
 			}
 		},
