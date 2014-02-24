@@ -6,7 +6,7 @@
 /**********************************************/
 
 .show-animations(@choice) when (@choice = true) {
-	
+
 	/*-- SOURCES PANEL --*/
 	.panel.sources .split-view-vertical .split-view-contents {
 		-webkit-transition: right .5s ease-in-out;
@@ -92,9 +92,9 @@
 
 	/* -- KEYFRAME DECLARATIONS -- */
 	@-webkit-keyframes match-animation {
-		0% { box-shadow: 0 0 0 #222; background-color: #222; color: #222;}
-		50% { box-shadow: 0 0 25px #89F5A2;}
-		100% { box-shadow: 0 0 0 #89F5A2; background-color: #89F5A2;}
+		0% { box-shadow: 0 0 0 @global-background; background-color: @global-background; color: @global-background;}
+		50% { box-shadow: 0 0 25px @global-accent;}
+		100% { box-shadow: 0 0 0 @global-accent; background-color: @global-accent;}
 	}
 
 	@-webkit-keyframes pulsate {
