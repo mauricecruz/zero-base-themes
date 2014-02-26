@@ -2,12 +2,29 @@
 /* DevTool Chrome
 /**********************************************/
 
-.event-bars .event-bar .header .title {text-shadow:none!important;color:#ccc!important;}
-.source-frame-debugger-script {background-color:#222!important;}
-.webkit-line-content {color:#ddd!important;}
+.event-bars .event-bar .header .title {
+	text-shadow:none !important;
+	color:#ccc !important;
+}
+
+.source-frame-debugger-script {
+	background-color:#222!important;
+}
+
+.webkit-line-content {
+	color:#ddd!important;
+}
+
 .webkit-highlighted-line,
-.webkit-execution-line.webkit-line-content {background-color: rgba(137,245,162,.2) !important; outline: 1px solid #181818 !important;}
-.webkit-highlighted-line span {color: #000 !important; font-weight:700 !important;}
+.webkit-execution-line.webkit-line-content {
+	background-color: rgba(137,245,162,.2) !important;
+	outline: 1px solid #181818 !important;
+}
+
+.webkit-highlighted-line span {
+	color: #000 !important;
+	font-weight:700 !important;
+}
 
 //GLOBAL BACKGROUND COLOR
 #console-messages,
@@ -22,6 +39,7 @@
 .panel,
 .panel-enabler-view,
 .profiles-sidebar-tree-box,
+.resource-view .script-view, // network -> response bg
 .sidebar-overlay,
 .split-view-vertical .sidebar-pane.composite .properties-tree,
 .styles-section.read-only,
@@ -44,16 +62,12 @@
 	color: #ccc  !important;
 }
 
-//Don't affect timeline panel for now.
-.timeline {
-	background: #fff !important;
-}
-
 //Panel text
 .panel-enabler-view {
 	color: @global-text;
 }
 
+// Elements CSS Sidebar Readonly
 .styles-section.read-only:not(.computed-style){
 	background-color: lighten(@global-background, 5%) !important;
 	margin: 0;
@@ -61,38 +75,104 @@
 	padding-right: 10px !important;
 }
 
-/*CURSOR/INSERTION POINT*/
+// Edit CSS or HTML Attribute overlay
 .text-editor-editable:focus,
 .editing:focus {
 	color: #FFF !important;
 	background-color: @global-background !important;
 }
 
-/*--GLOBAL EDITOR STYLES--*/
-.cm-breakpoint .CodeMirror-gutter-elt { color: #000 !important; font-weight: 700 !important;}
-.CodeMirror-cursor { border-left: 1px solid #FFF !important; }
-.cm-error { background: #9D1E15 !important; border-radius: 2px !important; color: #eee !important;}
-.CodeMirror-gutter-elt { color: @cm-gutter-lines !important;}
-.CodeMirror-gutters {background: @cm-gutter !important; border-right: 2px solid @cm-gutter-border !important; }
-.CodeMirror-selected { background: #383838 !important; color: #eee !important; }
-.CodeMirror-matchingbracket { color: @cm-matching-bracket !important; text-shadow: 0 0 3px @cm-matching-bracket !important; border-bottom: none !important;}
-.CodeMirror-nonmatchingbracket { color: @cm-nonmatching-bracket !important; text-shadow: 0 0 3px @cm-nonmatching-bracket !important; border-bottom: none !important;}
-span.CodeMirror-selectedtext { background-color: #383838 !important; }
-.cm-search-highlight-start:before { border-color: #89f5a2 !important;}
-.cm-search-highlight-end:before { border-color: #89f5a2 !important;}
-.cm-search-highlight:before { border-color: #89f5a2 !important; padding: 2px !important;}
-.cm-line-with-selection .cm-column-with-selection.cm-search-highlight:before { background-color: #89f5a2 !important; border-radius: 2px !important;}
-span.cm-token-highlight { background-color: transparent !important; padding: 0px !important;}
-span.cm-token-highlight:before { border-color: #89f5a2 !important; }
-.cm-line-with-selection span.cm-column-with-selection { color: #000 !important; background-color: #89f5a2 !important; }
-.cm-whitespace:before { color: #555 !important;}
-.cm-tab:before { border-bottom: 1px solid #555 !important;}
+// Breakpoint Arrow
+.cm-breakpoint .CodeMirror-gutter-elt {
+	color: #000 !important;
+	font-weight: 700 !important;
+}
 
+// Edit HTML cursor / Sources Edit cursor
+.CodeMirror-cursor {
+	border-left: 1px solid #FFF !important;
+}
+.cm-error {
+	background: #9D1E15 !important;
+	border-radius: 2px !important;
+	color: #eee !important;
+}
+
+// line number text
+.CodeMirror-gutter-elt {
+	color: @cm-gutter-lines !important;
+}
+
+// line number bg
+.CodeMirror-gutters {
+	background: @cm-gutter !important;
+	border-right: 2px solid @cm-gutter-border !important;
+}
+
+.CodeMirror-selected {
+	background: #383838 !important;
+}
+
+.CodeMirror-matchingbracket {
+	color: @cm-matching-bracket !important;
+	text-shadow: 0 0 3px @cm-matching-bracket !important;
+	border-bottom: none !important;
+}
+
+.CodeMirror-nonmatchingbracket {
+	color: @cm-nonmatching-bracket !important;
+	text-shadow: 0 0 3px @cm-nonmatching-bracket !important;
+	border-bottom: none !important;
+}
+
+span.CodeMirror-selectedtext {
+	background-color: #383838 !important;
+}
+
+.cm-search-highlight-start:before {
+	border-color: #89f5a2 !important;
+}
+
+.cm-search-highlight-end:before {
+	border-color: #89f5a2 !important;
+}
+
+.cm-search-highlight:before {
+	border-color: #89f5a2 !important;
+	padding: 2px !important;
+}
+
+.cm-line-with-selection .cm-column-with-selection.cm-search-highlight:before {
+	background-color: #89f5a2 !important;
+	border-radius: 2px !important;
+}
+
+span.cm-token-highlight {
+	background-color: transparent !important;
+	padding: 0px !important;
+}
+
+span.cm-token-highlight:before {
+	border-color: #89f5a2 !important;
+}
+
+.cm-line-with-selection span.cm-column-with-selection {
+	color: #000 !important; background-color: #89f5a2 !important;
+}
+
+.cm-whitespace:before {
+	color: #444 !important;
+}
+
+.cm-tab:before {
+	border-bottom: 1px solid #555 !important;
+}
 
 .cm-highlight {
 	-webkit-animation: "fadeout-revised" 3s 0s !important;
 	outline: 1px solid @selection-border;
 }
+
 .cm-highlight *:not(.CodeMirror-linenumber){
 	color: @selection-text !important;
 }
@@ -102,8 +182,7 @@ span.cm-token-highlight:before { border-color: #89f5a2 !important; }
 	outline: 1px solid @selection-border !important;
 }
 
-
-.CodeMirror-linenumber { border-right: none !important;}
+.CodeMirror-linenumber {border-right: none !important;}
 
 
 @-webkit-keyframes fadeout-revised {
@@ -122,12 +201,10 @@ span.cm-token-highlight:before { border-color: #89f5a2 !important; }
 	}
 }
 
-
 body.dock-to-right.inactive:not(.undocked):not(.overlay-contents),
 body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	border-left: transparent !important;
 }
-
 
 .split-view.vbox > .split-view-sidebar.split-view-contents-second:not(.maximized) {
 	border-top: none !important;
