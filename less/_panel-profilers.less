@@ -13,7 +13,7 @@
 }
 
 #profile-views .data-grid button {
-	color: lighten(@global-text, 5%) !important;
+	color: darken(@global-text, 5%) !important;
 }
 
 .heap-snapshot-view tr:not(.selected) td.object-column span.highlight {
@@ -35,4 +35,41 @@ body.inactive .sidebar-tree-item.selected,
 :focus .sidebar-tree-item.selected,
 .sidebar-tree-item.selected {
 	background-color: @global-background !important;
+}
+
+.panel.profiles {
+
+	.sidebar-tree-item {
+
+		&.selected {
+			background-color: @selection-background !important;
+			color: @selection-text !important;
+			border-top: 1px solid @selection-border !important;
+			border-bottom: 1px solid @selection-border !important;
+		}
+
+		&:not(.selected):hover {
+			background-color: @hover-background !important;
+			color: @hover-text !important;
+			border-top: 1px solid @hover-border !important;
+			border-bottom: 1px solid @hover-border !important;
+		}
+
+		.disclosure-button {
+			background-color: @navigation-arrow-color !important;
+		}
+
+	}
+
+	.data-grid th {
+		border: none !important;
+	}
+
+	.status-bar {
+		border-bottom: 1px solid @gradient-top;
+	}
+
+
+
+
 }
