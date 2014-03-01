@@ -202,11 +202,15 @@
 @table-secondary: lighten(@global-background,2%);
 
 // Editor Properties
+@cm-cursor             : #fff;
+@cm-error              : #9D1E15;
 @cm-gutter             : lighten(@global-background, 4%);
 @cm-gutter-border      : lighten(@global-background, 5%);
 @cm-gutter-lines       : lighten(@global-background, 40%);
 @cm-matching-bracket   : #15ca1a;
 @cm-nonmatching-bracket: #db0404;
+@cm-selected           : lighten(@global-background, 10%);
+@cm-whitespace         : lighten(@global-background, 5%);
 
 // Find
 @find-header-bg      : lighten(@global-background, 3%);
@@ -239,6 +243,13 @@
 @helpSettings-text             : #eee;
 @helpSettings-selected         : rgba(150, 255, 150, 0.2);
 @helpSettings-dialog           : #333;
+
+// Dialog [Ctrl/Cmd + O | Ctrl/Cmd + Shift + O]
+@dialog-background     : lighten(@global-background, 5%);
+@dialog-border         : lighten(@global-background, 20%);
+@dialog-item-background: @global-background;
+@dialog-item-text      : lighten(@global-text, 10%);
+@dialog-item-highlight : @global-accent;
 
 // Sources Tab
 @sources-text              : @grey;

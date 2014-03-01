@@ -1,10 +1,9 @@
-/**************************************************
-/* Zero Base Template [v0.1]
-/* https://github.com/mauricecruz/zero-base-themes
-/* -------------------------------------------
-/* [Themename]
-/* Author - Name [@github_handle]
-/**************************************************/
+//*********************************************
+// Zero Base Template [v0.1]
+// -------------------------------------------
+// Theme - Zero Dark Matrix
+// Author - Maurice Cruz [@mauricecruz]
+//*********************************************
 
 // Helper Colours
 @grey  : hsl(0, 0%, 80%);
@@ -24,6 +23,7 @@
 @global-text-error     : #f66;
 @global-textshadow     : @black;
 @navigation-arrow-color: #AAB0AF;
+
 
 // Toggle Options
 .show-animations( true );
@@ -146,7 +146,7 @@
 @style-selector-text          : #ccc;
 @style-edit-mode-selector-text: #999;
 
-// Sidebars [Elements & Sources]
+// Sidebar
 @sidebar-icon     : rgba(0,0,0,.8);
 
 // Crumbs
@@ -195,11 +195,15 @@
 @table-secondary: lighten(@global-background,2%);
 
 // Editor Properties
+@cm-cursor             : #fff;
+@cm-error              : #9D1E15;
 @cm-gutter             : lighten(@global-background, 4%);
 @cm-gutter-border      : lighten(@global-background, 5%);
 @cm-gutter-lines       : lighten(@global-background, 40%);
 @cm-matching-bracket   : #15ca1a;
 @cm-nonmatching-bracket: #db0404;
+@cm-selected           : lighten(@global-background, 10%);
+@cm-whitespace         : lighten(@global-background, 5%);
 
 // Find
 @find-header-bg      : lighten(@global-background, 3%);
@@ -225,31 +229,38 @@
 @resources-text      : #aaa;
 
 // Help/Settings Overlay
-@helpSettings-background: #444;
+@helpSettings-background       : #444;
 @helpSettings-folder-background: #222;
 @helpSettings-edit-background  : #222;
-@helpSettings-border    : #444;
-@helpSettings-text      : #eee;
-@helpSettings-selected  : rgba(150, 255, 150, 0.2);
-@helpSettings-dialog    : #333;
+@helpSettings-border           : #444;
+@helpSettings-text             : #eee;
+@helpSettings-selected         : rgba(150, 255, 150, 0.2);
+@helpSettings-dialog           : #333;
+
+// Dialog [Ctrl/Cmd + O | Ctrl/Cmd + Shift + O]
+@dialog-background     : lighten(@global-background, 5%);
+@dialog-border         : lighten(@global-background, 20%);
+@dialog-item-background: @global-background;
+@dialog-item-text      : lighten(@global-text, 10%);
+@dialog-item-highlight : @global-accent;
 
 // Sources Tab
-@sources-text           : @grey;
-@sources-placeholder-text: #999;
-@sources-save-background: rgba(255,255,255,0.2);
-@sources-pane-background: rgba(0,0,0,.8);
-@sources-highlight-text : @black;
-@sources-exception-all: rgba(220,3,3,1);
+@sources-text              : @grey;
+@sources-placeholder-text  : #999;
+@sources-save-background   : rgba(255,255,255,0.2);
+@sources-pane-background   : rgba(0,0,0,.8);
+@sources-highlight-text    : @black;
+@sources-exception-all     : rgba(220,3,3,1);
 @sources-exception-uncaught: rgb(213,191,0);
 
 // Sources Panel Controls
 @sourcesPanel-background: #111;
 
-//Forms
-@forms-label-text: @global-text;
+// Forms
+@forms-label-text         : @global-text;
 @forms-label-text-disabled: darken(@global-text, 55%);
-@forms-input-text: #222;
-@forms-input-disabled: @global-disabled;
+@forms-input-text         : #222;
+@forms-input-disabled     : @global-disabled;
 
 // Status Bar
 @statusBar-text            : #aaa;
