@@ -85,18 +85,23 @@
 }
 
 #timeline-overview-sidebar {
+	padding-right: 0 !important;
 	border-right: 1px solid @global-background !important;
 
 	.sidebar-tree-item {
+		&:hover {
+			border-left: 6px solid @hover-border !important;
+		}
+
 		&.selected {
-			border-left: 6px solid @global-accent !important;
+			border-left: 6px solid @selection-border !important;
 
 			.icon {
-				background-color: lighten(@global-text, 10%) !important;
+				background-color: @selection-text !important;
 			}
 
 			.title {
-				color: lighten(@global-text, 10%) !important;
+				color: @selection-text !important;
 			}
 		}
 	}
