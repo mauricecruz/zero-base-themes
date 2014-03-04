@@ -215,6 +215,11 @@
 }
 
 .show-animations(@choice) when (@choice = false) {
+	// prevent flickers from css-transforms
+	.panel.visible {
+		-webkit-transform: translatez(0);
+	}
+
 	.arrow-animations() {
 		// intentionally empty
 	}
