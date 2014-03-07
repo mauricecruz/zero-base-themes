@@ -23,7 +23,7 @@
 @global-text-error     : #f66;
 @global-textshadow     : @black;
 @navigation-arrow-color: #AAB0AF;
-@global-divider: lighten(@global-background, 5%);
+@global-divider        : lighten(@global-background, 5%);
 
 
 // Toggle Options
@@ -98,6 +98,7 @@
 @tab-top-contrast   : 18%;
 @tab-bottom-contrast: 8%;
 @tab-label          : #999;
+@tab-label-unsaved  : #db0;
 @tab-label-selected : #f8f8f8;
 @tab-highlighted    : @global-accent;
 
@@ -248,7 +249,7 @@
 // Sources Tab
 @sources-text              : @grey;
 @sources-placeholder-text  : #999;
-@sources-save-background   : rgba(255,255,255,0.2);
+@sources-save-background   : @global-background;
 @sources-pane-background   : rgba(0,0,0,.8);
 @sources-highlight-text    : @black;
 @sources-exception-all     : rgba(220,3,3,1);
