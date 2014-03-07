@@ -8,7 +8,7 @@
 
 	.crumbs {
 		text-shadow: none !important;
-		color: #bbb !important;
+		color: @crumb-label !important;
 
 		.crumb {
 			-webkit-border-image: none !important;
@@ -21,10 +21,6 @@
 			&:hover {
 				color: @crumb-selected-label !important;
 				background-color: rgba(0,0,0,0) !important;
-			}
-
-			span {
-				text-shadow: 0 1px 1px rgba(0,0,0,.6) !important;
 			}
 
 			&.selected {

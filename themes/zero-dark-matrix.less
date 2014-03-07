@@ -23,6 +23,7 @@
 @global-text-error     : #f66;
 @global-textshadow     : @black;
 @navigation-arrow-color: #AAB0AF;
+@global-divider: lighten(@global-background, 5%);
 
 
 // Toggle Options
@@ -150,7 +151,7 @@
 @sidebar-icon     : rgba(0,0,0,.8);
 
 // Crumbs
-@crumb-text               : @global-text;
+@crumb-label               : @global-text;
 @crumb-selected-label     : #f8f8f8;
 @crumb-selected-background: @global-selected;
 
@@ -238,11 +239,11 @@
 @helpSettings-dialog           : #333;
 
 // Dialog [Ctrl/Cmd + O | Ctrl/Cmd + Shift + O]
-@dialog-background: lighten(@global-background, 5%);
-@dialog-border: lighten(@global-background, 20%);
+@dialog-background     : lighten(@global-background, 5%);
+@dialog-border         : lighten(@global-background, 20%);
 @dialog-item-background: @global-background;
-@dialog-item-text: lighten(@global-text, 10%);
-@dialog-item-highlight: @global-accent;
+@dialog-item-text      : lighten(@global-text, 10%);
+@dialog-item-highlight : @global-accent;
 
 // Sources Tab
 @sources-text              : @grey;
