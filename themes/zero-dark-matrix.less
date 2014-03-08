@@ -129,9 +129,16 @@
 @buttonGlyphs: url(chrome-devtools://devtools/bundled/Images/statusbarButtonGlyphs.png);
 
 // Filters
-@filter-background: lighten(@global-background,5%);
-@filter-item-hover: lighten(@global-background, 10%);
-@filter-item-selected: lighten(@global-background, 15%);
+@filter-background   : lighten(@global-background,5%);
+@filter-text         : @global-text;
+@filter-hover        : lighten(@global-background, 10%);
+@filter-selected     : lighten(@global-background, 15%);
+@filter-selected-text: lighten(@global-text, 15%);
+@filter-error        : #951e15;
+@filter-warning      : #9D8500;
+@filter-info         : #49a6d2;
+@filter-log          : #8b6ccf;
+@filter-debug        : #CF7634;
 
 // Element Highlighter
 @eh-base-color          : @global-selected;

@@ -178,33 +178,33 @@ body:not(.undocked) .toolbar-background {
 	}
 
 	li:hover {
-		background: @filter-item-hover !important;
+		background: @filter-hover !important;
 	}
 
 	li.selected {
-		color: @global-text !important;
-		background: @filter-item-selected !important;
-		text-shadow: 0 1px 2px rgba(0,0,0,.5) !important;
+		color: @filter-selected-text !important;
+		background: @filter-selected !important;
+
 
 		//custom colors
 		&.error {
-			background: #951e15 !important;
+			background: @filter-error !important;
 		}
 
 		&.warning{
-			background: #9D8500 !important;
+			background: @filter-warning !important;
 		}
 
 		&.info{
-			background: #49a6d2 !important;
+			background: @filter-info !important;
 		}
 
 		&.log{
-			background: #8b6ccf !important;
+			background: @filter-log !important;
 		}
 
 		&.debug{
-			background: #CF7634 !important;
+			background: @filter-debug !important;
 		}
 	}
 }
