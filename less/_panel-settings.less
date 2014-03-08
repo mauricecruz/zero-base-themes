@@ -62,10 +62,10 @@
 	.help-key-cell {
 
 		.help-key {
-			color: @global-background !important;
+			color: @settings-text !important;
 		}
 		span {
-			color: @helpSettings-text !important;
+			color: @settings-text !important;
 		}
 	}
 
@@ -74,11 +74,11 @@
 	****************************************************/
 	.settings-list-container {
 		padding: 10px !important;
-		background-color: @helpSettings-folder-background !important;
+		background-color: @settings-folder-background !important;
 	}
 
 	.settings-list {
-		border: 1px solid @helpSettings-border !important;
+		border: 1px solid @settings-border !important;
 	}
 
 	.settings-list-item {
@@ -91,7 +91,7 @@
 		}
 
 		&.selected {
-			background-color: @helpSettings-selected !important;
+			background-color: @settings-selected !important;
 		}
 
 		&:nth-child(1) {
@@ -113,14 +113,14 @@
 }
 
 .settings-dialog {
-	border: 1px solid @helpSettings-border !important;
-	background-color: @helpSettings-edit-background !important;
+	border: 1px solid @settings-border !important;
+	background-color: @settings-edit-background !important;
 	border-radius: 4px !important;
 
 	.dialog-contents {
 
 		.header {
-			color: @helpSettings-text !important;
+			color: @settings-text !important;
 		}
 
 		.block-header {
@@ -129,19 +129,19 @@
 	}
 
 	.settings-list-container {
-		background-color: @helpSettings-background !important;
+		background-color: @settings-background !important;
 	}
 
 	.settings-list {
-		border-color: @helpSettings-background !important;
+		border-color: @settings-background !important;
 		border-radius: 2px !important;
 	}
 
 	.settings-list-item {
-		background-color: @helpSettings-background !important;
-		border-top: 1px solid @helpSettings-border !important;
+		background-color: @settings-background !important;
+		border-top: 1px solid @settings-border !important;
 		border-bottom: none !important;
-		color: @helpSettings-text !important;
+		color: @settings-text !important;
 
 		&:hover {
 			&:extend(.settings-list-item);
