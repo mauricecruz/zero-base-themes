@@ -2,55 +2,52 @@
 //* Drawer
 //************
 
-
-#drawer-contents .search-match-line-number,
-.webkit-line-number {
-	background: lighten(@global-background, 3%) !important;
-	border-right: 1px solid lighten(@global-background, 10%) !important;
-	padding: 1px 5px 1px 0 !important;
-	display: inline-block;
-	color: #999 !important;
-}
-
 .search-drawer-header label.search-config-label,
 .drawer .settings-tab label,
 #drawer-footer td label {
 	text-shadow: none !important;
-	color: @global-label !important;
+	color: @form-label-text !important;
 }
 
 .overrides-view {
 
 	.tabbed-pane-header-tab {
-		color: #999 !important;
+		color: @form-label-text !important;
 	}
 
 	.tabbed-pane-content {
-		color: #ccc !important;
+		color: @form-label-text !important;
 
 		:disabled {
-			color: #666!important;
+			color: @form-disabled-text !important;
 		}
 
-		input:disabled,
-		select:disabled {
-			background-color: #888!important;
-			border-color: #888 !important;
+		input,
+		select{
+			background-color: @form-input-background !important;
+			border-color: @form-input-border !important;
+			color: @form-input-text !important;
+
+			&:disabled {
+				background-color: @form-disabled-background !important;
+				border-color: @form-disabled-border !important;
+				color: @form-disabled-text !important;
+			}
 		}
 	}
 
 }
 
 .overrides-footer {
-	background-color: #333 !important;
-	border-top: 1px solid #222 !important;
-	color: #ccc !important;
+	background-color: @global-background !important;
+	border-top: 1px solid @global-background !important;
+	color: @global-text !important;
 }
 
 
 // History Tab
 .revision-history-link {
-	color: #89F5A2 !important;
+	color: @global-accent !important;
 }
 
 // override readability line height
