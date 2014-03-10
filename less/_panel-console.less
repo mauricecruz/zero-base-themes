@@ -3,8 +3,27 @@
 /**********************************************/
 
 
+.debug-type(@level,@color) {
+
+	.@{level} {
+		.console-message-text,
+		.console-message-url {
+			color: @color !important;
+		}
+
+		.children div:hover * {
+			color: darken(@color, 5%) !important;
+		}
+
+		.bubble {
+			background-color: @color !important;
+		}
+	}
+}
+
 .console-message {
 	border-bottom: none !important;
+	margin-top: 4px !important;
 }
 
 .console-status-bar {
@@ -44,45 +63,11 @@
 		color: @console-default-text !important;
 	}
 
-	.console-log-level,
-	.console-debug-level {
-
-		.console-message-text,
-		.console-message-url {
-			color: @console-log-msg !important;
-		}
-
-		.children div:hover * {
-			color: darken(@console-log-msg, 5%) !important;
-		}
-
-	}
-
-	.console-warning-level {
-
-		.console-message-text,
-		.console-message-url {
-			color: @console-warning-msg !important;
-		}
-
-		.children div:hover * {
-			color: darken(@console-warning-msg, 5%) !important;
-		}
-
-	}
-
-	.console-error-level {
-
-		.console-message-text,
-		.console-message-url {
-			color: @console-error-msg !important;
-		}
-
-		.children div:hover * {
-			color: darken(@console-error-msg, 5%) !important;
-		}
-
-	}
+	.debug-type(console-debug-level, @filter-debug);
+	.debug-type(console-log-level, @filter-log);
+	.debug-type(console-warning-level, @filter-warning);
+	.debug-type(console-error-level, @filter-error);
+	.debug-type(console-info-level, @filter-info);
 
 	// Children Hover
 		.outline-disclosure .stacktrace-entry:hover {
@@ -102,27 +87,8 @@
 	color: @console-default-text !important;
 }
 
-.console-group-messages .section .header .title {
-	color: @console-default-text !important;
-}
 
 //repeated item
 .console-message .bubble {
-	text-shadow: 0 0 1px rgba(0,0,0,0.4) !important;
+	text-shadow: 0 0 1px rgba(0,0,0,.8) !important;
 }
-
-.bubble.debug,
-.console-debug-level .bubble {
-	background-color: @console-log-bubble !important;
-}
-
-.bubble.warning,
-.console-warning-level .bubble {
-	background-color: @console-warning-bubble !important;
-}
-
-.bubble.error,
-.console-error-level .bubble {
-	background-color: @console-error-bubble !important;
-}
-
