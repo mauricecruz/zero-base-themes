@@ -23,19 +23,10 @@
 		}
 
 		input,
-		select{
-			background-color: @form-input-background !important;
-			border-color: @form-input-border !important;
-			color: @form-input-text !important;
-
-			&:disabled {
-				background-color: @form-disabled-background !important;
-				border-color: @form-disabled-border !important;
-				color: @form-disabled-text !important;
-			}
+		select {
+			.input-styles();
 		}
 	}
-
 }
 
 // Resolution Slider
@@ -118,7 +109,7 @@ input[type='range']::-webkit-slider-thumb {
 	}
 }
 
-// Overrides
+// [Screen] Emulation Tab
 .help-footnote {
 	border-top: none !important;
 

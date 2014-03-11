@@ -1,0 +1,31 @@
+// Global Button Styles
+.button-styles() {
+	background-image: @form-button-background !important;
+	color: @form-button-text !important;
+	border: 1px solid @form-button-border !important;
+	border-radius: 3px !important;
+	cursor: pointer !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+
+	&:disabled {
+		cursor: default !important;
+		color: @form-disabled-text !important;
+	}
+
+	&:not(:disabled):active {
+		box-shadow: @form-button-pressed !important;
+	}
+}
+
+.input-styles() {
+	background-color: @form-input-background !important;
+	border-color: @form-input-border !important;
+	color: @form-input-text !important;
+
+	&:disabled {
+		background-color: @form-disabled-background !important;
+		border-color: @form-disabled-border !important;
+		color: @form-disabled-text !important;
+	}
+}

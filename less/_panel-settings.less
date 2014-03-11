@@ -15,7 +15,7 @@
 
 	label,
 	label:hover {
-		color: @forms-label-text !important;
+		color: @form-label-text !important;
 	}
 
 	.tabbed-pane-header-tab.selected {
@@ -29,9 +29,8 @@
 	.help-block {
 
 		label,
-		label:hover,
 		td {
-			color: @forms-label-text !important;
+			color: @form-label-text !important;
 		}
 
 	}
@@ -39,12 +38,12 @@
 	select,
 	input,
 	option {
-		color: @forms-input-text !important;
+		.input-styles();
 	}
 
 	//disabled styles
 	fieldset:disabled label {
-		color: @forms-label-text-disabled !important;
+		color: @form-disabled-text !important;
 	}
 
 	select:disabled,
@@ -53,9 +52,6 @@
 		background-image: none !important;
 		box-shadow: none !important;
 		text-shadow: none !important;
-		background-color: @forms-input-disabled !important;
-		border-color: lighten(@forms-input-disabled, 5%) !important;
-		color: lighten(@forms-input-disabled, 20%) !important;
 	}
 
 	//keyboard shortcuts display
@@ -65,7 +61,7 @@
 			color: @settings-text !important;
 		}
 		span {
-			color: @settings-text !important;
+			color: @settings-delimiter !important;
 		}
 	}
 
@@ -120,7 +116,7 @@
 	.dialog-contents {
 
 		.header {
-			color: @settings-text !important;
+			color: @settings-delimiter !important;
 		}
 
 		.block-header {

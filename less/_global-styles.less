@@ -69,8 +69,6 @@
 	}
 }
 
-
-
 body.dock-to-right.inactive:not(.undocked):not(.overlay-contents),
 body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	border-left: transparent !important;
@@ -78,4 +76,9 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 
 .split-view.vbox > .split-view-sidebar.split-view-contents-second:not(.maximized) {
 	border-top: none !important;
+}
+
+// Buttons
+.tabbed-pane-content .settings-tab-text-button {
+	.button-styles();
 }
