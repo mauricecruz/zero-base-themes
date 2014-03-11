@@ -10,7 +10,7 @@
 
 	&:disabled {
 		cursor: default !important;
-		color: @form-disabled-text !important;
+		opacity: .3 !important
 	}
 
 	&:not(:disabled):active {
@@ -24,8 +24,23 @@
 	color: @form-input-text !important;
 
 	&:disabled {
-		background-color: @form-disabled-background !important;
-		border-color: @form-disabled-border !important;
-		color: @form-disabled-text !important;
+		opacity: .3 !important;
+	}
+
+	&:focus {
+		outline-color: none !important;
 	}
 }
+
+// Tab Rendering
+.tb-render(dark) {
+	@gradient-top: darken(@tab-base-color, @tab-contrast-top);
+	@gradient-bottom: darken(@tab-base-color, @tab-contrast-bottom);
+}
+
+.tb-render(light) {
+	@gradient-top: lighten(@tab-base-color, @tab-contrast-top);
+	@gradient-bottom: lighten(@tab-base-color, @tab-contrast-bottom);
+}
+
+.tb-render(@tab-style);
