@@ -3,17 +3,15 @@
 /**********************************************/
 
 .arrow-styles() {
-	background-color: @navigation-arrow-color !important;
+	background-color: @global-arrow !important;
 	background-image: none !important;
-	-webkit-mask-image: @buttonGlyphs !important;
+	-webkit-mask-image: @glyph-buttons !important;
 	-webkit-mask-position: -4px -96px !important;
 	-webkit-mask-repeat: no-repeat !important;
 	color: rgba(0,0,0,0) !important;
 	opacity: 1 !important;
 	.arrow-animations();
 }
-
-
 
  // hide/expand point arrow down
 .styles-section.matched-styles .properties li.parent.expanded .expand-element,
@@ -46,13 +44,13 @@
 	.arrow-animations-right();
 }
 
- // sort arrows point down
+// sort arrows point down
 .data-grid th.sort-ascending > div::after {
 	.arrow-styles;
 	-webkit-mask-position: -4px -108px !important;
 }
 
- // sort arrows point up
+// sort arrows point up
 .data-grid th.sort-descending > div::after {
 	.arrow-styles;
 	-webkit-mask-position: -20px -96px !important;

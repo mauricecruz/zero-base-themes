@@ -50,18 +50,8 @@
 	border: 1px solid @form-input-border !important;
 
 	input {
-		background-color: @form-input-background !important;
-		color: @form-input-text !important;
-
-		&:focus {
-			outline-color: @global-accent !important;
-		}
-
-		&:disabled {
-			background-color: @form-disabled-background !important;
-			border: 1px solid @form-disabled-border !important;
-			color: @form-disabled-text !important;
-		}
+		.input-styles();
+		border-color: none !important;
 	}
 
 	.toolbar-search-navigation-controls {
@@ -78,16 +68,6 @@
 	background-color: @form-input-background !important;
 	color: @form-input-text !important;
 	border: 1px solid @form-input-border !important;
-
-	&:focus {
-		outline-color: @global-accent !important;
-	}
-
-	&:disabled {
-		background-color: @form-disabled-background !important;
-		border: 1px solid @form-disabled-border !important;
-		color: @form-disabled-text !important;
-	}
 }
 
 // Find (Drawer)

@@ -19,7 +19,7 @@
 .cm-js-variable {color: @js-variable !important; }
 .cm-js-variable-2 { color: @js-variable !important; }
 
-.source-frame-eval-expression{ background-color: rgba(137,245,162,.4) !important; border-color: #89F5A2 !important;}
+.source-frame-eval-expression{ background-color: @selection-background !important; border-color: @selection-border !important;}
 
 //COFFEESCRIPT
 .cm-atom { .cm-js-atom }
@@ -124,7 +124,12 @@
 .popover .parent + .children.expanded,
 #console-messages .parent + .children.expanded,
 .sidebar-pane .parent:not(.event-category) + .children.expanded {
-	border-left: 1px dashed #444 !important;
+	border-left: 1px dashed fade(@global-text, 20%) !important;
 	position: relative;
 	left: 4.4px;
+}
+
+// dimmed object properties (also on console objects)
+.section .properties .dimmed {
+	opacity: 0.5 !important;
 }

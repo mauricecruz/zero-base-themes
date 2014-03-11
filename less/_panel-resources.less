@@ -22,14 +22,7 @@
 	margin-bottom: 5px !important;
 }
 
-// make global with other object style properties
-// .section .properties .name,
-// .event-properties .name {
-// 	color: #77A8C6 !important;
-// }
-
 /*-- WEB SQL --*/
-
 .database-query-prompt {
 	color: @global-text !important;
 }
@@ -44,12 +37,12 @@
 	padding: 2px 0 !important;
 	border-top: 1px solid @global-background !important;
 	border-bottom: 1px solid darken(@global-background, 10%) !important;
-	background-color: @resources-background !important;
+	background-color: lighten(@global-background, 2%) !important;
 	width: 100% !important;
 }
 
 .database-user-query .database-query-text {
-	color: @resources-text !important;
+	color: @global-text !important;
 	width: 100% !important;
 	display: inline-block !important;
 	margin-bottom: 5px;
@@ -62,6 +55,6 @@
  }
 
 .database-user-query .error {
-	color: @global-text-error !important;
+	color: @global-error !important;
 }
 

@@ -19,7 +19,7 @@
 		color: @form-label-text !important;
 
 		:disabled {
-			color: @form-disabled-text !important;
+			color: fade(@form-label-text, 30%) !important;
 		}
 
 		input,
@@ -31,7 +31,7 @@
 
 // Resolution Slider
 input[type="range"]::-webkit-slider-runnable-track {
-	background-image: -webkit-linear-gradient(#111,#444) !important;
+	background-image: -webkit-linear-gradient(darken(@global-background,10%), lighten(@global-background,10%)) !important;
 	height: 5px !important;
 	text-align: center !important;
 	margin: 10px 0 !important;
@@ -116,4 +116,8 @@ input[type='range']::-webkit-slider-thumb {
 	a {
 		color: @global-accent;
 	}
+}
+
+button.overrides-swap {
+	.button-styles();
 }
