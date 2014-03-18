@@ -82,3 +82,9 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 .tabbed-pane-content .settings-tab-text-button {
 	.button-styles();
 }
+
+// Remove border lines
+.split-view.vbox > .split-view-resizer > .split-view-resizer-border,
+.split-view.hbox > .split-view-resizer > .split-view-resizer-border {
+	border: none !important;
+}
