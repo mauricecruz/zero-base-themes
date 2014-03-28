@@ -177,8 +177,10 @@
 }
 
 .overview-grid-window-rulers {
-	border-right: 1px solid @global-accent;
-	border-left: 1px solid @global-accent;
+	border-right: 1px solid @timeline-graph-selection;
+	border-left: 1px solid @timeline-graph-selection;
+	background: @timeline-graph-selection !important;
+	opacity: 0.2 !important;
 }
 
 .timeline-frame-strip {
@@ -190,7 +192,7 @@
 }
 
 .overview-grid-window {
-	background-color: @timeline-overview-grid-window !important;
+	background-color: @global-background !important;
 }
 
 #memory-counters-graph {
