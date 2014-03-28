@@ -17,8 +17,8 @@
 @global-textshadow: darken(@global-background, 4%);
 
 // Options
-.show-animations( false );
-.show-child-highlighter( false );
+.show-animations( true );
+.show-child-highlighter( true );
 
 // JavaScript
 @js-atom      : #89f5a2;
@@ -151,7 +151,7 @@
 @timeline-graph-bar           : rgba(200,200,200,.3);
 @timeline-graph-bar-background: rgba(200,200,200,.2);
 @timeline-overview-background : @global-background;
-@timeline-overview-grid-window: @global-selected;
+@timeline-graph-selection     : @global-accent;
 @timeline-resources-divider   : lighten(@global-background, 3%);
 
 // Table/Sidebar Selections | Breakpoints
@@ -233,6 +233,3 @@
 // Local Modifications
 @history-added-text  : #7EB17E;
 @history-removed-text: @global-error;
-
-// Import Mixins
-@import "_mixins";
