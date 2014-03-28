@@ -23,10 +23,20 @@
 
 .profiles-status-bar .status-bar,
 .retainers-view-header,
-.heap-snapshot-view .class-view-toolbar,
-.timeline-frame-container {
+.heap-snapshot-view .class-view-toolbar {
 	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
 	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%);
 	border-top: none !important;
 	border-bottom: none !important;
+}
+
+input.status-bar-item {
+	background-color: @form-input-background;
+	color: @form-input-text;
+	border: 1px solid @form-input-border;
+
+	&:hover,
+	&:focus {
+		border: 1px solid @form-input-border !important;
+	}
 }
