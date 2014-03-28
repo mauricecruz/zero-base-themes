@@ -103,6 +103,13 @@
 	border-bottom: none !important
 }
 
+.network-error-row {
+	color: @global-error !important;
+	.network-cell-subtitle {
+		&:extend(.network-error-row);
+	}
+}
+
 /**********************************************/
 /* Elements/Network
 /**********************************************/
