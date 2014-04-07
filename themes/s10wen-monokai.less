@@ -174,7 +174,7 @@
 @find-header-background   : lighten(@global-background, 3%);
 @find-header-text         : #888;
 @find-highlight-background: @global-accent;
-@find-hightlight-text     : #000;
+@find-highlight-text     : #000;
 
 // Forms
 @form-button-background: linear-gradient(@gradient-top,@gradient-bottom);
@@ -190,6 +190,16 @@
 @history-added-text  : #7EB17E;
 @history-removed-text: @global-error;
 
+// Screencast
+@screencast-viewport       : lighten(@global-background, 10%);
+@screencast-viewport-border: @global-accent;
+
+// Scrollbars
+@sb-thickness      : 12px;
+@sb-thumb-border   : darken(@global-background, 10%);
+@sb-thumb-color    : lighten(@global-background, 20%);
+@sb-thumb-roundness: 8px;
+
 // Settings
 @settings-background       : #444;
 @settings-border           : #555;
@@ -199,12 +209,6 @@
 @settings-folder-background: #222;
 @settings-selected         : rgba(150, 255, 150, 0.2);
 @settings-text             : #333;
-
-// Scrollbars
-@sb-thickness      : 12px;
-@sb-thumb-border   : darken(@global-background, 10%);
-@sb-thumb-color    : lighten(@global-background, 20%);
-@sb-thumb-roundness: 8px;
 
 // Table/Sidebar Selections | Breakpoints
 @selection-background: @global-selected;
