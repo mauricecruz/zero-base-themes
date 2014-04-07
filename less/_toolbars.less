@@ -84,6 +84,7 @@
 }
 
 // Override MAC Toolbar Background
+body .toolbar-background,
 body.undocked.platform-mac-mountain-lion.inactive .toolbar-background,
 body.undocked.platform-mac-mountain-lion .toolbar-background,
 body.platform-mac-mountain-lion.inactive .toolbar-background,
@@ -93,6 +94,7 @@ body.undocked.platform-mac .toolbar-background,
 body.inactive .toolbar-background,
 body:not(.undocked) .toolbar-background {
 	background-image: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	border-bottom: none !important;
 }
 
 select.tabbed-pane-header-tabs-drop-down-select{
