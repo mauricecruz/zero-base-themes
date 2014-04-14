@@ -9,10 +9,23 @@
 
 }
 
-#scripts-debug-toolbar {
+.scripts-debug-toolbar {
 	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
 	border-bottom: 1px solid darken(@gradient-bottom,10%) !important;
 	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%);
+}
+
+// text for rendering tab in drawer
+.help-indent-labels label {
+	color: @global-text !important;
+}
+
+// override for pause exceptions ui module
+// NOTE: once this hits stable, remove the red/yellow styling of pause button
+.scripts-debug-toolbar-drawer {
+	background-color: transparent !important;
+	border-bottom: none !important;
+	color: @global-text !important;
 }
 
 //Warning/Error Bubbles

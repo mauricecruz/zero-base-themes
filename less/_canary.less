@@ -1,58 +1,4 @@
 //*********************************************
-// panel-sources-controls.less
-//*********************************************
-
-// #scripts-debug-toolbar changed to .scripts-debug-toolbar
-.scripts-debug-toolbar {
-	&:extend(#scripts-debug-toolbar);
-}
-
-// text for rendering tab in drawer
-.help-indent-labels label {
-	color: @global-text !important;
-}
-
-// override for pause exceptions ui module
-// NOTE: once this hits stable, remove the red/yellow styling of pause button
-.scripts-debug-toolbar-drawer {
-	background-color: transparent !important;
-	border-bottom: none !important;
-	color: @global-text !important;
-}
-
-
-//*********************************************
-// status-bar.less
-//*********************************************
-
-// adjust selected filter style
-.filter-bitset-filter {
-
-	li {
-		padding: 2px 6px !important;
-		margin: auto 2px !important;
-		border-radius: 8px !important;
-	}
-}
-
-// Move position of dropdown arrow so it doesn't hug right border
-.status-bar-select-arrow {
-	position: relative !important;
-	right: 5px !important;
-}
-
-
-//*********************************************
-// panel-sources.less v 35.0.1866.0
-//*********************************************
-
-//adjust event listener checkbox position
-.event-listener-breakpoints .checkbox-elem {
-	top: 0 !important;
-}
-
-
-//*********************************************
 // panel-sources.less v 35.0.1882.0
 //*********************************************
 
@@ -64,8 +10,6 @@
 #search-results-pane-file-based .parent::before {
 	-webkit-mask-position: -4px -93px !important;
 }
-
-
 
 //*********************************************
 // toolbars.less v n 35.0.1896
@@ -99,4 +43,26 @@
 	background-color: @global-selected !important;
 	box-shadow: 0 0 0 1px @selection-border !important;
 	border-radius: 2px;
+}
+
+//**********************************************/
+//* find.less v. 36.0.1939.0
+//**********************************************/
+
+// Fix event listener breakpoint item style
+.event-listener-breakpoints.properties-tree li {
+	height: auto !important;
+	padding-top: 0 !important;
+
+	&:before {
+		-webkit-mask-position: -4px -93px !important;
+	}
+
+	.checkbox-elem {
+		top: 2px !important;
+	}
+
+	&.parent .checkbox-elem {
+		top: 3px !important;
+	}
 }
