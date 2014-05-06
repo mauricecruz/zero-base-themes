@@ -67,6 +67,7 @@
 	}
 }
 
+
 //**********************************************/
 //* sidebar-navigation 36.0.1949.2
 //**********************************************/
@@ -85,7 +86,43 @@
 //**********************************************/
 //* panel-timeline  36.0.1963.0
 //**********************************************/
+
 #timeline-overview-panel .split-view-sidebar > label {
 	color: @global-text !important;
 }
 
+
+//**********************************************/
+//* panel-profilers  36.0.1963.0
+//**********************************************/
+.profile-entry-info {
+	background-color: fade(@global-background, 90%) !important;
+	border-radius: 4px;
+}
+
+
+//**********************************************/
+//* panel-console  36.0.1977.0
+//**********************************************/
+
+// Make the user input container stretch the full legth of the window.
+// (There's a new parent container)
+.console-user-command {
+	border-bottom: none !important;
+}
+
+.console-adjacent-user-command-result {
+	background-color:  lighten(@global-background, 2%) !important;
+	border-top: 1px solid lighten(@global-background, 3%) !important;
+	border-bottom: 1px solid darken(@global-background, 2%) !important;
+}
+
+//**********************************************/
+//* sidebar-elements  36.0.1977.0
+//**********************************************/
+
+// Make swatch size 12px again.
+.swatch {
+	width: 12px !important;
+	height: 12px !important;
+}
