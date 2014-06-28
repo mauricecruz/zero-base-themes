@@ -139,3 +139,27 @@
 .search-drawer-header input[type="checkbox"].search-config-checkbox {
 	vertical-align: middle !important;
 }
+
+
+//**********************************************/
+//* Find in Styles
+//**********************************************/
+
+.sidebar-pane-filter-box {
+	border-top: 1px solid @global-divider !important;
+
+	&.styles-filter-engaged {
+		background-color: transparent !important;
+	}
+
+	> input {
+		color: @global-text !important;
+	}
+}
+
+.styles-section .properties li.filter-match,
+.styles-section .simple-selector.filter-match {
+	background-color: @global-selected !important;
+	box-shadow: 0 0 0 1px @selection-border !important;
+	border-radius: 2px;
+}
