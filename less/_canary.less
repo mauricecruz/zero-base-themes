@@ -55,13 +55,30 @@
 
 
 //**********************************************/
-//* panel-console  36.0.1977.0
+//* sidebar-elements  36.0.1977.0
+//**********************************************/
+
+// Make swatch size 12px again.
+.swatch {
+	width: 12px !important;
+	height: 12px !important;
+}
+
+//**********************************************/
+//* panel-console  38.0.2072.0
 //**********************************************/
 
 // Make the user input container stretch the full legth of the window.
 // (There's a new parent container)
 .console-user-command {
+	border-top: none !important;
 	border-bottom: none !important;
+	width: 100% !important;
+
+}
+
+#console-messages .console-user-command > .console-message-text {
+	vertical-align: text-top !important;
 }
 
 .console-adjacent-user-command-result {
