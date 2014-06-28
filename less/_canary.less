@@ -87,12 +87,15 @@
 	border-bottom: 1px solid darken(@global-background, 2%) !important;
 }
 
+
 //**********************************************/
-//* sidebar-elements  36.0.1977.0
+//* panel-toolbars  38.0.2072.0
 //**********************************************/
 
-// Make swatch size 12px again.
-.swatch {
-	width: 12px !important;
-	height: 12px !important;
+// Change the color of the emulation checkboxes to theme color
+.overrides-activate-device #tab-device .tabbed-pane-header-tab-title::after,
+.overrides-activate-media #tab-media .tabbed-pane-header-tab-title::after,
+.overrides-activate-network #tab-network .tabbed-pane-header-tab-title::after,
+.overrides-activate-sensors #tab-sensors .tabbed-pane-header-tab-title::after {
+	color: @global-accent !important;
 }
