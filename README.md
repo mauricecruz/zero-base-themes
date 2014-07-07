@@ -24,8 +24,7 @@ All template files are located in the `/less` directory. Files beginning with an
 
 ## Changing Themes
 
-Copy `/themes/_theme-template.less` and modify color values accordingly. Rename the file and save in the `/themes` directory.  Update `build.less` with your theme name.
-
+Copy `/themes/_theme-template.less` and modify color values accordingly. Rename the file and save in the `/themes` directory. Specify the theme of your choice in `config.less`.
 
 # About Canary
 
