@@ -591,6 +591,7 @@ button.overrides-swap:not(:disabled):active {
 .status-bar {
   background-color: #484848 !important;
   border-top: none !important;
+  border-bottom: none !important;
 }
 .search-results-matches {
   color: #cccccc !important;

@@ -35,7 +35,6 @@
 	}
 }
 
-
 //**********************************************/
 //* panel-timeline  36.0.1963.0
 //**********************************************/
@@ -78,4 +77,44 @@
 .overrides-activate-network #tab-network .tabbed-pane-header-tab-title::after,
 .overrides-activate-sensors #tab-sensors .tabbed-pane-header-tab-title::after {
 	color: @global-accent !important;
+}
+
+//**********************************************/
+//* panel-toolbars  38.0.2072.0
+//**********************************************/
+
+// Fix text color and icon in Emulation Drawer Tab when inactive
+.overrides-splash-screen {
+	color: @global-text !important;
+
+	.glyph {
+		background-color: @glyph-inactive !important;
+	}
+}
+
+//**********************************************/
+//* panel-profilers  38.0.2072.0
+//**********************************************/
+
+// Retainers resizer bar in heap snapshot
+.heap-snapshot-view .heap-snapshot-view-resizer {
+	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%);
+	border-top: none !important;
+	border-bottom: none !important;
+	color: @global-text;
+}
+
+// Heap snapshot table text
+#profile-views .data-container .object-column {
+	color: @global-text;
+
+	button {
+		.button-styles();
+	}
+}
+
+// Canvas snapshot table text color & probably all other grids
+.data-grid td {
+	color: @global-text !important;
 }
