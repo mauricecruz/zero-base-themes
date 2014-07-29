@@ -118,3 +118,33 @@
 .data-grid td {
 	color: @global-text !important;
 }
+
+
+//**********************************************/
+//* status-bar 38.0.2106.0
+//**********************************************/
+
+/*L27 - text color of status bar labels
+replaces '.search-status-bar-summary span'*/
+.search-status-bar-summary .search-message {
+	text-shadow: none !important;
+	color: @global-text !important;
+}
+
+//**********************************************/
+//* status-bar 38.0.2106.0
+//**********************************************/
+.save-device-button,
+.remove-device-button {
+	.button-styles();
+}
+
+
+//**********************************************/
+//* panel-settings 38.0.2106.0
+//**********************************************/
+
+// Framework blackbox patterns
+.blackbox-dialog .columns-header {
+	color: @global-accent !important;
+}

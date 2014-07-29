@@ -69,3 +69,14 @@
 #search-results-pane-file-based .parent::before {
 	-webkit-mask-position: -4px -93px !important;
 }
+
+// Adjust position of
+// - network headers section arrows
+.panel.network .outline-disclosure li.parent::before{
+	top: 3px !important;
+}
+// - event listener arrows
+.section > .header::before,
+.event-bars .event-bar .header::before {
+	margin-top: 3px !important;
+}

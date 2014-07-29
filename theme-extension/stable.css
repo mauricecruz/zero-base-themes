@@ -293,6 +293,9 @@ span.cm-token-highlight:before {
 .CodeMirror-linenumber {
   border-right: none !important;
 }
+.cm-line-without-source-mapping {
+  background-color: #252525 !important;
+}
 @-webkit-keyframes fadeout-revised {
   0% {
     background-color: #364c3b;
@@ -781,6 +784,13 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 }
 #search-results-pane-file-based .parent::before {
   -webkit-mask-position: -4px -93px !important;
+}
+.panel.network .outline-disclosure li.parent::before {
+  top: 3px !important;
+}
+.section > .header::before,
+.event-bars .event-bar .header::before {
+  margin-top: 3px !important;
 }
 /**********************************************/
 /* Console
