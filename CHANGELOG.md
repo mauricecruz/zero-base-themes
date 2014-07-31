@@ -1,3 +1,85 @@
-### HEAD
+# Changelog
 
-* Add CHANGELOG following [h5bp](https://github.com/h5bp/html5-boilerplate/blob/master/CHANGELOG.md) approach.
+## 1.3.0
+* `canary` style cut/copy element highlighter
+* `canary` fix text colors of devices tab in console
+* `canary` style timeline progress panel overlay
+* darken nav arrow a little
+
+## 1.2.9
+* `canary` style source lines w/out sourcemapping
+* `canary` style labels of framework blackboxing
+* `canary` fix footer labels of find interface
+* `canary` style emulation buttons
+* adjust nav arrow positions of network headers and event listeners
+
+## 1.2.8
+* fix editing bg when renaming snippets
+* fix bg of meta information in profiler flamechart
+* adjust margins in layers panel
+* update color of text and icon in overrides splash screen
+* `canary` fix styles for heap snapshot and canvas frame
+
+## 1.2.7
+* `canary` fix extend width of user typed console statements
+* fix size of color swatches
+* update style of workspace edit dialog
+* style find in styles feature
+* manual support for FB React Devtools [https://github.com/mauricecruz/chrome-devtools-zerodarkmatrix-theme/issues/91#issuecomment-47414805]
+
+## 1.2.6
+* `canary` fix extend console user input background to width of devtools window
+* `canary` fix make color swatches in elements sidebar 12px again
+
+## 1.2.5
+* `canary` fix checkbox labels in timeline panel
+* style metadata text of flamechart view of cpu profile report in profile panel
+
+## 1.2.4
+* fix vertical alignment of sidebar navigation items
+
+## 1.2.3
+* Tightened padding/margins around toolbars so (>>) dropdown will display
+* `canary` Fixed display of Event Listener children
+
+## 1.2.2
+* Style screencasts
+
+## 1.2.1
+* Style color picker
+
+## 1.2.0
+* `canary` Remove default white bg from audits panel
+
+## 1.9
+* Style input for heap snapshot
+
+## 1.1.8
+* `canary` Style 'Find in styles'
+* `canary` Remove default white bg from resources panel sidebar
+* Fix Timeline Frames x-axis header
+
+## 1.1.7
+* `canary` Fix Timeline graph selection area
+* Style Network error node text
+
+## 1.1.6
+* Style truncated tab list on toolbars
+* `canary` remove white border lines from drawer
+* Excluded selection effect from Console panel and updated existing style
+
+## 1.1.5
+* Style forms for help settings
+* Style sidebar nav for layer panel
+
+## 1.1.4
+* Match console message color with selected filter
+* `canary` Fix alignment issue with Drawer find results
+* Style inputs for Find interfaces
+
+## 1.1.3
+* Update style for unsaved edits in sources panel
+* Fix scrollbar covering 	popover text in Canary channel
+
+## 1.1.2
+* Updated Dialog Panel Styles
