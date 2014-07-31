@@ -13,12 +13,12 @@
 }
 
 .resource-view.image .infoList dt {
-	color: darken(@global-text, 40%) !important;
+	color: @global-label !important;
 	margin-bottom: 5px !important;
 }
 
 .resource-view.image .infoList dd {
-	color: darken(@global-text, 30%) !important;
+	color: @global-text !important;
 	margin-bottom: 5px !important;
 }
 
@@ -58,3 +58,14 @@
 	color: @global-error !important;
 }
 
+// indexdb node
+.indexed-db-database-view .outline-disclosure {
+
+	.attribute-name {
+		color: @global-label !important;
+	}
+
+	.attribute-value {
+		color: @global-text !important;
+	}
+}
