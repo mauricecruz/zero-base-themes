@@ -212,6 +212,10 @@
 		-webkit-transform: rotate(90deg);
 	}
 
+	.arrow-sidebar-pane-adjustment() {
+		-webkit-transform: rotate(90deg) translateX(2px);
+	}
+
 }
 
 .show-animations(@choice) when (@choice = false) {
@@ -230,6 +234,9 @@
 
 	.arrow-animations-down() {
 		-webkit-mask-position: -20px -96px !important;
+	}
 
+	.arrow-sidebar-pane-adjustment() {
+		top: 5px;
 	}
 }
