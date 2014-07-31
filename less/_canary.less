@@ -178,18 +178,10 @@ replaces '.search-status-bar-summary span'*/
 }
 
 //**********************************************/
-//* panel-resources 38.0.2106.0
+//* panel-elements 38.0.2106.0
 //**********************************************/
 
-// indexdb node
-.indexed-db-database-view .outline-disclosure {
-
-	.attribute-name {
-		color: @global-label !important;
-	}
-
-	.attribute-value {
-		color: @global-text !important;
-	}
+// cut/copy highlighter
+.outline-disclosure li.in-clipboard .highlight {
+	outline: 1px dashed @eh-clipboard-selection !important;
 }
-
