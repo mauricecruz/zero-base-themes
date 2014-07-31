@@ -202,3 +202,22 @@
 	background-color: inherit !important;
 	line-height: inherit !important;
 }
+
+
+// Fix event listener breakpoint item style
+.event-listener-breakpoints.properties-tree li {
+	height: auto !important;
+	padding-top: 0 !important;
+
+	&:before {
+		-webkit-mask-position: -4px -93px !important;
+	}
+
+	.checkbox-elem {
+		top: 2px !important;
+	}
+
+	&.parent .checkbox-elem {
+		top: 3px !important;
+	}
+}

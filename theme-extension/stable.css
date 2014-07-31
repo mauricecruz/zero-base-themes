@@ -664,7 +664,7 @@ button.overrides-swap:not(:disabled):active {
   box-shadow: inset 0 1px 0 0 #484848, inset 0 -1px 0 0 #484848;
 }
 .panel .sidebar-tree-item .disclosure-button {
-  background-color: #aab0af !important;
+  background-color: #8c8c8c !important;
 }
 .panel .data-grid th {
   border: none !important;
@@ -723,7 +723,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 .sidebar-pane .parent.expanded::before,
 .sidebar-pane-stack .sidebar-pane-title.expanded::before,
 .timeline-expandable-expanded .timeline-expandable-arrow {
-  background-color: #aab0af !important;
+  background-color: #8c8c8c !important;
   background-image: none !important;
   -webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/statusbarButtonGlyphs.png) !important;
   -webkit-mask-position: -4px -96px !important;
@@ -732,6 +732,9 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
   opacity: 1 !important;
   -webkit-transition: -webkit-transform 0.1s ease-in-out;
   -webkit-transform: rotate(90deg);
+}
+.sidebar-pane-stack .sidebar-pane-title.expanded::before {
+  -webkit-transform: rotate(90deg) translateX(2px);
 }
 .styles-section.matched-styles .properties li.parent .expand-element,
 #console-messages .console-group-messages .section .header::before,
@@ -744,7 +747,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 .sidebar-pane .parent::before,
 .sidebar-pane-stack .sidebar-pane-title::before,
 .timeline-expandable-collapsed .timeline-expandable-arrow {
-  background-color: #aab0af !important;
+  background-color: #8c8c8c !important;
   background-image: none !important;
   -webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/statusbarButtonGlyphs.png) !important;
   -webkit-mask-position: -4px -96px !important;
@@ -755,7 +758,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
   -webkit-transform: rotate(0deg);
 }
 .data-grid th.sort-ascending > div::after {
-  background-color: #aab0af !important;
+  background-color: #8c8c8c !important;
   background-image: none !important;
   -webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/statusbarButtonGlyphs.png) !important;
   -webkit-mask-position: -4px -96px !important;
@@ -766,7 +769,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
   -webkit-mask-position: -4px -108px !important;
 }
 .data-grid th.sort-descending > div::after {
-  background-color: #aab0af !important;
+  background-color: #8c8c8c !important;
   background-image: none !important;
   -webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/statusbarButtonGlyphs.png) !important;
   -webkit-mask-position: -4px -96px !important;
@@ -788,9 +791,20 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 .panel.network .outline-disclosure li.parent::before {
   top: 3px !important;
 }
-.section > .header::before,
+.sidebar-tabbed-pane .section > .header::before,
 .event-bars .event-bar .header::before {
   margin-top: 3px !important;
+}
+.status-bar-select-arrow {
+  background-color: #8c8c8c !important;
+  background-image: none !important;
+  -webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/statusbarButtonGlyphs.png) !important;
+  -webkit-mask-position: -4px -96px !important;
+  -webkit-mask-repeat: no-repeat !important;
+  color: rgba(0, 0, 0, 0) !important;
+  opacity: 1 !important;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  -webkit-mask-position: -20px -96px !important;
 }
 /**********************************************/
 /* Console
@@ -1100,11 +1114,11 @@ input.status-bar-item:focus {
   color: #cccccc !important;
 }
 .resource-view.image .infoList dt {
-  color: #666666 !important;
+  color: #626262 !important;
   margin-bottom: 5px !important;
 }
 .resource-view.image .infoList dd {
-  color: #808080 !important;
+  color: #cccccc !important;
   margin-bottom: 5px !important;
 }
 /*-- WEB SQL --*/
@@ -1136,6 +1150,12 @@ input.status-bar-item:focus {
 }
 .database-user-query .error {
   color: #ff5a5a !important;
+}
+.indexed-db-database-view .outline-disclosure .attribute-name {
+  color: #626262 !important;
+}
+.indexed-db-database-view .outline-disclosure .attribute-value {
+  color: #cccccc !important;
 }
 /*************************************
  * Help/Settings Overlay
@@ -1414,6 +1434,19 @@ input.status-bar-item:focus {
   background-color: inherit !important;
   line-height: inherit !important;
 }
+.event-listener-breakpoints.properties-tree li {
+  height: auto !important;
+  padding-top: 0 !important;
+}
+.event-listener-breakpoints.properties-tree li:before {
+  -webkit-mask-position: -4px -93px !important;
+}
+.event-listener-breakpoints.properties-tree li .checkbox-elem {
+  top: 2px !important;
+}
+.event-listener-breakpoints.properties-tree li.parent .checkbox-elem {
+  top: 3px !important;
+}
 /**********************************************
 /* Sources Panel Controls
 /**********************************************/
@@ -1491,7 +1524,7 @@ input.status-bar-item:focus {
 }
 .timeline-tree-item.selected .timeline-tree-item-expand-arrow,
 .timeline-tree-item-expand-arrow {
-  background-color: #aab0af !important;
+  background-color: #8c8c8c !important;
 }
 #counter-values-bar,
 #memory-graphs-container .sidebar-tree-section,
@@ -1607,6 +1640,9 @@ input.status-bar-item:focus {
 }
 .timeline-frame-container {
   background: none !important;
+}
+#timeline-overview-panel .split-view-sidebar > label {
+  color: #cccccc !important;
 }
 /**********************************************
 /* Popovers
@@ -1890,7 +1926,7 @@ input.status-bar-item:focus {
 .panel:not(.elements):not(.console) .base-storage-tree-element-subtitle,
 .panel:not(.elements):not(.console) .base-navigator-tree-element-title {
   color: #cccccc !important;
-  top: 1px !important;
+  top: 0 !important;
 }
 .panel:not(.elements):not(.console) .selected .base-storage-tree-element-title,
 .panel:not(.elements):not(.console) .selected .base-storage-tree-element-subtitle,
