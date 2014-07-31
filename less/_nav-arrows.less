@@ -28,6 +28,10 @@
 	.arrow-animations-down();
 }
 
+.sidebar-pane-stack .sidebar-pane-title.expanded::before {
+	.arrow-sidebar-pane-adjustment();
+}
+
 // hide/expand arrow point right
 .styles-section.matched-styles .properties li.parent .expand-element,
 #console-messages .console-group-messages .section .header::before,
@@ -76,7 +80,13 @@
 	top: 3px !important;
 }
 // - event listener arrows
-.section > .header::before,
+.sidebar-tabbed-pane .section > .header::before,
 .event-bars .event-bar .header::before {
 	margin-top: 3px !important;
+}
+
+// selectbox arrows
+.status-bar-select-arrow {
+	.arrow-styles;
+	-webkit-mask-position: -20px -96px !important;
 }
