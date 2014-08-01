@@ -27,9 +27,19 @@
 	}
 }
 
+// console frame
+#console-messages {
+	border-top: none !important;
+}
+
 .console-message {
 	border-bottom: none !important;
-	margin-top: 4px !important;
+
+}
+
+//message line spacing
+.console-message-wrapper {
+	margin: 1px 0;
 }
 
 .console-status-bar {
@@ -45,17 +55,22 @@
 	border-bottom: 1px solid lighten(@global-background, 10%) !important;
 }
 
-// console frame
-#console-messages {
-	border-top: none !important;
-}
-
 // user input
 .console-user-command {
+	border-top: none !important;
+	border-bottom: none !important;
+	width: 100% !important;
+
+}
+
+#console-messages .console-user-command > .console-message-text {
+	vertical-align: text-top !important;
+}
+
+.console-adjacent-user-command-result {
 	background-color:  lighten(@global-background, 2%) !important;
 	border-top: 1px solid lighten(@global-background, 3%) !important;
 	border-bottom: 1px solid darken(@global-background, 2%) !important;
-	padding: 2px 22px 2px 0 !important;
 }
 
 // results with tree navigation
@@ -87,6 +102,11 @@
 		&:hover {
 			color: lighten(@console-link, 5%) !important;
 		}
+	}
+
+	// position adjustment of error icon
+	.console-error-level::before {
+		top: 9px !important;
 	}
 }
 
