@@ -1997,8 +1997,7 @@ select.status-bar-item option {
 #bottom-status-bar-container .timeline-records-stats,
 .source-frame-cursor-position,
 .search-status-bar-summary span,
-.search-results-status-bar-message,
-.status-bar-counter-item {
+.search-results-status-bar-message {
   text-shadow: none !important;
   color: #cccccc !important;
 }
