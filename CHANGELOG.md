@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2
+* `stable` extend with of console user input
+* adjust icon position of error messages
+
 ## 1.3.1
 * `canary` fix error/warning toolbar text color
 * `canary` fix bubble color for repeated console messages
