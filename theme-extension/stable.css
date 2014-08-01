@@ -850,7 +850,8 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 #console-messages .console-debug-level .section > .header .title {
   color: #fc844c !important;
 }
-#console-messages .console-debug-level .bubble {
+#console-messages .console-debug-level .bubble,
+#console-messages .console-debug-level .bubble-repeat-count {
   background-color: #fc844c !important;
 }
 #console-messages .console-log-level .console-message-text,
@@ -863,7 +864,8 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 #console-messages .console-log-level .section > .header .title {
   color: #49a6d2 !important;
 }
-#console-messages .console-log-level .bubble {
+#console-messages .console-log-level .bubble,
+#console-messages .console-log-level .bubble-repeat-count {
   background-color: #49a6d2 !important;
 }
 #console-messages .console-warning-level .console-message-text,
@@ -876,7 +878,8 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 #console-messages .console-warning-level .section > .header .title {
   color: #ddbb00 !important;
 }
-#console-messages .console-warning-level .bubble {
+#console-messages .console-warning-level .bubble,
+#console-messages .console-warning-level .bubble-repeat-count {
   background-color: #ddbb00 !important;
 }
 #console-messages .console-error-level .console-message-text,
@@ -889,7 +892,8 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 #console-messages .console-error-level .section > .header .title {
   color: #ff5a5a !important;
 }
-#console-messages .console-error-level .bubble {
+#console-messages .console-error-level .bubble,
+#console-messages .console-error-level .bubble-repeat-count {
   background-color: #ff5a5a !important;
 }
 #console-messages .console-info-level .console-message-text,
@@ -902,7 +906,8 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 #console-messages .console-info-level .section > .header .title {
   color: #a277ff !important;
 }
-#console-messages .console-info-level .bubble {
+#console-messages .console-info-level .bubble,
+#console-messages .console-info-level .bubble-repeat-count {
   background-color: #a277ff !important;
 }
 #console-messages .outline-disclosure .stacktrace-entry:hover {
@@ -1992,7 +1997,8 @@ select.status-bar-item option {
 #bottom-status-bar-container .timeline-records-stats,
 .source-frame-cursor-position,
 .search-status-bar-summary span,
-.search-results-status-bar-message {
+.search-results-status-bar-message,
+.status-bar-counter-item {
   text-shadow: none !important;
   color: #cccccc !important;
 }
