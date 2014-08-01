@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1
+* `canary` fix error/warning toolbar text color
+* `canary` fix bubble color for repeated console messages
+
 ## 1.3.0
 * `canary` style cut/copy element highlighter
 * `canary` fix text colors of devices tab in console
