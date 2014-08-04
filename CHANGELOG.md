@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.4
+* make glyph links relative
+
 ## 1.3.3
 * `canary` fix color of pie chart foreground text
 * `canary` set bg color of network panel back to theme color
