@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.3
+* `canary` fix color of pie chart foreground text
+* `canary` set bg color of network panel back to theme color
+
 ## 1.3.2
 * `stable` extend with of console user input
 * adjust icon position of error messages
