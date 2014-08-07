@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.5
+* `canary` update styles for file dialog
+* `canary` fix network headers tab styles
+* fix breakpoint hit bg color of event listener items
+
 ## 1.3.4
 * make glyph links relative
 
