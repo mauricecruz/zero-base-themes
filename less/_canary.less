@@ -132,5 +132,25 @@ replaces '.search-status-bar-summary span'*/
 }
 
 //**********************************************/
-//* panel-toolbars 38.0.2109.0
+//* panel-network 38.0.2116.0
 //**********************************************/
+
+// headers tab
+#network-views .request-headers-view .parent:extend(#network-views .resource-headers-view .parent) {};
+
+.resource-headers-view .outline-disclosure .header-name:extend(.resource-headers-view .outline-disclosure .header-name) {};
+
+.request-headers-view .outline-disclosure .header-value:extend(.resource-headers-view .outline-disclosure .header-value) {};
+
+.request-headers-view .outline-disclosure:extend(.resource-headers-view .outline-disclosure all) {};
+
+
+//**********************************************/
+//* panel-dialog 38.0.2116.0
+//**********************************************/
+
+//bg of new file dialog
+.filtered-item-list-dialog > div.container {
+	background-color: @global-background !important
+}
+
