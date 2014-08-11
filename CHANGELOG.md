@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.6
+* `canary` fix button/input styles
+
 ## 1.3.5
 * `canary` update styles for file dialog
 * `canary` fix network headers tab styles
