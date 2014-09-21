@@ -69,6 +69,16 @@
 		}
 	}
 
+	.hidden-placards-message {
+		.adjust(background-color, @global-background, 10%);
+		color: @global-warn;
+
+		.node-link {
+			color: @global-accent;
+		}
+
+	}
+
 	// "paused on a javascript breakpoint" node
 	> .body .placard + .info {
 		background: @global-background !important;
@@ -218,5 +228,17 @@ li.breakpoint-hit .breakpoint-hit-marker {
 
 	&.parent .checkbox-elem {
 		top: 3px !important;
+	}
+}
+
+// Notification bar (for mismatch/blackbox notices)
+.source-frame-infobar {
+	color: @global-warn;
+	border-bottom: 1px solid;
+	.adjust(border-bottom-color, @global-background, 10%);
+	.adjust(background-color, @global-background, 5%);
+
+	&-link {
+		color: @global-accent !important;
 	}
 }
