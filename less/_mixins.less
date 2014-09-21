@@ -44,3 +44,11 @@
 }
 
 .tb-render(@tab-style);
+
+.adjust(@selector, @color, @percent, @invert: false) when (@invert = false) and (@theme-type = dark), (@invert = true) and (@theme-type = light) {
+	@{selector}: lighten(@color, @percent) !important; /*lighten*/
+}
+
+.adjust(@selector, @color, @percent, @invert: false) when (@invert = false) and (@theme-type = light), (@invert = true) and (@theme-type = dark) {
+	@{selector}: darken(@color, @percent) !important; /*darken*/
+}
