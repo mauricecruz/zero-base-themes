@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.7
+* `canary` style blackbox notifications
+* style elements sidebar buttons
+* set network preview bg to white so text can be seen
+
 ## 1.3.6
 * `canary` fix button/input styles
 
