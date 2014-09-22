@@ -161,8 +161,8 @@ li.breakpoint-hit .breakpoint-hit-marker {
 
 		// Add Element Button
 		&.element-state,
-		&.pane-title-button.add {
-			background-color: @glyph-inactive !important;
+		&.add {
+			.adjust(background-color, @global-background, 40%);
 		}
 	}
 }
@@ -240,5 +240,16 @@ li.breakpoint-hit .breakpoint-hit-marker {
 
 	&-link {
 		color: @global-accent !important;
+	}
+}
+
+.sidebar-pane-button-new-rule {
+	.adjust(background-color, @global-background, 40%);
+	background-image: none;
+	-webkit-mask-image: url(Images/paneAddButtons.png) !important;
+	-webkit-mask-position: 0 0 !important;
+
+	&:hover {
+		-webkit-mask-position: -23px 0 !important;
 	}
 }
