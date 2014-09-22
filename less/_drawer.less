@@ -121,3 +121,12 @@ input[type='range']::-webkit-slider-thumb {
 button.overrides-swap {
 	.button-styles();
 }
+
+// Change the color of the emulation checkboxes to theme color
+.overrides-activate-device #tab-device .tabbed-pane-header-tab-title::after,
+.overrides-activate-media #tab-media .tabbed-pane-header-tab-title::after,
+.overrides-activate-network #tab-network .tabbed-pane-header-tab-title::after,
+.overrides-activate-sensors #tab-sensors .tabbed-pane-header-tab-title::after {
+	color: @global-accent !important;
+}
+

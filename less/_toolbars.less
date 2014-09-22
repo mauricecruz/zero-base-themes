@@ -230,10 +230,23 @@ select.tabbed-pane-header-tabs-drop-down-select{
 // error/warning counts on toolbar
 #error-warning-count {
 	color: @global-text !important;
+
+	&:hover {
+		border-bottom: none !important;
+	}
 }
 
 // Subtools bar select list when real viewport is tight
 .tabbed-pane-header-tabs-drop-down > select.drop-down-menu option {
 	background-color: @global-background !important;
 	color: @global-text !important;
+}
+
+// Fix text color and icon in Emulation Drawer Tab when inactive
+.overrides-splash-screen {
+	color: @global-text !important;
+
+	.glyph {
+		background-color: @glyph-inactive !important;
+	}
 }

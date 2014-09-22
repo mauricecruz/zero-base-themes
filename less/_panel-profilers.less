@@ -64,3 +64,26 @@ input.status-bar-item {
 		height: 18px !important;
 	}
 }
+
+// Retainers resizer bar in heap snapshot
+.heap-snapshot-view .heap-snapshot-view-resizer {
+	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
+	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%);
+	border-top: none !important;
+	border-bottom: none !important;
+	color: @global-text;
+}
+
+// Heap snapshot table text
+#profile-views .data-container .object-column {
+	color: @global-text;
+
+	button {
+		.button-styles();
+	}
+}
+
+// Canvas snapshot table text color & probably all other grids
+.data-grid td {
+	color: @global-text !important;
+}
