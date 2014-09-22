@@ -2,10 +2,12 @@
 /* Theme Name by Your Name [@githubHandle]                               */
 /*************************************************************************/
 
+@theme-type: dark;  // [dark|light]
+
 // Global Settings
 @text-height      : 14px;
 @global-accent    : #89f5a2;
-@global-arrow     : #AAB0AF;
+@global-arrow     : #8c8c8c;
 @global-background: #222;
 @global-boxshadow : rgba(17,17,17,.6);
 @global-divider   : lighten(@global-background, 5%);
@@ -14,6 +16,7 @@
 @global-selected  : #364c3b;
 @global-text      : #ccc;
 @global-label     : #626262;
+@global-warn      : #db0;
 @global-error     : #ff5a5a;
 @global-textshadow: darken(@global-background, 4%);
 
@@ -122,9 +125,9 @@
 @cm-gutter             : lighten(@global-background, 4%);
 @cm-gutter-border      : lighten(@global-background, 5%);
 @cm-gutter-lines       : lighten(@global-background, 40%);
-@cm-lines-no-sourcemap : lighten(@global-background, 1%);
 @cm-matching-bracket   : #15ca1a;
 @cm-nonmatching-bracket: #db0404;
+@cm-lines-no-sourcemap : lighten(@global-background, 1%);
 @cm-selected           : lighten(@global-background, 10%);
 @cm-whitespace         : lighten(@global-background, 5%);
 
@@ -160,7 +163,7 @@
 @find-header-background   : lighten(@global-background, 3%);
 @find-header-text         : #888;
 @find-highlight-background: @global-accent;
-@find-highlight-text     : #000;
+@find-highlight-text      : #000;
 
 // Forms
 @form-button-background: linear-gradient(@gradient-top,@gradient-bottom);
@@ -188,7 +191,7 @@
 
 // Settings
 @settings-background       : #444;
-@settings-border           : #444;
+@settings-border           : #454545;
 @settings-delimiter        : #eee;
 @settings-dialog           : #333;
 @settings-edit-background  : #222;
@@ -225,6 +228,8 @@
 @timeline-graph-selection     : @global-accent;
 @timeline-progress-pane       : fade(lighten(@global-background,30%), 50%);
 @timeline-resources-divider   : lighten(@global-background, 3%);
+
+
 
 // Popovers
 @popover-details-row-title: #49a6d2;
