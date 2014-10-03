@@ -15,7 +15,7 @@
 	color: @global-text !important;
 }
 
-.timeline-graph-side {
+#timeline-graphs .timeline-graph-side {
 
 	&.hovered {
 		background-color: @global-hover !important;
@@ -28,15 +28,15 @@
 	}
 }
 
-.timeline-tree-item {
+.timeline-records-list .timeline-tree-item {
 	color: @global-text !important;
 
 	&.hovered:not(.selected) {
-		&:extend(.timeline-graph-side.hovered);
+		&:extend(#timeline-graphs .timeline-graph-side.hovered);
 	}
 
 	&.selected {
-		&:extend(.timeline-graph-side.selected);
+		&:extend(#timeline-graphs .timeline-graph-side.selected);
 	}
 
 	.data.dimmed {
