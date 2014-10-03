@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.8
+* `canary` restore a bunch of overridden css 
+* improve visibility of matching/unmatching brackets
+* update style of layers panel
+* style dom elements in console panel
+
 ## 1.3.7
 * `canary` style blackbox notifications
 * style elements sidebar buttons
