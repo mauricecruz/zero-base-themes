@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.9
+* `canary` restore styles on elements panel
+
 ## 1.3.8
 * `canary` restore a bunch of overridden css 
 * improve visibility of matching/unmatching brackets
