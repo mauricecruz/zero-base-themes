@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.4.0
+* update color of emulation checkboxes
+* fix color of status bar labels
+* fix button styles
+* style blackbox dialog
+* style timeline event collector
+* fix text of devices panel
+* style copy/cut
+* fix error/warning colors on toolbar
+* fix network header text colors
+
 ## 1.3.9
 * `canary` restore styles on elements panel
 
