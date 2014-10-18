@@ -1,4 +1,3 @@
-
 /************************************************
 /* Status bar
 /************************************************/
@@ -14,7 +13,7 @@ select.status-bar-item {
 		&:extend(select.status-bar-item);
 	}
 
-	option {
+option {
 		background-color: @global-background !important;
 	}
 
@@ -29,7 +28,7 @@ select.status-bar-item {
 #bottom-status-bar-container .type,
 #bottom-status-bar-container .timeline-records-stats,
 .source-frame-cursor-position,
-.search-status-bar-summary span,
+.search-status-bar-summary .search-message,
 .search-results-status-bar-message {
 	text-shadow: none !important;
 	color: @global-text !important;
@@ -106,4 +105,10 @@ label.checkbox,
 //adjust event listener checkbox position
 .event-listener-breakpoints .checkbox-elem {
 	top: 0 !important;
+}
+
+// style device buttons
+.save-device-button,
+.remove-device-button {
+	.button-styles();
 }

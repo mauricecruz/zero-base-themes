@@ -228,7 +228,7 @@ select.tabbed-pane-header-tabs-drop-down-select{
 }
 
 // error/warning counts on toolbar
-#error-warning-count {
+.status-bar-counter {
 	color: @global-text !important;
 
 	&:hover {
@@ -250,3 +250,11 @@ select.tabbed-pane-header-tabs-drop-down-select{
 		background-color: @glyph-inactive !important;
 	}
 }
+
+// Change the color of the emulation checkboxes to theme color
+// canary v.39.0.2165 uses these selectors
+.tabbed-pane-header-tab.overrides-activate .tabbed-pane-header-tab-title::after {
+	color: @global-accent !important;
+}
+
+
