@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.1
+* `canary` fix color of glyphs
+* `canary` move elements crumb styles to shadow dom
+
 ## 1.4.0
 * update color of emulation checkboxes
 * fix color of status bar labels
