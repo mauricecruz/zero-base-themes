@@ -1,4 +1,5 @@
 node_modules
+theme-extension/images/*
 theme-extension/stable.css
 theme-extension/canary.css
 theme-extension/manifest.json
