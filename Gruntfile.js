@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 				files: [
 					{
 						cwd: 'theme-extension/',
-						src: '**/*',
+						src: '*',
 						expand: true
 					}
 				]
