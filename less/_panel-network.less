@@ -41,16 +41,21 @@
 	background: @global-background !important;
 }
 
-//Header Contents Label
-.request-headers-view .outline-disclosure .header-name,
-#network-views .resource-view .infoList dt {
-	color: lighten(@global-background, 25%) !important;
+// Network Preview for images
+.resource-view.image .title {
+	color: @global-text !important;
 }
 
-//Header Contents Values
-.request-headers-view .outline-disclosure .header-value,
-#network-views .resource-view .infoList dd {
-	color: @global-text;
+// Image property key
+.resource-view.image .infoList dt {
+	color: @global-label !important;
+	margin-bottom: 5px !important;
+}
+
+// Image property value
+.resource-view.image .infoList dd {
+	color: @global-text !important;
+	margin-bottom: 5px !important;
 }
 
 /* Network Timing Pane */
