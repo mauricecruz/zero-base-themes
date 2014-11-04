@@ -53,6 +53,7 @@ input[type='range']::-webkit-slider-thumb {
 	line-height: 15px !important;
 }
 
+// Local modifications
 .revision-history-drawer {
 
 	> ol > .parent {
@@ -76,6 +77,14 @@ input[type='range']::-webkit-slider-thumb {
 		border-bottom: 1px solid darken(@global-background, 3%) !important;
 		height: 22px !important;
 		line-height: 20px !important;
+	}
+
+	.webkit-line-number {
+		background: @cm-gutter !important;
+		border-right: 1px solid @cm-gutter-border !important;
+		padding: 1px 5px 1px 0 !important;
+		display: inline-block;
+		color: @cm-gutter-lines !important;
 	}
 
 	.source-code {
