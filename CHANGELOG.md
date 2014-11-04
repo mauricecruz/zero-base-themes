@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.2
+* `canary` fix image preview colors on network/resource panels
+* `canary` style new timeline details panel
+* `canary` style layers inside timeline panel
+* `canary` fix color picker text colors
+* `canary` fix local modification gutters
+* update dialog box design
+
+
 ## 1.4.1
 * `canary` fix color of glyphs
 * `canary` move elements crumb styles to shadow dom
