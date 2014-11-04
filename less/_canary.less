@@ -609,6 +609,7 @@ body {
 //**********************************************/
 
 // panel_network
+// *************************************
 
 // Image Preview for Network and Resources replaces ".resource-view" ....
 // Network Preview for images
@@ -633,3 +634,37 @@ body {
 	color: @xml-link !important;
 }
 
+// panel_timeline
+// *************************************
+
+// new timeline ui
+
+// add this to global background
+.timeline-details-view-body {
+	background-color: @global-background !important;
+}
+
+// divider
+.timeline-details-view-row {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+.timeline-details-view-row-value {
+	border-left: 1px solid @global-divider !important;
+	color: @global-text !important;
+}
+
+.timeline-details-view-row-title {
+	color: @global-label !important;
+}
+
+// text
+.timeline-aggregated-info-legend > div, .memory-counter-sidebar-info {
+	color: @global-text !important;
+}
+
+
+::shadow .flame-chart-selected-element {
+	border-color: @global-selected !important;
+	background-color: fade(@global-selected, 60%) !important;
+}
