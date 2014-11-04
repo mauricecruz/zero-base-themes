@@ -668,3 +668,37 @@ body {
 	border-color: @global-selected !important;
 	background-color: fade(@global-selected, 60%) !important;
 }
+
+
+// timeline layers
+.layer-tree.outline-disclosure li,
+.profiler-log-view li {
+	color: @global-text !important;
+}
+
+.layer-detail-view .table {
+
+	td {
+	
+	}
+}
+
+.timeline-layers-view-properties {
+
+	table tr{
+		// key
+		td:nth-child(1) {
+			color: @global-label !important;
+		}
+
+		td:nth-child(2) {
+			color: @global-text !important;
+		}
+	}
+
+
+	td {
+		border: 1px solid @global-divider !important;
+	}
+}
+
