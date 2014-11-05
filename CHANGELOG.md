@@ -1,6 +1,9 @@
 # Changelog
 
-## 1.4.2
+## 1.5.1
+* fix network headers content view
+
+## 1.5.0
 * `canary` fix image preview colors on network/resource panels
 * `canary` style new timeline details panel
 * `canary` style layers inside timeline panel
