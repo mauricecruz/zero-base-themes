@@ -20,7 +20,7 @@
 }
 
 #profile-views .data-grid button {
-	color: darken(@global-text, 5%) !important;
+	color: @- !important; .contrast(@global-text, 5%, invert) !important;
 }
 
 .heap-snapshot-view tr:not(.selected) td.object-column span.highlight {
@@ -32,7 +32,7 @@
 .retainers-view-header,
 .heap-snapshot-view .class-view-toolbar {
 	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
-	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%);
+	box-shadow: inset 0 1px 0 @- !important; .contrast(@gradient-top,7%);
 	border-top: none !important;
 	border-bottom: none !important;
 }
@@ -51,7 +51,7 @@ input.status-bar-item {
 // Retainers resizer bar in heap snapshot
 .heap-snapshot-view .heap-snapshot-view-resizer {
 	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
-	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%);
+	box-shadow: inset 0 1px 0 @- !important; .contrast(@gradient-top,7%);
 	border-top: none !important;
 	border-bottom: none !important;
 	color: @global-text;

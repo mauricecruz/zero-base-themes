@@ -45,10 +45,10 @@
 
 .tb-render(@tab-style);
 
-.adjust(@selector, @color, @percent, @invert: false) when (@invert = false) and (@theme-type = dark), (@invert = true) and (@theme-type = light) {
-	@{selector}: lighten(@color, @percent) !important; /*lighten*/
+.contrast(@color, @percent, @invert: false) when (@invert = false) and (@theme-type = dark), (@invert = invert) and (@theme-type = light) {
+	@-: lighten(@color, @percent);
 }
 
-.adjust(@selector, @color, @percent, @invert: false) when (@invert = false) and (@theme-type = light), (@invert = true) and (@theme-type = dark) {
-	@{selector}: darken(@color, @percent) !important; /*darken*/
+.contrast(@color, @percent, @invert: false) when (@invert = false) and (@theme-type = light), (@invert = invert) and (@theme-type = dark) {
+	@-: darken(@color, @percent);
 }

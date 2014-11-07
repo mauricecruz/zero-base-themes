@@ -3,7 +3,7 @@
 /**********************************************/
 .resources-status-bar .status-bar{
 	background: -webkit-linear-gradient(@gradient-top, @gradient-bottom) !important;
-	box-shadow: inset 0 1px 0 lighten(@gradient-top,7%);
+	box-shadow: inset 0 1px 0 @- !important; .contrast(@gradient-top,7%);
 	border-top: none !important;
 }
 
@@ -14,15 +14,15 @@
 
 .database-user-query {
 	border-top: 1px solid @global-background !important;
-	border-bottom: 1px solid darken(@global-background, 10%) !important;
+	border-bottom: 1px solid @- !important; .contrast(@global-background, 10%, invert) !important;
 	padding-bottom: 10px !important;
 }
 
 .database-user-query + span {
 	padding: 2px 0 !important;
 	border-top: 1px solid @global-background !important;
-	border-bottom: 1px solid darken(@global-background, 10%) !important;
-	background-color: lighten(@global-background, 2%) !important;
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 10%, invert) !important };
+	& { background-color: @- !important; .contrast(@global-background, 2%) !important };
 	width: 100% !important;
 }
 

@@ -200,7 +200,7 @@ body {
 		.console-formatted-string { color: @js-obj-string !important; }
 		.console-formatted-undefined { color: @js-obj-undefined !important; }
 		.json .title { color: @global-text !important;}
-		.json .separator { color: darken(@global-text, 35%) !important;}
+		.json .separator { color: @- !important; .contrast(@global-text, 35%, invert); }
 
 		.popover .parent + .children.expanded,
 		#console-messages .parent + .children.expanded,
@@ -349,7 +349,7 @@ body {
 		// _panel_elements
 		.CodeMirror {
 			outline: none !important;
-			border: 1px solid lighten(@global-background, 5%);
+			border: 1px solid @- !important; .contrast(@global-background, 5%);
 			border-radius: 5px;
 			box-shadow: inset 0 0 15px 0 rgba(17,17,17,.6) !important;
 			margin: 10px 0;
@@ -522,7 +522,7 @@ body {
 				border-bottom-right-radius: 5px;
 				padding-bottom: 5px !important;
 				box-shadow: inset 0 0 30px 0 @eh-children-shadow;
-				border-bottom: 1px solid lighten(@global-background, 10%) !important;
+				border-bottom: 1px solid @- !important; .contrast(@global-background, 10%);
 
 				// highlight pseudo elements of selected node
 				> li .webkit-html-pseudo-element:first-child {
@@ -584,8 +584,8 @@ body {
 
 		.crumb {
 			-webkit-border-image: none !important;
-			border-left: 1px solid lighten(@global-background,25%) !important;
-			border-right: 1px solid lighten(@global-background,15%) !important;
+			& { border-left: 1px solid @- !important; .contrast(@global-background, 25%) };
+			& { border-right: 1px solid @- !important;.contrast(@global-background, 15%) };
 			padding: 0 10px !important;
 			margin: 0 !important;
 			line-height: 18px !important;

@@ -17,8 +17,8 @@
 	th.sortable,
 	.timeline-column,
 	.corner {
-		border-right: 1px solid lighten(@global-background, 10%) !important;
-		border-bottom: 1px solid lighten(@global-background, 10%) !important;
+		& { border-right: 1px solid @- !important; .contrast(@global-background, 10%) !important };
+		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 10%) !important };
 	}
 
 	.network-timeline-grid .resources-divider-label {
@@ -79,7 +79,7 @@
 
 /* Network Timing Pane */
 .resource-timing-view table {
-	background-color: lighten(@global-background, 5%) !important;
+	background-color: @- !important; .contrast(@global-background, 5%) !important;
 	padding: 20px !important;
 	border-radius: 4px;
 	margin: 20px !important;
@@ -87,14 +87,14 @@
 
 .resource-timing-view table td .network-timing-bar-title {
 	color: @global-text !important;
-	text-shadow: 0 1px 1px lighten(@global-background, 5%);
+	text-shadow: 0 1px 1px @- !important; .contrast(@global-background, 5%);
 }
 
 #network-views .request-headers-view .parent {
-	background-color: lighten(@global-background, 2.5%);
+	& { background-color: @- !important; .contrast(@global-background, 2.5%) };
 	color: @global-text !important;
-	border-top: 1px solid lighten(@global-background, 10%);
-	border-bottom: 1px solid darken(@global-background, 5%);
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 10%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%, invert) };
 	line-height: 18px;
 }
 
@@ -118,7 +118,7 @@
 
 //subline under title of node
 .network-cell-subtitle {
-	color: darken(@global-text, 5%) !important;
+	color: @- !important; .contrast(@global-text, 5%, invert) !important;
 }
 
 .network-log-grid.data-grid th {

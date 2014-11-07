@@ -2,14 +2,14 @@
 /* Tables
 /**********************************************/
 .data-grid {
-	border: 1px solid darken(@global-background,5%);
+	border: 1px solid @- !important; .contrast(@global-background, 5%, invert);
 	background-color: transparent !important;
 	background-image: none !important;
 
 	th,
 	.data {
 		background: none !important;
-		border-left: 1px solid lighten(@global-background, 10%) !important;
+		border-left: 1px solid @- !important; .contrast(@global-background, 10%);
 	}
 
 	.header {
@@ -26,7 +26,7 @@
 	}
 
 	td {
-		border-left: 1px solid lighten(@global-background, 2.5%) !important;
+		border-left: 1px solid @- !important; .contrast(@global-background, 2.5%);
 	}
 
 	.data-container {
@@ -47,7 +47,7 @@
 
 			&:not(.selected):not(.filler):hover{
 				background-color: @global-hover !important;
-				outline: 1px solid lighten(@global-hover, 7%) !important;
+				outline: 1px solid @- !important; .contrast(@global-hover, 7%);
 			}
 
 			&.selected {

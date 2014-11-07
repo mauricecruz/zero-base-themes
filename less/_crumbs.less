@@ -3,7 +3,7 @@
 /************************************************/
 #elements-crumbs {
 	background: -webkit-linear-gradient(@gradient-top,@gradient-bottom) !important;
-	border-top: 1px solid lighten(@global-background,5%)  !important;
+	border-top: 1px solid @- !important; .contrast(@global-background, 5%);
 	height: 19px !important;
 
 	.crumbs {
@@ -12,8 +12,8 @@
 
 		.crumb {
 			-webkit-border-image: none !important;
-			border-left: 1px solid lighten(@global-background,25%) !important;
-			border-right: 1px solid lighten(@global-background,15%) !important;
+			& { border-left: 1px solid @- !important; .contrast(@global-background, 25%); }
+			& { border-right: 1px solid @- !important; .contrast(@global-background, 15%); }
 			padding: 0 10px !important;
 			margin: 0 !important;
 			line-height: 18px !important;

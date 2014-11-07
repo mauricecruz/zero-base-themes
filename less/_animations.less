@@ -53,11 +53,6 @@
 		-webkit-transition: opacity .5s ease-in-out 0;
 	}
 
-	/*-- CURRENTLY SELECTED --*/
-	.panel.elements .outline-disclosure ol:focus li.selected .selection {
-		-webkit-animation: pulsate 2.5s infinite;
-	}
-
 	.styles-section .properties .enabled-button {
 		-webkit-transition: visibility .5s ease-in-out;
 	}
@@ -91,12 +86,6 @@
 		0% { box-shadow: 0 0 0 @global-background; background-color: @global-background; color: @global-background;}
 		50% { box-shadow: 0 0 25px @global-accent;}
 		100% { box-shadow: 0 0 0 @global-accent; background-color: @global-accent;}
-	}
-
-	@-webkit-keyframes pulsate {
-		0% { background-color: @eh-base-color; }
-		50% { background-color: darken(@eh-base-color, 5%);}
-		100% { background-color: @eh-base-color; }
 	}
 
 	@-webkit-keyframes bounceInLeft {

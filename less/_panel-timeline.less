@@ -19,7 +19,7 @@
 
 	&.hovered {
 		background-color: @global-hover !important;
-		outline: 1px solid lighten(@global-hover, 10%);
+		outline: 1px solid @- !important; .contrast(@global-hover, 10%);
 	}
 
 	&.selected {
@@ -76,7 +76,7 @@
 }
 
 .timeline-details-view-row-title {
-	color: lighten(@global-background, 25%) !important;
+	color: @- !important; .contrast(@global-background, 25%);
 }
 
 .timeline-details-view-title {
@@ -115,11 +115,11 @@
 	}
 
 	.icon {
-		background-color: darken(@global-text, 10%) !important;
+		background-color: @- !important; .contrast(@global-text, 10%, invert);
 	}
 
 	.title {
-		color: darken(@global-text, 10%) !important;
+		color: @- !important; .contrast(@global-text, 10%, invert);
 	}
 
 }
@@ -155,7 +155,7 @@
 
 .panel:not(.network) .resources-dividers-label-bar {
 	background: transparent !important;
-	border-bottom:1px solid darken(@gradient-bottom,10%) !important;
+	border-bottom:1px solid @- !important; .contrast(@gradient-bottom, 10%, invert);
 }
 
 .panel:not(.network) #timeline-grid-header .resources-dividers-label-bar {
@@ -190,7 +190,7 @@
 }
 
 .overview-grid-dividers-background {
-	background-color: lighten(@global-background, 5%) !important;
+	background-color: @- !important; .contrast(@global-background, 5%);
 }
 
 .overview-grid-window {
@@ -198,7 +198,7 @@
 }
 
 #memory-counters-graph {
-	border-right: 1px solid lighten(@global-background, 3%) !important;
+	border-right: 1px solid @- !important; .contrast(@global-background, 3%);
 }
 
 .timeline-frame-container {

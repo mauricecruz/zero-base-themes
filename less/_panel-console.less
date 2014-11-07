@@ -12,7 +12,7 @@
 		}
 
 		.children div:hover * {
-			color: darken(@color, 5%) !important;
+			color: @- !important; .contrast(@color, 5%, invert) !important;
 		}
 
 		.section > .header .title {
@@ -51,8 +51,8 @@
 #console-prompt {
 	color: @console-input-text !important;
 	border-top: none !important;
-	border-top: 1px solid lighten(@global-background, 5%) !important;
-	border-bottom: 1px solid lighten(@global-background, 10%) !important;
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 5%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 10%) };
 }
 
 // user input
@@ -68,9 +68,9 @@
 }
 
 .console-adjacent-user-command-result {
-	background-color:  lighten(@global-background, 2%) !important;
-	border-top: 1px solid lighten(@global-background, 3%) !important;
-	border-bottom: 1px solid darken(@global-background, 2%) !important;
+	& { background-color: @- !important; .contrast(@global-background, 2%) };
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 3%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 2%, invert) };
 }
 
 // results with tree navigation
@@ -93,14 +93,14 @@
 
 	// Children Hover
 		.outline-disclosure .stacktrace-entry:hover {
-			background-color: lighten(@global-background, 1%) !important;
+			background-color: @- !important; .contrast(@global-background, 1%); 
 	}
 
 	a {
 		color: @console-link !important;
 
 		&:hover {
-			color: lighten(@console-link, 5%) !important;
+			color: @- !important; .contrast(@console-link, 5%);
 		}
 	}
 
