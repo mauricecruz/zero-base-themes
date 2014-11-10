@@ -83,14 +83,12 @@
 @xml-tag               : #49a6d2;
 
 // Tabbed Header Configuration
-@tab-base-color     : @global-background;
-@tab-contrast-bottom: 8%;
-@tab-contrast-top   : 18%;
+@tab-color-top      : lighten(@global-background, 18%);
+@tab-color-bottom   : lighten(@global-background, 8%);
 @tab-highlighted    : @global-accent;
 @tab-label          : #999;
 @tab-label-selected : #f8f8f8;
 @tab-label-unsaved  : #db0;
-@tab-style          : light; // (light | dark)
 
 // Toolbars
 @tab-main-icons-padding : 6px;
@@ -166,7 +164,7 @@
 @find-highlight-text      : #000;
 
 // Forms
-@form-button-background: linear-gradient(@gradient-top,@gradient-bottom);
+@form-button-background: linear-gradient(@tab-color-top, @tab-color-bottom);
 @form-button-border    : lighten(@global-background, 10%);
 @form-button-pressed   : inset 0 1px 1px 0 darken(@global-background, 5%), 0 1px 1px 0 lighten(@global-background, 30%);
 @form-button-text      : darken(@global-text, 10%);

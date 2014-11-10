@@ -80,8 +80,8 @@
 
 	.settings-list-item {
 		& { background-color: @- !important; .contrast(@global-background, 5%) };
-		& { border-top: 1px solid @- !important; .contrast(@gradient-top,7%) };
-		& { border-bottom: 1px solid @- !important; .contrast(@gradient-bottom,10%, invert) };
+		& { border-top: 1px solid @- !important; .contrast(@tab-color-top,7%) };
+		& { border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom,10%, invert) };
 
 		&:hover {
 			&:extend(.settings-list-item);
@@ -152,8 +152,8 @@
 
 	.settings-list-item {
 		background-color: @settings-background !important;
-		& { border-top: 1px solid @- !important; .contrast(@gradient-top, 7%) }; /* testsasdf */
-		& { border-bottom: 1px solid @- !important; .contrast(@gradient-bottom, 10%, invert) }; /* testsasdf */
+		& { border-top: 1px solid @- !important; .contrast(@tab-color-top, 7%) }; /* testsasdf */
+		& { border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom, 10%, invert) }; /* testsasdf */
 		color: @settings-text !important;
 
 		&:hover {

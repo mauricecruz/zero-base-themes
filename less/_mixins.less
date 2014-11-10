@@ -32,19 +32,6 @@
 	}
 }
 
-// Tab Rendering
-.tb-render(dark) {
-	@gradient-top: darken(@tab-base-color, @tab-contrast-top);
-	@gradient-bottom: darken(@tab-base-color, @tab-contrast-bottom);
-}
-
-.tb-render(light) {
-	@gradient-top: lighten(@tab-base-color, @tab-contrast-top);
-	@gradient-bottom: lighten(@tab-base-color, @tab-contrast-bottom);
-}
-
-.tb-render(@tab-style);
-
 .contrast(@color, @percent, @invert: false) when (@invert = false) and (@theme-type = dark), (@invert = invert) and (@theme-type = light) {
 	@-: lighten(@color, @percent);
 }
