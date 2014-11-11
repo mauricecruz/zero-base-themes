@@ -129,10 +129,11 @@
 	border-bottom: none !important
 }
 
-.network-error-row {
+.data-grid .network-error-row {
 	color: @global-error !important;
+	> td,
 	.network-cell-subtitle {
-		&:extend(.network-error-row);
+		&:extend(.data-grid .network-error-row);
 	}
 }
 
