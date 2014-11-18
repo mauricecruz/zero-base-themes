@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.5.2
+## 1.5.3
 * `canary` fix main toolbar and profiles toolbar
 
 ## 1.5.2
