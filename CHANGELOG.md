@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.2
+* `canary` fix main toolbar and profiles toolbar
+
+## 1.5.2
+* update network error state styles
+
 ## 1.5.1
 * fix network headers content view
 
