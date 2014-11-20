@@ -31,3 +31,9 @@ Copy `/themes/_theme-template.less` and modify color values accordingly. Rename 
 As of Version v. **33.0.1726.0**, themes only work via extensions and the developer tools experiments.
 
 There is a [thread detailing how this method came about.](https://code.google.com/p/chromium/issues/detail?can=4&start=0&num=100&q=&colspec=ID%20Pri%20M%20Iteration%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified&groupby=&sort=&id=318566).  Feel free to voice your opinions there.
+
+***
+
+## Additional Resources
+
+Blog post and screencast showing how to get up and running and create your own theme as well http://s10wen.com/blog/2014/03/12/chrome-dev-tools-theming-with-zero-base-themes/
