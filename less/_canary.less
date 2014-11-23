@@ -787,6 +787,53 @@ html /deep/ .component-root {
 	.input-styles() !important;
 }
 
+//select boxes
+::shadow {
+	select.status-bar-item {
+		&:extend(select.status-bar-item);
+		margin-right: -15px !important;
+	}
+
+	select.status-bar-item /deep/ option {
+		background-color: @global-background !important;
+	}
+}
+
+
+// glyphs
+::shadow {
+	.shadow-split-view button.sidebar-show-hide-button,
+	.status-bar-item > .glyph {
+		background-color: @glyph-inactive !important;
+	}
+
+	button.status-bar-item.toggled-on .glyph,
+	.filter-status-bar-item.toggled-shown .glyph,
+	button.status-bar-item:active .glyph {
+		background-color: @glyph-active !important;
+	}
+	
+}
+
+// panel-sources
+
+// replaces Alternate Buttons
+#glass-pane .status-bar.fill {
+	background-image: none !important;
+	background-color: transparent !important;
+}
+
+::shadow {
+	.status-bar-shadow.floating {
+		background-color: @- !important; .contrast(@global-background, 5%) !important;
+		border: none !important;
+
+		.status-bar-item {
+			border: 1px solid @global-background !important;
+		}
+	}
+}
+
 
 // panel-timeline.less
 
