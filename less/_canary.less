@@ -769,3 +769,20 @@ body {
 		&:extend(.toolbar-search button);
 	}
 }
+
+
+// status-bar.less
+
+.status-bar {
+	&:extend(.sources-status-bar);
+}
+
+// pretty much all label text in the status bars
+html /deep/ .component-root {
+	color: @global-text !important;
+}
+
+// network input filter
+.filter-input-field {
+	.input-styles() !important;
+}
