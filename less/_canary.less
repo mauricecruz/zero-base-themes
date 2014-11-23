@@ -799,3 +799,11 @@ html /deep/ .component-root {
 .timeline-layers-view-properties > div:last-child {
 	background-color: @global-background !important;
 }
+
+
+// panel-profilers.less
+
+// table overlay information
+::shadow .flame-chart-entry-info {
+	&:extend(.profile-entry-info);
+}
