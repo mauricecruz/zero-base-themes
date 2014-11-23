@@ -753,3 +753,19 @@ body {
 	}
 
 }
+
+// find.less
+::shadow {
+	.toolbar-search-control {
+		.input-styles();
+		&:extend(.toolbar-search-control all);
+	}
+
+	.search-bar {
+		&:extend(.status-bar);
+	}
+
+	.search-action-button {
+		&:extend(.toolbar-search button);
+	}
+}
