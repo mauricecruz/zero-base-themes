@@ -735,3 +735,21 @@ body {
 .filter-bar.hbox {
 	padding: 2px 0;
 }
+
+//**********************************************/
+//* 41.0.2227.1
+//**********************************************/
+
+// toolbars.less
+
+::shadow {
+	// sidebar borders
+	.shadow-split-view.hbox > .shadow-split-view-resizer > .shadow-split-view-resizer-border {
+		border-left: 2px solid @global-divider !important;
+	}
+
+	.shadow-split-view.vbox > .shadow-split-view-resizer > .shadow-split-view-resizer-border {
+		border-top: none !important;
+	}
+
+}
