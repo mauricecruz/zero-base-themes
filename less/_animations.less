@@ -7,30 +7,6 @@
 
 .show-animations(@choice) when (@choice = true) {
 
-	/*-- SOURCES PANEL --*/
-	.panel.sources .split-view-vertical .split-view-contents {
-		-webkit-transition: right .5s ease-in-out;
-	}
-
-	.panel.sources .split-view-contents-second.split-view-sidebar {
-		-webkit-animation: slideInRightBig .2s ease-out;
-	}
-
-	.panel.sources div:not(.split-view-horizontal) .split-view-vertical .split-view-sidebar,
-	.panel.sources .split-view-vertical .split-view-contents-first.split-view-sidebar {
-		-webkit-animation: none !important
-	}
-
-	.sidebar-overlay {
-		-webkit-animation: slideInLeftBig .5s ease-out;
-	}
-
-	.panel.elements .split-view-horizontal .split-view-contents-second:not(.metrics-and-computed),
-	.panel.sources .split-view-horizontal > .split-view-contents-second.split-view-sidebar {
-		-webkit-animation: bounceInUp 1s ease-in-out;
-		z-index: 99;
-	}
-
 	#toolbar > .toolbar-item.toggleable.toggled-on {
 		-webkit-transition: border-top .25s ease-out 0;
 	}
