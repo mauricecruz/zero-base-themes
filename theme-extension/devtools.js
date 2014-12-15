@@ -1,7 +1,7 @@
 var xhr = new XMLHttpRequest(),
 	stylesheet = 'stable.css';
 
-if (/Chrome\/(\d\d)/.exec(navigator.userAgent)[1] > 38) {
+if (/Chrome\/(\d\d)/.exec(navigator.userAgent)[1] > 39) {
 	stylesheet = 'canary.css'
 }
 
