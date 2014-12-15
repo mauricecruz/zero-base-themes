@@ -744,7 +744,11 @@ body {
 
 ::shadow {
 	// sidebar borders
-	.shadow-split-view.hbox > .shadow-split-view-resizer > .shadow-split-view-resizer-border {
+	.shadow-split-view.hbox.shadow-split-view-first-is-sidebar > .shadow-split-view-sidebar:not(.maximized) {
+		border-right: 2px solid @global-divider !important;
+	}
+
+	.shadow-split-view.hbox > .shadow-split-view-sidebar:not(.maximized) {
 		border-left: 2px solid @global-divider !important;
 	}
 
@@ -856,4 +860,153 @@ html /deep/ .component-root {
 // table overlay information
 ::shadow .flame-chart-entry-info {
 	&:extend(.profile-entry-info);
+}
+
+
+//**********************************************/
+//* 41.0.2238.1
+//**********************************************/
+
+//toolbars.less
+
+body .inspector-view-tabbed-pane.tabbed-pane::shadow {
+
+	.tabbed-pane-header {
+		background-image: linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	}
+}
+
+::shadow {
+
+	.tabbed-pane-header {
+		background-image: linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	}	
+
+	//main nav tabs
+	.tabbed-pane-header-contents {
+		box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
+		color: @tab-label !important;
+	}
+}
+
+
+// Adjust the height of the main navigation 
+.inspector-view-tabbed-pane.tabbed-pane::shadow {
+
+	.tabbed-pane-header {
+		flex: 0 0 @tab-main-toolbar-height !important;
+	}
+
+	.tabbed-pane-header-contents {
+		.tabbed-pane-header-tab {
+			height: @tab-main-toolbar-height !important;
+			line-height: (.75*@tab-main-toolbar-height) !important;
+		}
+	}
+}
+
+// Change tab styles
+.tabbed-pane::shadow {
+	
+	.tabbed-pane-header {
+		box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
+		border-bottom: 1px solid @global-background !important;
+		border: none;
+	}
+
+	.tabbed-pane-header-tab {
+		border-color: transparent !important;
+		border-image: none !important;
+		border-left: none !important;
+		border-right: none !important;
+		border-top: 2px solid rgba(0,0,0,0) !important;
+		cursor: pointer !important;
+		margin: 0 !important;
+		margin-bottom: 1px !important;
+		margin-top: 0 !important;
+		padding: 2px 4px !important;
+		width: auto !important;
+
+		&:hover {
+			color: @tab-label-selected !important;
+		}
+
+		&.selected {
+			background: none !important;
+			border-top: 2px solid @tab-highlighted !important;
+			color: @tab-label-selected !important;
+			font-size: 1em;
+		}
+	}
+}
+
+// drawer background color
+::shadow .tabbed-pane-content {
+	background-color: @global-background !important;
+}
+
+// drawer (search) form labels 
+::shadow .search-drawer-header label.search-config-label {
+	color: @form-label-text !important;
+}
+
+// isolate just the status bar and not the toolbar left/right components
+.panel .status-bar::shadow .status-bar-shadow {
+	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	box-shadow: inset 0 1px 0 lighten(@tab-color-top,7%), inset 0 -1px 0 darken(@tab-color-bottom,10%);
+	border-bottom: none !important;
+}
+
+// adjust height of left/right components of main nav
+.tabbed-pane-header-before::shadow,
+.tabbed-pane-header-after::shadow {
+
+	.status-bar-shadow {
+		height: @tab-main-toolbar-height !important;
+	}
+}
+
+
+// remove border from drawer header
+::shadow .shadow-split-view.vbox > .shadow-split-view-sidebar:not(.maximized) {
+	border-top: none !important;
+}
+
+// label for drawer -> devices
+.device-name {
+	color: @global-label !important;
+}
+
+.device-serial {
+	color: @global-text !important;
+}
+
+
+// find.less
+
+::shadow .search-config-search {
+	&:extend(.search-drawer-header input[type="text"].search-config-search all);
+}
+
+// remove bg gradient from device icon in emulation drawer
+.overrides-splash-screen .status-bar {
+	background-color: @global-background !important;
+	background-image: none !important;
+}
+
+::shadow .search-status-bar-summary {
+	&:extend(.search-status-bar-summary all);
+}
+
+// find results
+::shadow #search-results-pane-file-based {
+	&:extend(#search-results-pane-file-based all);
+}
+
+::shadow .search-match-line-number {
+	&:extend(#drawer-contents .search-match-line-number all);
+}
+
+::shadow .search-match-content {
+	&:extend(.search-match-content);
 }
