@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.7
+* `canary` fix main nav for docked devtools on mac
+
 ## 1.5.6
 * `canary` fix main nav for mac
 
