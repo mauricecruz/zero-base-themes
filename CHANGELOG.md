@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.5.6
+* `canary` fix main nav for mac
+
+## 1.5.5
+* `canary` update styles that moved into shadow dom
+
+## 1.5.4
+* `canary` fix a bunch of broken styles
+
 ## 1.5.3
 * `canary` fix main toolbar and profiles toolbar
 
