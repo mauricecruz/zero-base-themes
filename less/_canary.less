@@ -902,12 +902,22 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 		flex: 0 0 @tab-main-toolbar-height !important;
 	}
 
+	.tabbed-pane-header-tabs-drop-down-container {
+		padding-top: 6px !important;
+	}
+
 	.tabbed-pane-header-contents {
 		.tabbed-pane-header-tab {
 			height: @tab-main-toolbar-height !important;
 			line-height: (.75*@tab-main-toolbar-height) !important;
 		}
 	}
+}
+
+// drop-down hook when viewport is short
+::shadow .tabbed-pane-header-tabs-drop-down-container {
+	
+	color: @tab-label !important;
 }
 
 // Change tab styles
@@ -1014,4 +1024,24 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 
 ::shadow .search-match-content {
 	&:extend(.search-match-content);
+}
+
+
+// drawer.less
+
+//buttons
+[is="text-button"] {
+	&:extend(.text-button all);
+}
+
+// remove padding from overrides view so left sidebar displays correctly
+.overrides-view {
+	padding-top: 0 !important;
+}
+
+// add padding to overrides content panel
+.overrides-view ::shadow {
+	.tabbed-pane-content {
+		padding: 10px;
+	}
 }
