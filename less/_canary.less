@@ -1060,3 +1060,14 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 		padding-top: 5px !important;
 	}
 }
+
+// network view headers
+.network .request-headers-view .parent {
+	&:extend(#network-views .request-headers-view .parent);
+	margin-top: 1px !important;
+}
+
+// reduce space between network headers and subnav menu
+.data-grid .header-container {
+	top: -1px !important;
+}
