@@ -1049,3 +1049,14 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 ::shadow .tabbed-pane-placeholder {
 	&:extend(.tabbed-pane-placeholder);
 }
+
+// network header tall view
+.network-details-view-tall-header .network-item-view::shadow {
+	.tabbed-pane-header {
+		padding-top: 0 !important;
+	}
+	.tabbed-pane-header-tab {
+		height: 31px !important;
+		padding-top: 5px !important;
+	}
+}
