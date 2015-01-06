@@ -1098,3 +1098,32 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 		color: lighten(@global-text, 5%) !important;
 	}
 }
+
+// vertical navbars
+::shadow .vertical-tab-layout {
+	// change selected style from top border to left border
+	.tabbed-pane-header-tab {
+		padding-left: 20px !important;
+		border-top: none !important;
+		color: @global-text !important;
+		
+		&.selected {
+			border-top: none !important;
+			border-left: 7px solid @global-accent !important;
+			padding-left: 13px !important;
+		}
+	}
+}
+
+// Settings Sidebar
+.help-window-main ::shadow {
+	//remove bg normally for horizontal pane header
+	.tabbed-pane-header {
+		background-image: none !important;
+		box-shadow: none !important;
+	}
+
+	.tabbed-pane-header-contents {
+		box-shadow: none !important;
+	}
+}
