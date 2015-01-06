@@ -1,14 +1,12 @@
 # Changelog
 
-<<<<<<< HEAD
 ## 1.6.0
 * Add Tomorrow Night Bright theme. Preview - https://github.com/mauricecruz/zero-base-themes/pull/37#issuecomment-67730427
-=======
+
 ## 1.5.9
 * `canary` network panel fixes
 * `canary` fix vertical menus
 * `canary` fix suggest-box
->>>>>>> update changelog
 
 ## 1.5.8
 * `canary` fix button styles and drawer padding
