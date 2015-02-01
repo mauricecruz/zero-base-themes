@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.1
+* [canary] fix call stack styles
+
 ## 1.6.0
 * Add Tomorrow Night Bright theme. Preview - https://github.com/mauricecruz/zero-base-themes/pull/37#issuecomment-67730427
 
