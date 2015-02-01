@@ -772,6 +772,12 @@ body {
 	.search-action-button {
 		&:extend(.toolbar-search button);
 	}
+
+	#search-results-pane-file-based .search-match:hover {
+		box-shadow: inset 0 1px 0 @hover-border, inset 0 -1px 0 @hover-border !important;
+		background-color: @hover-background;
+		color: @hover-text;
+	}
 }
 
 
@@ -916,7 +922,7 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 
 // drop-down hook when viewport is short
 ::shadow .tabbed-pane-header-tabs-drop-down-container {
-	
+
 	color: @tab-label !important;
 }
 
@@ -1106,7 +1112,7 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 		padding-left: 20px !important;
 		border-top: none !important;
 		color: @global-text !important;
-		
+
 		&.selected {
 			border-top: none !important;
 			border-left: 7px solid @global-accent !important;
@@ -1126,4 +1132,50 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 	.tabbed-pane-header-contents {
 		box-shadow: none !important;
 	}
+}
+
+// 42.0.2291.0
+
+// _toolbars.less
+
+// status bar error|warn counts override
+body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
+	&:extend(.status-bar-counter);
+}
+
+// expand/collapse arrows in elements sidepanel
+.styles-section.matched-styles .style-properties li.parent.expanded .expand-element {
+	&:extend(.styles-section.matched-styles .properties li.parent.expanded .expand-element);
+}
+
+.styles-section.matched-styles .style-properties li.parent .expand-element {
+	&:extend(.styles-section.matched-styles .properties li.parent .expand-element);
+}
+
+
+
+
+// edit CSS elements in sidebar
+// [BUG?] Can't override the color of text.
+//
+// /deep/ style + .text-prompt-editing,
+// /deep/ style + .text-prompt-editing::content * {
+// 	background-color: @global-background !important;
+// 	color: red !important;
+// 	text-decoration: underline !important;
+// }
+
+
+// Sidebar Callstack (replaces placard in _panel-sources)
+::shadow {
+	.list-item {
+		&:extend(.placard all);
+	}
+}
+
+
+// 'paused on a js breakpoint' callstack node
+.callstack-info.status {
+	border-top: none !important;
+	&:extend(.hidden-placards-message all);
 }
