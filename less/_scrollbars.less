@@ -46,6 +46,7 @@
 .custom-popup-horizontal-scroll ::-webkit-scrollbar-track,
 .custom-popup-vertical-scroll ::-webkit-scrollbar-track {
  	-webkit-box-shadow: none !important;
+ 	background-image: none !important;
  	&:extend(::-webkit-scrollbar-track all);
 }
 
@@ -71,4 +72,9 @@
 .custom-popup-vertical-scroll ::-webkit-scrollbar-track-piece:vertical:decrement,
 .custom-popup-vertical-scroll ::-webkit-scrollbar-track-piece:vertical:increment {
 	-webkit-border-image:none !important;
+}
+
+.custom-popup-horizontal-scroll ::-webkit-scrollbar,
+.custom-popup-vertical-scroll ::-webkit-scrollbar {
+	background: none !important;
 }
