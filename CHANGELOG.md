@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.2
+* [canary] fix editing mode styles
+* fix popover overflows
+
 ## 1.6.1
 * [canary] fix call stack styles
 
