@@ -1155,15 +1155,15 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 
 
 
-// edit CSS elements in sidebar
-// [BUG?] Can't override the color of text.
-//
-// /deep/ style + .text-prompt-editing,
-// /deep/ style + .text-prompt-editing::content * {
-// 	background-color: @global-background !important;
-// 	color: red !important;
-// 	text-decoration: underline !important;
-// }
+// Editing Mode for CSS sidebars/ Snippets / Watch Expressions
+::shadow style + .text-prompt-editing {
+	background-color: @global-background !important;
+	outline: 1px solid @global-accent !important;
+}
+
+::shadow .text-prompt-editing > ::content * {
+	color: @global-text !important;
+}
 
 
 // Sidebar Callstack (replaces placard in _panel-sources)
