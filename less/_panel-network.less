@@ -75,20 +75,39 @@
 	}
 }
 
+/* Fallback Support */
+.resource-source-frame-fallback {
+	background-color: @- !important; .contrast(@global-background, 5%) !important;
+	color: @global-text !important;
+}
 
 
 /* Network Timing Pane */
-.resource-timing-view table {
-	background-color: @- !important; .contrast(@global-background, 5%) !important;
-	padding: 20px !important;
-	border-radius: 4px;
-	margin: 20px !important;
+.resource-timing-view {
+
+	table {
+		background-color: @- !important; .contrast(@global-background, 5%) !important;
+		padding: 20px !important;
+		border-radius: 4px;
+		margin: 20px !important;
+
+		td {
+			.network-timing-bar-title {
+				color: @global-text !important;
+				text-shadow: 0 1px 1px @- !important; .contrast(@global-background, 5%);
+			}
+		}
+	}
+
+	.network-timing-table {
+		.footnote, .network-timing-footer {
+			a {
+				color: @global-accent;
+			}
+		}
+	}
 }
 
-.resource-timing-view table td .network-timing-bar-title {
-	color: @global-text !important;
-	text-shadow: 0 1px 1px @- !important; .contrast(@global-background, 5%);
-}
 
 #network-views .request-headers-view .parent {
 	& { background-color: @- !important; .contrast(@global-background, 2.5%) };
