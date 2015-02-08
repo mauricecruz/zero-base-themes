@@ -1,15 +1,18 @@
 # Changelog
 
+## 1.6.4
+* `canary` style devices list
+
 ## 1.6.3
 * Add Dark Soda / Monokai theme.
 https://github.com/mauricecruz/zero-base-themes/commit/2dfffd32d38c7370aa219fd6b13d7b86baf295b1
 
 ## 1.6.2
-* [canary] fix editing mode styles
+* `canary` fix editing mode styles
 * fix popover overflows
 
 ## 1.6.1
-* [canary] fix call stack styles
+* `canary` fix call stack styles
 
 ## 1.6.0
 * Add Tomorrow Night Bright theme. Preview - https://github.com/mauricecruz/zero-base-themes/pull/37#issuecomment-67730427
