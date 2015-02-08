@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.5
+* `canary` forgot to style title of devices list
+
 ## 1.6.4
 * `canary` style devices list
 
