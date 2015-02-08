@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.3
+* Add Dark Soda / Monokai theme.
+https://github.com/mauricecruz/zero-base-themes/commit/2dfffd32d38c7370aa219fd6b13d7b86baf295b1
+
 ## 1.6.2
 * [canary] fix editing mode styles
 * fix popover overflows
