@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.6
+* `canary` fix event listener styles
+
 ## 1.6.5
 * `canary` forgot to style title of devices list
 
