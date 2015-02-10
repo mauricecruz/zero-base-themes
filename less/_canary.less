@@ -1218,11 +1218,8 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 	}
 
 	.devices-custom-separator {
-		border-top: 1px solid @- !important; .contrast(@global-background, 5%, invert);
-	}
-
-	.devices-custom-separator {
-		border-bottom: 1px solid @- !important; .contrast(@global-background, 5%);
+		& { border-top: 1px solid @- !important; .contrast(@global-background, 5%, invert) };
+		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%); }
 	}
 
 	.devices-list-edit,
@@ -1240,3 +1237,29 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 		-webkit-mask-position: -128px -24px;
 	}
 }
+
+
+// [sidebar-elements.less] Event listener list
+
+.events-pane > ol > li.parent {
+	&:extend(.sidebar-pane .section);
+	margin: 0 !important;
+	padding-bottom: 2px !important;
+}
+
+.events-pane > ol > ol > li {
+	border-top: none !important;
+}
+
+// remove bottom border from child items because stable.css still uses the selector
+.events-pane .sidebar-pane .section.expanded > .header,
+.events-pane .children .section.event-bar {
+	border-bottom: none !important;
+}
+
+// remove dashed border which is still being used on stable
+body .sidebar-pane .parent:not(.event-category) + .children.expanded {
+	border-left: none !important;
+}
+
+// [end] Event listener list
