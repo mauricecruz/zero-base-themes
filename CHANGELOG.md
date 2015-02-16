@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.8
+* remove horizontal scrollbars from popovers
+
 ## 1.6.7
 * `canary` style hidden stackframe notification and editable media query
 
