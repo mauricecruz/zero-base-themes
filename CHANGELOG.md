@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.7
+* `canary` style hidden stackframe notification and editable media query
+
 ## 1.6.6
 * `canary` fix event listener styles
 
