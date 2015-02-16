@@ -1279,7 +1279,13 @@ body .sidebar-pane .parent:not(.event-category) + .children.expanded {
 .styles-section-title .media-list {
 	color: @- !important; .contrast(@global-text, 25%, invert);
 
+	
 	&.media-matches .media.editable-media .media-text {
-		color: @global-text;
+		color: @global-text !important;
 	}
+}
+
+// Chrome beta only - remove once it hits stable
+.styles-section .header .title .media-list.media-matches .media.editable-media {
+	color: @global-text !important;
 }
