@@ -357,27 +357,6 @@ body {
 			color: @global-text !important;
 		}
 
-		.outline-disclosure {
-
-			li {
-				color: @global-text;
-			}
-
-			ol:focus li.selected .selection,
-			li.selected .selection {
-				outline: 1px solid @eh-highlight-outline !important;
-				background-color: @eh-highlight-background !important;
-			}
-
-			li.hovered:not(.selected) .selection {
-				border-radius: 0 !important;
-				background-color: @eh-hover-background !important;
-				border-top: 1px solid @eh-hover-outline !important;
-				border-bottom: 1px solid @eh-hover-outline !important;
-			}
-		}
-
-
 		//scrollbars
 		::-webkit-scrollbar,
 		.CodeMirror-scrollbar-filler,
@@ -1265,7 +1244,7 @@ body .sidebar-pane .parent:not(.event-category) + .children.expanded {
 // [end] Event listener list
 
 // [panel-sources] Hidden stack frames notification (sidebar)
-.hidden-callFrames-message {
+.hidden-callframes-message {
 	background: @-; .contrast(@global-background, 5%);
 	text-align: center;
 
@@ -1279,7 +1258,7 @@ body .sidebar-pane .parent:not(.event-category) + .children.expanded {
 .styles-section-title .media-list {
 	color: @- !important; .contrast(@global-text, 25%, invert);
 
-	
+
 	&.media-matches .media.editable-media .media-text {
 		color: @global-text !important;
 	}
@@ -1288,4 +1267,14 @@ body .sidebar-pane .parent:not(.event-category) + .children.expanded {
 // Chrome beta only - remove once it hits stable
 .styles-section .header .title .media-list.media-matches .media.editable-media {
 	color: @global-text !important;
+}
+
+
+// Element Selector (Class Change)
+.panel.elements ::shadow,
+.panel.console ::shadow {
+
+	.elements-disclosure {
+		&:extend(.panel.elements ::shadow .outline-disclosure all);
+	}
 }
