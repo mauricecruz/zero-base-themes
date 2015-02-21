@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.0
+* `canary` fix element selector
+* `canary` fix network scroll issue that prevented last item from being visible
+
 ## 1.6.8
 * remove horizontal scrollbars from popovers
 
