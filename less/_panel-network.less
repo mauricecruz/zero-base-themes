@@ -15,10 +15,8 @@
 	th.sort-ascending,
 	th.sort-descending,
 	th.sortable,
-	.timeline-column,
-	.corner {
+	.timeline-column {
 		& { border-right: 1px solid @- !important; .contrast(@global-background, 10%) !important };
-		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 10%) !important };
 	}
 
 	.network-timeline-grid .resources-divider-label {
@@ -75,11 +73,11 @@
 	}
 }
 
-/* Fallback Support */
-.resource-source-frame-fallback {
-	background-color: @- !important; .contrast(@global-background, 5%) !important;
-	color: @global-text !important;
-}
+// /* Fallback Support */
+// .resource-source-frame-fallback {
+// 	background-color: @- !important; .contrast(@global-background, 5%) !important;
+// 	color: @global-text !important;
+// }
 
 
 /* Network Timing Pane */
