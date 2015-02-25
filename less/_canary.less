@@ -1278,3 +1278,16 @@ body .sidebar-pane .parent:not(.event-category) + .children.expanded {
 		&:extend(.panel.elements ::shadow .outline-disclosure all);
 	}
 }
+
+// Sources - Watch Panel
+.watch-expressions {
+	.name {
+		color: @js-obj-name !important;
+	}
+}
+
+// Watch Panel Hover
+.watch-expression .primitive-value:hover,
+.watch-expression .section .header:hover {
+	.highlight(hover);
+}
