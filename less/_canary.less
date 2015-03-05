@@ -509,8 +509,8 @@ body {
 				}
 
 				// fade closing tag of parent
-				> :last-child * {
-					opacity: .6;
+				> li:last-of-type .webkit-html-tag.close {
+					opacity: 0.5 !important;
 				}
 			}
 		}
@@ -525,12 +525,12 @@ body {
 		-webkit-transition: .5s ease-in .25s;
 	}
 
-	.panel.elements /deep/ .parent.selected.expanded + .children > :last-child *,
-	.panel.elements /deep/ .parent.hovered.expanded + .children > :last-child * {
-		-webkit-transition: opacity .5s ease-in-out .25s;
+	.panel.elements /deep/ .hovered,
+	.panel.elements /deep/ .selected {
+		&.parent.expanded + .children > li:last-of-type .webkit-html-tag.close {
+			-webkit-transition: opacity .5s ease-in-out .25s;
+		}
 	}
-
-
 }
 
 //**********************************************/
