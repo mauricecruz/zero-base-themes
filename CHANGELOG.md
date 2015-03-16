@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.7.1
+* `canary` style animation editor
+* `canary` style hidden experiments options
+* `canary` enable fallback styles again
+* `canary` fix watch panel styles
+
 ## 1.7.0
 * `canary` fix element selector
 * `canary` fix network scroll issue that prevented last item from being visible
