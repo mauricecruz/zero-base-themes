@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.7.2
+* `canary` fix filter style match
+* `canary` fix popover styles
+* `canary` style network graph
+* `canary` fix console js styles
+* `canary` style console warning/error messages
+
 ## 1.7.1
 * `canary` style animation editor
 * `canary` style hidden experiments options
