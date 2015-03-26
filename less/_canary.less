@@ -1272,19 +1272,10 @@ body .sidebar-pane .parent:not(.event-category) + .children.expanded {
 }
 
 
-// Element Selector (Class Change)
-.panel.elements ::shadow,
-.panel.console ::shadow {
-
-	.elements-disclosure {
-		&:extend(.panel.elements ::shadow .outline-disclosure all);
-	}
-}
-
 // Sources - Watch Panel
 .watch-expressions {
 	margin-top: 0 !important;
-	
+
 	.name {
 		color: @js-obj-name !important;
 	}
@@ -1312,7 +1303,7 @@ body .sidebar-pane .parent:not(.event-category) + .children.expanded {
 
 // Sources Panel - Event Listener Tree
 .event-listener-tree {
-	
+
 	> li {
 		border-top: none !important;
 	}
@@ -1325,7 +1316,7 @@ body .sidebar-pane .parent:not(.event-category) + .children.expanded {
 // Animation Editor Popover
 .bezier-icon {
 	background-color: @global-accent !important;
-	
+
 	path {
 		stroke: @global-background !important;
 	}
@@ -1361,3 +1352,39 @@ body .sidebar-pane .parent:not(.event-category) + .children.expanded {
 		}
 	}
 }
+
+/* ==========================================================================
+   console.less
+   ========================================================================== */
+
+// overrides
+// ---------------------------
+// remove white border
+.console-message-wrapper {
+	border-bottom: none !important;
+}
+
+
+// console error
+.console-error-level {
+	background-color: fade(@filter-error, 05%) !important;
+	border-top: 1px solid fade(@filter-error, 05%) !important;
+	border-bottom: 1px solid fade(@filter-error, 05%) !important;
+
+	// remove 1 border for consecutive errors
+	+.console-error-level {
+		border-top: none !important;
+	}
+}
+
+.console-warning-level {
+	background-color: fade(@filter-warning, 05%) !important;
+	border-top: 1px solid fade(@filter-warning, 05%) !important;
+	border-bottom: 1px solid fade(@filter-warning, 05%) !important;
+
+	// remove 1 border for consecutive errors
+	+.console-warning-level {
+		border-top: none !important;
+	}
+}
+
