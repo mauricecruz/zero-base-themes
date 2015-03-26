@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.7.3
+* `canary` put horizontal scrollbars back on popovers
+
 ## 1.7.2
 * `canary` fix filter style match
 * `canary` fix popover styles
