@@ -1,0 +1,1319 @@
+//**********************************************/
+//* 40.0.2191
+//**********************************************/
+// Fixes for elements panel content that is now inside shadow dom.
+
+//_syntax.less
+body {
+
+	/deep/ .cm-js- {
+		&keyword { color: @js-keyword !important; font-style: italic !important; }
+		&number { color: @js-number !important; }
+		&comment { color: @js-comment !important; }
+		&string { color: @js-string !important; }
+		&string-2 { color: @js-string !important; }
+	}
+
+	/deep/ .cm-css- {
+		&keyword { color: @css-def !important; }
+		&number { color: @css-number !important; }
+		&comment { color: @css-comment }
+		&def { color: @css-def !important; }
+		&meta { color: @css-meta !important; }
+		&atom { color: @css-atom !important; }
+		&string { color: @css-string !important; }
+		&string-2 { color: @css-string-2 !important; }
+		&link { color: @xml-link !important; }
+		&variable { color: @css-variable !important; }
+		&variable-2 { color: @css-variable-2 !important; }
+		&property { color: @css-property !important; }
+	}
+
+	/deep/ .webkit-css-property { color: @css-property !important; }
+
+	/deep/ .cm-xml- {
+		&meta { color: @js-meta !important; }
+		&comment { color: @xml-comment !important; }
+		&string { color: @xml-string !important; }
+		&tag { color: @xml-tag !important; }
+		&attribute { color: @xml-attribute !important; }
+		&link { color: @xml-link !important; }
+	}
+
+	/deep/ .webkit-html-comment { color: @xml-comment !important; }
+	/deep/ .webkit-html-tag { color: @xml-tag !important; }
+	/deep/ .webkit-html-text-node { unicode-bidi: -webkit-isolate !important; }
+
+	// non-standard
+	/deep/ .webkit-html-pseudo-element { color: brown !important; }
+	/deep/ .webkit-html-entity-value { color: pink !important; unicode-bidi: -webkit-isolate !important; }
+
+	/deep/ .webkit-html-doctype { color: @global-text !important; }
+	/deep/ .webkit-html-attribute-name { color: @xml-attribute !important; unicode-bidi: -webkit-isolate; }
+
+	/deep/ .webkit-html-attribute-value { color: @xml-string !important; unicode-bidi: -webkit-isolate; }
+
+	/deep/ .webkit-html-external-link,
+	/deep/ .webkit-html-resource-link {
+		color: @xml-link !important;
+	}
+
+	/deep/ .webkit-html-resource-link {
+		cursor: pointer;
+	}
+
+	/deep/ .webkit-html-external-link {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	/deep/ .shadow-root .webkit-html-fragment.shadow-root { color: @xml-shadow-root !important; }
+
+	 /deep/ .webkit-html-end-of-file {
+		color: rgb(255, 0, 0);
+		font-weight: bold;
+	}
+
+	// _global_styles
+	::shadow {
+		.editing {
+			background-color: @global-background !important;
+			outline: 1px solid @eh-editing-outline !important;
+			color: @global-text !important;
+		}
+	}
+
+	// syntax
+	::shadow {
+
+		//JAVASCRIPT
+		.cm-js-atom { color: @js-atom !important; }
+		.cm-js-attribute {color: @js-attribute !important; }
+		.cm-js-builtin {color: @js-builtin !important; }
+		.cm-js-comment {color: @js-comment !important; font-style: italic; }
+		.cm-js-def {color: @js-def !important; }
+		.cm-js-error { background: #9D1E15 !important; color: @js-error !important; }
+		.cm-js-header {color: @js-header !important; }
+		.cm-js-hr {color: @js-hr !important; }
+		.cm-js-keyword {color: @js-keyword !important; font-style: italic; }
+		.cm-js-link {color: @js-link !important; }
+		.cm-js-meta {color: @js-meta !important; }
+		.cm-js-number {color: @js-number !important; }
+		.cm-js-operator {color: @js-operator !important;}
+		.cm-js-property {color: @js-property !important; }
+		.cm-js-string {color: @js-string !important; }
+		.cm-js-string-2 { color: @js-string !important; }
+		.cm-js-tag {color: @js-tag !important; }
+		.cm-js-variable {color: @js-variable !important; }
+		.cm-js-variable-2 { color: @js-variable-2 !important; }
+
+		.source-frame-eval-expression{ background-color: @selection-background !important; border-color: @selection-border !important;}
+
+		//COFFEESCRIPT
+		.cm-atom { .cm-js-atom }
+		.cm-comment { .cm-js-comment }
+		.cm-variable { .cm-js-variable }
+		.cm-string { .cm-js-string }
+		.cm-keyword { .cm-js-keyword }
+		.cm-number { .cm-js-number }
+		.cm-operator { .cm-js-operator }
+		.cm-error { .cm-js-error}
+		.cm-s-default .cm-property { .cm-js-variable }
+
+		/*--CSS--*/
+		.cm-css-atom { color: @css-atom !important; }
+		.cm-css-builtin { color: @css-builtin !important; }
+		.cm-css-def { color: @css-def !important; }
+		.cm-css-comment { color: @css-comment !important; font-style: italic; }
+		.cm-css-meta { color: @css-meta !important;}
+		.cm-css-number { color: @css-number !important; }
+		.cm-css-operator { color: @css-operator !important; }
+		.cm-css-property { color: @css-property !important;}
+		.cm-css-qualifier { color: @css-qualifier !important; }
+		.cm-css-string { color: @css-string !important;}
+		.cm-css-string-2 { color: @css-string-2 !important; }
+		.cm-css-tag { color: @css-tag !important; }
+		.cm-css-variable { color: @css-variable !important; }
+		.cm-css-variable-2 { color: @css-variable-2 !important; }
+
+		/*--HTML--*/
+		.cm-xml-comment { color: @xml-comment !important; font-style: italic !important; }
+		.cm-xml-error { color: @xml-error  !important; }
+		.cm-xml-string { color: @xml-string !important; }
+		.cm-xml-tag { color: @xml-tag !important; }
+		.cm-xml-attribute { color: @xml-attribute !important; }
+		.cm-xml-link { color: @xml-link !important; }
+		.shadow-root .webkit-html-fragment.shadow-root { color: @xml-shadow-root !important; }
+		.outline-disclosure ol li .highlight { color: @xml-iframe-root !important; }
+
+		/*--GLOBAL--*/
+		.CodeMirror-code {
+			color: @global-text;
+		}
+
+
+		/**********************************************
+		/* Code Highlighting [WEBKIT]
+		/**********************************************/
+
+		/*-- HTML --*/
+		.webkit-html-attribute-name {color: @xml-attribute !important;}
+		.webkit-html-attribute-value {color: @xml-string !important;}
+		.webkit-html-comment {color:@xml-comment!important;font-style:italic;}
+		.webkit-html-resource-link,
+		.webkit-html-external-link {color:@xml-link!important;}
+		.webkit-html-tag,
+		.webkit-html-tag-name {color:@xml-tag!important;}
+		.webkit-html-text-node,
+		.webkit-html-css-node,
+		.webkit-html-js-node {color:@xml-js-node!important;}
+		.webkit-html-pseudo-element {color:@xml-pseudo !important;}
+
+		/*-- CSS --*/
+		.selector-matches {color:@css-builtin!important;}
+		.webkit-css-selector {color:@css-def!important;}
+		.webkit-css-at-rule {color:@css-at-rule!important;}
+		.webkit-css-color {color:@css-def!important;}
+		.webkit-css-comment {color:@css-comment!important;}
+		.webkit-css-important {color:@css-important!important;}
+		.webkit-css-keyword {color:@css-def!important;}
+		.webkit-css-number {color:@css-number!important;}
+		.webkit-css-property,
+		.styles-section .properties > li .webkit-css-property {color:@css-property!important;font-weight:400;}
+		.webkit-css-string {color:@css-string!important;}
+		.webkit-css-url {color:@xml-link!important;}
+
+		// Javascript Objects
+		.section .properties .name,
+		.event-properties .name,
+		.console-formatted-object .name { color: @js-obj-name !important; }
+		.console-formatted-object,
+		.console-formatted-array { color: @js-obj-array !important; }
+		.console-formatted-function { color: @js-obj-function !important; }
+		.console-formatted-number { color: @js-obj-number !important; }
+		.console-formatted-boolean { color: @js-obj-boolean !important; }
+		.console-object-preview { color: @js-obj-preview !important; }
+		.console-formatted-regexp { color: @js-obj-regexp !important; }
+		.console-formatted-string { color: @js-obj-string !important; }
+		.console-formatted-undefined { color: @js-obj-undefined !important; }
+		.json .title { color: @global-text !important;}
+		.json .separator { color: @- !important; .contrast(@global-text, 35%, invert); }
+
+		.popover .parent + .children.expanded,
+		#console-messages .parent + .children.expanded,
+		.sidebar-pane .parent:not(.event-category) + .children.expanded {
+			border-left: 1px dashed fade(@global-text, 20%) !important;
+			position: relative;
+			left: 4.4px;
+		}
+
+		// dimmed object properties (also on console objects)
+		.section .properties .dimmed {
+			opacity: 0.5 !important;
+		}
+
+		//Codemirror
+		// Breakpoint Arrow
+		.cm-breakpoint .CodeMirror-gutter-elt {
+			color: #000 !important;
+			font-weight: 700 !important;
+		}
+
+		// Edit HTML cursor / Sources Edit cursor
+		.CodeMirror-cursor {
+			border-left: 1px solid @cm-cursor !important;
+		}
+
+		.cm-error {
+			background: @cm-error !important;
+			border-radius: 2px !important;
+			color: #eee !important;
+		}
+
+		// line number text
+		.CodeMirror-gutter-elt {
+			color: @cm-gutter-lines !important;
+		}
+
+		// line number bg
+		.CodeMirror-gutters {
+			background: @cm-gutter !important;
+			border-right: 2px solid @cm-gutter-border !important;
+		}
+
+		.CodeMirror-selected,
+		span.CodeMirror-selectedtext {
+			background: @cm-selected !important;
+		}
+
+		.CodeMirror-code .CodeMirror-matchingbracket {
+			color: @cm-matching-bracket !important;
+			text-shadow: 0 0 3px @cm-matching-bracket !important;
+			border-bottom: none !important;
+			font-weight: 800 !important;
+		}
+
+		.CodeMirror-code .CodeMirror-nonmatchingbracket {
+			color: @cm-nonmatching-bracket !important;
+			text-shadow: 0 0 3px @cm-nonmatching-bracket !important;
+			border-bottom: none !important;
+			font-weight: 800 !important;
+		}
+
+		.cm-search-highlight-start:before {
+			border-color: @global-accent !important;
+		}
+
+		.cm-search-highlight-end:before {
+			border-color: @global-accent !important;
+		}
+
+		.cm-search-highlight:before {
+			border-color: @global-accent !important;
+			padding: 2px !important;
+		}
+
+		.cm-line-with-selection .cm-column-with-selection.cm-search-highlight:before {
+			background-color: @global-accent !important;
+			border-radius: 2px !important;
+		}
+
+		span.cm-token-highlight {
+			background-color: transparent !important;
+			padding: 0px !important;
+		}
+
+		span.cm-token-highlight:before {
+			border-color: @global-accent !important;
+		}
+
+		.cm-line-with-selection span.cm-column-with-selection {
+			color: #000 !important; background-color: @global-accent !important;
+		}
+
+		.cm-whitespace:before {
+			color: @cm-whitespace !important;
+		}
+
+		.cm-tab:before {
+			border-bottom: 1px solid @cm-whitespace !important;
+		}
+
+		.cm-highlight {
+			-webkit-animation: "fadeout-revised" 3s 0s !important;
+			outline: 1px solid @selection-border;
+		}
+
+		.cm-highlight *:not(.CodeMirror-linenumber){
+			color: @selection-text !important;
+		}
+
+		.cm-execution-line {
+			background-color: @selection-background  !important;
+			outline: 1px solid @selection-border !important;
+		}
+
+		.CodeMirror-linenumber {border-right: none !important;}
+
+		.cm-line-without-source-mapping {
+			background-color: @cm-lines-no-sourcemap !important;
+		}
+
+		@-webkit-keyframes fadeout-revised {
+			0% {
+					background-color: @selection-background;
+					outline: 1px solid @selection-border;
+				}
+			50% {
+					background-color: @selection-background;
+					outline: 1px solid @selection-border;
+				}
+
+			100% {
+					background-color: @global-background;
+					outline: 1px solid @global-background;
+			}
+		}
+
+
+		// Editing Dom Nodes or Snippet Filenames
+		.editing {
+			background-color: @global-background !important;
+			outline: 1px solid @eh-editing-outline !important;
+			color: @global-text !important;
+		}
+
+		// _panel_elements
+		.CodeMirror {
+			outline: none !important;
+			border: 1px solid @- !important; .contrast(@global-background, 5%);
+			border-radius: 5px;
+			box-shadow: inset 0 0 15px 0 rgba(17,17,17,.6) !important;
+			margin: 10px 0;
+			padding: 10px 0 0 10px !important;
+			color: @global-text !important;
+		}
+
+		//scrollbars
+		::-webkit-scrollbar,
+		.CodeMirror-scrollbar-filler,
+		.CodeMirror-gutter-filler {
+			width: @sb-thickness !important;
+			height: @sb-thickness !important;
+			background-color: @global-background !important;
+		}
+
+		::-webkit-scrollbar-track {
+
+			&:horizontal {
+				-webkit-box-shadow: inset 1px 5px 6px rgba(0,0,0,0.3) !important;
+			};
+
+			&:vertical {
+				-webkit-box-shadow: inset 4px 1px 8px 1px rgba(0,0,0,0.3) !important;
+			};
+
+		}
+
+		::-webkit-scrollbar-corner,
+		.CodeMirror-scrollbar-filler,
+		.CodeMirror-gutter-filler {
+			-webkit-box-shadow: inset 1px 5px 6px rgba(0,0,0,0.3) !important;
+		}
+
+		::-webkit-scrollbar-thumb {
+			border-radius: @sb-thumb-roundness !important;
+			background-color: @sb-thumb-color !important;
+			border: 1px solid @sb-thumb-border !important;
+
+			&:horizontal {
+				-webkit-box-shadow: inset 0 7px 1px -5px rgba(255,255,255,0.3) !important;
+			}
+
+			&:vertical {
+				-webkit-box-shadow: inset 3px 0 5px 0 rgba(255,255,255,0.3) !important;
+			}
+		}
+
+		//navigation-arrows
+
+		 // hide/expand point arrow down
+		.styles-section.matched-styles .properties li.parent.expanded .expand-element,
+		#console-messages .console-group-messages .section.expanded .header::before,
+		#console-messages .properties-tree li.parent.expanded::before,
+		.outline-disclosure li.parent.expanded::before,
+		.properties-tree li.parent.expanded::before,
+		.section.expanded > .header::before,
+		.section .event-bar.expanded .header::before,
+		.sidebar-pane .parent.expanded::before,
+		.sidebar-pane-stack .sidebar-pane-title.expanded::before,
+		.timeline-expandable-expanded .timeline-expandable-arrow {
+			.arrow-styles;
+			.arrow-animations-down();
+		}
+
+		.sidebar-pane-stack .sidebar-pane-title.expanded::before {
+			.arrow-sidebar-pane-adjustment();
+		}
+
+		// hide/expand arrow point right
+		.styles-section.matched-styles .properties li.parent .expand-element,
+		#console-messages .console-group-messages .section .header::before,
+		#console-messages .properties-tree li.parent::before,
+		.outline-disclosure li.parent::before,
+		#search-results-pane-file-based .parent::before,
+		.properties-tree li.parent::before,
+		.section > .header::before,
+		.section .event-bar .header::before,
+		.sidebar-pane .parent::before,
+		.sidebar-pane-stack .sidebar-pane-title::before,
+		.timeline-expandable-collapsed .timeline-expandable-arrow {
+			.arrow-styles;
+			.arrow-animations-right();
+		}
+
+		// sort arrows point down
+		.data-grid th.sort-ascending > div::after {
+			.arrow-styles;
+			-webkit-mask-position: -4px -108px !important;
+		}
+
+		// sort arrows point up
+		.data-grid th.sort-descending > div::after {
+			.arrow-styles;
+			-webkit-mask-position: -20px -96px !important;
+		}
+
+		// BUG??: Arrows don't rotate in find module
+		#search-results-pane-file-based .parent.expanded::before{
+			-webkit-mask-position: -20px -96px !important;
+		}
+
+		// Drawer find arrow trees showing more sprite area than normal
+		#search-results-pane-file-based .parent.expanded::before {
+			-webkit-mask-position: -20px -93px !important;
+		}
+
+		#search-results-pane-file-based .parent::before {
+			-webkit-mask-position: -4px -93px !important;
+		}
+
+		// Adjust position of
+		// - network headers section arrows
+		.panel.network .outline-disclosure li.parent::before{
+			top: 3px !important;
+		}
+		// - event listener arrows
+		.sidebar-tabbed-pane .section > .header::before,
+		.event-bars .event-bar .header::before {
+			margin-top: 3px !important;
+		}
+
+		// selectbox arrows
+		.status-bar-select-arrow {
+			.arrow-styles;
+			-webkit-mask-position: -20px -96px !important;
+		}
+	}
+
+	// find
+	/deep/ .highlighted-search-result {
+		color: @find-highlight-text !important;
+		border-radius: 2px !important;
+		font-size: 1em !important;
+		background-color: @find-highlight-background !important;
+		box-shadow: rgba(0, 0, 0, 0.498039) 3px 3px 4px 0px !important;
+	}
+
+}
+
+// elements-child-highlighter
+.show-child-highlighter(@choice) when (@choice = true) {
+	.panel.elements {
+		/deep/ .parent {
+			// highlight children
+			&.selected.expanded + .children,
+			&.hovered.expanded + .children {
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				padding-bottom: 5px !important;
+				box-shadow: inset 0 0 30px 0 @eh-children-shadow;
+				border-bottom: 1px solid @- !important; .contrast(@global-background, 10%);
+
+				// highlight pseudo elements of selected node
+				> li .webkit-html-pseudo-element:first-child {
+					color: @xml-pseudo-highlighted !important;
+				}
+
+				// fade closing tag of parent
+				> li:last-of-type .webkit-html-tag.close {
+					opacity: 0.5 !important;
+				}
+			}
+		}
+	}
+}
+
+// animations
+.show-animations(@choice) when (@choice = true) {
+
+	/*-- HIGHLIGHT CHILDREN --*/
+	.panel.elements /deep/ .parent + .children {
+		-webkit-transition: .5s ease-in .25s;
+	}
+
+	.panel.elements /deep/ .hovered,
+	.panel.elements /deep/ .selected {
+		&.parent.expanded + .children > li:last-of-type .webkit-html-tag.close {
+			-webkit-transition: opacity .5s ease-in-out .25s;
+		}
+	}
+}
+
+//**********************************************/
+//*  40.0.2199.1
+//**********************************************/
+
+// panel_timeline
+
+// color of aggregated times in details sidebar ()
+.timeline-aggregated-category + span {
+	text-shadow: none !important;
+	color: @global-text !important;
+}
+
+// glyphs are now using webkit masks across the app. Update the glyph color
+.glyph {
+	background-color: rgba(140, 140, 140, 0.7) !important;
+}
+
+//**********************************************/
+//* 40.0.2204.0
+//**********************************************/
+
+// elements crumbs in now in shadow dom
+
+::shadow {
+	.crumbs {
+		text-shadow: none !important;
+		color: @crumb-text !important;
+
+		.crumb {
+			-webkit-border-image: none !important;
+			& { border-left: 1px solid @- !important; .contrast(@global-background, 25%) };
+			& { border-right: 1px solid @- !important;.contrast(@global-background, 15%) };
+			padding: 0 10px !important;
+			margin: 0 !important;
+			line-height: 18px !important;
+
+			&:hover {
+				color: @crumb-selected-text !important;
+				background-color: rgba(0,0,0,0) !important;
+			}
+
+			&.selected {
+				background-color: @crumb-selected-background !important;
+				text-shadow: none !important;
+				color: @crumb-selected-text !important;
+				cursor: default;
+			}
+		}
+	}
+}
+//**********************************************/
+//* 40.0.2209.0
+//**********************************************/
+
+// panel_network
+// *************************************
+
+// Image Preview for Network and Resources replaces ".resource-view" ....
+// Network Preview for images
+.image-view .title {
+	color: @global-text !important;
+}
+
+// Image property key
+.image-view .infoList dt {
+	color: @global-label !important;
+	margin-bottom: 5px !important;
+}
+
+// Image property value
+.image-view .infoList dd {
+	color: @global-text !important;
+	margin-bottom: 5px !important;
+}
+
+// urls (there's no descriptive class to get to this at the moment)
+.image-view dd > a.undefined {
+	color: @xml-link !important;
+}
+
+// panel_timeline
+// *************************************
+
+// new timeline ui
+
+// add this to global background
+.timeline-details-view-body {
+	background-color: @global-background !important;
+}
+
+// divider
+.timeline-details-view-row {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+.timeline-details-view-row-value {
+	border-left: 1px solid @global-divider !important;
+	color: @global-text !important;
+}
+
+.timeline-details-view-row-title {
+	color: @global-label !important;
+}
+
+// text
+.timeline-aggregated-info-legend > div, .memory-counter-sidebar-info {
+	color: @global-text !important;
+}
+
+
+::shadow .flame-chart-selected-element {
+	border-color: @global-selected !important;
+	background-color: fade(@global-selected, 60%) !important;
+}
+
+
+// timeline layers
+.layer-tree.outline-disclosure li,
+.profiler-log-view li {
+	color: @global-text !important;
+}
+
+.layer-detail-view .table {
+
+	td {
+
+	}
+}
+
+.timeline-layers-view-properties {
+
+	table tr{
+		// key
+		td:nth-child(1) {
+			color: @global-label !important;
+		}
+
+		td:nth-child(2) {
+			color: @global-text !important;
+		}
+	}
+
+
+	td {
+		border: 1px solid @global-divider !important;
+	}
+}
+
+// popovers_panel
+// *************************************
+
+
+// color picker
+::shadow {
+	.spectrum-display-value,
+	.spectrum-range-container {
+		color: @global-text !important;
+	}
+}
+
+//**********************************************/
+//* 41.0.2223.0
+//**********************************************/
+
+
+// toolbars_panel
+// *************************************
+
+// replaces toolbar-controls-left(and right)
+.toolbar > .status-bar {
+	background-color: transparent !important;
+	height: inherit !important;
+	padding-top: @tab-main-icons-padding !important;
+	border-bottom: 1px solid darken(@tab-color-bottom,10%) !important;
+	box-shadow: inset 0 1px 0 lighten(@tab-color-top,7%) !important;
+}
+
+// add padding to console subtoolbar (filters)
+.filter-bar.hbox {
+	padding: 2px 0;
+}
+
+//**********************************************/
+//* 41.0.2227.1
+//**********************************************/
+
+// toolbars.less
+
+::shadow {
+	// sidebar borders
+	.shadow-split-view.hbox.shadow-split-view-first-is-sidebar > .shadow-split-view-sidebar:not(.maximized) {
+		border-right: 2px solid @global-divider !important;
+	}
+
+	.shadow-split-view.hbox > .shadow-split-view-sidebar:not(.maximized) {
+		border-left: 2px solid @global-divider !important;
+	}
+
+	.shadow-split-view.vbox > .shadow-split-view-resizer > .shadow-split-view-resizer-border {
+		border-top: none !important;
+	}
+
+}
+
+// find.less
+::shadow {
+	.toolbar-search-control {
+		.input-styles();
+		&:extend(.toolbar-search-control all);
+	}
+
+	.search-bar {
+		&:extend(.status-bar);
+	}
+
+	.search-action-button {
+		&:extend(.toolbar-search button);
+	}
+
+	#search-results-pane-file-based .search-match:hover {
+		box-shadow: inset 0 1px 0 @hover-border, inset 0 -1px 0 @hover-border !important;
+		background-color: @hover-background;
+		color: @hover-text;
+	}
+}
+
+
+// status-bar.less
+
+.status-bar {
+	&:extend(.sources-status-bar);
+}
+
+// pretty much all label text in the status bars
+html /deep/ .component-root {
+	color: @global-text !important;
+}
+
+// network input filter
+.filter-input-field {
+	.input-styles() !important;
+}
+
+//select boxes
+::shadow {
+	select.status-bar-item {
+		&:extend(select.status-bar-item);
+		margin-right: -15px !important;
+	}
+
+	select.status-bar-item /deep/ option {
+		background-color: @global-background !important;
+	}
+}
+
+
+// glyphs
+::shadow {
+
+	.status-bar-item > .glyph,
+	.shadow-split-view button.sidebar-show-hide-button {
+		background-color: @glyph-inactive !important;
+	}
+
+	.status-bar-item[disabled] {
+		opacity: 0.5 !important;
+	}
+
+	button.status-bar-item.toggled-on .glyph,
+	.filter-status-bar-item.toggled-shown .glyph,
+	button.status-bar-item:not([disabled]):active .glyph {
+		background-color: @glyph-active !important;
+	}
+
+}
+
+// panel-sources
+
+// replaces Alternate Buttons
+#glass-pane .status-bar.fill {
+	background-image: none !important;
+	background-color: transparent !important;
+}
+
+::shadow {
+	.status-bar-shadow.floating {
+		background-color: @- !important; .contrast(@global-background, 5%) !important;
+		border: none !important;
+
+		.status-bar-item {
+			border: 1px solid @global-background !important;
+		}
+	}
+}
+
+
+// panel-timeline.less
+
+#memory-graphs-container > div:last-child {
+	background: @global-background !important;
+}
+
+// layers inside timeline panel
+.timeline-layers-view > div:last-child,
+.timeline-layers-view-properties > div:last-child {
+	background-color: @global-background !important;
+}
+
+
+// panel-profilers.less
+
+// table overlay information
+::shadow .flame-chart-entry-info {
+	&:extend(.profile-entry-info);
+}
+
+
+//**********************************************/
+//* 41.0.2238.1
+//**********************************************/
+
+//toolbars.less
+
+// First 2 selectors are override specific for mac because a background-image is set
+body.undocked.platform-mac.inactive .inspector-view-tabbed-pane.tabbed-pane::shadow,
+body.undocked.platform-mac .inspector-view-tabbed-pane.tabbed-pane::shadow,
+body.platform-mac.inactive .inspector-view-tabbed-pane.tabbed-pane::shadow,
+body.platform-mac .inspector-view-tabbed-pane.tabbed-pane::shadow,
+body .inspector-view-tabbed-pane.tabbed-pane::shadow {
+
+	.tabbed-pane-header {
+		background-image: linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	}
+}
+
+::shadow {
+
+	.tabbed-pane-header {
+		background-image: linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	}
+
+	//main nav tabs
+	.tabbed-pane-header-contents {
+		box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
+		color: @tab-label !important;
+	}
+}
+
+
+// Adjust the height of the main navigation
+.inspector-view-tabbed-pane.tabbed-pane::shadow {
+
+	.tabbed-pane-header {
+		flex: 0 0 @tab-main-toolbar-height !important;
+	}
+
+	.tabbed-pane-header-tabs-drop-down-container {
+		padding-top: 6px !important;
+	}
+
+	.tabbed-pane-header-contents {
+		.tabbed-pane-header-tab {
+			height: @tab-main-toolbar-height !important;
+			line-height: (.75*@tab-main-toolbar-height) !important;
+		}
+	}
+}
+
+// drop-down hook when viewport is short
+::shadow .tabbed-pane-header-tabs-drop-down-container {
+
+	color: @tab-label !important;
+}
+
+// Change tab styles
+.tabbed-pane::shadow {
+
+	.tabbed-pane-header {
+		box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
+		border-bottom: 1px solid @global-background !important;
+		border: none;
+	}
+
+	.tabbed-pane-header-tab {
+		border-color: transparent !important;
+		border-image: none !important;
+		border-left: none !important;
+		border-right: none !important;
+		border-top: 2px solid rgba(0,0,0,0) !important;
+		cursor: pointer !important;
+		margin: 0 !important;
+		margin-bottom: 1px !important;
+		margin-top: 0 !important;
+		padding: 2px 4px !important;
+		width: auto !important;
+
+		&:hover {
+			color: @tab-label-selected !important;
+		}
+
+		&.selected {
+			background: none !important;
+			border-top: 2px solid @tab-highlighted !important;
+			color: @tab-label-selected !important;
+			font-size: 1em;
+		}
+	}
+}
+
+// drawer background color
+::shadow .tabbed-pane-content {
+	background-color: @global-background !important;
+}
+
+// drawer (search) form labels
+::shadow .search-drawer-header label.search-config-label {
+	color: @form-label-text !important;
+}
+
+// isolate just the status bar and not the toolbar left/right components
+.panel .status-bar::shadow .status-bar-shadow {
+	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	box-shadow: inset 0 1px 0 lighten(@tab-color-top,7%), inset 0 -1px 0 darken(@tab-color-bottom,10%);
+	border-bottom: none !important;
+}
+
+// adjust height of left/right components of main nav
+.tabbed-pane-header-before::shadow,
+.tabbed-pane-header-after::shadow {
+
+	.status-bar-shadow {
+		height: @tab-main-toolbar-height !important;
+	}
+}
+
+
+// remove border from drawer header
+::shadow .shadow-split-view.vbox > .shadow-split-view-sidebar:not(.maximized) {
+	border-top: none !important;
+}
+
+// label for drawer -> devices
+.device-name {
+	color: @global-label !important;
+}
+
+.device-serial {
+	color: @global-text !important;
+}
+
+
+// find.less
+
+::shadow .search-config-search {
+	&:extend(.search-drawer-header input[type="text"].search-config-search all);
+}
+
+// remove bg gradient from device icon in emulation drawer
+.overrides-splash-screen .status-bar {
+	background-color: @global-background !important;
+	background-image: none !important;
+}
+
+::shadow .search-status-bar-summary {
+	&:extend(.search-status-bar-summary all);
+}
+
+// find results
+::shadow #search-results-pane-file-based {
+	&:extend(#search-results-pane-file-based all);
+}
+
+::shadow .search-match-line-number {
+	&:extend(#drawer-contents .search-match-line-number all);
+}
+
+::shadow .search-match-content {
+	&:extend(.search-match-content);
+}
+
+
+// drawer.less
+
+//buttons
+[is="text-button"] {
+	&:extend(.text-button all);
+}
+
+// remove padding from overrides view so left sidebar displays correctly
+.overrides-view {
+	padding-top: 0 !important;
+}
+
+// add padding to overrides content panel
+.overrides-view ::shadow {
+	.tabbed-pane-content {
+		padding: 10px;
+	}
+}
+
+::shadow .tabbed-pane-placeholder {
+	&:extend(.tabbed-pane-placeholder);
+}
+
+// network header tall view
+.network-details-view-tall-header .network-item-view::shadow {
+	.tabbed-pane-header {
+		padding-top: 0 !important;
+	}
+	.tabbed-pane-header-tab {
+		height: 31px !important;
+		padding-top: 5px !important;
+	}
+}
+
+// network view headers
+.network .request-headers-view .parent {
+	&:extend(#network-views .request-headers-view .parent);
+	margin-top: 1px !important;
+}
+
+// reduce space between network headers and subnav menu
+.data-grid .header-container {
+	top: -1px !important;
+}
+
+// Suggest box is now in shadow dom
+::shadow {
+	.suggest-box {
+		color: #000 !important;
+		background-color: @global-background !important;
+		border: 2px rgba(0,0,0,.2) solid !important;
+		box-shadow: 0 8px 10px 1px rgba(0,0,0,.1) !important;
+	}
+
+	.suggest-box-content-item.source-code:hover {
+		background-color: @global-hover !important;
+		border: 1px solid rgba(0,0,0,0) !important;
+	}
+
+	.suggest-box-content-item.source-code.selected {
+		background-color: @global-hover !important;
+	}
+
+	.suggest-box .source-code .prefix {
+		color: @global-accent !important;
+	}
+
+	.suggest-box .source-code .suffix {
+		color: lighten(@global-text, 5%) !important;
+	}
+}
+
+// vertical navbars
+::shadow .vertical-tab-layout {
+	// change selected style from top border to left border
+	.tabbed-pane-header-tab {
+		padding-left: 20px !important;
+		border-top: none !important;
+		color: @global-text !important;
+
+		&.selected {
+			border-top: none !important;
+			border-left: 7px solid @global-accent !important;
+			padding-left: 13px !important;
+		}
+	}
+}
+
+// Settings Sidebar
+.help-window-main ::shadow {
+	//remove bg normally for horizontal pane header
+	.tabbed-pane-header {
+		background-image: none !important;
+		box-shadow: none !important;
+	}
+
+	.tabbed-pane-header-contents {
+		box-shadow: none !important;
+	}
+}
+
+// 42.0.2291.0
+
+// _toolbars.less
+
+// status bar error|warn counts override
+body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
+	&:extend(.status-bar-counter);
+}
+
+// expand/collapse arrows in elements sidepanel
+.styles-section.matched-styles .style-properties li.parent.expanded .expand-element {
+	&:extend(.styles-section.matched-styles .properties li.parent.expanded .expand-element);
+}
+
+.styles-section.matched-styles .style-properties li.parent .expand-element {
+	&:extend(.styles-section.matched-styles .properties li.parent .expand-element);
+}
+
+
+
+
+// Editing Mode for CSS sidebars/ Snippets / Watch Expressions
+::shadow style + .text-prompt-editing {
+	background-color: @global-background !important;
+	outline: 1px solid @global-accent !important;
+}
+
+::shadow .text-prompt-editing > ::content * {
+	color: @global-text !important;
+}
+
+
+// Sidebar Callstack (replaces placard in _panel-sources)
+::shadow {
+	.list-item {
+		&:extend(.placard all);
+	}
+}
+
+
+// 'paused on a js breakpoint' callstack node
+.callstack-info.status {
+	border-top: none !important;
+	&:extend(.hidden-placards-message all);
+}
+
+// devices list
+#devices-tab-content {
+
+	.devices-list {
+		border: 1px solid @- !important; .contrast(@global-background, 5%);
+	}
+
+	.devices-title {
+		color: @global-accent !important;
+	}
+
+	.devices-list-item {
+		color: @global-text;
+
+		&:hover {
+			background: @hover-background !important;
+			border-top: 1px solid @hover-border !important;
+			border-bottom: 1px solid  @hover-border !important;
+		}
+
+		.devices-list-title {
+			opacity: 0.2 !important;
+		}
+
+		&.device-list-item-show {
+
+			.devices-list-title {
+				color: @global-text !important;
+				opacity: 1 !important;
+			}
+		}
+	}
+
+	.devices-edit-container {
+		background: @- !important; .contrast(@global-background, 5%);
+	}
+
+	.devices-custom-separator {
+		& { border-top: 1px solid @- !important; .contrast(@global-background, 5%, invert) };
+		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%); }
+	}
+
+	.devices-list-edit,
+	.devices-list-remove {
+		-webkit-mask-image: url(Images/statusbarButtonGlyphs.png) !important;
+		background-color: @global-accent !important;
+		background-image: none !important
+	}
+
+	.devices-list-edit {
+		-webkit-mask-position: -224px -72px;
+	}
+
+	.devices-list-remove {
+		-webkit-mask-position: -128px -24px;
+	}
+}
+
+
+// [sidebar-elements.less] Event listener list
+
+.events-pane > ol > li.parent {
+	&:extend(.sidebar-pane .section);
+	margin: 0 !important;
+	padding-bottom: 2px !important;
+}
+
+.events-pane > ol > ol > li {
+	border-top: none !important;
+}
+
+// remove bottom border from child items because stable.css still uses the selector
+.events-pane .sidebar-pane .section.expanded > .header,
+.events-pane .children .section.event-bar {
+	border-bottom: none !important;
+}
+
+// remove dashed border which is still being used on stable
+body .sidebar-pane .parent:not(.event-category) + .children.expanded {
+	border-left: none !important;
+}
+
+// [end] Event listener list
+
+// [panel-sources] Hidden stack frames notification (sidebar)
+.hidden-callframes-message {
+	background: @-; .contrast(@global-background, 5%);
+	text-align: center;
+
+	.link {
+		color: @xml-link !important;
+	}
+}
+
+// Editable Media Query on Elements Panel
+.styles-section-title .media-list.media-matches .media.editable-media,
+.styles-section-title .media-list {
+	color: @- !important; .contrast(@global-text, 25%, invert);
+
+
+	&.media-matches .media.editable-media .media-text {
+		color: @global-text !important;
+	}
+}
+
+// Chrome beta only - remove once it hits stable
+.styles-section .header .title .media-list.media-matches .media.editable-media {
+	color: @global-text !important;
+}
+
+
+// Sources - Watch Panel
+.watch-expressions {
+	margin-top: 0 !important;
+
+	.name {
+		color: @js-obj-name !important;
+	}
+}
+
+// Watch Panel Hover
+.watch-expression .primitive-value:hover,
+.watch-expression .section .header:hover {
+	.highlight(hover);
+}
+
+// not available message
+.error-message {
+	color: @global-error !important;
+}
+
+
+// Hidden Experiments (Shift 6x on Experiments Menu)
+.settings-experiment-hidden {
+	label {
+		background-color: @global-background !important;
+
+		.dt-checkbox-text {
+			color: @global-accent !important;
+		}
+	}
+
+
+}
+
+// Sources Panel - Event Listener Tree
+.event-listener-tree {
+
+	> li {
+		border-top: none !important;
+	}
+
+	.name {
+		color: @js-obj-name !important;
+	}
+}
