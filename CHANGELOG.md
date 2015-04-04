@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.5
+* set minimum height on popovers
+* `canary` style inline variable display on sources panel
+
 ## 1.7.3
 * `canary` put horizontal scrollbars back on popovers
 
