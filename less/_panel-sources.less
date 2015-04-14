@@ -159,11 +159,22 @@ li.breakpoint-hit .breakpoint-hit-marker {
 			-webkit-mask-image: url(Images/paneElementStateButtons.png) !important;
 		}
 
+		&.animations-controls {
+			-webkit-mask-image: url(Images/paneAnimationsButtons.png) !important;
+		}
+
+		&.animations-controls {
+			background-color: rgba(0,0,0,1) !important;
+		}
+
 		// Add Element Button
 		&.element-state,
+		&.animations-controls,
 		&.add {
 			background-color: @- !important; .contrast(@global-background, 40%);
 		}
+
+
 	}
 }
 
