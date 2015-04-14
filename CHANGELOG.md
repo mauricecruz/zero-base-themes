@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.6
+* `canary` fix syntax highlighting for objects
+* glyph fixes
+* style accessibility panel
+
 ## 1.7.5
 * set minimum height on popovers
 * `canary` style inline variable display on sources panel
