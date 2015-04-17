@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.7.7
+* increase minimum height on popovers
+
 ## 1.7.6
 * `canary` fix syntax highlighting for objects
 * glyph fixes
