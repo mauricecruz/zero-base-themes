@@ -164,3 +164,31 @@
 	box-shadow: 0 0 0 1px @selection-border !important;
 	border-radius: 2px;
 }
+
+
+//**********************************************/
+//* Glyphs
+//**********************************************/
+
+
+::shadow ::shadow {
+
+	.regex-search-status-bar-item,
+	.case-sensitive-search-status-bar-item {
+
+		&.status-bar-item.toggled-off .status-bar-button-text {
+			color: @glyph-inactive !important;
+		}
+
+		&.status-bar-item.toggled-on .status-bar-button-text {
+			color: @glyph-active !important;
+		}
+	}
+
+	// match toggled-off version
+	.status-bar-item .status-bar-button-text {
+		color: @glyph-inactive !important;
+	}
+}
+
+
