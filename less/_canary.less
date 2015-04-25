@@ -132,6 +132,10 @@
 	.object-value-error { color: @global-error !important; }
 }
 
+body /deep/ .link {
+	color: @xml-link !important;
+}
+
 
 /* ==========================================================================
    Network Panel
@@ -202,6 +206,19 @@
 
 }
 
+// Notification bar (for mismatch/blackbox notices)
+.source-frame-infobar::shadow {
+	.infobar-warning {
+		color: @global-warn;
+		border-bottom: 1px solid @- !important; .contrast(@global-background, 10%);
+		background-color: @- !important; .contrast(@global-background, 5%);
+	}
+
+	.source-frame-infobar-toggle-link {
+		color: @global-accent !important;
+	}
+}
+
 
 /* ==========================================================================
    Popovers
@@ -248,13 +265,17 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 }
 
 // only put gradient background on specific subtoolbars
-.network .toolbar {
-	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+.console-view,
+.network {
+	.toolbar {
+		background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	}
 }
 
 ::shadow {
 	// glyph states
 	.toolbar-item > .glyph,
+	.toolbar-item > .glyph:active,
 	.filter-toolbar-item.toggled-shown .glyph,
 	button.toolbar-item.toggled-on .glyph {
 		background-color: @glyph-active !important;
@@ -273,5 +294,26 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 
 
 
+/* ==========================================================================
+   Status Bars
+   ========================================================================== */
+#sources-panel-sources-view .sources-toolbar {
+	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	border-top: @global-background !important;
+	color: @global-text !important;
+}
 
+.toolbar::shadow {
 
+	// replace _status-bar.less (select.status-bar-item)
+	// style select box
+	select.toolbar-item {
+		&:extend(select.status-bar-item all);
+	}
+
+	// move arrow away from edge
+	.toolbar-select-arrow {
+		position: relative !important;
+		right: 5px !important;
+	}
+}
