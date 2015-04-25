@@ -322,3 +322,18 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 		right: 5px !important;
 	}
 }
+
+
+// various toolbars that need gradient backgrounds
+.resources-toolbar,
+::shadow .search-toolbar-summary {
+	.gradient-background();
+	border-top: @global-background !important;
+}
+
+.profiles-toolbar {
+	.gradient-background();
+	border-bottom: @global-background !important;
+}
+
+
