@@ -219,6 +219,11 @@ body /deep/ .link {
 	}
 }
 
+// Highlight currently evaluated context (not sure of what color to use so making it subtle for now)
+.cm-execution-line-tail {
+	background-color: @- !important; .contrast(@selection-background, 10%, invert);
+	border-radius: 2px !important;
+}
 
 /* ==========================================================================
    Popovers
