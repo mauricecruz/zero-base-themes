@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.8
+* Update glyph styles in find module and style 'replace' input box
+* [canary] fix toolbar/status backgrounds
+* [canary] style execution line context
+
 ## 1.7.7
 * increase minimum height on popovers
 
