@@ -233,4 +233,45 @@ div.ax-computed-name {
 }
 
 
+/* ==========================================================================
+   Toolbar
+   ========================================================================== */
+body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
+	background-color: @glyph-inactive !important;
+}
+
+
+//adjust toolbar glyph positions
+.inspector-view-toolbar-left,
+.inspector-view-toolbar.tabbed-pane-header-after {
+	margin-top: 7px !important;
+}
+
+// only put gradient background on specific subtoolbars
+.network .toolbar {
+	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+}
+
+::shadow {
+	// glyph states
+	.toolbar-item > .glyph,
+	.filter-toolbar-item.toggled-shown .glyph,
+	button.toolbar-item.toggled-on .glyph {
+		background-color: @glyph-active !important;
+	}
+
+	.toolbar-item > .glyph,
+	button.toolbar-item.toggled-off .glyph {
+		background-color: @glyph-inactive !important;
+	}
+
+	// error/warning counts on toolbar
+	.toolbar-counter-item {
+		color: @global-text !important;
+	}
+}
+
+
+
+
 
