@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.7.9
+## 1.8.0
 * version bump for stable
 
 ## 1.7.8
