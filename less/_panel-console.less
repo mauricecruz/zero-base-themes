@@ -93,7 +93,7 @@
 
 	// Children Hover
 		.outline-disclosure .stacktrace-entry:hover {
-			background-color: @- !important; .contrast(@global-background, 1%); 
+			background-color: @- !important; .contrast(@global-background, 1%);
 	}
 
 	a {
@@ -131,3 +131,93 @@
 		color: @global-accent;
 	}
 }
+
+// remove white border
+.console-message-wrapper {
+	border-bottom: none !important;
+}
+
+// console error
+.console-error-level {
+	background-color: fade(@filter-error, 05%) !important;
+	border-top: 1px solid fade(@filter-error, 05%) !important;
+	border-bottom: 1px solid fade(@filter-error, 05%) !important;
+
+	// remove 1 border for consecutive errors
+	+.console-error-level {
+		border-top: none !important;
+	}
+}
+
+.console-warning-level {
+	background-color: fade(@filter-warning, 05%) !important;
+	border-top: 1px solid fade(@filter-warning, 05%) !important;
+	border-bottom: 1px solid fade(@filter-warning, 05%) !important;
+
+	// remove 1 border for consecutive errors
+	+.console-warning-level {
+		border-top: none !important;
+	}
+}
+
+// js syntax
+.console-object-preview .name { color: @js-obj-name !important; }
+
+.object-value-object,
+.object-value-map,
+.object-value-set,
+.object-value-iterator,
+.object-value-generator,
+.object-value-node,
+.object-value-array {
+	color: @js-obj-array !important;
+}
+
+.object-value-number,
+.object-value-boolean { color: @js-obj-boolean !important; }
+
+
+.object-value-function { color: @js-obj-function !important; }
+.object-value-function::before { color: @global-text !important; }
+
+.object-value-string { color: @js-obj-string !important; }
+.object-value-null { color: @js-obj-array !important; }
+.object-value-number { color: @js-obj-number !important; }
+.object-value-calculate-value-button { color: @js-obj-array !important;}
+.object-value-error { color: @global-error !important; }
+
+::shadow {
+	.object-properties-section .name { color: @js-obj-name !important; }
+	.object-properties-section .number { color: @js-obj-number !important; }
+
+	// js syntax
+	.console-object-preview .name { color: @js-obj-name !important; }
+
+	.object-value-object,
+	.object-value-map,
+	.object-value-set,
+	.object-value-iterator,
+	.object-value-generator,
+	.object-value-node,
+	.object-value-array {
+		color: @js-obj-array !important;
+	}
+
+	.object-value-number,
+	.object-value-boolean { color: @js-obj-boolean !important; }
+
+
+	.object-value-function { color: @js-obj-function !important; }
+	.object-value-function::before { color: @global-text !important; }
+
+	.object-value-string { color: @js-obj-string !important; }
+	.object-value-null { color: @js-obj-array !important; }
+	.object-value-number { color: @js-obj-number !important; }
+	.object-value-calculate-value-button { color: @js-obj-array !important;}
+	.object-value-error { color: @global-error !important; }
+}
+
+body /deep/ .link {
+	color: @xml-link !important;
+}
+

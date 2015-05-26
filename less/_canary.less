@@ -44,37 +44,6 @@
    console.less
    ========================================================================== */
 
-// overrides
-// ---------------------------
-// remove white border
-.console-message-wrapper {
-	border-bottom: none !important;
-}
-
-
-// console error
-.console-error-level {
-	background-color: fade(@filter-error, 05%) !important;
-	border-top: 1px solid fade(@filter-error, 05%) !important;
-	border-bottom: 1px solid fade(@filter-error, 05%) !important;
-
-	// remove 1 border for consecutive errors
-	+.console-error-level {
-		border-top: none !important;
-	}
-}
-
-.console-warning-level {
-	background-color: fade(@filter-warning, 05%) !important;
-	border-top: 1px solid fade(@filter-warning, 05%) !important;
-	border-bottom: 1px solid fade(@filter-warning, 05%) !important;
-
-	// remove 1 border for consecutive errors
-	+.console-warning-level {
-		border-top: none !important;
-	}
-}
-
 // js syntax
 .console-object-preview .name { color: @js-obj-name !important; }
 
