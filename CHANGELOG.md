@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.7.9
+* version bump for stable
+
 ## 1.7.8
 * Update glyph styles in find module and style 'replace' input box
 * [canary] fix toolbar/status backgrounds
