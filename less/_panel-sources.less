@@ -263,3 +263,14 @@ li.breakpoint-hit .breakpoint-hit-marker {
 		-webkit-mask-position: -23px 0 !important;
 	}
 }
+
+// snippet that pops up when stepping into code that shows you values of variables
+.text-editor-value-decoration {
+	& {background-color: @- !important; .contrast(@global-background, 5%)};
+	color: @global-text !important;
+	padding: 0 5px;
+	border-radius: 2px !important;
+	& {box-shadow: 0 1px 0 0 @- !important; .contrast(@global-background, 5%)};
+	& {border-top: 1px solid @- !important; .contrast(@global-background, 2.5%, invert)};
+
+}
