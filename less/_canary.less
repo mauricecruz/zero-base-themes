@@ -1,44 +1,5 @@
 
 
-// Animation Editor Popover
-.bezier-icon {
-	background-color: @global-accent !important;
-
-	path {
-		stroke: @global-background !important;
-	}
-}
-::shadow {
-	.bezier-preview-container {
-		background: rgba(0,0,0,0) !important;
-	}
-
-	.bezier-preview-animation {
-		background-color: @global-accent !important;
-	}
-
-	.bezier-curve {
-		circle.bezier-control-circle {
-			fill: @global-accent !important;
-		}
-
-		line.bezier-control-line {
-			stroke: @global-accent !important;
-		}
-
-		line.bezier-control-accent {
-			stroke: @global-text !important;
-		}
-
-		line.linear-line {
-			stroke: @- !important; .contrast(@global-background, 15%);
-		}
-
-		path.bezier-path {
-			stroke: #000 !important;
-		}
-	}
-}
 
 /* ==========================================================================
    Network Panel
