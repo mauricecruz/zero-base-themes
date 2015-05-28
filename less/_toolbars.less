@@ -246,4 +246,19 @@ select.tabbed-pane-header-tabs-drop-down-select{
 	color: @global-accent !important;
 }
 
+// sidebar borders
+::shadow {
 
+	.shadow-split-view.hbox.shadow-split-view-first-is-sidebar > .shadow-split-view-sidebar:not(.maximized) {
+		border-right: 2px solid @global-divider !important;
+	}
+
+	.shadow-split-view.hbox > .shadow-split-view-sidebar:not(.maximized) {
+		border-left: 2px solid @global-divider !important;
+	}
+
+	.shadow-split-view.vbox > .shadow-split-view-resizer > .shadow-split-view-resizer-border {
+		border-top: none !important;
+	}
+
+}
