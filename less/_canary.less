@@ -167,3 +167,32 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 }
 
 
+/* ==========================================================================
+   Toolbars
+   ========================================================================== */
+
+// border from sidebar in elements panel
+// replaces ".shadow-split-view.hbox > .shadow-split-view-sidebar:not(.maximized)"
+::shadow .shadow-split-widget.hbox > .shadow-split-widget-sidebar:not(.maximized) {
+	border-left: 2px solid @global-divider !important;
+}
+
+// divider for network details
+::shadow .shadow-split-widget.hbox.shadow-split-widget-first-is-sidebar > .shadow-split-widget-sidebar:not(.maximized) {
+	border-right: 2px solid @global-divider !important;
+}
+
+/* ==========================================================================
+   Elements Sidebar
+   ========================================================================== */
+// override bottom border color
+.styles-animations-controls-pane.expanded {
+	border-bottom: 1px solid @global-divider !important;
+	background: @- !important; .contrast(@global-background,6%);
+}
+
+// adjust position of animation slider
+.styles-animations-controls-pane > * {
+	margin: 3px 4px !important;
+}
+
