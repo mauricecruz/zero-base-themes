@@ -206,3 +206,20 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 ::content .dt-checkbox-text {
 	color: @global-text !important;
 }
+
+/* ==========================================================================
+   Console
+   ========================================================================== */
+// remove top border
+::shadow .shadow-split-widget.vbox > .shadow-split-widget-sidebar:not(.maximized) {
+	border-top: none !important;
+}
+
+// fix Emulation labels (these selector hooks sucks. might be temporary)
+.overrides-view label,
+.overrides-view fieldset > span,
+#metrics-override-section span,
+#metrics-override-section td,
+#geolocation-override-section td {
+	color: @global-label !important;
+}
