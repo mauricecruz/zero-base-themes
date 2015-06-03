@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.8.2
+* [canary] fix styles for console object properties
+
 ## 1.8.1
 * [canary] fixes for broken styles
 
