@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.8.1
+* [canary] fixes for broken styles
+
 ## 1.8.0
 * version bump for stable
 
