@@ -249,6 +249,38 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 .filter-bar {
 	background-color: @filter-background !important;
 }
+
+/* ==========================================================================
+   Elements Sidebar
+   ========================================================================== */
+.styles-pane-toolbar {
+	background-color: rgba(0,0,0,0) !important;
+}
+
+
+// event listeners section borders
+::shadow .event-listener-tree > li {
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
+	margin-top: 0 !important;
+}
+
+// Properties section
+.properties-widget-section {
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
+	margin-top: 0 !important;
+
+	&::shadow .object-properties-section {
+		color: @global-text !important;
+	}
+}
+
+::shadow .event-listener-tree .name {
+	color: @js-obj-name !important;
+}
+
+
 /* ==========================================================================
    Sources
    ========================================================================== */
