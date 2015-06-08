@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.8.3
+* [canary] style timeline selectbox 
+* [canary] fix elements sidebar styles 
+* [canary] style scope headers
+* [canary] style revised filter bar
+* [canary] remove background from filter toggle 
+
 ## 1.8.2
 * [canary] fix styles for console object properties
 
