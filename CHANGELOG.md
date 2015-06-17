@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.8.4
+* [canary] made it pretty again
+
 ## 1.8.3
 * [canary] style timeline selectbox 
 * [canary] fix elements sidebar styles 
