@@ -248,7 +248,7 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 // fat filter bar
 .filter-bar {
 	background-color: @filter-background !important;
-	border-bottom: 1px solid @global-divider !important;
+	border-bottom: 1px solid @- !important ; .contrast(@global-divider, 2%);
 }
 
 /* ==========================================================================
@@ -327,6 +327,11 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	border-bottom: 1px solid @global-divider !important;
 }
 
+// footer statusbar text
+
+::shadow .toolbar-item {
+	color: @global-text !important;
+}
 
 /* ==========================================================================
    Elements Sidebar
@@ -350,8 +355,29 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	color: @global-text !important;
 }
 
-// #Filter Module
+// Force State
+.styles-element-state-pane {
+	color: @global-text !important;
 
+	> div {
+		margin: 0 4px 2px !important;
+	}
+}
+
+// Buttons for Sidebar Options
+::shadow {
+	.pin-toolbar-item.toggled-on,
+	.animation-toolbar-item.toggled-on {
+		background-color: rgba(0,0,0,0);
+	}
+}
+
+// Animation Controls
+.styles-animations-controls-pane {
+	background: @- !important; .contrast(@global-background,6%);
+	color: @global-text !important;
+	border-bottom: 1px solid @style-separator !important;
+}
 
 /* ==========================================================================
    Network
@@ -370,3 +396,31 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 ::shadow .list-item:hover {
 	background-color: @global-hover !important;
 }
+
+// remove watch border on horizontal split view
+.sidebar-pane > .toolbar {
+	border-bottom: 1px solid @style-separator !important;
+}
+
+
+/* ==========================================================================
+   Find
+   ========================================================================== */
+
+// Button text in sources
+::shadow ::shadow {
+	.regex-search-toolbar-item.toggled-on .toolbar-button-text,
+	.case-sensitive-search-toolbar-item.toggled-on .toolbar-button-text {
+		color: @glyph-active !important;
+	}
+}
+
+
+/* ==========================================================================
+   Timeline
+   ========================================================================== */
+.panel.timeline > .toolbar {
+	border-bottom: none !important;
+	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+}
+

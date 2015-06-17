@@ -181,3 +181,61 @@
 .blackbox-dialog .columns-header {
 	color: @global-accent !important;
 }
+
+
+// devices list
+
+
+.devices-list {
+	border: 1px solid @- !important; .contrast(@global-background, 5%);
+}
+
+.devices-title {
+	color: @global-accent !important;
+}
+
+.devices-list-item {
+	color: @global-text;
+
+	&:hover {
+		background: @hover-background !important;
+		border-top: 1px solid @hover-border !important;
+		border-bottom: 1px solid  @hover-border !important;
+	}
+
+	.devices-list-title {
+		opacity: 0.2 !important;
+	}
+
+	&.device-list-item-show {
+
+		.devices-list-title {
+			color: @global-text !important;
+			opacity: 1 !important;
+		}
+	}
+}
+
+.devices-edit-container {
+	background: @- !important; .contrast(@global-background, 5%);
+}
+
+.devices-custom-separator {
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 5%, invert) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%); }
+}
+
+.devices-list-edit,
+.devices-list-remove {
+	-webkit-mask-image: url(Images/statusbarButtonGlyphs.png) !important;
+	background-color: @global-accent !important;
+	background-image: none !important
+}
+
+.devices-list-edit {
+	-webkit-mask-position: -224px -72px;
+}
+
+.devices-list-remove {
+	-webkit-mask-position: -128px -24px;
+}
