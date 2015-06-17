@@ -248,6 +248,7 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 // fat filter bar
 .filter-bar {
 	background-color: @filter-background !important;
+	border-bottom: 1px solid @global-divider !important;
 }
 
 /* ==========================================================================
@@ -289,3 +290,39 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	color: @global-text;
 }
 
+
+
+/* ==========================================================================
+   Toolbar
+   ========================================================================== */
+
+
+// ----- Material Design Toolbar ------
+
+// Remove selected bar for main nav only
+.inspector-view-tabbed-pane::shadow .tabbed-pane-header-tab.selected {
+	border-top: none !important;
+}
+
+::shadow {
+
+	.tabbed-pane-tab-slider {
+		background-color: @tab-highlighted !important;
+		bottom: 0 !important;
+		top: 0 !important;
+	}
+
+	.tabbed-pane-header-tab {
+		color: @tab-label !important;
+	}
+
+	.toolbar-divider {
+		background-color: @glyph-inactive !important;
+	}
+}
+
+// toolbar borders
+.console-view > .toolbar,
+.panel.network > .toolbar {
+	border-bottom: 1px solid @global-divider !important;
+}
