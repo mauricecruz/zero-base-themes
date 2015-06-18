@@ -333,6 +333,19 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	color: @global-text !important;
 }
 
+// Sources Pause Options
+::shadow {
+	.toolbar-shadow.floating {
+		border: none !important;
+		background: -webkit-linear-gradient(darken(@tab-color-top, 8%), darken(@tab-color-bottom, 8%)) !important;
+	}
+
+	.toolbar-item.emulate-active {
+		background-color: @- !important; .contrast(@global-hover, 10%);
+	}
+
+}
+
 /* ==========================================================================
    Elements Sidebar
    ========================================================================== */
