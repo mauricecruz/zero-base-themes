@@ -68,11 +68,15 @@
 	}
 
 	/*-- METRICS--*/
-	.body .metrics {
+	.metrics {
 		color: #000 !important;
 		& { border-top: 1px solid @- !important; .contrast(@global-background, 5%) };
 		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%) };
 		margin-top: 5px !important;
+
+		.position {
+			margin: 0 0 -16px 0 !important;
+		}
 
 		.position,
 		.margin:not([style^=background-color]),
