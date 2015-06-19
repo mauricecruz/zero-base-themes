@@ -18,12 +18,12 @@
 #timeline-graphs .timeline-graph-side {
 
 	&.hovered {
-		background-color: @global-hover !important;
+		background-color: fade(@global-hover, 50%) !important;
 		outline: 1px solid @- !important; .contrast(@global-hover, 10%);
 	}
 
 	&.selected {
-		background-color: @selection-background !important;
+		background-color: fade(@global-accent, 20%)!important;
 		outline: 1px solid @selection-border !important;
 	}
 }
