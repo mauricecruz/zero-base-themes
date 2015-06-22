@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.8.5
+* [canary] style source play button overlay options
+* [canary] style arrows on dropdowns
+* [canary] fix metrics background colors
+* fix opacity of timeline selections
+
 ## 1.8.4
 * [canary] made it pretty again
 
