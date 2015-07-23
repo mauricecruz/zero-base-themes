@@ -1,3 +1,6 @@
+# Notice
+Experiments settings reset in `44.0.2403.89`. Open developer tools settings &#9654; Experiments &#9654; [&#10004;] Allow custom UI themes to enable theme again.
+
 # Zero Base Themes
 
 An assortment of Chrome Devtools theme that use the Zero Base Template.
