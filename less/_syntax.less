@@ -133,3 +133,524 @@
 .section .properties .dimmed {
 	opacity: 0.5 !important;
 }
+
+
+
+
+
+
+
+//_syntax.less
+body {
+
+	/deep/ .cm-js- {
+		&keyword { color: @js-keyword !important; font-style: italic !important; }
+		&number { color: @js-number !important; }
+		&comment { color: @js-comment !important; }
+		&string { color: @js-string !important; }
+		&string-2 { color: @js-string !important; }
+	}
+
+	/deep/ .cm-css- {
+		&keyword { color: @css-def !important; }
+		&number { color: @css-number !important; }
+		&comment { color: @css-comment }
+		&def { color: @css-def !important; }
+		&meta { color: @css-meta !important; }
+		&atom { color: @css-atom !important; }
+		&string { color: @css-string !important; }
+		&string-2 { color: @css-string-2 !important; }
+		&link { color: @xml-link !important; }
+		&variable { color: @css-variable !important; }
+		&variable-2 { color: @css-variable-2 !important; }
+		&property { color: @css-property !important; }
+	}
+
+	/deep/ .webkit-css-property { color: @css-property !important; }
+
+	/deep/ .cm-xml- {
+		&meta { color: @js-meta !important; }
+		&comment { color: @xml-comment !important; }
+		&string { color: @xml-string !important; }
+		&tag { color: @xml-tag !important; }
+		&attribute { color: @xml-attribute !important; }
+		&link { color: @xml-link !important; }
+	}
+
+	/deep/ .webkit-html-comment { color: @xml-comment !important; }
+	/deep/ .webkit-html-tag { color: @xml-tag !important; }
+	/deep/ .webkit-html-text-node { unicode-bidi: -webkit-isolate !important; }
+
+	// non-standard
+	/deep/ .webkit-html-pseudo-element { color: brown !important; }
+	/deep/ .webkit-html-entity-value { color: pink !important; unicode-bidi: -webkit-isolate !important; }
+
+	/deep/ .webkit-html-doctype { color: @global-text !important; }
+	/deep/ .webkit-html-attribute-name { color: @xml-attribute !important; unicode-bidi: -webkit-isolate; }
+
+	/deep/ .webkit-html-attribute-value { color: @xml-string !important; unicode-bidi: -webkit-isolate; }
+
+	/deep/ .webkit-html-external-link,
+	/deep/ .webkit-html-resource-link {
+		color: @xml-link !important;
+	}
+
+	/deep/ .webkit-html-resource-link {
+		cursor: pointer;
+	}
+
+	/deep/ .webkit-html-external-link {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	/deep/ .shadow-root .webkit-html-fragment.shadow-root { color: @xml-shadow-root !important; }
+
+	 /deep/ .webkit-html-end-of-file {
+		color: rgb(255, 0, 0);
+		font-weight: bold;
+	}
+
+	// _global_styles
+	::shadow {
+		.editing {
+			background-color: @global-background !important;
+			outline: 1px solid @eh-editing-outline !important;
+			color: @global-text !important;
+		}
+	}
+
+	// syntax
+	::shadow {
+
+		//JAVASCRIPT
+		.cm-js-atom { color: @js-atom !important; }
+		.cm-js-attribute {color: @js-attribute !important; }
+		.cm-js-builtin {color: @js-builtin !important; }
+		.cm-js-comment {color: @js-comment !important; font-style: italic; }
+		.cm-js-def {color: @js-def !important; }
+		.cm-js-error { background: #9D1E15 !important; color: @js-error !important; }
+		.cm-js-header {color: @js-header !important; }
+		.cm-js-hr {color: @js-hr !important; }
+		.cm-js-keyword {color: @js-keyword !important; font-style: italic; }
+		.cm-js-link {color: @js-link !important; }
+		.cm-js-meta {color: @js-meta !important; }
+		.cm-js-number {color: @js-number !important; }
+		.cm-js-operator {color: @js-operator !important;}
+		.cm-js-property {color: @js-property !important; }
+		.cm-js-string {color: @js-string !important; }
+		.cm-js-string-2 { color: @js-string !important; }
+		.cm-js-tag {color: @js-tag !important; }
+		.cm-js-variable {color: @js-variable !important; }
+		.cm-js-variable-2 { color: @js-variable-2 !important; }
+
+		.source-frame-eval-expression{ background-color: @selection-background !important; border-color: @selection-border !important;}
+
+		//COFFEESCRIPT
+		.cm-atom { .cm-js-atom }
+		.cm-comment { .cm-js-comment }
+		.cm-variable { .cm-js-variable }
+		.cm-string { .cm-js-string }
+		.cm-keyword { .cm-js-keyword }
+		.cm-number { .cm-js-number }
+		.cm-operator { .cm-js-operator }
+		.cm-error { .cm-js-error}
+		.cm-s-default .cm-property { .cm-js-variable }
+
+		/*--CSS--*/
+		.cm-css-atom { color: @css-atom !important; }
+		.cm-css-builtin { color: @css-builtin !important; }
+		.cm-css-def { color: @css-def !important; }
+		.cm-css-comment { color: @css-comment !important; font-style: italic; }
+		.cm-css-meta { color: @css-meta !important;}
+		.cm-css-number { color: @css-number !important; }
+		.cm-css-operator { color: @css-operator !important; }
+		.cm-css-property { color: @css-property !important;}
+		.cm-css-qualifier { color: @css-qualifier !important; }
+		.cm-css-string { color: @css-string !important;}
+		.cm-css-string-2 { color: @css-string-2 !important; }
+		.cm-css-tag { color: @css-tag !important; }
+		.cm-css-variable { color: @css-variable !important; }
+		.cm-css-variable-2 { color: @css-variable-2 !important; }
+
+		/*--HTML--*/
+		.cm-xml-comment { color: @xml-comment !important; font-style: italic !important; }
+		.cm-xml-error { color: @xml-error  !important; }
+		.cm-xml-string { color: @xml-string !important; }
+		.cm-xml-tag { color: @xml-tag !important; }
+		.cm-xml-attribute { color: @xml-attribute !important; }
+		.cm-xml-link { color: @xml-link !important; }
+		.shadow-root .webkit-html-fragment.shadow-root { color: @xml-shadow-root !important; }
+		.outline-disclosure ol li .highlight { color: @xml-iframe-root !important; }
+
+		/*--GLOBAL--*/
+		.CodeMirror-code {
+			color: @global-text;
+		}
+
+
+		/**********************************************
+		/* Code Highlighting [WEBKIT]
+		/**********************************************/
+
+		/*-- HTML --*/
+		.webkit-html-attribute-name {color: @xml-attribute !important;}
+		.webkit-html-attribute-value {color: @xml-string !important;}
+		.webkit-html-comment {color:@xml-comment!important;font-style:italic;}
+		.webkit-html-resource-link,
+		.webkit-html-external-link {color:@xml-link!important;}
+		.webkit-html-tag,
+		.webkit-html-tag-name {color:@xml-tag!important;}
+		.webkit-html-text-node,
+		.webkit-html-css-node,
+		.webkit-html-js-node {color:@xml-js-node!important;}
+		.webkit-html-pseudo-element {color:@xml-pseudo !important;}
+
+		/*-- CSS --*/
+		.selector-matches {color:@css-builtin!important;}
+		.webkit-css-selector {color:@css-def!important;}
+		.webkit-css-at-rule {color:@css-at-rule!important;}
+		.webkit-css-color {color:@css-def!important;}
+		.webkit-css-comment {color:@css-comment!important;}
+		.webkit-css-important {color:@css-important!important;}
+		.webkit-css-keyword {color:@css-def!important;}
+		.webkit-css-number {color:@css-number!important;}
+		.webkit-css-property,
+		.styles-section .properties > li .webkit-css-property {color:@css-property!important;font-weight:400;}
+		.webkit-css-string {color:@css-string!important;}
+		.webkit-css-url {color:@xml-link!important;}
+
+		// Javascript Objects
+		.section .properties .name,
+		.event-properties .name,
+		.console-object-preview .name,
+		.console-formatted-object .name { color: @js-obj-name !important; }
+		.console-formatted-object,
+		.console-formatted-array { color: @js-obj-array !important; }
+		.console-formatted-function { color: @js-obj-function !important; }
+		.console-formatted-number { color: @js-obj-number !important; }
+		.console-formatted-boolean { color: @js-obj-boolean !important; }
+		.console-object-preview { color: @js-obj-preview !important; }
+		.console-formatted-regexp { color: @js-obj-regexp !important; }
+		.console-formatted-string { color: @js-obj-string !important; }
+		.console-formatted-undefined { color: @js-obj-undefined !important; }
+		.json .title { color: @global-text !important;}
+		.json .separator { color: @- !important; .contrast(@global-text, 35%, invert); }
+
+		.popover .parent + .children.expanded,
+		#console-messages .parent + .children.expanded,
+		.sidebar-pane .parent:not(.event-category) + .children.expanded {
+			border-left: 1px dashed fade(@global-text, 20%) !important;
+			position: relative;
+			left: 4.4px;
+		}
+
+		// dimmed object properties (also on console objects)
+		.section .properties .dimmed {
+			opacity: 0.5 !important;
+		}
+
+		//Codemirror
+		// Breakpoint Arrow
+		.cm-breakpoint .CodeMirror-gutter-elt {
+			color: #000 !important;
+			font-weight: 700 !important;
+		}
+
+		// Edit HTML cursor / Sources Edit cursor
+		.CodeMirror-cursor {
+			border-left: 1px solid @cm-cursor !important;
+		}
+
+		.cm-error {
+			background: @cm-error !important;
+			border-radius: 2px !important;
+			color: #eee !important;
+		}
+
+		// line number text
+		.CodeMirror-gutter-elt {
+			color: @cm-gutter-lines !important;
+		}
+
+		// line number bg
+		.CodeMirror-gutters {
+			background: @cm-gutter !important;
+			border-right: 2px solid @cm-gutter-border !important;
+		}
+
+		.CodeMirror-selected,
+		span.CodeMirror-selectedtext {
+			background: @cm-selected !important;
+		}
+
+		.CodeMirror-code .CodeMirror-matchingbracket {
+			color: @cm-matching-bracket !important;
+			text-shadow: 0 0 3px @cm-matching-bracket !important;
+			border-bottom: none !important;
+			font-weight: 800 !important;
+		}
+
+		.CodeMirror-code .CodeMirror-nonmatchingbracket {
+			color: @cm-nonmatching-bracket !important;
+			text-shadow: 0 0 3px @cm-nonmatching-bracket !important;
+			border-bottom: none !important;
+			font-weight: 800 !important;
+		}
+
+		.cm-search-highlight-start:before {
+			border-color: @global-accent !important;
+		}
+
+		.cm-search-highlight-end:before {
+			border-color: @global-accent !important;
+		}
+
+		.cm-search-highlight:before {
+			border-color: @global-accent !important;
+			padding: 2px !important;
+		}
+
+		.cm-line-with-selection .cm-column-with-selection.cm-search-highlight:before {
+			background-color: @global-accent !important;
+			border-radius: 2px !important;
+		}
+
+		span.cm-token-highlight {
+			background-color: transparent !important;
+			padding: 0px !important;
+		}
+
+		span.cm-token-highlight:before {
+			border-color: @global-accent !important;
+		}
+
+		.cm-line-with-selection span.cm-column-with-selection {
+			color: #000 !important; background-color: @global-accent !important;
+		}
+
+		.cm-whitespace:before {
+			color: @cm-whitespace !important;
+		}
+
+		.cm-tab:before {
+			border-bottom: 1px solid @cm-whitespace !important;
+		}
+
+		.cm-highlight {
+			-webkit-animation: "fadeout-revised" 3s 0s !important;
+			outline: 1px solid @selection-border;
+		}
+
+		.cm-highlight *:not(.CodeMirror-linenumber){
+			color: @selection-text !important;
+		}
+
+		.cm-execution-line {
+			background-color: @selection-background  !important;
+			outline: 1px solid @selection-border !important;
+		}
+
+		.CodeMirror-linenumber {border-right: none !important;}
+
+		.cm-line-without-source-mapping {
+			background-color: @cm-lines-no-sourcemap !important;
+		}
+
+		@-webkit-keyframes fadeout-revised {
+			0% {
+					background-color: @selection-background;
+					outline: 1px solid @selection-border;
+				}
+			50% {
+					background-color: @selection-background;
+					outline: 1px solid @selection-border;
+				}
+
+			100% {
+					background-color: @global-background;
+					outline: 1px solid @global-background;
+			}
+		}
+
+
+		// Editing Dom Nodes or Snippet Filenames
+		.editing {
+			background-color: @global-background !important;
+			outline: 1px solid @eh-editing-outline !important;
+			color: @global-text !important;
+		}
+
+		// _panel_elements
+		.CodeMirror {
+			outline: none !important;
+			border: 1px solid @- !important; .contrast(@global-background, 5%);
+			border-radius: 5px;
+			box-shadow: inset 0 0 15px 0 rgba(17,17,17,.6) !important;
+			margin: 10px 0;
+			padding: 10px 0 0 10px !important;
+			color: @global-text !important;
+		}
+
+		//scrollbars
+		::-webkit-scrollbar,
+		.CodeMirror-scrollbar-filler,
+		.CodeMirror-gutter-filler {
+			width: @sb-thickness !important;
+			height: @sb-thickness !important;
+			background-color: @global-background !important;
+		}
+
+		::-webkit-scrollbar-track {
+
+			&:horizontal {
+				-webkit-box-shadow: inset 1px 5px 6px rgba(0,0,0,0.3) !important;
+			};
+
+			&:vertical {
+				-webkit-box-shadow: inset 4px 1px 8px 1px rgba(0,0,0,0.3) !important;
+			};
+
+		}
+
+		::-webkit-scrollbar-corner,
+		.CodeMirror-scrollbar-filler,
+		.CodeMirror-gutter-filler {
+			-webkit-box-shadow: inset 1px 5px 6px rgba(0,0,0,0.3) !important;
+		}
+
+		::-webkit-scrollbar-thumb {
+			border-radius: @sb-thumb-roundness !important;
+			background-color: @sb-thumb-color !important;
+			border: 1px solid @sb-thumb-border !important;
+
+			&:horizontal {
+				-webkit-box-shadow: inset 0 7px 1px -5px rgba(255,255,255,0.3) !important;
+			}
+
+			&:vertical {
+				-webkit-box-shadow: inset 3px 0 5px 0 rgba(255,255,255,0.3) !important;
+			}
+		}
+
+		//navigation-arrows
+
+		 // hide/expand point arrow down
+		.styles-section.matched-styles .properties li.parent.expanded .expand-element,
+		#console-messages .console-group-messages .section.expanded .header::before,
+		#console-messages .properties-tree li.parent.expanded::before,
+		.outline-disclosure li.parent.expanded::before,
+		.properties-tree li.parent.expanded::before,
+		.section.expanded > .header::before,
+		.section .event-bar.expanded .header::before,
+		.sidebar-pane .parent.expanded::before,
+		.sidebar-pane-stack .sidebar-pane-title.expanded::before,
+		.timeline-expandable-expanded .timeline-expandable-arrow {
+			.arrow-styles;
+			.arrow-animations-down();
+		}
+
+		.sidebar-pane-stack .sidebar-pane-title.expanded::before {
+			.arrow-sidebar-pane-adjustment();
+		}
+
+		// hide/expand arrow point right
+		.styles-section.matched-styles .properties li.parent .expand-element,
+		#console-messages .console-group-messages .section .header::before,
+		#console-messages .properties-tree li.parent::before,
+		.outline-disclosure li.parent::before,
+		#search-results-pane-file-based .parent::before,
+		.properties-tree li.parent::before,
+		.section > .header::before,
+		.section .event-bar .header::before,
+		.sidebar-pane .parent::before,
+		.sidebar-pane-stack .sidebar-pane-title::before,
+		.timeline-expandable-collapsed .timeline-expandable-arrow {
+			.arrow-styles;
+			.arrow-animations-right();
+		}
+
+		// sort arrows point down
+		.data-grid th.sort-ascending > div::after {
+			.arrow-styles;
+			-webkit-mask-position: -4px -108px !important;
+		}
+
+		// sort arrows point up
+		.data-grid th.sort-descending > div::after {
+			.arrow-styles;
+			-webkit-mask-position: -20px -96px !important;
+		}
+
+		// BUG??: Arrows don't rotate in find module
+		#search-results-pane-file-based .parent.expanded::before{
+			-webkit-mask-position: -20px -96px !important;
+		}
+
+		// Drawer find arrow trees showing more sprite area than normal
+		#search-results-pane-file-based .parent.expanded::before {
+			-webkit-mask-position: -20px -93px !important;
+		}
+
+		#search-results-pane-file-based .parent::before {
+			-webkit-mask-position: -4px -93px !important;
+		}
+
+		// Adjust position of
+		// - network headers section arrows
+		.panel.network .outline-disclosure li.parent::before{
+			top: 3px !important;
+		}
+		// - event listener arrows
+		.sidebar-tabbed-pane .section > .header::before,
+		.event-bars .event-bar .header::before {
+			margin-top: 3px !important;
+		}
+
+		// selectbox arrows
+		.status-bar-select-arrow {
+			.arrow-styles;
+			-webkit-mask-position: -20px -96px !important;
+		}
+	}
+
+	// find
+	/deep/ .highlighted-search-result {
+		color: @find-highlight-text !important;
+		border-radius: 2px !important;
+		font-size: 1em !important;
+		background-color: @find-highlight-background !important;
+		box-shadow: rgba(0, 0, 0, 0.498039) 3px 3px 4px 0px !important;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

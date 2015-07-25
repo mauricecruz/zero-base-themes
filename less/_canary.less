@@ -150,14 +150,16 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 		&:extend(select.status-bar-item all);
 	}
 
+	// move arrow away from edge
 	.toolbar-select-arrow {
 		position: relative !important;
-		background-image: none !important;
 		right: 5px !important;
+		background-image: none !important;
 		-webkit-mask-image: url(Images/toolbarButtonGlyphs.png) !important;
 		-webkit-mask-position: -18px -96px !important;
-		background-color: @global-arrow !important;
 		-webkit-mask-size: 352px 144px !important;
+
+		color: @global-arrow !important;
 	}
 }
 
@@ -337,18 +339,6 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	color: @global-text !important;
 }
 
-// Sources Pause Options
-::shadow {
-	.toolbar-shadow.floating {
-		border: none !important;
-		background: -webkit-linear-gradient(darken(@tab-color-top, 8%), darken(@tab-color-bottom, 8%)) !important;
-	}
-
-	.toolbar-item.emulate-active {
-		background-color: @- !important; .contrast(@global-hover, 10%);
-	}
-}
-
 /* ==========================================================================
    Elements Sidebar
    ========================================================================== */
@@ -395,14 +385,11 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	border-bottom: 1px solid @style-separator !important;
 }
 
-// Metrics
-.metrics {}
-
 /* ==========================================================================
    Network
    ========================================================================== */
 // resource graph label bar
-.panel:not(.network) .resources-dividers-label-bar {
+.resources-dividers-label-bar {
 	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
 }
 
@@ -419,6 +406,11 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 // remove watch border on horizontal split view
 .sidebar-pane > .toolbar {
 	border-bottom: 1px solid @style-separator !important;
+}
+
+// XHR label text
+.sidebar-pane .breakpoint-condition {
+	color: @global-label !important;
 }
 
 
@@ -443,17 +435,3 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
 }
 
-.sort-order-icon {
-	background-image: none !important;
-	-webkit-mask-image: url(Images/toolbarButtonGlyphs.png) !important;
-	background-color: @global-arrow !important;
-	-webkit-mask-size: 352px 144px !important;
-}
-
-.data-grid th.sort-descending .sort-order-icon {
-	-webkit-mask-position: -20px -99px !important;
-}
-
-.data-grid th.sort-ascending .sort-order-icon {
-	-webkit-mask-position: -4px -111px !important;
-}
