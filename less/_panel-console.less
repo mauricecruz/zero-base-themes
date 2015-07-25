@@ -215,9 +215,17 @@
 	.object-value-number { color: @js-obj-number !important; }
 	.object-value-calculate-value-button { color: @js-obj-array !important;}
 	.object-value-error { color: @global-error !important; }
-}
+
+
+	// remove top border
+	.shadow-split-widget.vbox > .shadow-split-widget-sidebar:not(.maximized) {
+		border-top: none !important;
+	}
+	
+} //::shadow
 
 body /deep/ .link {
 	color: @xml-link !important;
 }
+
 

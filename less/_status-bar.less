@@ -3,23 +3,38 @@
 /************************************************/
 
 //Select boxes
-select.status-bar-item {
-	color: @global-text !important;
-	text-shadow: none !important;
-	border-left: 1px solid lighten(@global-background, 5%) !important;
-	border-right: 1px solid lighten(@global-background, 5%) !important;
-	background: inherit !important;
-	border-top: none !important;
-	border-bottom: none !important;
+.toolbar::shadow {
 
-	&:hover {
-		&:extend(select.status-bar-item);
+	// replace _status-bar.less (select.status-bar-item)
+	// style select box
+	select.toolbar-item {
+		color: @global-text !important;
+		text-shadow: none !important;
+		border-left: 1px solid lighten(@global-background, 5%) !important;
+		border-right: 1px solid lighten(@global-background, 5%) !important;
+		background: inherit !important;
+		border-top: none !important;
+		border-bottom: none !important;
+
+		&:hover {
+			&:extend(select.status-bar-item);
+		}
+
+		option {
+			background-color: @global-background !important;
+		}
 	}
 
-option {
-		background-color: @global-background !important;
+	// move arrow away from edge
+	.toolbar-select-arrow {
+		position: relative !important;
+		right: 10px !important;
+		background-image: none !important;
+		-webkit-mask-image: url(Images/toolbarButtonGlyphs.png) !important;
+		-webkit-mask-position: -20px -96px !important;
+		-webkit-mask-size: 352px 144px !important;
+		background-color: @global-arrow !important;
 	}
-
 }
 
 .status-bar-items {
@@ -123,4 +138,21 @@ label.checkbox,
 .save-device-button,
 .remove-device-button {
 	.button-styles();
+}
+
+.resources-toolbar,
+::shadow .search-toolbar-summary {
+	.gradient-background();
+	border-top: @global-background !important;
+}
+
+.profiles-toolbar {
+	.gradient-background();
+	border-bottom: @global-background !important;
+}
+
+#sources-panel-sources-view .sources-toolbar {
+	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	border-top: @global-background !important;
+	color: @global-text !important;
 }

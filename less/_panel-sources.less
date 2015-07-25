@@ -276,6 +276,12 @@ li.breakpoint-hit .breakpoint-hit-marker {
 	}
 }
 
+// Highlight currently evaluated context (not sure of what color to use so making it subtle for now)
+.cm-execution-line-tail {
+	background-color: @- !important; .contrast(@selection-background, 10%, invert);
+	border-radius: 2px !important;
+}
+
 // snippet that pops up when stepping into code that shows you values of variables
 .text-editor-value-decoration {
 	& {background-color: @- !important; .contrast(@global-background, 5%)};
@@ -284,5 +290,17 @@ li.breakpoint-hit .breakpoint-hit-marker {
 	border-radius: 2px !important;
 	& {box-shadow: 0 1px 0 0 @- !important; .contrast(@global-background, 5%)};
 	& {border-top: 1px solid @- !important; .contrast(@global-background, 2.5%, invert)};
+}
 
+// Notification bar (for mismatch/blackbox notices)
+.source-frame-infobar::shadow {
+	.infobar-warning {
+		color: @global-warn;
+		border-bottom: 1px solid @- !important; .contrast(@global-background, 10%);
+		background-color: @- !important; .contrast(@global-background, 5%);
+	}
+
+	.source-frame-infobar-toggle-link {
+		color: @global-accent !important;
+	}
 }

@@ -33,7 +33,6 @@
 	border-radius: 2px !important;
 	& {box-shadow: 0 1px 0 0 @- !important; .contrast(@global-background, 5%)};
 	& {border-top: 1px solid @- !important; .contrast(@global-background, 2.5%, invert)};
-
 }
 
 // Notification bar (for mismatch/blackbox notices)
@@ -48,13 +47,6 @@
 		color: @global-accent !important;
 	}
 }
-
-// Highlight currently evaluated context (not sure of what color to use so making it subtle for now)
-.cm-execution-line-tail {
-	background-color: @- !important; .contrast(@selection-background, 10%, invert);
-	border-radius: 2px !important;
-}
-
 /* ==========================================================================
    Popovers
    ========================================================================== */
@@ -82,114 +74,6 @@ div.ax-computed-name {
 ::shadow {
 	.ax-name { color: @js-obj-name !important; }
 	.ax-role { color: @global-text !important; }
-}
-
-
-/* ==========================================================================
-   Toolbar
-   ========================================================================== */
-body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
-	background-color: @glyph-inactive !important;
-}
-
-
-//adjust toolbar glyph positions
-.inspector-view-toolbar-left,
-.inspector-view-toolbar.tabbed-pane-header-after {
-	margin-top: 7px !important;
-}
-
-// only put gradient background on specific subtoolbars
-.console-view,
-.network {
-	.toolbar {
-		background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-	}
-}
-
-::shadow {
-	// glyph states
-	.toolbar-item > .glyph,
-	.toolbar-item > .glyph:active,
-	.filter-toolbar-item.toggled-shown .glyph,
-	button.toolbar-item.toggled-on .glyph {
-		background-color: @glyph-active !important;
-	}
-
-	.filter-toolbar-item.toggled-shown {
-		background-color: rgba(0,0,0,0) !important;
-	}
-
-	.toolbar-item > .glyph,
-	button.toolbar-item.toggled-off .glyph {
-		background-color: @glyph-inactive !important;
-	}
-
-	// error/warning counts on toolbar
-	.toolbar-counter-item {
-		color: @global-text !important;
-	}
-}
-
-
-
-/* ==========================================================================
-   Status Bars
-   ========================================================================== */
-#sources-panel-sources-view .sources-toolbar {
-	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-	border-top: @global-background !important;
-	color: @global-text !important;
-}
-
-.toolbar::shadow {
-
-	// replace _status-bar.less (select.status-bar-item)
-	// style select box
-	select.toolbar-item {
-		&:extend(select.status-bar-item all);
-	}
-
-	// move arrow away from edge
-	.toolbar-select-arrow {
-		position: relative !important;
-		right: 5px !important;
-		background-image: none !important;
-		-webkit-mask-image: url(Images/toolbarButtonGlyphs.png) !important;
-		-webkit-mask-position: -18px -96px !important;
-		-webkit-mask-size: 352px 144px !important;
-
-		color: @global-arrow !important;
-	}
-}
-
-
-// various toolbars that need gradient backgrounds
-.resources-toolbar,
-::shadow .search-toolbar-summary {
-	.gradient-background();
-	border-top: @global-background !important;
-}
-
-.profiles-toolbar {
-	.gradient-background();
-	border-bottom: @global-background !important;
-}
-
-
-/* ==========================================================================
-   Toolbars
-   ========================================================================== */
-
-// border from sidebar in elements panel
-// replaces ".shadow-split-view.hbox > .shadow-split-view-sidebar:not(.maximized)"
-::shadow .shadow-split-widget.hbox > .shadow-split-widget-sidebar:not(.maximized) {
-	border-left: 2px solid @global-divider !important;
-}
-
-// divider for network details
-::shadow .shadow-split-widget.hbox.shadow-split-widget-first-is-sidebar > .shadow-split-widget-sidebar:not(.maximized) {
-	border-right: 2px solid @global-divider !important;
 }
 
 /* ==========================================================================
@@ -226,11 +110,6 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 /* ==========================================================================
    Console
    ========================================================================== */
-// remove top border
-::shadow .shadow-split-widget.vbox > .shadow-split-widget-sidebar:not(.maximized) {
-	border-top: none !important;
-}
-
 // fix Emulation labels (these selector hooks sucks. might be temporary)
 .overrides-view label,
 .overrides-view fieldset > span,

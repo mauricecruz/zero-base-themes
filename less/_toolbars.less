@@ -56,22 +56,11 @@
 		color: @form-label-text !important;
 	}
 
-
-	// Glyphs
-	.status-bar-item > .glyph,
-	.shadow-split-view button.sidebar-show-hide-button {
-		background-color: @glyph-inactive !important;
-	}
-
 	.status-bar-item[disabled] {
 		opacity: 0.5 !important;
 	}
 
-	button.status-bar-item.toggled-on .glyph,
-	.filter-status-bar-item.toggled-shown .glyph,
-	button.status-bar-item:not([disabled]):active .glyph {
-		background-color: @glyph-active !important;
-	}
+	
 
 	// sidebar borders
 	.shadow-split-view.hbox.shadow-split-view-first-is-sidebar > .shadow-split-view-sidebar:not(.maximized) {
@@ -128,13 +117,13 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 }
 
 // adjust height of left/right components of main nav
-.tabbed-pane-header-before::shadow,
-.tabbed-pane-header-after::shadow {
+// .tabbed-pane-header-before::shadow,
+// .tabbed-pane-header-after::shadow {
 
-	.status-bar-shadow {
-		height: @tab-main-toolbar-height !important;
-	}
-}
+// 	.status-bar-shadow {
+// 		height: @tab-main-toolbar-height !important;
+// 	}
+// }
 
 
 // Drawer Toolbar
@@ -302,3 +291,58 @@ select.tabbed-pane-header-tabs-drop-down-select{
 }
 
 
+body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
+	background-color: @glyph-inactive !important;
+}
+
+
+//adjust toolbar glyph positions
+.inspector-view-toolbar-left,
+.inspector-view-toolbar.tabbed-pane-header-after {
+	margin-top: 7px !important;
+}
+
+// only put gradient background on specific subtoolbars
+.console-view,
+.network {
+	.toolbar {
+		background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	}
+}
+
+::shadow { 
+	// glyph states
+	.toolbar-item > .glyph,
+	.toolbar-item > .glyph:active,
+	.filter-toolbar-item.toggled-shown .glyph,
+	button.toolbar-item.toggled-on .glyph {
+		background-color: @glyph-active !important;
+	}
+
+	.filter-toolbar-item.toggled-shown {
+		background-color: rgba(0,0,0,0) !important;
+	}
+
+	.toolbar-item > .glyph,
+	button.toolbar-item.toggled-off .glyph {
+		background-color: @glyph-inactive !important;
+	}
+
+	// error/warning counts on toolbar
+	.toolbar-counter-item {
+		color: @global-text !important;
+	}
+
+	// border from sidebar in elements panel
+	// replaces ".shadow-split-view.hbox > .shadow-split-view-sidebar:not(.maximized)"
+	.shadow-split-widget.hbox > .shadow-split-widget-sidebar:not(.maximized) {
+		border-left: 2px solid @global-divider !important;
+	}
+
+	// divider for network details
+	.shadow-split-widget.hbox.shadow-split-widget-first-is-sidebar > .shadow-split-widget-sidebar:not(.maximized) {
+		border-right: 2px solid @global-divider !important;
+	}
+
+
+} //::shadow
