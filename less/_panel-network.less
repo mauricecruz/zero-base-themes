@@ -180,3 +180,24 @@
 #network-views .resource-view.html {
 	background-color: #fff !important;
 }
+
+// network header tall view
+.network-details-view-tall-header .network-item-view::shadow {
+	.tabbed-pane-header {
+		padding-top: 0 !important;
+	}
+	.tabbed-pane-header-tab {
+		padding-top: 8px !important;
+	}
+}
+
+// network view headers
+.network .request-headers-view .parent {
+	&:extend(#network-views .request-headers-view .parent);
+	margin-top: 1px !important;
+}
+
+// reduce space between network headers and subnav menu
+.data-grid .header-container {
+	top: -1px !important;
+}
