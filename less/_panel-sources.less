@@ -254,17 +254,6 @@ li.breakpoint-hit .breakpoint-hit-marker {
 	}
 }
 
-// Notification bar (for mismatch/blackbox notices)
-.source-frame-infobar {
-	color: @global-warn;
-	border-bottom: 1px solid @- !important; .contrast(@global-background, 10%);
-	background-color: @- !important; .contrast(@global-background, 5%);
-
-	&-toggle-link {
-		color: @global-accent !important;
-	}
-}
-
 .sidebar-pane-button-new-rule {
 	background-color: @- !important; .contrast(@global-background, 40%);
 	background-image: none;
@@ -294,13 +283,25 @@ li.breakpoint-hit .breakpoint-hit-marker {
 
 // Notification bar (for mismatch/blackbox notices)
 .source-frame-infobar::shadow {
-	.infobar-warning {
-		color: @global-warn;
+	.infobar {
 		border-bottom: 1px solid @- !important; .contrast(@global-background, 10%);
 		background-color: @- !important; .contrast(@global-background, 5%);
+	}
+
+	.infobar-info {
+		color: @global-text !important;
+	}
+
+	.infobar-warning {
+		color: @global-warn !important;
 	}
 
 	.source-frame-infobar-toggle-link {
 		color: @global-accent !important;
 	}
+}
+
+// style hover for watches
+.watch-expression-header:hover {
+	background-color: @global-hover !important;
 }
