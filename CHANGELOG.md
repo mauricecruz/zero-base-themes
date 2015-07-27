@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.8.6
+* v44 version bump
+
 ## 1.8.5
 * [canary] style source play button overlay options
 * [canary] style arrows on dropdowns
