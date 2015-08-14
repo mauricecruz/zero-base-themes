@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.7
+* Fix timeline subtoolbar background
+* Fix color switcher
+* Fix glyph colors
+
 ## 1.8.6
 * v44 version bump
 
