@@ -1,4 +1,6 @@
 # Changelog
+## 1.8.9
+* `canary` Support material design
 
 ## 1.8.8
 * The real 187!
