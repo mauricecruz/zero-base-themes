@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.8.8
+* The real 187!
+
 ## 1.8.7
 * Fix timeline subtoolbar background
 * Fix color switcher
