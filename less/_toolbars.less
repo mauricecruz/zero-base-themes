@@ -60,7 +60,7 @@
 		opacity: 0.5 !important;
 	}
 
-	
+
 
 	// sidebar borders
 	.shadow-split-view.hbox.shadow-split-view-first-is-sidebar > .shadow-split-view-sidebar:not(.maximized) {
@@ -310,7 +310,7 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	}
 }
 
-::shadow { 
+::shadow {
 	// glyph states
 	.toolbar-item > .glyph,
 	.toolbar-item > .glyph:active,
@@ -344,5 +344,9 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 		border-right: 2px solid @global-divider !important;
 	}
 
+	// show/hide button in sources
+	.shadow-split-widget button.sidebar-show-hide-button {
+		background-color: @glyph-inactive !important;
+	}
 
 } //::shadow
