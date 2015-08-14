@@ -52,23 +52,26 @@
 	outline: 1px solid @selection-border !important;
 }
 
-// color-picker
-.spectrum-container {
-	border: none !important;
-	background: @global-background !important;
-	border-radius: 3px !important;
-	padding: 7px 10px !important;
+::shadow  {
 
-	.swatch {
-		margin-right: 3px !important;
+	.spectrum-text-value {
+		color: @global-text;
+		border: 1px solid @form-input-border;
 	}
-}
 
-.spectrum-range-container {
-	padding-bottom: 0 !important;
+	.spectrum-display-switcher {
+		color: @form-button-text !important;
+		background: rgba(0,0,0,0);
+		background-image: @form-button-background !important;
+		border: 1px solid @form-button-border !important;
 
-	input {
-		position: static !important;
+		&:hover {
+			background-image: @form-button-background !important;
+		}
+
+		&:active {
+			box-shadow: @form-button-pressed !important;
+		}
 	}
 }
 
