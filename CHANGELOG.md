@@ -1,4 +1,14 @@
 # Changelog
+
+## 1.9.0
+* `canary` Update location of webkit masks for navigation arrows go
+* `canary` Indicate network filter has selection active
+* `canary` Style network summary bar
+* `canary` Style request payload header
+* `canary` Style throttle table
+* `canary` Fix toolbar selection
+* `canary` Style regexp in console
+
 ## 1.8.9
 * `canary` Support material design
 
@@ -14,34 +24,34 @@
 * v44 version bump
 
 ## 1.8.5
-* [canary] style source play button overlay options
-* [canary] style arrows on dropdowns
-* [canary] fix metrics background colors
+* `canary` style source play button overlay options
+* `canary` style arrows on dropdowns
+* `canary` fix metrics background colors
 * fix opacity of timeline selections
 
 ## 1.8.4
-* [canary] made it pretty again
+* `canary` made it pretty again
 
 ## 1.8.3
-* [canary] style timeline selectbox 
-* [canary] fix elements sidebar styles 
-* [canary] style scope headers
-* [canary] style revised filter bar
-* [canary] remove background from filter toggle 
+* `canary` style timeline selectbox 
+* `canary` fix elements sidebar styles 
+* `canary` style scope headers
+* `canary` style revised filter bar
+* `canary` remove background from filter toggle 
 
 ## 1.8.2
-* [canary] fix styles for console object properties
+* `canary` fix styles for console object properties
 
 ## 1.8.1
-* [canary] fixes for broken styles
+* `canary` fixes for broken styles
 
 ## 1.8.0
 * version bump for stable
 
 ## 1.7.8
 * Update glyph styles in find module and style 'replace' input box
-* [canary] fix toolbar/status backgrounds
-* [canary] style execution line context
+* `canary` fix toolbar/status backgrounds
+* `canary` style execution line context
 
 ## 1.7.7
 * increase minimum height on popovers
