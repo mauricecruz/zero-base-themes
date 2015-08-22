@@ -389,6 +389,19 @@ div.ax-computed-name {
 	.palette-preview:hover {
 		background-color: @- !important; .contrast(@popover-background, 7%);
 	}
+}
 
+// Promises Console Panel
+.promises {
+	> .toolbar {
+		background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+		border-bottom: none !important;
+	}
 
+	.data-grid {
+		th,
+		td {
+			border-bottom: 1px solid @global-divider !important;
+		}
+	}
 }
