@@ -52,14 +52,18 @@
 	outline: 1px solid @selection-border !important;
 }
 
+// Color Picker
 ::shadow  {
 
 	.spectrum-text-value {
 		color: @global-text;
+		background-color: @form-input-background !important;
 		border: 1px solid @form-input-border;
 	}
 
-	.spectrum-display-switcher {
+	// remove 1st property when two switchers display on popover
+	.spectrum-display-switcher,
+	.spectrum-switcher {
 		color: @form-button-text !important;
 		background: rgba(0,0,0,0);
 		background-image: @form-button-background !important;
@@ -72,6 +76,10 @@
 		&:active {
 			box-shadow: @form-button-pressed !important;
 		}
+	}
+
+	.spectrum-palette {
+		border-top: 1px solid @- !important; .contrast(@popover-background, 5%);
 	}
 }
 
