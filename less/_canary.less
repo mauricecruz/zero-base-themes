@@ -381,8 +381,11 @@ div.ax-computed-name {
 			background-color: @glyph-inactive !important;
 		}
 
-		button.toolbar-item.toggled-on .glyph {
-			background-color: @glyph-active !important;
+		button.toolbar-item.toggled-on,
+		button.toolbar-item.toggled-on.hover {
+			.glyph {
+				background-color: @glyph-active !important;
+			}
 		}
 	}
 
