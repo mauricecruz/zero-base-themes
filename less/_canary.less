@@ -408,3 +408,30 @@ div.ax-computed-name {
 		}
 	}
 }
+
+// Context Menu (New settings button and material menus)
+.soft-context-menu {
+	background: @popover-background !important;
+	border: 1px solid @- !important; .contrast(@popover-background, 5%);
+	color: @global-text !important;
+
+	&::shadow {
+		.soft-context-menu-item-mouse-over {
+			& { background-color: @- !important; .contrast(@popover-background, 8%); }
+			& { border-top: 1px solid @- !important; .contrast(@popover-background, 10%); }
+			& { border-bottom: 1px solid @- !important; .contrast(@popover-background, 10%); }
+		}
+
+		.soft-context-menu-separator > .separator-line {
+			border-bottom: 1px solid @- !important; .contrast(@popover-background, 5%);
+		}
+
+		.checkmark {
+			-webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/toolbarButtonGlyphs.png);
+			-webkit-mask-position: -128px -109px;
+			-webkit-mask-size: 352px 168px;
+			background-color: @global-accent !important;
+			background-image: none !important;
+		}
+	}
+}
