@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.9.1 
+* `canary` Fix hover for eyedropper in color picker
+* `canary` Style promise panel
+* `canary` Style new additions to color picker
+* `canary` style optgroup in network throttle dropdown
+* `canary` Style new additions to color picker 
+* `canary` Fix status bar dropdown arrow position
+* Modify popover background on themes and remove popover-arrow
+* Correct popover arrow positions
+
 ## 1.9.0
 * `canary` Update location of webkit masks for navigation arrows go
 * `canary` Indicate network filter has selection active
