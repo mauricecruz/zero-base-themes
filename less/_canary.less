@@ -435,3 +435,27 @@ div.ax-computed-name {
 		}
 	}
 }
+
+/* ==========================================================================
+   Elements Panel
+   ========================================================================== */
+
+// closing tag
+::shadow .webkit-html-close-tag-name {
+	color: @xml-tag !important;
+}
+
+// HACK: Reset background color to white because shadow dom !important rule can't be overridden
+// https://code.google.com/p/chromium/issues/detail?id=524599
+body ::shadow {
+	.editing,
+	.editing * {
+		background-color: #fff !important;
+	}
+}
+
+// HACK: white bg for sidebar editing
+// https://code.google.com/p/chromium/issues/detail?id=524599
+::shadow style + .text-prompt-editing {
+	background-color: #fff !important;
+}
