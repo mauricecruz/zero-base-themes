@@ -10,7 +10,6 @@
 }
 
 .overrides-view {
-
 	.tabbed-pane-header-tab {
 		color: @form-label-text !important;
 	}
@@ -26,6 +25,18 @@
 	input,
 	select {
 		.input-styles() !important;
+	}
+
+	::shadow {
+		// add padding to overrides content panel
+		.tabbed-pane-content {
+			padding: 10px;
+		}
+
+		// remove padding from top so menu displays well
+		.tabbed-pane-header {
+			padding-top: 0 !important;
+		}
 	}
 }
 
@@ -139,3 +150,23 @@ button.overrides-swap {
 	color: @global-accent !important;
 }
 
+
+
+// Promises Console Panel
+.promises {
+	> .toolbar {
+		background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+		border-bottom: none !important;
+	}
+
+	.data-grid .header-container {
+		border-top: none !important;
+	}
+
+	.data-grid {
+		th,
+		td {
+			border-bottom: 1px solid @global-divider !important;
+		}
+	}
+}

@@ -2,7 +2,7 @@
 /* Find Module [ctrl+shift+F / cmd+shift+F]
 /**********************************************/
 
-#search-results-pane-file-based {
+::shadow #search-results-pane-file-based {
 
 	// filename header
 	.search-result {
@@ -41,11 +41,11 @@
 }
 
 // Find (Status-bar)
-.toolbar-search button {
+::shadow .search-action-button {
 	.button-styles();
 }
 
-.toolbar-search-control {
+::shadow .toolbar-search-control {
 	background-color: @form-input-background !important;
 	border: 1px solid @form-input-border !important;
 
@@ -72,7 +72,7 @@
 }
 
 // Find (Drawer)
-.search-drawer-header input[type="text"].search-config-search {
+::shadow .search-config-search {
 
 	&:focus {
 		outline-color: @global-accent !important;
@@ -85,7 +85,7 @@
 
 
 
-#drawer-contents .search-match-line-number {
+::shadow .search-match-line-number {
 	background: @cm-gutter !important;
 	border-right: 1px solid @cm-gutter-border !important;
 	padding: 1px 5px 1px 0 !important;
@@ -94,7 +94,7 @@
 }
 
 // highlighted search input
-#search-results-pane-file-based .search-match .highlighted-match,
+::shadow #search-results-pane-file-based .search-match .highlighted-match,
 .highlighted-search-result,
 .webkit-highlighted-line.webkit-line-content {
 	color: @find-highlight-text !important;
@@ -105,12 +105,12 @@
 }
 
 // hover over line
-.search-match:hover {
+::shadow .search-match:hover {
 	.highlight(hover)
 }
 
 // Find Module inside file in sources panel
-.status-bar {
+::shadow .search-bar {
 	background-color: @- !important; .contrast(@global-background, 15%);
 	border-top: none !important;
 	border-bottom: none !important;
@@ -126,12 +126,12 @@
 //**********************************************/
 
 // content color
-.search-match-content {
+::shadow .search-match-content {
 	color: @global-text !important;
 }
 
 // footer
-.search-status-bar-summary {
+::shadow .search-status-bar-summary {
 	background: linear-gradient(@tab-color-top,@tab-color-bottom) !important;
 	border-top: 1px solid @tab-color-top !important;
 }
@@ -172,7 +172,7 @@
 //**********************************************/
 
 
-::shadow ::shadow {
+::shadow {
 
 	.regex-search-status-bar-item,
 	.case-sensitive-search-status-bar-item {
@@ -193,3 +193,10 @@
 }
 
 
+// Button text in sources
+::shadow ::shadow {
+	.regex-search-toolbar-item.toggled-on .toolbar-button-text,
+	.case-sensitive-search-toolbar-item.toggled-on .toolbar-button-text {
+		color: @glyph-active !important;
+	}
+}

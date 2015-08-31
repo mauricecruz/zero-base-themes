@@ -108,6 +108,7 @@
 
 /*-- PSEUDO STATE DISPLAY --*/
 
+.styles-animations-controls-pane.expanded,
 .styles-element-state-pane {
 	background: @- !important; .contrast(@global-background,6%);
 	padding: 4px 0 !important;
@@ -118,9 +119,30 @@
 	margin-top: 0 !important;
 }
 
+.styles-animations-controls-pane.expanded {
+	height: 68px !important;
+}
+
 .sidebar-pane-stack .event-category,
 .sidebar-pane .section {
 	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
 	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
 	margin-top: 0 !important;
+}
+
+// Editable Media Query on Elements Panel
+.styles-section-title .media-list.media-matches .media.editable-media,
+.styles-section-title .media-list {
+	color: @- !important; .contrast(@global-text, 25%, invert);
+
+
+	&.media-matches .media.editable-media .media-text {
+		color: @global-text !important;
+	}
+}
+
+
+// Magnifying glyph in computed panel when hovering over rule
+.computed-style-trace-button > .glyph {
+	background-color: @glyph-active !important;
 }

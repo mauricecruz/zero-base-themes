@@ -260,15 +260,6 @@ select.tabbed-pane-header-tabs-drop-down-select{
 	background-color: lighten(@global-background, 10%) !important;
 }
 
-// error/warning counts on toolbar
-.status-bar-counter {
-	color: @global-text !important;
-
-	&:hover {
-		border-bottom: none !important;
-	}
-}
-
 // Subtools bar select list when real viewport is tight
 .tabbed-pane-header-tabs-drop-down > select.drop-down-menu option {
 	background-color: @global-background !important;
@@ -351,3 +342,20 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	}
 
 } //::shadow
+
+// status bar error|warn counts override
+body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
+	
+	.status-bar-counter {
+		color: @global-text !important;
+
+		&:hover {
+			border-bottom: none !important;
+		}
+	}
+}
+
+// add padding to console subtoolbar (filters)
+.filter-bar.hbox {
+	padding: 2px 0;
+}

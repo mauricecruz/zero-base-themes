@@ -159,3 +159,18 @@ label.checkbox,
 	border-top: @global-background !important;
 	color: @global-text !important;
 }
+
+.status-bar {
+	&:extend(.sources-status-bar);
+}
+
+// pretty much all label text in the status bars
+html /deep/ .component-root {
+	color: @global-text !important;
+}
+
+// network input filter & timeline filter & dropdown
+.filter-combobox-filter .toolbar-item,
+.filter-input-field {
+	.input-styles() !important;
+}

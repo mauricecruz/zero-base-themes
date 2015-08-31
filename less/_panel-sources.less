@@ -3,7 +3,7 @@
 /* Sources Tab
 /**********************************************/
 /*placeholder text when no file is open*/
-.tabbed-pane-placeholder {
+::shadow .tabbed-pane-placeholder {
 	text-shadow: 0 1px 0 @global-textshadow !important;
 	color: @sources-placeholder-text !important;
 }
@@ -45,7 +45,7 @@
 	}
 
 	/* Call Stack */
-	.placard {
+	::shadow .list-item {
 
 		.title,
 		.subtitle {
@@ -69,7 +69,9 @@
 		}
 	}
 
-	.hidden-placards-message {
+	// 'paused on a js breakpoint' callstack node
+	.callstack-info.status {
+		border-top: none !important;
 		background-color: @- !important; .contrast(@global-background, 10%);
 		color: @global-warn;
 
@@ -77,14 +79,6 @@
 			color: @global-accent;
 		}
 
-	}
-
-	// "paused on a javascript breakpoint" node
-	> .body .placard + .info {
-		background: @global-background !important;
-		border-top: 0 !important;
-		color: @global-accent !important;
-		font-style: normal !important;
 	}
 }
 
@@ -277,8 +271,8 @@ li.breakpoint-hit .breakpoint-hit-marker {
 // Notification bar (for mismatch/blackbox notices)
 .source-frame-infobar::shadow {
 	.infobar {
-		border-bottom: 1px solid @- !important; .contrast(@global-background, 10%);
-		background-color: @- !important; .contrast(@global-background, 5%);
+		& {border-bottom: 2px solid @- !important; .contrast(@global-background, 10%);}
+		& {background-color: @- !important; .contrast(@global-background, 5%);}
 	}
 
 	.infobar-info {
@@ -297,4 +291,59 @@ li.breakpoint-hit .breakpoint-hit-marker {
 // style hover for watches
 .watch-expression-header:hover {
 	background-color: @global-hover !important;
+}
+
+
+// Watch Panel Hover
+.watch-expression .primitive-value:hover,
+.watch-expression .section .header:hover {
+	.highlight(hover);
+}
+
+
+// ==========================================================================
+// Sources Sidebar
+// ==========================================================================
+
+
+// [panel-sources] Hidden stack frames notification (sidebar)
+.hidden-callframes-message {
+	background: @-; .contrast(@global-background, 5%);
+	text-align: center;
+
+	.link {
+		color: @xml-link !important;
+	}
+}
+
+
+// Watch Panel
+.watch-expressions {
+	margin-top: 0 !important;
+
+	.name {
+		color: @js-obj-name !important;
+	}
+}
+
+// not available message
+.error-message {
+	color: @global-error !important;
+}
+
+//Event Listener Tree
+.event-listener-tree {
+
+	> li {
+		border-top: none !important;
+	}
+
+	.name {
+		color: @js-obj-name !important;
+	}
+}
+
+// Buttons on panel headers
+.sidebar-pane-toolbar .pane-title-button {
+	background-color: @- !important; .contrast(@glyph-inactive, 50%);
 }

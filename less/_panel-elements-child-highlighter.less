@@ -4,7 +4,7 @@
 
 .show-child-highlighter(@choice) when (@choice = true) {
 	.panel.elements {
-		.parent {
+		::shadow .parent {
 			// highlight children
 			&.selected.expanded + .children,
 			&.hovered.expanded + .children {
@@ -20,8 +20,8 @@
 				}
 
 				// fade closing tag of parent
-				> :last-child * {
-					opacity: .6;
+				> li:last-of-type .webkit-html-tag.close {
+					opacity: 0.5 !important;
 				}
 			}
 		}

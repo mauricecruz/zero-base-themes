@@ -34,13 +34,15 @@
 	}
 
 	/*-- HIGHLIGHT CHILDREN --*/
-	.panel.elements .parent + .children {
+	.panel.elements ::shadow .parent + .children {
 		-webkit-transition: .5s ease-in .25s;
 	}
 
-	.panel.elements .parent.selected.expanded + .children > :last-child *,
-	.panel.elements .parent.hovered.expanded + .children > :last-child * {
-		-webkit-transition: opacity .5s ease-in-out .25s;
+	.panel.elements ::shadow .hovered,
+	.panel.elements ::shadow .selected {
+		&.parent.expanded + .children > li:last-of-type .webkit-html-tag.close {
+			-webkit-transition: opacity .5s ease-in-out .25s;
+		}
 	}
 
 	/*-- POPOVERS --*/

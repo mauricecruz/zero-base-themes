@@ -9,20 +9,6 @@
 }
 
 /* ==========================================================================
-   Sources
-   ========================================================================== */
-
-// snippet that pops up when stepping into code that shows you values of variables
-.text-editor-value-decoration {
-	& {background-color: @- !important; .contrast(@global-background, 5%)};
-	color: @global-text !important;
-	padding: 0 5px;
-	border-radius: 2px !important;
-	& {box-shadow: 0 1px 0 0 @- !important; .contrast(@global-background, 5%)};
-	& {border-top: 1px solid @- !important; .contrast(@global-background, 2.5%, invert)};
-}
-
-/* ==========================================================================
    Popovers
    ========================================================================== */
 
@@ -255,20 +241,6 @@ div.ax-computed-name {
 	color: @global-label !important;
 }
 
-
-/* ==========================================================================
-   Find
-   ========================================================================== */
-
-// Button text in sources
-::shadow ::shadow {
-	.regex-search-toolbar-item.toggled-on .toolbar-button-text,
-	.case-sensitive-search-toolbar-item.toggled-on .toolbar-button-text {
-		color: @glyph-active !important;
-	}
-}
-
-
 /* ==========================================================================
    Timeline
    ========================================================================== */
@@ -391,21 +363,6 @@ div.ax-computed-name {
 
 	.palette-preview:hover {
 		background-color: @- !important; .contrast(@popover-background, 7%);
-	}
-}
-
-// Promises Console Panel
-.promises {
-	> .toolbar {
-		background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-		border-bottom: none !important;
-	}
-
-	.data-grid {
-		th,
-		td {
-			border-bottom: 1px solid @global-divider !important;
-		}
 	}
 }
 

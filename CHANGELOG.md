@@ -1,6 +1,12 @@
 # Changelog
 
-## 1.9.1 
+## 1.9.3
+* Cleanup
+
+## 1.9.2
+* `canary` Band-aided editable text so that it's visible until https://code.google.com/p/chromium/issues/detail?id=524599 is addressed
+
+## 1.9.1
 * `canary` Fix hover for eyedropper in color picker
 * `canary` Style promise panel
 * `canary` Style new additions to color picker

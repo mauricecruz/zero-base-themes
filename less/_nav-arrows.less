@@ -13,8 +13,9 @@
 	.arrow-animations();
 }
 
- // hide/expand point arrow down
-.styles-section.matched-styles .properties li.parent.expanded .expand-element,
+// hide/expand point arrow down
+::shadow .elements-disclosure ol li.parent.expanded::before,
+.styles-section.matched-styles .style-properties li.parent.expanded .expand-element,
 #console-messages .console-group-messages .section.expanded .header::before,
 #console-messages .properties-tree li.parent.expanded::before,
 .outline-disclosure li.parent.expanded::before,
@@ -33,7 +34,8 @@
 }
 
 // hide/expand arrow point right
-.styles-section.matched-styles .properties li.parent .expand-element,
+::shadow .elements-disclosure ol li.parent::before,
+.styles-section.matched-styles .style-properties li.parent .expand-element,
 #console-messages .console-group-messages .section .header::before,
 #console-messages .properties-tree li.parent::before,
 .outline-disclosure li.parent::before,

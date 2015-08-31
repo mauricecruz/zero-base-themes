@@ -225,3 +225,80 @@
 	background-color: @timeline-progress-pane !important;
 	color: @global-text !important;
 }
+
+
+// new timeline ui
+
+// add this to global background
+.timeline-details-view-body {
+	background-color: @global-background !important;
+}
+
+// divider
+.timeline-details-view-row {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+.timeline-details-view-row-value {
+	border-left: 1px solid @global-divider !important;
+	color: @global-text !important;
+}
+
+.timeline-details-view-row-title {
+	color: @global-label !important;
+}
+
+// text
+.timeline-aggregated-info-legend > div, .memory-counter-sidebar-info {
+	color: @global-text !important;
+}
+
+
+::shadow .flame-chart-selected-element {
+	border-color: @global-selected !important;
+	background-color: fade(@global-selected, 60%) !important;
+}
+
+
+// timeline layers
+.layer-tree.outline-disclosure li,
+.profiler-log-view li {
+	color: @global-text !important;
+}
+
+.layer-detail-view .table {
+
+	td {
+
+	}
+}
+
+.timeline-layers-view-properties {
+
+	table tr{
+		// key
+		td:nth-child(1) {
+			color: @global-label !important;
+		}
+
+		td:nth-child(2) {
+			color: @global-text !important;
+		}
+	}
+
+
+	td {
+		border: 1px solid @global-divider !important;
+	}
+}
+
+// Memory Section
+#memory-graphs-container > div:last-child {
+	background: @global-background !important;
+}
+
+// layers inside timeline panel
+.timeline-layers-view > div:last-child,
+.timeline-layers-view-properties > div:last-child {
+	background-color: @global-background !important;
+}
