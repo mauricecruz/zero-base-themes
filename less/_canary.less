@@ -1,25 +1,8 @@
-// overrides
-// --------------------------
-#network-overview-container {
-	border-bottom: none !important;
-}
-
-.network-overview-canvas-container {
-	background-color: @global-background !important;
-}
-
-/* ==========================================================================
-   Popovers
-   ========================================================================== */
-
-.popover {
-	//override min-height on stable
-	min-height: 0 !important;
-}
 
 /* ==========================================================================
    Elements - Accessibility
    ========================================================================== */
+
 div.ax-computed-name {
 	border-bottom: 1px solid @global-divider !important;
 }
@@ -30,38 +13,9 @@ div.ax-computed-name {
 }
 
 /* ==========================================================================
-   Elements Sidebar
-   ========================================================================== */
-// override bottom border color
-.styles-animations-controls-pane.expanded {
-	border-bottom: 1px solid @global-divider !important;
-	background: @- !important; .contrast(@global-background,6%);
-}
-
-// adjust position of animation slider
-.styles-animations-controls-pane > * {
-	margin: 3px 4px !important;
-}
-
-/* ==========================================================================
-   Toolbars
-   ========================================================================== */
-
-// toolbar labels
-.dt-checkbox-text,
-::shadow .dt-checkbox-text,
-::content .dt-checkbox-text {
-	color: @global-text !important;
-}
-
-// Network filter when a filter is applied but options are hidden
-::shadow .toolbar-item.toggled-active .glyph {
-	background-color: @global-accent !important;
-}
-
-/* ==========================================================================
    Console
    ========================================================================== */
+
 // fix Emulation labels (these selector hooks sucks. might be temporary)
 .overrides-view label,
 .overrides-view fieldset > span,
@@ -77,212 +31,22 @@ div.ax-computed-name {
 	color: @js-obj-array !important;
 }
 
-
-/* ==========================================================================
-   Toolbars
-   ========================================================================== */
-
-// fat filter bar
-.filter-bar {
-	background-color: @filter-background !important;
-	border-bottom: 1px solid @- !important ; .contrast(@global-divider, 2%);
-}
-
-/* ==========================================================================
-   Elements Sidebar
-   ========================================================================== */
-.styles-pane-toolbar {
-	background-color: rgba(0,0,0,0) !important;
-}
-
-
-// event listeners section borders
-::shadow .event-listener-tree > li {
-	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
-	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
-	margin-top: 0 !important;
-}
-
-// Properties section
-.properties-widget-section {
-	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
-	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
-	margin-top: 0 !important;
-
-	&::shadow .object-properties-section {
-		color: @global-text !important;
-	}
-}
-
-::shadow .event-listener-tree .name {
-	color: @js-obj-name !important;
-}
-
-
 /* ==========================================================================
    Sources
    ========================================================================== */
+
 // Scope headers
 .scope-chain-sidebar-pane-section-title {
 	color: @global-text;
 }
 
-
-
-/* ==========================================================================
-   Toolbar
-   ========================================================================== */
-
-::shadow {
-
-	.tabbed-pane-tab-slider {
-		background-color: @tab-highlighted !important;
-		bottom: 0 !important;
-		top: 0 !important;
-	}
-
-	.tabbed-pane-header-tab {
-		color: @tab-label !important;
-	}
-
-	.toolbar-divider {
-		background-color: @glyph-inactive !important;
-	}
-}
-
-// toolbar borders
-.console-view > .toolbar,
-.panel.network > .toolbar {
-	border-bottom: 1px solid @global-divider !important;
-}
-
-// footer statusbar text
-
-::shadow .toolbar-item {
-	color: @global-text !important;
-}
-
-/* ==========================================================================
-   Elements Sidebar
-   ========================================================================== */
-
-.styles-sidebar-pane-toolbar {
-	border-bottom: 1px solid @style-separator !important;
-}
-
-.metrics-and-styles .metrics {
-	border-top: 1px solid @style-separator !important;
-}
-
-
-// Filter Module
-.styles-filter-engaged {
-	background-color: fade(@global-selected, 50%) !important;
-}
-
-.styles-sidebar-pane-filter-box > input {
-	color: @global-text !important;
-}
-
-// Force State
-.styles-element-state-pane {
-	color: @global-text !important;
-
-	> div {
-		margin: 0 4px 2px !important;
-	}
-}
-
-// Buttons for Sidebar Options
-::shadow {
-	.pin-toolbar-item.toggled-on,
-	.animation-toolbar-item.toggled-on {
-		background-color: rgba(0,0,0,0);
-	}
-}
-
-// Animation Controls
-.styles-animations-controls-pane {
-	background: @- !important; .contrast(@global-background,6%);
-	color: @global-text !important;
-	border-bottom: 1px solid @style-separator !important;
-}
-
-/* ==========================================================================
-   Network
-   ========================================================================== */
-// resource graph label bar
-.resources-dividers-label-bar {
-	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-}
-
-// string header label of request payload
-::shadow .object-properties-section {
-	color: @js-obj-array !important;
-}
-
-
 /* ==========================================================================
    Sources Sidebar
    ========================================================================== */
 
-// Call stack item
-::shadow .list-item:hover {
-	background-color: @global-hover !important;
-}
-
-// remove watch border on horizontal split view
-.sidebar-pane > .toolbar {
-	border-bottom: 1px solid @style-separator !important;
-}
-
 // XHR label text
 .sidebar-pane .breakpoint-condition {
 	color: @global-label !important;
-}
-
-/* ==========================================================================
-   Timeline
-   ========================================================================== */
-.panel.timeline > .toolbar {
-	border-bottom: none !important;
-	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-}
-
-// status pane timeline description frame
-.timeline-status-pane {
-	background: @global-background !important;
-	color: @global-text !important
-}
-
-
-// ----- Material Design ------
-.material {
-
-	.elements-topbar {
-		background: @filter-background !important;
-	}
-
-	// crumbs
-	#elements-crumbs {
-		background: rgba(0,0,0,0) !important;
-		border-top: 0 !important;
-
-		::shadow {
-			.crumb {
-				border-left: none !important;
-				border-right: none !important;
-				padding: 5px 10px !important;
-				vertical-align: top !important;
-				color: @global-label !important;
-
-				&.selected {
-					color: @global-text !important;
-					background: none !important;
-				}
-			}
-		}
-	}
 }
 
 // Overlay menu (on material elements bar for now)
@@ -407,12 +171,12 @@ div.ax-computed-name {
 body ::shadow {
 	.editing,
 	.editing * {
-		background-color: #fff !important;
+		-webkit-text-fill-color: @global-text;
 	}
 }
 
 // HACK: white bg for sidebar editing
 // https://code.google.com/p/chromium/issues/detail?id=524599
 ::shadow style + .text-prompt-editing {
-	background-color: #fff !important;
+	-webkit-text-fill-color: @global-text;
 }

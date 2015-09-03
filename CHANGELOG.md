@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.9.4
+* Stable version bump to v45
+
 ## 1.9.3
 * Cleanup
 

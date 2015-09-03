@@ -113,3 +113,32 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	background-color: @global-background !important;
 	color: @global-text !important;
 }
+
+// ----- Material Design ------
+.material {
+
+	.elements-topbar {
+		background: @filter-background !important;
+	}
+
+	// crumbs
+	#elements-crumbs {
+		background: rgba(0,0,0,0) !important;
+		border-top: 0 !important;
+
+		::shadow {
+			.crumb {
+				border-left: none !important;
+				border-right: none !important;
+				padding: 5px 10px !important;
+				vertical-align: top !important;
+				color: @global-label !important;
+
+				&.selected {
+					color: @global-text !important;
+					background: none !important;
+				}
+			}
+		}
+	}
+}

@@ -146,3 +146,87 @@
 .computed-style-trace-button > .glyph {
 	background-color: @glyph-active !important;
 }
+
+.styles-sidebar-pane-toolbar {
+	border-bottom: 1px solid @style-separator !important;
+}
+
+.metrics-and-styles .metrics {
+	border-top: 1px solid @style-separator !important;
+}
+
+
+// Filter Module
+.styles-filter-engaged {
+	background-color: fade(@global-selected, 50%) !important;
+}
+
+.styles-sidebar-pane-filter-box > input {
+	color: @global-text !important;
+}
+
+// Force State
+.styles-element-state-pane {
+	color: @global-text !important;
+
+	> div {
+		margin: 0 4px 2px !important;
+	}
+}
+
+// Buttons for Sidebar Options
+::shadow {
+	.pin-toolbar-item.toggled-on,
+	.animation-toolbar-item.toggled-on {
+		background-color: rgba(0,0,0,0);
+	}
+}
+
+// Animation Controls
+.styles-animations-controls-pane {
+	background: @- !important; .contrast(@global-background,6%);
+	color: @global-text !important;
+	border-bottom: 1px solid @style-separator !important;
+}
+
+// adjust position of animation slider
+.styles-animations-controls-pane > * {
+	margin: 3px 4px !important;
+}
+
+// event listeners section borders
+::shadow .event-listener-tree > li {
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
+	margin-top: 0 !important;
+}
+
+::shadow .event-listener-tree .name {
+	color: @js-obj-name !important;
+}
+
+// Properties section
+.properties-widget-section {
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
+	margin-top: 0 !important;
+
+	&::shadow .object-properties-section {
+		color: @global-text !important;
+	}
+}
+
+// Border for Event Listener filter
+.sidebar-pane > .toolbar {
+	border-bottom: 1px solid @style-separator !important;
+}
+
+// Sources - Call stack item
+::shadow .list-item:hover {
+	background-color: @global-hover !important;
+}
+
+// Rendered Font Text
+.font-stats-item {
+	color: @global-text !important;
+}

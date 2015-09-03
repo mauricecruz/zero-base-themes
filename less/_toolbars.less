@@ -345,7 +345,7 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 
 // status bar error|warn counts override
 body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
-	
+
 	.status-bar-counter {
 		color: @global-text !important;
 
@@ -358,4 +358,51 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 // add padding to console subtoolbar (filters)
 .filter-bar.hbox {
 	padding: 2px 0;
+}
+
+// fat filter bar
+.filter-bar {
+	background-color: @filter-background !important;
+	border-bottom: 1px solid @- !important ; .contrast(@global-divider, 5%);
+}
+
+::shadow {
+
+	.tabbed-pane-tab-slider {
+		background-color: @tab-highlighted !important;
+		bottom: 0 !important;
+		top: 0 !important;
+	}
+
+	.tabbed-pane-header-tab {
+		color: @tab-label !important;
+	}
+
+	.toolbar-divider {
+		background-color: @glyph-inactive !important;
+	}
+}
+
+// toolbar borders
+.console-view > .toolbar,
+.panel.network > .toolbar {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+// footer statusbar text
+
+::shadow .toolbar-item {
+	color: @global-text !important;
+}
+
+// toolbar labels
+.dt-checkbox-text,
+::shadow .dt-checkbox-text,
+::content .dt-checkbox-text {
+	color: @global-text !important;
+}
+
+// Network filter when a filter is applied but options are hidden
+::shadow .toolbar-item.toggled-active .glyph {
+	background-color: @global-accent !important;
 }

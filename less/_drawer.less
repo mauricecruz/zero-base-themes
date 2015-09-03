@@ -107,7 +107,7 @@ input[type='range']::-webkit-slider-thumb {
 	}
 
 	.revision-history-line-separator {
-		.contrast(background-color, @global-background, 1%); 
+		.contrast(background-color, @global-background, 1%);
 		margin-top: 4px !important;
 	}
 
@@ -169,4 +169,9 @@ button.overrides-swap {
 			border-bottom: 1px solid @global-divider !important;
 		}
 	}
+}
+
+// Emulation Tab
+.overrides-device button {
+	.button-styles();
 }
