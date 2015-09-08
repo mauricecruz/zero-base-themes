@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.9.5
+* Cleanup and navigation/directory arrow fixes
+
 ## 1.9.4
 * Stable version bump to v45
 
