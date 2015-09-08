@@ -7,7 +7,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-bump');
 
-
 	grunt.initConfig({
 		pkg: '<json:package.json>',
 		compress: {
@@ -31,6 +30,15 @@ module.exports = function(grunt) {
 					'theme-extension/stable.css': 'less/build-stable.less',
 					'theme-extension/canary.css': 'less/build-canary.less',
 				}
+			},
+			build: {
+				options: {
+					compress: true
+				},
+				files: {
+					'theme-extension/stable.css': 'less/build-stable.less',
+					'theme-extension/canary.css': 'less/build-canary.less',
+				}
 			}
 		},
 		watch: {
@@ -43,5 +51,6 @@ module.exports = function(grunt) {
 
 	});
 
-	grunt.registerTask('default', ['less']);
+	grunt.registerTask('default', ['less:generate']);
+	grunt.registerTask('package', ['less:build', 'compress']);
 };
