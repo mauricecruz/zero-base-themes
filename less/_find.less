@@ -1,6 +1,6 @@
-/**********************************************/
-/* Find Module [ctrl+shift+F / cmd+shift+F]
-/**********************************************/
+// ==========================================================================
+// Find Module [ctrl+shift+F / cmd+shift+F]
+// ========================================================================== */
 
 ::shadow #search-results-pane-file-based {
 
@@ -21,6 +21,7 @@
 
 	.parent {
 
+		// hover over filename header
 		&:hover {
 			& { background-color: @- !important; .contrast(@global-background, 5%) };
 			& { color: @- !important; .contrast(@global-text, 5%) };
@@ -35,25 +36,78 @@
 		.search-result-matches-count {
 			color: @- !important; .contrast(@global-accent, 5%, invert);
 		}
-
 	}
-
 }
 
-// Find (Status-bar)
+// ==========================================================================
+// Drawer Find
+// ========================================================================== */
+
+// input textbox
+::shadow .search-config-search {
+
+	&:focus {
+		outline-color: @global-accent !important;
+	}
+
+	background-color: @form-input-background !important;
+	color: @form-input-text !important;
+	border: 1px solid @form-input-border !important;
+}
+
+// Gutter w/ line numbers
+::shadow .search-match-line-number {
+	background: @cm-gutter !important;
+	border-right: 1px solid @cm-gutter-border !important;
+	padding: 1px 5px 1px 0 !important;
+	display: inline-block;
+	color: @cm-gutter-lines !important;
+}
+
+// [global] highlighted search input
+::shadow #search-results-pane-file-based .search-match .highlighted-match,
+::shadow .highlighted-search-result,
+.webkit-highlighted-line.webkit-line-content {
+	color: @find-highlight-text !important;
+	border-radius: 2px !important;
+	font-size: 1em !important;
+	background-color: @find-highlight-background !important;
+	box-shadow: rgba(0, 0, 0, 0.498039) 3px 3px 4px 0px !important;
+}
+
+// hover over line in global find
+::shadow .search-match:hover {
+	.highlight(hover)
+}
+
+// text color of find contents
+::shadow .search-match-content {
+	color: @global-text !important;
+}
+
+// ==========================================================================
+// Status Bar Find
+// ========================================================================== */
+
+// buttons (i.e. cancel)
 ::shadow .search-action-button {
 	.button-styles();
 }
+
 
 ::shadow .toolbar-search-control {
 	background-color: @form-input-background !important;
 	border: 1px solid @form-input-border !important;
 
+	// input textbox
 	input {
 		.input-styles();
 		border-color: none !important;
 	}
 
+
+	// Prev/Next Buttons
+	// ========================================================================== */
 	.toolbar-search-navigation-controls {
 		background-image: linear-gradient(@tab-color-top,@tab-color-bottom) !important;
 	}
@@ -67,46 +121,9 @@
 	}
 }
 
+// search/replace input textbox
 ::shadow .search-replace.toolbar-replace-control {
 	.input-styles();
-}
-
-// Find (Drawer)
-::shadow .search-config-search {
-
-	&:focus {
-		outline-color: @global-accent !important;
-	}
-
-	background-color: @form-input-background !important;
-	color: @form-input-text !important;
-	border: 1px solid @form-input-border !important;
-}
-
-
-
-::shadow .search-match-line-number {
-	background: @cm-gutter !important;
-	border-right: 1px solid @cm-gutter-border !important;
-	padding: 1px 5px 1px 0 !important;
-	display: inline-block;
-	color: @cm-gutter-lines !important;
-}
-
-// highlighted search input
-::shadow #search-results-pane-file-based .search-match .highlighted-match,
-.highlighted-search-result,
-.webkit-highlighted-line.webkit-line-content {
-	color: @find-highlight-text !important;
-	border-radius: 2px !important;
-	font-size: 1em !important;
-	background-color: @find-highlight-background !important;
-	box-shadow: rgba(0, 0, 0, 0.498039) 3px 3px 4px 0px !important;
-}
-
-// hover over line
-::shadow .search-match:hover {
-	.highlight(hover)
 }
 
 // Find Module inside file in sources panel
@@ -121,77 +138,9 @@
 	color: @global-text !important;
 }
 
-//**********************************************/
-//* Drawer Specific
-//**********************************************/
-
-// content color
-::shadow .search-match-content {
-	color: @global-text !important;
-}
-
-// footer
-::shadow .search-status-bar-summary {
-	background: linear-gradient(@tab-color-top,@tab-color-bottom) !important;
-	border-top: 1px solid @tab-color-top !important;
-}
-
-// checkboxes
-.search-drawer-header input[type="checkbox"].search-config-checkbox {
-	vertical-align: middle !important;
-}
-
-
-//**********************************************/
-//* Find in Styles
-//**********************************************/
-
-.sidebar-pane-filter-box {
-	border-top: 1px solid @global-divider !important;
-
-	&.styles-filter-engaged {
-		background-color: transparent !important;
-	}
-
-	> input {
-		color: @global-text !important;
-	}
-}
-
-// Filter for Styles
-.styles-section .style-properties li.filter-match,
-.styles-section .simple-selector.filter-match {
-	background-color: @global-selected !important;
-	box-shadow: 0 0 0 1px @selection-border !important;
-	border-radius: 2px;
-}
-
-
-//**********************************************/
-//* Glyphs
-//**********************************************/
-
-
-::shadow {
-
-	.regex-search-status-bar-item,
-	.case-sensitive-search-status-bar-item {
-
-		&.status-bar-item.toggled-off .status-bar-button-text {
-			color: @glyph-inactive !important;
-		}
-
-		&.status-bar-item.toggled-on .status-bar-button-text {
-			color: @glyph-active !important;
-		}
-	}
-
-	// match toggled-off version
-	.status-bar-item .status-bar-button-text {
-		color: @glyph-inactive !important;
-	}
-}
-
+// ==========================================================================
+// Glyphs
+// ========================================================================== */
 
 // Button text in sources
 ::shadow ::shadow {

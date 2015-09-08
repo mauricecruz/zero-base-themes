@@ -1,6 +1,6 @@
-/**********************************************/
-/* Navigation Arrows
-/**********************************************/
+// ==========================================================================
+// Mixins
+// ==========================================================================
 
 .arrow-styles() {
 	background-color: @global-arrow !important;
@@ -13,82 +13,128 @@
 	.arrow-animations();
 }
 
-// hide/expand point arrow down
-::shadow .elements-disclosure ol li.parent.expanded::before,
-.styles-section.matched-styles .style-properties li.parent.expanded .expand-element,
-#console-messages .console-group-messages .section.expanded .header::before,
-#console-messages .properties-tree li.parent.expanded::before,
-.outline-disclosure li.parent.expanded::before,
-.properties-tree li.parent.expanded::before,
-.section.expanded > .header::before,
-.section .event-bar.expanded .header::before,
-.sidebar-pane .parent.expanded::before,
-.sidebar-pane-stack .sidebar-pane-title.expanded::before,
-.timeline-expandable-expanded .timeline-expandable-arrow {
+// Generates the styles for arrows. Defaults to the most commonly used selectors
+.arrow-mixin(@arrow-right: ~'li.parent::before', @arrow-down: ~'li.parent.expanded::before') {
+	@{arrow-right} { .arrow-animations-right(); }
+	@{arrow-down} { .arrow-animations-down(); }
+
+	@{arrow-right},
+	@{arrow-down} {
+		.arrow-styles;
+	}
+}
+
+/* ==========================================================================
+   Expand/Collapse Sections
+   ========================================================================== */
+
+// Elements Panel
+::shadow .elements-disclosure ol {
+	.arrow-mixin();
+}
+
+// Elements Sidebar
+.styles-section.matched-styles .style-properties {
+	.arrow-mixin(~'li.parent .expand-element', ~'li.parent.expanded .expand-element');
+}
+
+// Sources Sidebar Titles
+.sidebar-pane-stack {
+	.arrow-mixin(~'.sidebar-pane-title::before', ~'.sidebar-pane-title.expanded::before');
+}
+
+// Sources Sidebar Event Listener Breakpoints
+.event-listener-breakpoints {
+	.arrow-mixin();
+
+	li.parent::before,
+	li.parent.expanded::before {
+		-webkit-mask-position: -4px -94px !important;
+	}
+}
+
+// Navigation Trees | Network Headers Items
+.outline-disclosure {
+	.arrow-mixin();
+}
+
+// Position adjustment for network headers
+.request-headers-view .outline-disclosure li.parent {
+
+	&::before,
+	&.expanded::before {
+		-webkit-mask-position: -4px -98px !important;
+		margin: 0 4px !important;
+	}
+}
+
+// Drawer Find
+::shadow #search-results-pane-file-based .parent {
+
+	&::before { .arrow-animations-right(); }
+	&.expanded::before { .arrow-animations-down(); }
+
+	&::before,
+	&.expanded::before {
+		.arrow-styles;
+		-webkit-mask-position: -2px -93px !important;
+		margin-right: 2px !important;
+	}
+}
+
+// Console
+::shadow .tree-outline {
+	.arrow-mixin(~'li::before', ~'li.expanded::before');
+}
+
+// Maintain transparency for properties that don't have children
+::shadow .tree-outline li:not(.parent)::before {
+	background-color: transparent !important;
+}
+
+// Timeline Item Header
+.timeline-tree-item {
+	.arrow-mixin(~'.timeline-tree-item-expand-arrow.parent', ~'.timeline-tree-item-expand-arrow.parent.expanded');
+}
+
+// Timeline Item Content - just color arrow
+.timeline-expandable {
+
+	&.timeline-expandable-expanded .timeline-expandable-arrow {
+		-webkit-mask-position: -20px -96px !important;
+	}
+
+	.timeline-expandable-arrow{
+		.arrow-styles;
+	}
+}
+
+// ==========================================================================
+// Other Types
+// ==========================================================================
+
+
+// Sorting Columns
+.sort-order-icon {
 	.arrow-styles;
-	.arrow-animations-down();
 }
 
-.sidebar-pane-stack .sidebar-pane-title.expanded::before {
-	.arrow-sidebar-pane-adjustment();
+.sort-ascending .sort-order-icon {
+	-webkit-mask-position: -4px -111px !important;
 }
 
-// hide/expand arrow point right
-::shadow .elements-disclosure ol li.parent::before,
-.styles-section.matched-styles .style-properties li.parent .expand-element,
-#console-messages .console-group-messages .section .header::before,
-#console-messages .properties-tree li.parent::before,
-.outline-disclosure li.parent::before,
-#search-results-pane-file-based .parent::before,
-.properties-tree li.parent::before,
-.section > .header::before,
-.section .event-bar .header::before,
-.sidebar-pane .parent::before,
-.sidebar-pane-stack .sidebar-pane-title::before,
-.timeline-expandable-collapsed .timeline-expandable-arrow {
-	.arrow-styles;
-	.arrow-animations-right();
+.sort-descending .sort-order-icon {
+	-webkit-mask-position: -20px -99px !important;
 }
 
-// sort arrows point down
-.data-grid th.sort-ascending > div::after {
-	.arrow-styles;
-	-webkit-mask-position: -4px -108px !important;
-}
 
-// sort arrows point up
-.data-grid th.sort-descending > div::after {
-	.arrow-styles;
-	-webkit-mask-position: -20px -96px !important;
-}
+::shadow {
 
-// BUG??: Arrows don't rotate in find module
-#search-results-pane-file-based .parent.expanded::before{
-	-webkit-mask-position: -20px -96px !important;
-}
+	// selectbox arrows
+	.status-bar-select-arrow {
+		.arrow-styles;
+		-webkit-mask-position: -20px -96px !important;
+	}
 
-// Drawer find arrow trees showing more sprite area than normal
-#search-results-pane-file-based .parent.expanded::before {
-	-webkit-mask-position: -20px -93px !important;
-}
+} // ::shadow
 
-#search-results-pane-file-based .parent::before {
-	-webkit-mask-position: -4px -93px !important;
-}
-
-// Adjust position of
-// - network headers section arrows
-.panel.network .outline-disclosure li.parent::before{
-	top: 3px !important;
-}
-// - event listener arrows
-.sidebar-tabbed-pane .section > .header::before,
-.event-bars .event-bar .header::before {
-	margin-top: 3px !important;
-}
-
-// selectbox arrows
-.status-bar-select-arrow {
-	.arrow-styles;
-	-webkit-mask-position: -20px -96px !important;
-}

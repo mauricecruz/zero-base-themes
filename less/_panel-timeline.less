@@ -153,13 +153,19 @@
 	background-color: @timeline-resources-divider !important;
 }
 
+// X axis guide for overview visual
 .panel:not(.network) .resources-dividers-label-bar {
 	background: transparent !important;
 	border-bottom:1px solid @- !important; .contrast(@tab-color-bottom, 10%, invert);
 }
 
-.panel #timeline-grid-header .resources-dividers-label-bar {
-	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+// X axis guide for records || also used in network visualization
+#network-overview-grid,
+#resources-container-content {
+
+	.timeline-grid-header .resources-dividers-label-bar {
+		background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	}
 }
 
 .overview-grid-dividers-background {

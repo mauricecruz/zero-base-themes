@@ -1,13 +1,12 @@
-/**********************************************
-/* Resources Tab
-/**********************************************/
 .resources-status-bar .status-bar{
 	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
 	box-shadow: inset 0 1px 0 @- !important; .contrast(@tab-color-top,7%);
 	border-top: none !important;
 }
 
-/*-- WEB SQL --*/
+// ==========================================================================
+// Web Sql
+// ==========================================================================
 .database-query-prompt {
 	color: @global-text !important;
 }
@@ -35,17 +34,20 @@
 }
 
 .database-user-query::before,
- .database-query-result::before{
+.database-query-result::before{
 	margin-top: -5px !important;
- }
+}
 
 .database-user-query .error {
 	color: @global-error !important;
 }
 
-// indexdb node
-.indexed-db-database-view .outline-disclosure {
+// ==========================================================================
+// IndexDB
+// ==========================================================================
 
+// info display
+.indexed-db-database-view .outline-disclosure {
 	.attribute-name {
 		color: @global-label !important;
 	}
@@ -53,4 +55,19 @@
 	.attribute-value {
 		color: @global-text !important;
 	}
+}
+
+// header
+.indexed-db-data-view .data-view-toolbar {
+	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom);
+	border-bottom: none !important;
+
+	.key-input {
+		.input-styles();
+	}
+}
+
+// remove border from table
+.indexed-db-data-view .data-grid .data-container tr:nth-last-child(2) td {
+	border-bottom: none !important;
 }

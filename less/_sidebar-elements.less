@@ -1,7 +1,8 @@
-/**********************************************
-/* Elements/Sources Right Sidebar
-/**********************************************/
+// ==========================================================================
+// Elements/Sources Right Sidebar
+// ==========================================================================
 
+// Each selector section
 .styles-section {
 	padding: 4px 0 !important;
 	margin: 0 10px;
@@ -24,27 +25,19 @@
 		color: @style-value !important;
 	}
 
+	// edit mode
 	.child-editing,
 	.header .subtitle {
 		color: @style-edit-mode-selector-text !important;
 	}
 
-	.properties {
-
-		.overloaded,
-		.inactive ,
-		.disabled ,
-		.not-parsed-ok {
-			opacity: .5 !important;
-		}
+	.overloaded,
+	.inactive ,
+	.disabled ,
+	.not-parsed-ok {
+		opacity: .5 !important;
 	}
 
-}
-
-//event listener children
-.event-bars .event-bar .header .title {
-	text-shadow:none !important;
-	color:@global-text !important;
 }
 
 .sidebar-pane {
@@ -67,13 +60,16 @@
 		}
 	}
 
-	/*-- METRICS--*/
+
+	// Metrics
+	// ========================================================================== */
+
 	.metrics {
-		color: #000 !important;
 		& { border-top: 1px solid @- !important; .contrast(@global-background, 5%) };
 		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%) };
 		margin-top: 5px !important;
 
+		// Give position bottom border some space to render. Currently a UI bug in native devtools.
 		.position {
 			margin: 0 0 -16px 0 !important;
 		}
@@ -87,17 +83,14 @@
 			background-color: #888 !important;
 		}
 	}
-
-	.section:first-child {
-		border-top: none !important;
-	}
 }
 
 .styles-section.first-styles-section,
 .sidebar-separator + .styles-section {
- border-top: none !important;
+	border-top: none !important;
 }
 
+// Style Section Headers
 .sidebar-separator {
 	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
 	color: @style-selector-text !important;
@@ -106,8 +99,8 @@
 	border-bottom: none !important;
 }
 
-/*-- PSEUDO STATE DISPLAY --*/
 
+// Pseudo State Displays
 .styles-animations-controls-pane.expanded,
 .styles-element-state-pane {
 	background: @- !important; .contrast(@global-background,6%);
@@ -123,6 +116,7 @@
 	height: 68px !important;
 }
 
+// Sections with nested objects
 .sidebar-pane-stack .event-category,
 .sidebar-pane .section {
 	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
@@ -140,7 +134,6 @@
 		color: @global-text !important;
 	}
 }
-
 
 // Magnifying glyph in computed panel when hovering over rule
 .computed-style-trace-button > .glyph {
@@ -229,4 +222,22 @@
 // Rendered Font Text
 .font-stats-item {
 	color: @global-text !important;
+}
+
+
+// CSS that matches selected item
+.selector-matches { color: @css-builtin !important; }
+
+
+// CSS Selector
+.webkit-css-property,
+.styles-section .properties > li .webkit-css-property { color: @css-property !important; font-weight:400;}
+
+
+// Highlighted Filtered Element (Filter box)
+.styles-section .style-properties li.filter-match,
+.styles-section .simple-selector.filter-match {
+	background-color: @global-selected !important;
+	box-shadow: 0 0 0 1px @selection-border !important;
+	border-radius: 2px;
 }
