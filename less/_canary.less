@@ -172,19 +172,13 @@ div.ax-computed-name {
 	color: @xml-tag !important;
 }
 
-// HACK: Reset background color to white because shadow dom !important rule can't be overridden
-// https://code.google.com/p/chromium/issues/detail?id=524599
-body ::shadow {
-	.editing,
-	.editing * {
-		-webkit-text-fill-color: @global-text;
-	}
+
+
+// ==========================================================================
+// Sidebar Elements
+// ========================================================================== */
+
+// Property rules in table view
+::shadow .property-trace-selector {
+	color: @global-text !important;
 }
-
-// HACK: white bg for sidebar editing
-// https://code.google.com/p/chromium/issues/detail?id=524599
-::shadow style + .text-prompt-editing {
-	-webkit-text-fill-color: @global-text;
-}
-
-

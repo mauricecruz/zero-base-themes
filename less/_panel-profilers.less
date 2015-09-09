@@ -82,16 +82,3 @@ input.status-bar-item {
 .heap-snapshot-stats-size {
 	color: @global-text !important;
 }
-
-// Only found in audits for now
-::shadow .tree-outline li {
-	color: @global-text !important;
-
-	&.hovered:not(.selected) .selection {
-		.highlight(hover);
-	}
-
-	&.selected .selection {
-		.highlight(selection);
-	}
-}

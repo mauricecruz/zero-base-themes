@@ -142,3 +142,23 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 		}
 	}
 }
+
+// Tables
+// Only found in audits for now
+::shadow .tree-outline li {
+	color: @global-text !important;
+	background-color: @table-primary !important;
+
+	&.odd-row + .children li,
+	&.odd-row {
+		background-color: @table-secondary !important;
+	}
+
+	&.hovered:not(.selected) .selection {
+		.highlight(hover);
+	}
+
+	&.selected .selection {
+		.highlight(selection);
+	}
+}
