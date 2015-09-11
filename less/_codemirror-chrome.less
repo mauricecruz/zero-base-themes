@@ -131,11 +131,10 @@
 		background-color: @cm-lines-no-sourcemap !important;
 	}
 
-::shadow {
-	// Editing Dom Nodes or Snippet Filenames
-	.editing {
-		background-color: @global-background !important;
-		outline: 1px solid @eh-editing-outline !important;
-		color: @global-text !important;
-	}
+// Editing Dom Nodes or Snippet Filenames
+#-blink-dev-tools ::shadow .editing,
+#-blink-dev-tools .editing {
+	background-color: @global-background !important;
+	outline: 1px solid @eh-editing-outline !important;
+	color: @global-text !important;
 }
