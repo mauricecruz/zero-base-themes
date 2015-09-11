@@ -182,3 +182,39 @@ div.ax-computed-name {
 ::shadow .property-trace-selector {
 	color: @global-text !important;
 }
+
+// ==========================================================================
+// Network
+// ========================================================================== */
+
+
+.network-blocked-urls {
+	border-top: none !important;
+
+	&::shadow {
+
+		// Header for blocked urls
+		.toolbar {
+			border-bottom: none !important;
+
+			&::shadow {
+
+				.toolbar-shadow {
+					background-image: linear-gradient(@tab-color-top,@tab-color-bottom) !important;
+				}
+
+				.toolbar-text {
+					color: @global-text !important;
+				}
+			}
+		}
+
+		.blocked-url {
+			color: @global-text !important;
+
+			&:hover {
+				.highlight(hover);
+			}
+		}
+	}
+}
