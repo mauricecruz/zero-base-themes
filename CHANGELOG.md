@@ -1,5 +1,11 @@
 # Changelog
 
+# 1.9.7
+* [canary] Style drag/drop toolbar panels
+
+## 1.9.6
+* [canary] Style blocked urls
+
 ## 1.9.5
 * Cleanup and navigation/directory arrow fixes
 

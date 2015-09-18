@@ -218,3 +218,25 @@ div.ax-computed-name {
 		}
 	}
 }
+
+// ==========================================================================
+// Toolbar
+// ========================================================================== */
+
+// Drag-drop toolbars
+::shadow .tabbed-pane-header-tab.selected,
+::shadow .tabbed-pane-header-tab {
+	border-top: none !important;
+}
+
+::shadow .tabbed-pane-header-tab:hover {
+	background-color: rgba(0,0,0,0) !important;
+}
+
+::shadow .tabbed-pane-header-tabs-drop-down-container  {
+	background-color: rgba(0,0,0,0) !important;
+
+	> .glyph {
+		background-color: @tab-label !important;
+	}
+}
