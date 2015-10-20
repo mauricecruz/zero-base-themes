@@ -11,24 +11,6 @@ div.ax-computed-name {
 	.ax-role { color: @global-text !important; }
 }
 
-// ==========================================================================
-// Console
-// ==========================================================================
-
-// fix Emulation labels (these selector hooks sucks. might be temporary)
-.overrides-view label,
-.overrides-view fieldset > span,
-#metrics-override-section span,
-#metrics-override-section td,
-#geolocation-override-section td {
-	color: @global-label !important;
-}
-
-// Object property name
-::shadow .object-properties-section-name,
-.console-view-object-properties-section span {
-	color: @js-obj-array !important;
-}
 
 // ==========================================================================
 // Sources
@@ -40,145 +22,10 @@ div.ax-computed-name {
 }
 
 // ==========================================================================
-// Source Sidebar
-// ==========================================================================
-
-// XHR label text
-.sidebar-pane .breakpoint-condition {
-	color: @global-label !important;
-}
-
-// Overlay menu (on material elements bar for now)
-.soft-context-menu {
-
-}
-
-// Settings -> Throttling
-.conditions {
-	&-list {
-		border: 1px solid @- !important; .contrast(@global-background, 5%);
-
-		.custom-separator {
-			& { border-top: 1px solid @- !important; .contrast(@global-background, 5%, invert) };
-			& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%); }
-		}
-
-		&-separator {
-			& { border-right: 1px solid @- !important; .contrast(@global-background, 5%); }
-		}
-	}
-
-	&-list-item:hover {
-		background: @hover-background !important;
-		border-top: 1px solid @hover-border !important;
-		border-bottom: 1px solid  @hover-border !important;
-	}
-
-	&-list-text {
-		color: @global-text !important;
-	}
-
-	&-edit-container {
-		background: @- !important; .contrast(@global-background, 5%);
-		border-top: none !important;
-	}
-
-	&-list-edit,
-	&-list-remove {
-		-webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/toolbarButtonGlyphs.png) !important;
-		background-color: @global-accent !important;
-		background-image: none !important
-	}
-
-	&-list-edit {
-		-webkit-mask-position: -224px -72px;
-	}
-
-	&-list-remove {
-		-webkit-mask-position: -128px -24px;
-	}
-}
-
-// ==========================================================================
-// Popovers
-// ==========================================================================
-
-::shadow {
-	.palette-panel {
-		background-color: @popover-background !important;
-		border-top: 1px solid @- !important; .contrast(@popover-background, 5%);
-
-		> div:not(.toolbar) {
-			border-bottom: 1px solid @- !important; .contrast(@popover-background, 5%);
-			color: @global-text !important;
-		}
-	}
-
-	.toolbar::shadow {
-		button.toolbar-item:enabled.hover .glyph {
-			background-color: @glyph-inactive !important;
-		}
-
-		button.toolbar-item.toggled-on,
-		button.toolbar-item.toggled-on.hover {
-			.glyph {
-				background-color: @glyph-active !important;
-			}
-		}
-	}
-
-	.palette-preview:hover {
-		background-color: @- !important; .contrast(@popover-background, 7%);
-	}
-}
-
-// ==========================================================================
-// Global
-// ==========================================================================
-
-// Context Menu (New settings button and material menus)
-.soft-context-menu {
-	background: @popover-background !important;
-	border: 1px solid @- !important; .contrast(@popover-background, 5%);
-	color: @global-text !important;
-
-	&::shadow {
-		.soft-context-menu-item-mouse-over {
-			& { background-color: @- !important; .contrast(@popover-background, 8%); }
-			& { border-top: 1px solid @- !important; .contrast(@popover-background, 10%); }
-			& { border-bottom: 1px solid @- !important; .contrast(@popover-background, 10%); }
-		}
-
-		.soft-context-menu-separator > .separator-line {
-			border-bottom: 1px solid @- !important; .contrast(@popover-background, 5%);
-		}
-
-		.checkmark {
-			-webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/toolbarButtonGlyphs.png);
-			-webkit-mask-position: -128px -109px;
-			-webkit-mask-size: 352px 168px;
-			background-color: @global-accent !important;
-			background-image: none !important;
-		}
-	}
-}
-
-// ==========================================================================
-// Elements
-// ==========================================================================
-
-// closing tag
-::shadow .webkit-html-close-tag-name {
-	color: @xml-tag !important;
-}
-
-
-
-// ==========================================================================
 // Sidebar Elements
 // ========================================================================== */
 
-// Property rules in table view
+// Property rules in table view (styles)
 ::shadow .property-trace-selector {
 	color: @global-text !important;
 }

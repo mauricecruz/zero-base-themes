@@ -136,3 +136,33 @@
 		}
 	}
 }
+
+// Color Swatch Palette Panel 
+::shadow {
+	.palette-panel {
+		background-color: @popover-background !important;
+		border-top: 1px solid @- !important; .contrast(@popover-background, 5%);
+
+		> div:not(.toolbar) {
+			border-bottom: 1px solid @- !important; .contrast(@popover-background, 5%);
+			color: @global-text !important;
+		}
+	}
+
+	.toolbar::shadow {
+		button.toolbar-item:enabled.hover .glyph {
+			background-color: @glyph-inactive !important;
+		}
+
+		button.toolbar-item.toggled-on,
+		button.toolbar-item.toggled-on.hover {
+			.glyph {
+				background-color: @glyph-active !important;
+			}
+		}
+	}
+
+	.palette-preview:hover {
+		background-color: @- !important; .contrast(@popover-background, 7%);
+	}
+}

@@ -231,3 +231,17 @@ body /deep/ .link {
 }
 
 
+// fix Emulation labels (these selector hooks sucks. might be temporary)
+.overrides-view label,
+.overrides-view fieldset > span,
+#metrics-override-section span,
+#metrics-override-section td,
+#geolocation-override-section td {
+	color: @global-label !important;
+}
+
+// Object property name
+::shadow .object-properties-section-name,
+.console-view-object-properties-section span {
+	color: @js-obj-array !important;
+}
