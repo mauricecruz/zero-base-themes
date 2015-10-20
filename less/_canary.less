@@ -71,9 +71,11 @@ div.ax-computed-name {
 // ========================================================================== */
 
 // Drag-drop toolbars
-::shadow .tabbed-pane-header-tab.selected,
-::shadow .tabbed-pane-header-tab {
-	border-top: none !important;
+.inspector-view-tabbed-pane::shadow .tabbed-pane-header-contents {
+	.tabbed-pane-header-tab.selected,
+	.tabbed-pane-header-tab {
+		border-top: none !important;
+	}
 }
 
 ::shadow .tabbed-pane-header-tab:hover {
@@ -86,4 +88,9 @@ div.ax-computed-name {
 	> .glyph {
 		background-color: @tab-label !important;
 	}
+}
+
+::shadow .tabbed-pane-tab-slider {
+	//remove top border
+	border-top: none !important;
 }
