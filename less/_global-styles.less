@@ -189,3 +189,14 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 		}
 	}
 }
+
+// Tooltips
+::shadow .tooltip {
+	background: @- !important; .contrast(@global-background, 3%);
+	border: 1px solid @global-background;
+	color: @global-text !important;
+
+	&-shortcut {
+		color: @global-accent !important;
+	}
+}
