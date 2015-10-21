@@ -1,6 +1,14 @@
 # Changelog
 
-# 1.9.7
+## 1.9.8
+* [canary] Dialog styles
+* [canary] Setting overlay
+* [canary] Toolbar selection
+* Style tooltips
+* Highlighted text in console find
+* Dock selection
+
+## 1.9.7
 * [canary] Style drag/drop toolbar panels
 
 ## 1.9.6
