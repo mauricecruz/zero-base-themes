@@ -94,3 +94,25 @@ div.ax-computed-name {
 	//remove top border
 	border-top: none !important;
 }
+
+// ==========================================================================
+// Dialog
+// ========================================================================== */
+
+.filtered-item-list-dialog {
+	background: @dialog-background !important;
+	box-shadow: 0 5px 15px 5px rgba(0,0,0,.6) !important;
+	border: 1px solid @dialog-border !important;
+
+	> input[type=text] {
+		background-color: @dialog-item-background !important;
+		box-shadow: inset 0 1px 5px 0 rgba(0,0,0,.3) !important;
+		color: @- !important; .contrast(@dialog-item-text, 10%);
+	}
+}
+
+// Clean up dialog border (not confident about this selector)
+.vbox.flex-auto {
+	border: none !important;
+	box-shadow: none !important;
+}
