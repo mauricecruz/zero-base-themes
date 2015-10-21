@@ -187,6 +187,15 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 			background-color: @global-accent !important;
 			background-image: none !important;
 		}
+
+		// Dock options (remove blue hover)
+		.toolbar::shadow .toolbar-shadow.blue-on-hover .toolbar-item:not(.toggled-on).hover:enabled {
+			background-color: @global-hover !important;
+
+			.glyph {
+				color: @global-text !important;
+			}
+		}
 	}
 }
 
