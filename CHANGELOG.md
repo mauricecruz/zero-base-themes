@@ -1,18 +1,23 @@
 # Changelog
 
+## 1.9.9
+* `canary` Fix material design footer
+* `canary` Cleanup settings panel
+* `canary` Style security panel
+
 ## 1.9.8
-* [canary] Dialog styles
-* [canary] Setting overlay
-* [canary] Toolbar selection
+* `canary` Dialog styles
+* `canary` Setting overlay
+* `canary` Toolbar selection
 * Style tooltips
 * Highlighted text in console find
 * Dock selection
 
 ## 1.9.7
-* [canary] Style drag/drop toolbar panels
+* `canary` Style drag/drop toolbar panels
 
 ## 1.9.6
-* [canary] Style blocked urls
+* `canary` Style blocked urls
 
 ## 1.9.5
 * Cleanup and navigation/directory arrow fixes
