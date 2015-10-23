@@ -223,27 +223,35 @@ div.ax-computed-name {
 		}
 
 		.settings-list-container {
-			padding: 10px !important;
 			background-color: @settings-folder-background !important;
 		}
 
 		.settings-list {
-			border: 1px solid @settings-border !important;
+			border: none !important;
+		}
+
+		.contents {
+			border: 1px solid @- !important; .contrast(@global-background, 3%);
+			padding: 10px !important;
+			border-radius: 4px !important;
+		}
+
+		// Remove the border off the first child after the input
+		.settings-list-item.add-list-item + .settings-list-item {
+			border-top: none !important;
 		}
 
 		.settings-list-item {
-			& { background-color: @- !important; .contrast(@global-background, 5%) };
-			& { border-top: 1px solid @- !important; .contrast(@tab-color-top,7%) };
-			& { border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom,10%, invert) };
+			background-color: @global-background !important;
+			border-top: 1px solid @global-divider !important;
 
 			&:hover {
-				& { background-color: @- !important; .contrast(@global-background, 5%) };
-				& { border-top: 1px solid @- !important; .contrast(@tab-color-top,7%) };
-				& { border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom,10%, invert) };
+				background-color: @global-background !important;
+				border-top: 1px solid @global-divider !important;
 			}
 
 			&.selected {
-				background-color: @settings-selected !important;
+				background-color: @global-background !important;
 			}
 
 			&:nth-child(1) {
