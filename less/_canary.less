@@ -215,6 +215,13 @@ div.ax-computed-name {
 		/* Workspaces Dialog Box
 		****************************************************/
 
+		// Headers
+		.settings-dialog {
+			.block-header {
+				color: @global-label !important;
+			}
+		}
+
 		.settings-list-container {
 			padding: 10px !important;
 			background-color: @settings-folder-background !important;
@@ -264,56 +271,6 @@ div.ax-computed-name {
 		background-color: @form-input-background !important;
 		border: 1px solid @form-input-border !important;
 		color: @form-input-text !important;
-	}
-
-
-
-
-	.settings-dialog {
-		border: 1px solid @settings-border !important;
-		background-color: @settings-edit-background !important;
-		border-radius: 4px !important;
-
-		.dialog-contents {
-
-			label {
-				color: @global-text;
-			}
-
-			.header {
-				color: @settings-delimiter !important;
-			}
-
-			.block-header {
-				color: @global-accent !important;
-			}
-		}
-
-		.settings-list-container {
-			background-color: @settings-background !important;
-		}
-
-		.settings-list {
-			border-color: @settings-background !important;
-			border-radius: 2px !important;
-		}
-
-		.settings-list-item
-		.settings-list-item:hover {
-			background-color: @settings-background !important;
-			& { border-top: 1px solid @- !important; .contrast(@tab-color-top, 7%) }; /* testsasdf */
-			& { border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom, 10%, invert) }; /* testsasdf */
-			color: @settings-text !important;
-		}
-
-		.add-list-item {
-			border-bottom: none !important;
-		}
-
-		.file-mappings-list .settings-list-item:first-child,
-		.excluded-folders-section .settings-list-item:first-child {
-			border-top: none !important;
-		}
 	}
 
 	// Make swatch size 12px again.
