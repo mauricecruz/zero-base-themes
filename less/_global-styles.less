@@ -188,3 +188,13 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 		color: @global-accent !important;
 	}
 }
+
+// Buttons
+::shadow {
+	.chrome-select:extend(.chrome-select all) {};
+
+	.text-button,
+	[is="text-button"] {
+		.button-styles();
+	}
+}

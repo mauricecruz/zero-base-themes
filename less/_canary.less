@@ -435,17 +435,6 @@ div.ax-computed-name {
 	}
 }
 
-// Settings page also has buttons in shadow dom
-::shadow {
-	.chrome-select:extend(.chrome-select all) {};
-
-	.text-button,
-	[is="text-button"] {
-		.button-styles();
-	}
-}
-
-
 // Padding is different in canary (update padding setting on stable L252 in settings.less)
 ::shadow ::shadow .vertical-tab-layout .tabbed-pane-header-tab.selected {
 	padding-left: 19px !important;
