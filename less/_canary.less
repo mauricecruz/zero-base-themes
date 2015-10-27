@@ -487,3 +487,36 @@ div.ax-computed-name {
 		}
 	}
 }
+
+
+// ==========================================================================
+// Animation Inspection [Experiments]
+// ==========================================================================
+.animations-timeline::shadow {
+
+	.animation-controls {
+		border-right: none !important;
+	}
+
+	.animation-timeline-buffer {
+		border-left: none !important;
+	}
+
+	// SVG Icon Representing Animation List
+	.animation-buffer-preview.selected {
+		background-color: @global-accent !important;
+	}
+
+	.animation-buffer-preview.selected > svg > line {
+		stroke: @global-background !important;
+	}
+	
+	.animation-playback-label {
+		color: @global-text !important;
+		border: 1px solid @- !important; .contrast(@global-background, 8%);
+	}
+
+	.animation-name {
+		color: @global-text !important;
+	}
+}
