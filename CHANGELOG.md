@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.1
+* Fix nav arrow visibility in sources sidebar
+
 ## 2.0.0
 * Style experimental animation inspection
 
