@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.0
+* Style experimental animation inspection
+
 ## 1.9.9
 * `canary` Fix material design footer
 * `canary` Cleanup settings panel
