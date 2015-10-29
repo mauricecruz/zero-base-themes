@@ -293,7 +293,9 @@ div.ax-computed-name {
 	}
 
 
-	// devices list
+	// Devices
+	//==========================================================================
+
 	.devices-list {
 		border: 1px solid @- !important; .contrast(@global-background, 5%);
 	}
@@ -388,7 +390,100 @@ div.ax-computed-name {
 		}
 	}
 
-	// Settings -> Throttling
+	// ==========================================================================
+	// Setting Mixins
+	// --------------------------------------------------------------------------
+	// Because some styles are used in several levels of shadow dom and I don't
+	// want to use /deep/ because it's deprecated (so is ::shadow, but it's 
+	// still used in devtools).
+	// ==========================================================================
+	.list-styles() {
+		.list {
+			border: 1px solid @global-divider !important;
+			border-radius: 2px !important;
+		}
+
+		.list-item:hover {
+			.highlight(hover);
+
+			.controls-gradient {
+				background-image: none !important;
+			}
+
+			.controls-buttons {
+				.highlight(hover);
+			}
+
+			.edit-button,
+			.remove-button {
+				background-image: none !important;
+				-webkit-mask-image: url(Images/toolbarButtonGlyphs.png);
+				background-color: @global-accent !important;
+			}
+
+			.edit-button {
+				-webkit-mask-position: -224px -72px !important;
+			}
+
+			.remove-button {
+				-webkit-mask-position: -128px -24px !important;
+			}
+		}
+	}
+
+	// Settings Global Styles
+	::shadow {
+		button {
+			.button-styles();
+		}
+
+		.list-styles();
+
+		// Edit Mode
+		.editor-container {
+			background: @global-hover !important;
+		}
+
+		::shadow {
+			.list-styles();
+
+			// Edit Mode
+			.editor-container {
+				background: @global-hover !important;
+			}
+			
+			.blackbox-pattern,
+			.file-system-value {
+				color: @global-text !important;
+
+				input {
+					.input-styles() !important;
+					border: 1px solid @form-input-border;
+					background-color: @global-background !important;
+					border-radius: 2px;
+					padding: 4px;
+				}
+			}
+
+			.chrome-select {
+				.input-styles() !important;
+				background-image: none !important;
+				text-shadow: none !important;
+				box-shadow: none !important;
+				padding-right: 0;
+			}
+		}
+
+		&::shadow {
+			button {
+				.button-styles();
+			}
+		}
+	}
+
+	// Throttling
+	//==========================================================================
+	
 	.conditions {
 		&-list {
 			border: 1px solid @- !important; .contrast(@global-background, 5%);
@@ -431,6 +526,68 @@ div.ax-computed-name {
 
 		&-list-remove {
 			-webkit-mask-position: -128px -24px;
+		}
+	}
+
+	// Workspaces
+	//==========================================================================
+	.settings-tab {
+		
+		.file-system-container {
+			border-left: none !important;
+			padding: 10px !important;
+		}
+
+		.file-system-name {
+			color: @global-accent !important;
+		}
+
+		::shadow {
+			button {
+				.button-styles();
+			}
+		}
+
+		::shadow .file-system-list::shadow {
+			.file-system-separator {
+				background-color: @global-divider !important;
+			}
+		}
+	}
+
+	// ==========================================================================
+	// Settings sections uses different selectors for the same styles. Hope they
+	// consolidate it soon.
+	// ==========================================================================
+
+	// Blackbox
+	//==========================================================================
+	.help-window-main ::shadow .header {
+		border-bottom: 1px solid @global-divider !important;
+	}
+
+	::shadow ::shadow .blackbox-separator {
+		background-color: @global-divider !important;
+	}
+
+	// Conditions
+	//==========================================================================
+	::shadow {
+		.conditions-list-text {
+			color: @global-text !important;
+
+			input {
+				.input-styles() !important;
+				border: 1px solid @form-input-border;
+				background-color: @global-background !important;
+				border-radius: 2px;
+				padding: 4px;
+			}
+		}
+		
+		.list-separator,
+		.conditions-list-separator {
+			background-color: @global-divider !important;
 		}
 	}
 }
