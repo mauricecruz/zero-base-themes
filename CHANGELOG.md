@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.2
+* Style text in filmstrip image details
+* Flatten button styles
+* `canary` Style settings sections
+
 ## 2.0.1
 * Fix nav arrow visibility in sources sidebar
 
