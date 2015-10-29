@@ -1,6 +1,6 @@
 // Global Button Styles
 .button-styles() {
-	background-image: @form-button-background !important;
+	background: @form-button-background !important;
 	color: @form-button-text !important;
 	border: 1px solid @form-button-border !important;
 	border-radius: 3px !important;
@@ -15,6 +15,7 @@
 
 	&:not(:disabled):active {
 		box-shadow: @form-button-pressed !important;
+		border-color: @- !important; .contrast(@form-button-border, 15%, invert);
 	}
 }
 
