@@ -666,3 +666,21 @@ div.ax-computed-name {
 		color: @global-text !important;
 	}
 }
+
+
+// ==========================================================================
+// Elements Sidebar
+// ==========================================================================
+
+// inherited from selector is now a link
+.sidebar-separator > span.monospace {
+	background: none !important;
+	border: none !important;
+
+	&::shadow {
+		.node-label-name { color: @xml-tag !important; }
+		.node-label-id,
+		.node-label-class,
+		.node-label-pseudo { color: @css-def !important; }
+	}
+}
