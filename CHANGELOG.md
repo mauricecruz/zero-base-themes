@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.3
+* `canary` Style custom selector sidebar pane
+* `canary` Style devices list
+
 ## 2.0.2
 * Style text in filmstrip image details
 * Flatten button styles
