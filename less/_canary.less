@@ -300,8 +300,13 @@ div.ax-computed-name {
 		border: 1px solid @- !important; .contrast(@global-background, 5%);
 	}
 
+::shadow {
 	.devices-title {
 		color: @global-accent !important;
+	}
+
+	input[type="text"] {
+		.input-styles();
 	}
 
 	.devices-list-item {
@@ -315,15 +320,14 @@ div.ax-computed-name {
 
 		.devices-list-title {
 			opacity: 0.2 !important;
+			color: @global-text !important;
 		}
 
-		&.device-list-item-show {
-
-			.devices-list-title {
-				color: @global-text !important;
-				opacity: 1 !important;
-			}
+		.devices-list-checkbox:checked + .devices-list-title {
+			opacity: 1 !important;
 		}
+
+		
 	}
 
 	.devices-edit-container {
@@ -349,6 +353,7 @@ div.ax-computed-name {
 	.devices-list-remove {
 		-webkit-mask-position: -128px -24px;
 	}
+}
 
 	// vertical navbars
 	::shadow .vertical-tab-layout {
@@ -394,7 +399,7 @@ div.ax-computed-name {
 	// Setting Mixins
 	// --------------------------------------------------------------------------
 	// Because some styles are used in several levels of shadow dom and I don't
-	// want to use /deep/ because it's deprecated (so is ::shadow, but it's 
+	// want to use /deep/ because it's deprecated (so is ::shadow, but it's
 	// still used in devtools).
 	// ==========================================================================
 	.list-styles() {
@@ -451,7 +456,7 @@ div.ax-computed-name {
 			.editor-container {
 				background: @global-hover !important;
 			}
-			
+
 			.blackbox-pattern,
 			.file-system-value {
 				color: @global-text !important;
@@ -483,7 +488,7 @@ div.ax-computed-name {
 
 	// Throttling
 	//==========================================================================
-	
+
 	.conditions {
 		&-list {
 			border: 1px solid @- !important; .contrast(@global-background, 5%);
@@ -532,7 +537,7 @@ div.ax-computed-name {
 	// Workspaces
 	//==========================================================================
 	.settings-tab {
-		
+
 		.file-system-container {
 			border-left: none !important;
 			padding: 10px !important;
@@ -584,7 +589,7 @@ div.ax-computed-name {
 				padding: 4px;
 			}
 		}
-		
+
 		.list-separator,
 		.conditions-list-separator {
 			background-color: @global-divider !important;
@@ -656,7 +661,7 @@ div.ax-computed-name {
 	.animation-buffer-preview.selected > svg > line {
 		stroke: @global-background !important;
 	}
-	
+
 	.animation-playback-label {
 		color: @global-text !important;
 		border: 1px solid @- !important; .contrast(@global-background, 8%);
