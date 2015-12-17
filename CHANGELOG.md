@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.4
+* Remove animations for navigation arrows
+* Style shadow dom content indicator
+* `canary` Fix tree navigation selected element bg
+* `canary` Timeline cleanup
+
 ## 2.0.3
 * `canary` Style custom selector sidebar pane
 * `canary` Style devices list
