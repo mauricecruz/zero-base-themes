@@ -5,190 +5,80 @@
 /* remove the animations section below.
 /**********************************************/
 
-.show-animations(@choice) when (@choice = true) {
+// ==========================================================================
+// Popovers
+// ==========================================================================
+.show-popover-animations(@choice) when (@choice = true) {
+	
+	@keyframes growFadeIn {
+		0% {
+			opacity: 0;
+			transform: scale(.3);
+		}
 
-	#toolbar > .toolbar-item.toggleable.toggled-on {
-		-webkit-transition: border-top .25s ease-out 0;
+		100% {
+			transform: scale(1);
+		}
 	}
+	
+	.popover {
+		animation: growFadeIn .2s ease-in-out;
 
-	.tabbed-pane:not(.help-window-main) .tabbed-pane-header-tab.selected,
-	.small .tabbed-pane:not(.help-window-main) .tabbed-pane-header-tab.selected {
-		-webkit-transition: border-top .25s ease-out 0;
+		&.top-left-arrow { transform-origin: 25% 0%; }
+		&.top-right-arrow { transform-origin: 75% 0%; }
+		&.right-top-arrow { transform-origin: 100% 10%; }
+		&.right-bottom-arrow { transform-origin: 100% 90%;}
+		&.bottom-left-arrow { transform-origin: 25% 100%; }
+		&.bottom-right-arrow { transform-origin: 75% 100%; }
+		&.left-top-arrow { transform-origin: 0% 10%; }
+		&.left-bottom-arrow { transform-origin: 0% 90%; }
 	}
+}
 
-	/*-- NETWORK PANES --*/
-	#network-views {
-		-webkit-animation: bounceInRight .5s ease-in-out;
-	}
+// ==========================================================================
+// Child Highlighter
+// ==========================================================================
 
-	/*-- INACTIVE SELECTORS --*/
-	.styles-section .properties .overloaded ,
-	.styles-section .properties .inactive ,
-	.styles-section .properties .disabled ,
-	.styles-section .properties .not-parsed-ok {
-		-webkit-transition: opacity .5s ease-in-out 0;
-	}
-
-	.styles-section .properties .enabled-button {
-		-webkit-transition: visibility .5s ease-in-out;
-	}
-
-	/*-- HIGHLIGHT CHILDREN --*/
+.show-child-highlighter-animations(@choice) when (@choice = true) { 
+		/*-- HIGHLIGHT CHILDREN --*/
 	.panel.elements ::shadow .parent + .children {
-		-webkit-transition: .5s ease-in .25s;
+		transition: .5s ease-in .25s;
 	}
 
 	.panel.elements ::shadow .hovered,
 	.panel.elements ::shadow .selected {
 		&.parent.expanded + .children > li:last-of-type .webkit-html-tag.close {
-			-webkit-transition: opacity .5s ease-in-out .25s;
+			transition: opacity .5s ease-in-out .25s;
 		}
 	}
+}
 
-	/*-- POPOVERS --*/
-	.popover {
-		-webkit-animation: growFadeIn .2s ease-in-out;
+// ==========================================================================
+// Navigation Arrows
+// ==========================================================================
 
-		&.top-left-arrow { -webkit-transform-origin: 25% 0%; }
-		&.top-right-arrow { -webkit-transform-origin: 75% 0%; }
-		&.right-top-arrow { -webkit-transform-origin: 100% 10%; }
-		&.right-bottom-arrow { -webkit-transform-origin: 100% 90%;}
-		&.bottom-left-arrow { -webkit-transform-origin: 25% 100%; }
-		&.bottom-right-arrow { -webkit-transform-origin: 75% 100%; }
-		&.left-top-arrow { -webkit-transform-origin: 0% 10%; }
-		&.left-bottom-arrow { -webkit-transform-origin: 0% 90%; }
-	}
-
-	/* -- KEYFRAME DECLARATIONS -- */
-	@-webkit-keyframes match-animation {
-		0% { box-shadow: 0 0 0 @global-background; background-color: @global-background; color: @global-background;}
-		50% { box-shadow: 0 0 25px @global-accent;}
-		100% { box-shadow: 0 0 0 @global-accent; background-color: @global-accent;}
-	}
-
-	@-webkit-keyframes bounceInLeft {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(-550px);
-		}
-
-		60% {
-			opacity: 1;
-			-webkit-transform: translateX(30px);
-		}
-
-		80% {
-			-webkit-transform: translateX(-10px);
-		}
-
-		100% {
-			-webkit-transform: translateX(0);
-		}
-	}
-
-	@-webkit-keyframes bounceInRight {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(550px);
-		}
-
-		60% {
-			opacity: 1;
-			-webkit-transform: translateX(-30px);
-		}
-
-		80% {
-			-webkit-transform: translateX(10px);
-		}
-
-		100% {
-			-webkit-transform: translateX(0);
-		}
-	}
-
-	@-webkit-keyframes bounceInUp {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateY(500px);
-		}
-
-		60% {
-			opacity: 1;
-			-webkit-transform: translateY(-30px);
-		}
-
-		80% {
-			-webkit-transform: translateY(10px);
-		}
-
-		100% {
-			-webkit-transform: translateY(0);
-		}
-	}
-
-	@-webkit-keyframes slideInLeftBig {
-		0% {
-			-webkit-transform: translateX(-500px);
-		}
-
-		100% {
-			-webkit-transform: translateX(0);
-		}
-	}
-
-	@-webkit-keyframes slideInRightBig {
-		0% {
-			-webkit-transform: translateX(500px);
-		}
-
-		100% {
-			-webkit-transform: translateX(0);
-		}
-	}
-
-	@-webkit-keyframes growFadeIn {
-		0% {
-			opacity: 0;
-			-webkit-transform: scale(.3);
-		}
-
-		100% {
-			-webkit-transform: scale(1);
-		}
-	}
-
-	// prevent flickers from css-transforms
-	.panel.visible {
-		-webkit-transform: translatez(0);
-	}
-
+.show-arrow-animations(@choice) when (@choice = true) {
 	// navigation arrow animations
 	.arrow-animations() {
-		-webkit-transition: -webkit-transform .10s ease-in-out;
+		transition: transform .10s ease-in-out;
 	}
 
 	.arrow-animations-right() {
-		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
 		-webkit-mask-position: -4px -96px !important;
 	}
 
 	.arrow-animations-down() {
-		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
 		-webkit-mask-position: -4px -96px !important;
 	}
 
 	.arrow-sidebar-pane-adjustment() {
-		-webkit-transform: rotate(90deg) translateX(2px);
+		transform: rotate(90deg) translateX(2px);
 	}
-
 }
 
-.show-animations(@choice) when (@choice = false) {
-	// prevent flickers from css-transforms
-	.panel.visible {
-		-webkit-transform: translatez(0);
-	}
-
+.show-arrow-animations(@choice) when (@choice = false) {
 	.arrow-animations() {
 		// intentionally empty
 	}
