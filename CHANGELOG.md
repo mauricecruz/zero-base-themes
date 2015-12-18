@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.5
+* `canary` fix toolbar background
+
 ## 2.0.4
 * Remove animations for navigation arrows
 * Style shadow dom content indicator
