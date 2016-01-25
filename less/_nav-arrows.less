@@ -77,8 +77,15 @@
 	&::before,
 	&.expanded::before {
 		.arrow-styles;
-		-webkit-mask-position: -2px -93px !important;
 		margin-right: 2px !important;
+	}
+
+	&::before {
+		-webkit-mask-position: -4px -93px !important;
+	}
+
+	&.expanded::before {
+		-webkit-mask-position: -20px -93px !important;
 	}
 }
 

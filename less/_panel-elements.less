@@ -56,7 +56,7 @@
 	background: @global-background !important;
 	color: @global-text !important;
 	border-top: 2px solid @- !important; .contrast(@global-background, 3%);
-	
+
 	&::shadow {
 		.animation-node-row {
 			border-bottom: 1px solid @- !important; .contrast(@global-background, 3%);
@@ -113,4 +113,49 @@
 
 ::shadow .elements-tree-outline ol.shadow-root {
 	border-left: 1px solid @- !important; .contrast(@global-background, 20%);
+}
+
+// inherited from selector is now a link
+.sidebar-separator > span.monospace {
+	background: none !important;
+	border: none !important;
+
+	&::shadow {
+		.node-label-name { color: @xml-tag !important; }
+		.node-label-id,
+		.node-label-class,
+		.node-label-pseudo { color: @css-def !important; }
+	}
+}
+
+// ==========================================================================
+// Animation Inspection [Experiments]
+// ==========================================================================
+.animations-timeline::shadow {
+
+	.animation-controls {
+		border-right: none !important;
+	}
+
+	.animation-timeline-buffer {
+		border-left: none !important;
+	}
+
+	// SVG Icon Representing Animation List
+	.animation-buffer-preview.selected {
+		background-color: @global-accent !important;
+	}
+
+	.animation-buffer-preview.selected > svg > line {
+		stroke: @global-background !important;
+	}
+
+	.animation-playback-label {
+		color: @global-text !important;
+		border: 1px solid @- !important; .contrast(@global-background, 8%);
+	}
+
+	.animation-name {
+		color: @global-text !important;
+	}
 }

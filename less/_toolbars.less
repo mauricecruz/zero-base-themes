@@ -24,6 +24,7 @@
 
 		&:hover {
 			color: @tab-label-selected !important;
+			background-color: rgba(0,0,0,0) !important;
 		}
 
 		&.selected {
@@ -42,7 +43,11 @@
 
 	// drop-down hook when viewport is short
 	.tabbed-pane-header-tabs-drop-down-container {
-		color: @tab-label !important;
+		background-color: rgba(0,0,0,0) !important;
+
+		> .glyph {
+			background-color: @tab-label !important;
+		}
 	}
 
 	// drawer background color

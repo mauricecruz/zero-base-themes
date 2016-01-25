@@ -9,7 +9,7 @@
 // Popovers
 // ==========================================================================
 .show-popover-animations(@choice) when (@choice = true) {
-	
+
 	@keyframes growFadeIn {
 		0% {
 			opacity: 0;
@@ -20,7 +20,7 @@
 			transform: scale(1);
 		}
 	}
-	
+
 	.popover {
 		animation: growFadeIn .2s ease-in-out;
 
@@ -39,7 +39,7 @@
 // Child Highlighter
 // ==========================================================================
 
-.show-child-highlighter-animations(@choice) when (@choice = true) { 
+.show-child-highlighter-animations(@choice) when (@choice = true) {
 		/*-- HIGHLIGHT CHILDREN --*/
 	.panel.elements ::shadow .parent + .children {
 		transition: .5s ease-in .25s;

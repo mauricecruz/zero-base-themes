@@ -34,28 +34,37 @@
 	}
 }
 
-// Material Design
+// Material Design Breadcrumbs reverts back to original in v48
 .material {
 	#elements-crumbs {
-		background: @filter-background !important;
-		border-top: 0 !important;
+		background: -webkit-linear-gradient(@tab-color-top,@tab-color-bottom) !important;
+		border-top: 1px solid @- !important; .contrast(@global-background, 5%);
 
 		::shadow {
-			.crumb {
-				border-left: none !important;
-				border-right: none !important;
-				padding: 5px 10px !important;
-				vertical-align: top !important;
-				color: @global-label !important;
+			.crumbs {
+				text-shadow: none !important;
+				color: @crumb-text !important;
 
-				&:hover {
-					color: @crumb-selected-text !important;
-					background-color: rgba(0,0,0,0) !important;
-				}
+				.crumb {
+					-webkit-border-image: none !important;
+					& { border-left: 1px solid @- !important; .contrast(@global-background, 25%) };
+					& { border-right: 1px solid @- !important;.contrast(@global-background, 15%) };
+					padding: 0 10px !important;
+					margin: 0 !important;
+					line-height: 18px !important;
+					color: @crumb-text !important;
 
-				&.selected {
-					color: @crumb-selected-text !important;
-					background: none !important;
+					&:hover {
+						color: @crumb-selected-text !important;
+						background-color: rgba(0,0,0,0) !important;
+					}
+
+					&.selected {
+						background-color: @crumb-selected-background !important;
+						text-shadow: none !important;
+						color: @crumb-selected-text !important;
+						cursor: default;
+					}
 				}
 			}
 		}

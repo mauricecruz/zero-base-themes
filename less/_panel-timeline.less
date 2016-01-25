@@ -324,3 +324,34 @@
 .network-film-strip {
 	border-bottom: none !important;
 }
+
+// ms header
+#timeline-overview-container .timeline-grid-header {
+	background-color: @global-background !important;
+}
+
+// pie chart bg
+.timeline-details-view-block {
+	background-color: @global-background !important;
+	box-shadow: none !important;
+}
+
+.timeline-details-chip-title {
+	color: @global-text !important;
+}
+
+// Timeline Recording Overlay
+.timeline.panel .status-pane-container.tinted {
+	background-color: fade(@global-background, 70%) !important;
+
+	::shadow .timeline-status-dialog {
+		background-color: @dialog-background !important;
+		border: 1px solid @dialog-border !important;
+		box-shadow: 0 5px 25px 0 @- !important; .contrast(@global-background, 10%, invert);
+		color: @global-text !important;
+
+		.stop-button button {
+			.button-styles();
+		}
+	}
+}

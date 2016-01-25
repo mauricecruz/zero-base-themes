@@ -1,6 +1,6 @@
-//*****************
-//* Drawer
-//************
+// ==========================================================================
+// Drawer
+// ==========================================================================
 
 .search-drawer-header label.search-config-label,
 .drawer .settings-tab label,
@@ -172,4 +172,25 @@ button.overrides-swap {
 // Emulation Tab
 .overrides-device button {
 	.button-styles();
+}
+
+
+// ==========================================================================
+// Network Panel
+// ==========================================================================
+
+::shadow .network-config-ua label[is="dt-radio"] {
+	color: @global-label !important;
+}
+
+::shadow .network-config-ua input:not(.dt-radio-button) {
+	.input-styles();
+}
+
+// ==========================================================================
+// Sensors Panel
+// ==========================================================================
+
+::shadow .sensors-view input[type=text] {
+	.input-styles();
 }

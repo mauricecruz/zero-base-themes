@@ -241,3 +241,41 @@
 	box-shadow: 0 0 0 1px @selection-border !important;
 	border-radius: 2px;
 }
+
+// Custom Element Form
+.styles-element-classes-pane {
+	background-color: @global-background !important;
+	border-bottom: 1px solid @global-divider !important;
+
+	.new-class-input {
+		.input-styles();
+	}
+
+}
+
+// Custom Element Button
+.toolbar-gray-toggled::shadow .class-toolbar-item {
+	color: @glyph-inactive !important;
+
+	&.toggled-on {
+		background-color: @global-background !important;
+
+		.toolbar-button-text {
+			color: @global-accent !important;
+		}
+	}
+
+	&.hover,
+	.toggled-off {
+		.toolbar-button-text {
+			color: @glyph-inactive !important;
+		}
+	}
+}
+
+// Sidebar Pane Hover Options
+.sidebar-pane-section-toolbar {
+	background-color: @- !important; .contrast(@global-background, 2%);
+
+}
+
