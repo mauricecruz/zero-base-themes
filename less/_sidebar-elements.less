@@ -279,3 +279,20 @@
 
 }
 
+// ==========================================================================
+// Accessibility Inspection (Experiments)
+// ==========================================================================
+
+div.ax-computed-name {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+::shadow {
+	.ax-name { color: @js-obj-name !important; }
+	.ax-role { color: @global-text !important; }
+}
+
+// ui for selected elements with no a11y exposed
+.ax-ignored-node-pane {
+	background-color: @-; .contrast(@global-background, 5%) !important;
+}
