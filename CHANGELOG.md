@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.6
+* fix animation inspection styles
+* fix sources highlighted text
+
 ## 2.0.5
 * `canary` fix toolbar background
 
