@@ -119,13 +119,6 @@
 .sidebar-separator > span.monospace {
 	background: none !important;
 	border: none !important;
-
-	&::shadow {
-		.node-label-name { color: @xml-tag !important; }
-		.node-label-id,
-		.node-label-class,
-		.node-label-pseudo { color: @css-def !important; }
-	}
 }
 
 // ==========================================================================
@@ -159,4 +152,13 @@
 	.animation-name {
 		color: @global-text !important;
 	}
+}
+
+// Syntax Highlighting
+
+.monospace::shadow {
+	.node-label-name { color: @xml-tag !important; }
+	.node-label-id,
+	.node-label-class,
+	.node-label-pseudo { color: @css-def !important; }
 }
