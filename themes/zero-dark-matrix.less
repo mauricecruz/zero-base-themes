@@ -15,6 +15,7 @@
 @global-input     : #111;
 @global-selected  : #364c3b;
 @global-text      : #ccc;
+@global-toolbar   : #444;
 @global-label     : #626262;
 @global-warn      : #db0;
 @global-error     : #ff5a5a;
@@ -83,12 +84,16 @@
 @xml-tag               : #49a6d2;
 
 // Tabbed Header Configuration
-@tab-color-top      : lighten(@global-background, 18%);
-@tab-color-bottom   : lighten(@global-background, 8%);
-@tab-highlighted    : @global-accent;
-@tab-label          : #999;
-@tab-label-selected : #f8f8f8;
-@tab-label-unsaved  : #db0;
+@toolbar-main         : @global-toolbar;
+@toolbar-sub          : darken(@global-toolbar, 5%);
+@toolbar-divider      : darken(@toolbar-sub, 2%);
+@toolbar-item-divider : darken(@tab-label, 5%);
+@tab-color-top        : lighten(@global-background, 18%);
+@tab-color-bottom     : lighten(@global-background, 8%);
+@tab-highlighted      : @global-accent;
+@tab-label            : #999;
+@tab-label-selected   : #f8f8f8;
+@tab-label-unsaved    : #db0;
 
 // Toolbars
 @tab-main-icons-padding : 6px;

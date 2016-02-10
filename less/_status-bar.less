@@ -10,11 +10,11 @@
 	select.toolbar-item:hover {
 		color: @global-text !important;
 		text-shadow: none !important;
-		border-left: 1px solid lighten(@global-background, 5%) !important;
-		border-right: 1px solid lighten(@global-background, 5%) !important;
-		background: inherit !important;
+		border-left: 1px solid @toolbar-divider;
+		border-right: 1px solid @toolbar-divider;
 		border-top: none !important;
 		border-bottom: none !important;
+		background: inherit !important;
 	}
 
 	select.toolbar-item {
@@ -96,8 +96,8 @@ button.scripts-step-out:disabled .glyph {
 .panel-status-bar,
 .resources-status-bar .status-bar,
 .overrides-footer {
-	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom);
-	border-top: @global-background !important;
+	background: @toolbar-sub !important;
+	border-top: 1px solid @global-background !important;
 	color: @global-text !important;
 }
 
@@ -144,18 +144,19 @@ label.checkbox,
 
 .resources-toolbar,
 ::shadow .search-toolbar-summary {
-	.gradient-background();
-	border-top: @global-background !important;
+	background: @toolbar-sub !important;
+	border-top: 1px solid @global-background !important;
+	color: @global-text !important;
 }
 
 .profiles-toolbar {
-	.gradient-background();
-	border-bottom: @global-background !important;
+	background: @toolbar-sub !important;
+	border-bottom: 1px solid @global-background !important;
 }
 
 #sources-panel-sources-view .sources-toolbar {
-	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-	border-top: @global-background !important;
+	background: @toolbar-sub !important;
+	border-top: 1px solid @global-background !important;
 	color: @global-text !important;
 }
 

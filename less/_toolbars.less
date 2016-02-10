@@ -5,8 +5,8 @@
 ::shadow {
 
 	.tabbed-pane-header {
-		background-image: linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-		box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
+		background: @toolbar-main;
+		box-shadow: inset 0 1px 0 @-; .contrast(@toolbar-main,7%);
 		border-bottom: 1px solid @global-background !important;
 		border: none;
 	}
@@ -64,8 +64,6 @@
 		opacity: 0.5 !important;
 	}
 
-
-
 	// sidebar borders
 	.shadow-split-view.hbox.shadow-split-view-first-is-sidebar > .shadow-split-view-sidebar:not(.maximized) {
 		border-right: 2px solid @global-divider !important;
@@ -98,18 +96,6 @@
 			height: @tab-main-toolbar-height !important;
 			line-height: (.75*@tab-main-toolbar-height) !important;
 		}
-	}
-}
-
-// First 2 selectors are override specific for mac because a background-image is set
-body.undocked.platform-mac.inactive .inspector-view-tabbed-pane.tabbed-pane::shadow,
-body.undocked.platform-mac .inspector-view-tabbed-pane.tabbed-pane::shadow,
-body.platform-mac.inactive .inspector-view-tabbed-pane.tabbed-pane::shadow,
-body.platform-mac .inspector-view-tabbed-pane.tabbed-pane::shadow,
-body .inspector-view-tabbed-pane.tabbed-pane::shadow {
-
-	.tabbed-pane-header {
-		background-image: linear-gradient(@tab-color-top, @tab-color-bottom) !important;
 	}
 }
 
@@ -274,14 +260,15 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	margin-top: 7px !important;
 }
 
-// only put gradient background on specific subtoolbars
-.console-view,
-.network,
-.timeline {
-	.toolbar {
-		background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-	}
+// Subtoolbars
+.console-view .toolbar,
+.network .toolbar,
+.timeline .toolbar,
+.filter-bar {
+	background: @toolbar-sub !important;
+	border-bottom: 1px solid @toolbar-divider !important;
 }
+
 
 ::shadow {
 	// glyph states
@@ -351,17 +338,6 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 	}
 }
 
-// add padding to console subtoolbar (filters)
-.filter-bar.hbox {
-	padding: 2px 0;
-}
-
-// fat filter bar
-.filter-bar {
-	background-color: @filter-background !important;
-	border-bottom: 1px solid @- !important ; .contrast(@global-divider, 5%);
-}
-
 ::shadow {
 
 	.tabbed-pane-tab-slider {
@@ -375,18 +351,11 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 	}
 
 	.toolbar-divider {
-		background-color: @glyph-inactive !important;
+		background-color: @toolbar-item-divider !important;
 	}
 }
 
-// toolbar borders
-.console-view > .toolbar,
-.panel.network > .toolbar {
-	border-bottom: 1px solid @global-divider !important;
-}
-
 // footer statusbar text
-
 ::shadow .toolbar-item {
 	color: @global-text !important;
 }

@@ -2,7 +2,7 @@
 /* Elements Crumbs
 /************************************************/
 #elements-crumbs {
-	background: -webkit-linear-gradient(@tab-color-top,@tab-color-bottom) !important;
+	background: @toolbar-sub !important;
 	border-top: 1px solid @- !important; .contrast(@global-background, 5%);
 
 	::shadow {
@@ -37,7 +37,7 @@
 // Material Design Breadcrumbs reverts back to original in v48
 .material {
 	#elements-crumbs {
-		background: -webkit-linear-gradient(@tab-color-top,@tab-color-bottom) !important;
+		background: @toolbar-sub !important;
 		border-top: 1px solid @- !important; .contrast(@global-background, 5%);
 
 		::shadow {
@@ -53,6 +53,10 @@
 					margin: 0 !important;
 					line-height: 18px !important;
 					color: @crumb-text !important;
+
+					&:first-child {
+						border-left: 1px solid rgba(0,0,0,0) !important;
+					}
 
 					&:hover {
 						color: @crumb-selected-text !important;

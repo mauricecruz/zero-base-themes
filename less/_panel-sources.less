@@ -17,6 +17,13 @@
 	background-color: @global-background !important;
 }
 
+// Debugger Controls Toolbar
+.scripts-debug-toolbar {
+	background: @toolbar-main !important;
+	box-shadow: inset 0 1px 0 @-; .contrast(@toolbar-main,7%);
+	border-bottom: 1px solid @global-background !important;
+}
+
 .sidebar-pane {
 
 	/* Breakpoints/Dom Breakpoints */
@@ -86,12 +93,21 @@
 	opacity: .3 !important;
 }
 
-/*Pane Headers*/
+// Sidebar Pane Headers
 .sidebar-pane-title {
-	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-	color: @global-text;
-	& { border-top: 1px solid @- !important; .contrast(@tab-color-top, 7%) };
-	& { border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom, 10%, invert) };
+	color: @global-text !important;
+	background: @toolbar-main !important;
+	& { border-top: 1px solid @- !important; .contrast(@toolbar-main, 5%); }
+	& { border-bottom: 1px solid @- !important; .contrast(@toolbar-main, 5%, invert); }
+
+	&.expanded,
+	&:last-child {
+		border-bottom: 1px solid @toolbar-main !important;
+	}
+
+	&:first-child {
+		border-top: 1px solid red !important;
+	}
 }
 
 .sidebar-pane-stack > .sidebar-pane.visible:nth-last-of-type(1){
