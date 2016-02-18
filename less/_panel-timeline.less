@@ -124,10 +124,9 @@
 
 }
 
-.timeline-cpu-curtain-left,
-.timeline-cpu-curtain-right {
-	background-color: @global-text !important;
-	opacity: 0.3 !important;
+.timeline-curtain-left,
+.timeline-curtain-right {
+	background: hsla(0, 0, 40%, 0.5) !important
 }
 
 .timeline-expandable {
@@ -164,7 +163,7 @@
 #resources-container-content {
 
 	.timeline-grid-header .resources-dividers-label-bar {
-		background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+		background: @toolbar-main !important;
 	}
 }
 
@@ -182,6 +181,9 @@
 
 .overview-grid-window-resizer {
 	box-shadow: none !important;
+	border-radius: 2px !important;
+	border: none !important;
+	background: @global-accent !important;
 }
 
 .overview-grid-window-rulers {
