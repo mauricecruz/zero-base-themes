@@ -86,3 +86,53 @@
 	background: none !important;
 }
 
+
+// ==========================================================================
+// Toolbar
+// ==========================================================================
+
+// glyph
+::shadow {
+	// off
+	.toolbar-glyph {
+		background-color: @glyph-inactive !important;
+	}
+
+	// hover
+	.toolbar-button:enabled.hover:not(:active) .toolbar-glyph {
+		background-color: @glyph-hover !important;
+	}
+
+	// on
+	.toolbar-state-on.toolbar-button:enabled:not(:active) .toolbar-glyph,
+	.toolbar-button.toolbar-state-on .toolbar-glyph {
+		background-color: @glyph-active !important;
+	}
+}
+
+// Weird '== $0' on active element
+::shadow .elements-disclosure li.selected:after {
+	color: @global-text !important;
+}
+
+// ==========================================================================
+// Elements Sidebar
+// ==========================================================================
+::shadow {
+
+	.toolbar-button:not(.toolbar-has-glyph):not(.toolbar-has-dropdown):not(.menu-toolbar-item).hover {
+		background-color: rgba(0,0,0,0) !important;
+
+		.toolbar-text {
+			color: @global-text !important
+		}
+	}
+
+	.toolbar-button.toolbar-state-on {
+		background-color: rgba(0,0,0,0) !important;
+
+		.toolbar-text {
+			color: @global-accent !important;
+		}
+	}
+}
