@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.0.9
+* style service workers
+* `canary` fix sources dialog overlay
+* `canary` fix sources notification header
+
+## 2.0.8
+* fix toolbar colors
+* fix timeline/network slice selections
+* flatten sidebar sections
+* `canary` fix glyph selections
+
+## 2.0.7
+* fix syntax highlighting of dom breakpoints
+* flatten color palette
+
 ## 2.0.6
 * fix animation inspection styles
 * fix sources highlighted text
