@@ -115,6 +115,7 @@
 	color: @global-text !important;
 }
 
+
 // ==========================================================================
 // Elements Sidebar
 // ==========================================================================
@@ -134,5 +135,65 @@
 		.toolbar-text {
 			color: @global-accent !important;
 		}
+	}
+}
+
+// ==========================================================================
+// Sources Info Bar
+// ==========================================================================
+
+::shadow .infobar-info {
+	background-color: @toolbar-sub !important;
+	border-bottom: 1px solid @toolbar-divider !important;
+	color: @global-text !important;
+
+	.infobar-toggle {
+		color: @global-link !important;
+	}
+}
+
+// ==========================================================================
+// File/Function Dialog
+// ==========================================================================
+::shadow .filtered-list-widget {
+	background: @dialog-background !important;
+	box-shadow: 0 5px 15px 5px rgba(0,0,0,.6) !important;
+	border: 1px solid @dialog-border !important;
+
+	.filtered-list-widget-prompt-element {
+		box-shadow: none !important;
+		color: @global-text !important;
+		background-color: @global-background !important;
+	}
+
+	> div.container {
+		background: @global-background !important;
+	}
+
+	.filtered-list-widget-item {
+		background-color: @dialog-item-background !important;
+		& { border-top: 1px solid @- !important; .contrast(@dialog-item-background, 5%) };
+		& { border-bottom: 1px solid @- !important; .contrast(@dialog-item-background, 10%) };
+
+		&.selected {
+			background-color: @selection-background !important;
+			color: @- !important; .contrast(@dialog-item-text, 10%);
+		}
+
+		&:not(.selected):hover {
+			background-color: @hover-background !important;
+		}
+
+		.highlight {
+			color: @global-accent !important;
+		}
+	}
+
+	.filtered-list-widget-title {
+		color: @dialog-item-text !important;
+	}
+
+	.filtered-list-widget-subtitle {
+		color: @- !important; .contrast(@dialog-item-text, 40%, invert);
 	}
 }
