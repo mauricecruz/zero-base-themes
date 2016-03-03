@@ -386,6 +386,21 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 	.toolbar-button.toolbar-state-on .toolbar-glyph {
 		background-color: @glyph-active !important;
 	}
+
+	//override for v49
+	.toolbar-state-on .record-toolbar-item.toolbar-glyph,
+	.toolbar-state-active .filter-toolbar-item.toolbar-glyph,
+	.toolbar-state-active .block-toolbar-item.toolbar-glyph {
+		background-color: @glyph-inactive !important;
+	}
+}
+
+::shadow ::shadow {
+	.toolbar-button.toolbar-state-on .toolbar-glyph,
+	.toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled.hover:not(:active),
+	.-theme-selection-color {
+		background-color: @global-accent !important;
+	}
 }
 
 ::shadow .toolbar-shadow .toolbar-text {
