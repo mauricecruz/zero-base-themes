@@ -279,6 +279,27 @@
 
 }
 
+
+// button options near filter
+::shadow {
+
+	.toolbar-button:not(.toolbar-has-glyph):not(.toolbar-has-dropdown):not(.menu-toolbar-item).hover {
+		background-color: rgba(0,0,0,0) !important;
+
+		.toolbar-text {
+			color: @global-text !important
+		}
+	}
+
+	.toolbar-button.toolbar-state-on {
+		background-color: rgba(0,0,0,0) !important;
+
+		.toolbar-text {
+			color: @global-accent !important;
+		}
+	}
+}
+
 // ==========================================================================
 // Accessibility Inspection (Experiments)
 // ==========================================================================
@@ -295,4 +316,10 @@ div.ax-computed-name {
 // ui for selected elements with no a11y exposed
 .ax-ignored-node-pane {
 	background-color: @-; .contrast(@global-background, 5%) !important;
+}
+
+// Property rules in table view (styles)
+::shadow .property-trace-value,
+::shadow .property-trace-selector {
+	color: @global-text !important;
 }

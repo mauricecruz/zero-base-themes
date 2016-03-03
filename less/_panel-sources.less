@@ -361,3 +361,27 @@ body .CodeMirror .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight) {
 .sidebar-pane-toolbar .pane-title-button {
 	background-color: @- !important; .contrast(@glyph-inactive, 50%);
 }
+
+
+// ==========================================================================
+// Sources Tree Navigation
+// ==========================================================================
+
+// remove bg from selected menu item
+::shadow .tree-outline li {
+	background-color: rgba(0,0,0,0) !important;
+}
+
+// ==========================================================================
+// Sources Info Bar
+// ==========================================================================
+
+::shadow .infobar-info {
+	background-color: @toolbar-sub !important;
+	border-bottom: 1px solid @toolbar-divider !important;
+	color: @global-text !important;
+
+	.infobar-toggle {
+		color: @global-link !important;
+	}
+}

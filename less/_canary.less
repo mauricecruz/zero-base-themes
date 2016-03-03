@@ -52,104 +52,15 @@
 	}
 }
 
-// ==========================================================================
-// Toolbar
-// ========================================================================== */
 
-// Drag-drop toolbars
-.inspector-view-tabbed-pane::shadow .tabbed-pane-header-contents {
-	.tabbed-pane-header-tab.selected,
-	.tabbed-pane-header-tab {
-		border-top: none !important;
-	}
-}
-
-::shadow .tabbed-pane-tab-slider {
-	//remove top border
-	border-top: none !important;
-}
 
 // ==========================================================================
 // Sources Tree Navigation
 // ==========================================================================
 
-// remove bg from selected menu item
-::shadow .tree-outline li {
-	background-color: rgba(0,0,0,0) !important;
-}
-
-// ==========================================================================
-// Toolbar
-// ==========================================================================
-::shadow .tabbed-pane-header-tab,
-::shadow .tabbed-pane-header-tab.selected {
-	background: none !important;
-}
-
-
-// ==========================================================================
-// Toolbar
-// ==========================================================================
-
-// glyph
-::shadow {
-	// off
-	.toolbar-glyph {
-		background-color: @glyph-inactive !important;
-	}
-
-	// hover
-	.toolbar-button:enabled.hover:not(:active) .toolbar-glyph {
-		background-color: @glyph-hover !important;
-	}
-
-	// on
-	.toolbar-state-on.toolbar-button:enabled:not(:active) .toolbar-glyph,
-	.toolbar-button.toolbar-state-on .toolbar-glyph {
-		background-color: @glyph-active !important;
-	}
-}
-
 // Weird '== $0' on active element
 ::shadow .elements-disclosure li.selected:after {
 	color: @global-text !important;
-}
-
-
-// ==========================================================================
-// Elements Sidebar
-// ==========================================================================
-::shadow {
-
-	.toolbar-button:not(.toolbar-has-glyph):not(.toolbar-has-dropdown):not(.menu-toolbar-item).hover {
-		background-color: rgba(0,0,0,0) !important;
-
-		.toolbar-text {
-			color: @global-text !important
-		}
-	}
-
-	.toolbar-button.toolbar-state-on {
-		background-color: rgba(0,0,0,0) !important;
-
-		.toolbar-text {
-			color: @global-accent !important;
-		}
-	}
-}
-
-// ==========================================================================
-// Sources Info Bar
-// ==========================================================================
-
-::shadow .infobar-info {
-	background-color: @toolbar-sub !important;
-	border-bottom: 1px solid @toolbar-divider !important;
-	color: @global-text !important;
-
-	.infobar-toggle {
-		color: @global-link !important;
-	}
 }
 
 // ==========================================================================

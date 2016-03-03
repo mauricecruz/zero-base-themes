@@ -6,8 +6,8 @@
 
 	.tabbed-pane-header {
 		background: @toolbar-main;
-		box-shadow: inset 0 1px 0 @-; .contrast(@toolbar-main,7%);
-		border-bottom: 1px solid @toolbar-divider !important;
+		box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
+		border-bottom: 1px solid @global-background !important;
 		border: none;
 	}
 
@@ -124,6 +124,13 @@ select.tabbed-pane-header-tabs-drop-down-select{
 		.tabbed-pane-header-tabs-drop-down {
 			line-height: (0.9*@tab-main-toolbar-height);
 		}
+	}
+
+	.toolbar-controls-left,
+	.toolbar-controls-right {
+		padding-top: @tab-main-icons-padding !important;
+		border-bottom: 1px solid darken(@tab-color-bottom,10%) !important;
+		box-shadow: inset 0 1px 0 lighten(@tab-color-top,7%) !important;
 	}
 }
 
@@ -320,9 +327,6 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 		color: @tab-label !important;
 	}
 
-	.toolbar-divider {
-		background-color: @toolbar-item-divider !important;
-	}
 }
 
 // footer statusbar text
@@ -340,4 +344,50 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 // Network filter when a filter is applied but options are hidden
 ::shadow .toolbar-item.toggled-active .glyph {
 	background-color: @global-accent !important;
+}
+
+
+// Drag-drop toolbars
+.inspector-view-tabbed-pane::shadow .tabbed-pane-header-contents {
+	.tabbed-pane-header-tab.selected,
+	.tabbed-pane-header-tab {
+		border-top: none !important;
+	}
+}
+
+::shadow .tabbed-pane-tab-slider {
+	//remove top border
+	border-top: none !important;
+}
+
+::shadow .tabbed-pane-header-tab,
+::shadow .tabbed-pane-header-tab.selected {
+	background: none !important;
+}
+
+::shadow .toolbar-divider {
+	background-color: @toolbar-divider !important;
+}
+
+// glyph
+::shadow {
+	// off
+	.toolbar-glyph {
+		background-color: @glyph-inactive !important;
+	}
+
+	// hover
+	.toolbar-button:enabled.hover:not(:active) .toolbar-glyph {
+		background-color: @glyph-hover !important;
+	}
+
+	// on
+	.toolbar-state-on.toolbar-button:enabled:not(:active) .toolbar-glyph,
+	.toolbar-button.toolbar-state-on .toolbar-glyph {
+		background-color: @glyph-active !important;
+	}
+}
+
+::shadow .toolbar-shadow .toolbar-text {
+	color: @global-label !important;
 }
