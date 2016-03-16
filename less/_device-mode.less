@@ -1,0 +1,32 @@
+::shadow .device-mode-toolbar {
+	background-color: @toolbar-sub !important;
+}
+
+// Toolbar Button Arrow on Hover
+::shadow ::shadow .toolbar-button:enabled.hover:not(:active) {
+	.toolbar-glyph,
+	.toolbar-dropdown-arrow {
+		background-color: @global-text !important;
+		color: @global-text !important;
+	}
+}
+
+::shadow ::shadow .toolbar-has-dropdown .toolbar-text {
+	color: @global-text !important;
+}
+
+::shadow ::shadow .toolbar-item {
+	color: @global-text !important;
+
+	.device-mode-x {
+		color: @global-label !important;
+	}
+
+	&.toolbar-button {
+		padding: 0 5px !important;
+	}
+}
+
+::shadow ::shadow ::shadow .device-mode-size-input {
+	.input-styles()
+}

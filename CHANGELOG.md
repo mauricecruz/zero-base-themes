@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.1
+* style device mode toolbar
+
 ## 2.0.9
 * style service workers
 * `canary` fix sources dialog overlay
