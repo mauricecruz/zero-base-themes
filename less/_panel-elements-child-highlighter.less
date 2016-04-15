@@ -12,6 +12,7 @@
 				border-bottom-right-radius: 5px;
 				padding-bottom: 5px !important;
 				box-shadow: inset 0 0 30px 0 @eh-children-shadow;
+				border-color: transparent !important;
 				border-bottom: 1px solid @- !important; .contrast(@global-background, 10%);
 
 				// highlight pseudo elements of selected node
@@ -30,4 +31,18 @@
 
 .show-child-highlighter(@choice) when (@choice = false){
 	// intentionally empty
+}
+
+// override child scope indicator line
+::shadow li.selected:not(.always-parent) + ol.children {
+	border-color: transparent !important;
+}
+
+::shadow li.hovered:not(.always-parent) + ol.children,
+::shadow .elements-tree-outline ol.shadow-root,
+::shadow li.selected:not(.always-parent) + ol.children {
+	margin-left: 0 !important;
+	border-width: 0 !important;
+	border-left-style: none !important;
+	-webkit-padding-start: 12px !important;
 }

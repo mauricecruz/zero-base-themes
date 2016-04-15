@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.2
+* style custom autocomplete items
+* style == $0 text
+* [canary] fix element highlighter
+
 ## 2.1.1
 * style device mode toolbar
 
