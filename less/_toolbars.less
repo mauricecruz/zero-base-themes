@@ -395,11 +395,17 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 	}
 }
 
+// hover states for toolbar menu icons
 ::shadow ::shadow {
+	.toolbar-button:enabled.hover:not(:active) .toolbar-glyph,
+	.toolbar-button:enabled.hover:not(:active) .toolbar-dropdown-arrow,
 	.toolbar-button.toolbar-state-on .toolbar-glyph,
-	.toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled.hover:not(:active),
 	.-theme-selection-color {
 		background-color: @global-accent !important;
+	}
+
+	.toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled.hover:not(:active) {
+		border: 1px solid @global-accent !important;
 	}
 }
 
