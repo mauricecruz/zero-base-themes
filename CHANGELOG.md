@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.3
+* update style in animation panel
+* add indicator for shadow dom child elements
+* style css selector headers in elements sidebar
+
 ## 2.1.2
 * style custom autocomplete items
 * style == $0 text
