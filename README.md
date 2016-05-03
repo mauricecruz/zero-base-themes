@@ -1,6 +1,10 @@
 # Notice
 Experiments settings reset in `44.0.2403.89`. Open developer tools settings &#9654; Experiments &#9654; [&#10004;] Allow custom UI themes to enable theme again.
 
+# Chrome Default Dark Theme
+
+Chrome now has a default dark theme, that you can enable via Settings > Appearance > Theme: Dark. It's a great step in the right direction, well done Chrome Team! For those if you who want more customization, Zero Base Themes is here for you :)
+
 # Zero Base Themes
 
 An assortment of Chrome Devtools theme that use the Zero Base Template.
