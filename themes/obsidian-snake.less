@@ -1,0 +1,235 @@
+//***************************************************************************************************************************/
+/* Obsidian Snake by Charles Ahmadzadeh (@superzadeh), based on Obsidian (https://github.com/mekwall/obsidian-color-scheme) */
+/****************************************************************************************************************************/
+
+@theme-type: dark;
+
+// Global Settings
+@text-height      : 14px;
+@global-accent    : #54799E;
+@global-arrow     : #8c8c8c;
+@global-background: #22282A;
+@global-boxshadow : rgba(17,17,17,.6);
+@global-divider   : lighten(@global-background, 5%);
+@global-hover     : lighten(@global-background, 5%);
+@global-input     : #111;
+@global-selected  : #364c3b;
+@global-text      : #ccc;
+@global-label     : #626262;
+@global-warn      : #db0;
+@global-error     : #ff5a5a;
+@global-textshadow: darken(@global-background, 4%);
+
+// JavaScript
+@js-atom      : #93C763;
+@js-attribute : #4e87bf;
+@js-builtin   : #8CBBAD;
+@js-comment   : #676767;
+@js-def       : #7CCADD;
+@js-error     : #9D1E15;
+@js-header    : #ff6400;
+@js-hr        : #aeaeae;
+@js-keyword   : #93C763;
+@js-link      : #8CBBAD;
+@js-meta      : #d8fa3c;
+@js-number    : #FFCD22;
+@js-operator  : #E8E2B7;
+@js-property  : #F0F0F0;
+@js-string    : #EC7600;
+@js-tag       : #49a6d2;
+@js-variable  : #678CB1;
+@js-variable-2: #678CB1;
+
+// JavaScript Objects
+@js-obj-array    : #7c7c7c;
+@js-obj-boolean  : #93C763;
+@js-obj-function : #8b6ccf;
+@js-obj-name     : #77a8c6;
+@js-obj-number   : #93C763;
+@js-obj-preview  : #ddd;
+@js-obj-regexp   : #D39745;
+@js-obj-string   : #d97640;
+@js-obj-undefined: #ad4e4e;
+
+// CSS
+@css-at-rule   : #b094bb;
+@css-atom      : #EC7600;
+@css-builtin   : #93C763;
+@css-comment   : #676767;
+@css-def       : #93C763;
+@css-important : #f00;
+@css-meta      : #9898BC;
+@css-number    : #F0F0F0;
+@css-operator  : #F0F0F0;
+@css-property  : #668BB0;
+@css-qualifier : #93C763;
+@css-string    : #e3b959;
+@css-string-2  : #F0F0F0;
+@css-tag       : #93C763;
+@css-variable  : #93C763;
+@css-variable-2: #93C763;
+
+// HTML Highlighting
+@xml-attribute         : #B3B689;
+@xml-comment           : #66747B;
+@xml-error             : #bf4c4c;
+@xml-iframe-root       : #db0;
+@xml-js-node           : #c2c3c3;
+@xml-link              : #FFCD22;
+@xml-pseudo            : #49a5d2;
+@xml-pseudo-highlighted: #a6371a;
+@xml-shadow-root       : #db0;
+@xml-string            : #EC7600;
+@xml-tag               : #8CBBAD;
+
+// Tabbed Header Configuration
+@tab-color-top      : lighten(@global-background, 18%);
+@tab-color-bottom   : lighten(@global-background, 8%);
+@tab-highlighted    : @global-accent;
+@tab-label          : #999;
+@tab-label-selected : #f8f8f8;
+@tab-label-unsaved  : #db0;
+
+// Toolbars
+@tab-main-icons-padding : 6px;
+@tab-main-toolbar-height: 34px;
+@tab-sub-icons-padding : 0;
+@tab-sub-toolbar-height: 25px;
+
+// Glyphs
+@glyph-active  : @global-accent;
+@glyph-inactive: lighten(@global-background, 35%);
+
+// Crumbs
+@crumb-selected-background: @global-selected;
+@crumb-selected-text      : #f8f8f8;
+@crumb-text               : @global-text;
+
+// Console
+@console-default-text: @global-text;
+@console-input-text  : #f1f1f1;
+@console-link        : #888;
+
+// Dialog [Ctrl/Cmd + O | Ctrl/Cmd + Shift + O]
+@dialog-background     : lighten(@global-background, 5%);
+@dialog-border         : lighten(@global-background, 10%);
+@dialog-item-background: @global-background;
+@dialog-item-highlight : @global-accent;
+@dialog-item-text      : lighten(@global-text, 10%);
+
+// Editor Properties
+@cm-cursor             : #fff;
+@cm-error              : #9D1E15;
+@cm-gutter             : lighten(@global-background, 4%);
+@cm-gutter-border      : lighten(@global-background, 5%);
+@cm-gutter-lines       : lighten(@global-background, 40%);
+@cm-matching-bracket   : #15ca1a;
+@cm-nonmatching-bracket: #db0404;
+@cm-lines-no-sourcemap : lighten(@global-background, 1%);
+@cm-selected           : lighten(@global-background, 10%);
+@cm-whitespace         : lighten(@global-background, 5%);
+
+// Element Highlighter
+@eh-base-color          : @global-selected;
+@eh-children-shadow     : darken(@global-background, 10%);
+@eh-editing-outline     : @global-accent;
+@eh-highlight-background: @selection-background;
+@eh-highlight-outline   : @selection-border;
+@eh-hover-background    : @hover-background;
+@eh-hover-outline       : @hover-border;
+@eh-clipboard-selection : lighten(@global-background, 40%);
+
+// Elements Sidebar
+@style-edit-mode-selector-text: #999;
+@style-selector-text          : #ccc;
+@style-separator              : lighten(@global-background, 10%);
+@style-value                  : #ccc;
+
+// Filters
+@filter-background   : lighten(@global-background,5%);
+@filter-text         : @global-text;
+@filter-hover        : lighten(@global-background, 10%);
+@filter-selected     : lighten(@global-background, 15%);
+@filter-selected-text: lighten(@global-text, 15%);
+@filter-error        : @global-error;
+@filter-warning      : #db0;
+@filter-info         : #A277FF;
+@filter-log          : #49a6d2;
+@filter-debug        : #FC844C;
+
+// Find
+@find-header-background   : lighten(@global-background, 3%);
+@find-header-text         : #888;
+@find-highlight-background: @global-accent;
+@find-highlight-text      : #000;
+
+// Forms
+@form-button-background: lighten(@global-background, 5%);
+@form-button-border    : lighten(@global-background, 10%);
+@form-button-pressed   : inset 0 1px 1px 0 darken(@global-background, 5%), 0 1px 1px 0 lighten(@global-background, 5%);
+@form-button-text      : darken(@global-text, 10%);
+@form-input-background : lighten(@global-background, 5%);
+@form-input-border     : lighten(@global-background, 10%);
+@form-input-text       : lighten(@global-text, 10%);
+@form-label-text       : @global-text;
+
+// Local Modifications
+@history-added-text  : #7EB17E;
+@history-removed-text: @global-error;
+
+// Screencast
+@screencast-viewport       : lighten(@global-background, 10%);
+@screencast-viewport-border: @global-accent;
+
+// Scrollbars
+@sb-thickness      : 12px;
+@sb-thumb-border   : darken(@global-background, 10%);
+@sb-thumb-color    : lighten(@global-background, 20%);
+@sb-thumb-roundness: 8px;
+
+// Settings
+@settings-background       : #444;
+@settings-border           : #454545;
+@settings-delimiter        : #eee;
+@settings-dialog           : #333;
+@settings-edit-background  : #222;
+@settings-folder-background: #222;
+@settings-selected         : rgba(150, 255, 150, 0.2);
+@settings-text             : #333;
+
+// Table/Sidebar Selections | Breakpoints
+@selection-background: @global-selected;
+@selection-border    : lighten(@selection-background, 15%);
+@selection-text      : lighten(@global-text, 10%);
+@hover-background: @global-hover;
+@hover-border    : lighten(@hover-background, 10%);
+@hover-text      : @global-text;
+
+// Sources Tab
+@sources-exception-all     : rgba(220,3,3,1);
+@sources-exception-uncaught: rgb(213,191,0);
+@sources-highlight-text    : darken(@global-background, 4%);
+@sources-pane-background   : rgba(0,0,0,.8);
+@sources-placeholder-text  : #999;
+@sources-save-background   : @global-background;
+@sources-text              : @global-text;
+
+// Tables
+@table-primary  : @global-background;
+@table-secondary: lighten(@global-background,2%);
+
+// Timeline
+@timeline-expandable-border   : lighten(@global-background, 35%);
+@timeline-graph-bar           : rgba(200,200,200,.3);
+@timeline-graph-bar-background: rgba(200,200,200,.2);
+@timeline-overview-background : @global-background;
+@timeline-graph-selection     : @global-accent;
+@timeline-progress-pane       : fade(lighten(@global-background,30%), 50%);
+@timeline-resources-divider   : lighten(@global-background, 3%);
+
+// Popovers
+@popover-background       : lighten(@global-background, 5%);
+@popover-details-row-title: #49a6d2;
+@popover-details-title    : #db0;
+@popover-title            : #ff8b3e;
+@popover-tree-border      : #888;
