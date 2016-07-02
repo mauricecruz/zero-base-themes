@@ -88,3 +88,25 @@
 		color: @- !important; .contrast(@dialog-item-text, 40%, invert);
 	}
 }
+
+// ==========================================================================
+// Sidebar - Rendered Fonts
+// ==========================================================================
+
+// Fonts section header should be styled the same as .sidebar-separator, but
+// there isn't a good selector hook for it. Attaching to parent class.
+.style-panes-wrapper ::shadow .title {
+	background-color: @style-section !important;
+	color: @style-selector-text !important;
+	text-shadow: none !important;
+	border-top: none !important;
+	border-bottom: none !important;
+}
+
+::shadow .font-stats-item {
+	color: @global-text;
+
+	.font-usage {
+		color: @global-accent;
+	}
+}
