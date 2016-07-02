@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.1.6
+* Remove box-shadow from edit states
+* Set sidebar panel default text to theme color
+
+## 2.1.5
+* `canary` Fix font glyph bg color
+* Fix blackbox indicator in sources callstack
+* Fix console panel form colors
+
 ## 2.1.3
 * update style in animation panel
 * add indicator for shadow dom child elements
@@ -92,7 +101,7 @@
 * `canary` Style promise panel
 * `canary` Style new additions to color picker
 * `canary` style optgroup in network throttle dropdown
-* `canary` Style new additions to color picker 
+* `canary` Style new additions to color picker
 * `canary` Fix status bar dropdown arrow position
 * Modify popover background on themes and remove popover-arrow
 * Correct popover arrow positions
@@ -130,11 +139,11 @@
 * `canary` made it pretty again
 
 ## 1.8.3
-* `canary` style timeline selectbox 
-* `canary` fix elements sidebar styles 
+* `canary` style timeline selectbox
+* `canary` fix elements sidebar styles
 * `canary` style scope headers
 * `canary` style revised filter bar
-* `canary` remove background from filter toggle 
+* `canary` remove background from filter toggle
 
 ## 1.8.2
 * `canary` fix styles for console object properties
