@@ -96,8 +96,9 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 
 // Editing Dom Nodes or Snippet Filenames
 ::shadow ::shadow style + .text-prompt-editing,
-::shadow style + .text-prompt-editing ,
+::shadow .text-prompt-editing ,
 .editing {
+	box-shadow: none !important;
 	background-color: @global-background !important;
 	outline: 1px solid @eh-editing-outline !important;
 	color: @global-text !important;
@@ -105,7 +106,6 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 
 ::shadow .text-prompt-editing > ::content * {
 	color: @global-text !important;
-
 }
 
 // Editing Scope values
