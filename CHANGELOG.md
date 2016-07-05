@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.7
+* Paint bg white for react extension
+
 ## 2.1.6
 * Remove box-shadow from edit states
 * Set sidebar panel default text to theme color
