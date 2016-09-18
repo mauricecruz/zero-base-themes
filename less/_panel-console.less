@@ -245,3 +245,49 @@ body /deep/ .link {
 .console-view-object-properties-section span {
 	color: @js-obj-array !important;
 }
+
+
+// ==========================================================================
+// Console Panel - Network Conditions
+// ==========================================================================
+::shadow .network-config-title {
+	color: @global-label;
+}
+
+::shadow .panel-section-separator {
+	background: @global-divider;
+}
+
+// ==========================================================================
+// Console Panel - Sensors
+// ==========================================================================
+
+::shadow {
+	.sensors-group-title,
+	.latlong-title,
+	.orientation-axis-input-container {
+		color: @global-label;
+	}
+
+	.sensors-view input {
+		.input-styles();
+	}
+}
+
+// ==========================================================================
+// Console Panel - Find
+// ==========================================================================
+
+// remove white borders
+::shadow {
+	.search-drawer-header label.search-config-label:first-of-type {
+		border-left: 0 !important;
+		border-bottom: 1px solid @toolbar-divider !important;
+	}
+
+	.search-drawer-header {
+		border-bottom: 1px solid @toolbar-divider !important;
+		background: @toolbar-sub !important;
+
+	}
+}
