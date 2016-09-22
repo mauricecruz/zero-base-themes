@@ -342,7 +342,9 @@ body .CodeMirror .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight) {
 	color: @global-error !important;
 }
 
-//Event Listener Tree
+// ==========================================================================
+// Event Listener Tree
+// ==========================================================================
 .event-listener-tree {
 
 	> li {
@@ -357,6 +359,10 @@ body .CodeMirror .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight) {
 // Buttons on panel headers
 .sidebar-pane-toolbar .pane-title-button {
 	background-color: @- !important; .contrast(@glyph-inactive, 50%);
+}
+
+::shadow .event-listener-button {
+	.button-styles()
 }
 
 
