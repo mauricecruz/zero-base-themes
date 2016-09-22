@@ -335,8 +335,9 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 }
 
 // toolbar labels
+
 .dt-checkbox-text,
-::shadow .dt-checkbox-text,
+body/deep/ .dt-checkbox-text,
 ::content .dt-checkbox-text {
 	color: @global-text !important;
 }
@@ -411,4 +412,14 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 
 ::shadow .toolbar-shadow .toolbar-text {
 	color: @global-label !important;
+}
+
+
+// Application
+::shadow .toolbar-item.checkbox {
+	color: @global-label !important;
+
+	&:hover {
+		color: @global-label !important;
+	}
 }
