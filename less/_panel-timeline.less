@@ -59,7 +59,7 @@
 #memory-graphs-container .sidebar-tree-section,
 .timeline-records-title,
 .timeline-details-view-title {
-	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom);
+	background-color: @global-toolbar !important;
 	color: @global-text !important;
 	text-shadow: none !important;
 }
@@ -329,6 +329,7 @@
 
 // pie chart bg
 .timeline-details-view-block {
+	border-bottom: 1px solid @global-divider !important;
 	background-color: @global-background !important;
 	box-shadow: none !important;
 }
@@ -367,5 +368,5 @@
 .timeline-stack-view-header {
 	background: @toolbar-sub !important;
 	border-bottom: 1px solid @toolbar-divider !important;
-	color: @global-text;
+	color: @global-text !important;
 }
