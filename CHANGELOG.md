@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.8
+* Style application panel
+* Style breakpoint color
+* Remove leftover toolbar gradients from timeline/profiles panels
+
+
 ## 2.1.7
 * Paint bg white for react extension
 
