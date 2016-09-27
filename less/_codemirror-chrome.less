@@ -33,9 +33,10 @@
 	}
 
 	//Codemirror
-	// Breakpoint Arrow
-	// Since breakpoint uses a border-image that isn't easily replaceable, hardcoding color value for now.
+	// Breakpoint Marker
 	.cm-breakpoint .CodeMirror-gutter-elt {
+		background: @global-accent;
+		-webkit-border-image: none !important;
 		color: #000 !important;
 		font-weight: 700 !important;
 	}
