@@ -1,3 +1,14 @@
+// ==========================================================================
+// Sources
+// ==========================================================================
+
+// section headers - replace when stable
 ::shadow .expandable-view-title {
 	&:extend(.sidebar-pane-title all);
+}
+
+::shadow .list-item {
+	&:not(.label) {
+		&:extend(.sidebar-pane .breakpoint-list li all);
+	}
 }
