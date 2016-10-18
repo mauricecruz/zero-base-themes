@@ -57,30 +57,29 @@
 			background-color: @- !important; .contrast(@global-background, 2%);
 		}
 	}
+}
 
+// Metrics
+// ========================================================================== */
 
-	// Metrics
-	// ========================================================================== */
+.metrics {
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 5%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%) };
+	margin-top: 5px !important;
+	color: #222;
 
-	.metrics {
-		& { border-top: 1px solid @- !important; .contrast(@global-background, 5%) };
-		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%) };
-		margin-top: 5px !important;
-		color: #222;
+	// Give position bottom border some space to render. Currently a UI bug in native devtools.
+	.position {
+		margin: 0 0 -16px 0 !important;
+	}
 
-		// Give position bottom border some space to render. Currently a UI bug in native devtools.
-		.position {
-			margin: 0 0 -16px 0 !important;
-		}
-
-		.position,
-		.margin:not([style^=background-color]),
-		.border:not([style^=background-color]),
-		.padding:not([style^=background-color]),
-		.margin:not([style^=background-color]),
-		.content:not([style^=background-color]){
-			background-color: #888 !important;
-		}
+	.position,
+	.margin:not([style^=background-color]),
+	.border:not([style^=background-color]),
+	.padding:not([style^=background-color]),
+	.margin:not([style^=background-color]),
+	.content:not([style^=background-color]){
+		background-color: #888 !important;
 	}
 }
 
