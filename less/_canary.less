@@ -114,3 +114,31 @@
 		}
 	}
 }
+
+// ==========================================================================
+// Toolbar
+// ==========================================================================
+
+// remove button styles from toolbar buttons
+::shadow ::shadow button.toolbar-button {
+	border: none !important;
+	background: none !important;
+}
+
+// ==========================================================================
+// Sidebars
+// ==========================================================================
+
+// Darken side panel bg
+.panel-sidebar {
+	background-color: @global-background !important;
+}
+
+
+// ==========================================================================
+// Network
+// ==========================================================================
+
+.request-headers-view ::shadow .parent {
+	&:extend(.request-headers-view .parent all);
+}
