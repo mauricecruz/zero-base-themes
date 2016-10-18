@@ -9,6 +9,16 @@
 
 ::shadow .list-item {
 	&:not(.label) {
-		&:extend(.sidebar-pane .breakpoint-list li all);
+		&:extend(.breakpoint-list li all);
 	}
+}
+
+// horizontal view watch expression toolbar divider
+.view-container > .toolbar {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+// editing style properties
+::shadow ::shadow style + .text-prompt-editing ::content .text-prompt {
+	color: @global-text !important;
 }

@@ -24,32 +24,37 @@
 	border-bottom: 1px solid @global-background !important;
 }
 
-.sidebar-pane {
-	color: @global-text;
+/* Breakpoints/Dom Breakpoints */
+.breakpoints-list-deactivated {
+	background-color: @- !important; .contrast(@global-background, 5%) !important;
+	opacity: 0.3 !important
+}
 
-	/* Breakpoints/Dom Breakpoints */
-	.breakpoints-list-deactivated {
-		background-color: @- !important; .contrast(@global-background, 5%) !important;
-		opacity: 0.3 !important
-	}
+.breakpoint-list li {
+	color: @global-text !important;
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) !important };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) !important };
 
-	.breakpoint-list li {
-		color: @global-text !important;
+	&:not(.breakpoint-hit):hover {
+		background-color: @global-hover !important;
 		& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) !important };
 		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) !important };
-
-		&:not(.breakpoint-hit):hover {
-			background-color: @global-hover !important;
-			& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) !important };
-			& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) !important };
-		}
 	}
 
-	.breakpoint-hit {
-		background: @selection-background !important;
-		border-top: 1px solid @selection-border !important;
-		border-bottom: 1px solid @selection-border !important;
+	.source-text {
+		color: @global-accent !important;
 	}
+}
+
+.breakpoint-hit {
+	background: @selection-background !important;
+	border-top: 1px solid @selection-border !important;
+	border-bottom: 1px solid @selection-border !important;
+}
+
+
+.sidebar-pane {
+	color: @global-text;
 
 	/* Call Stack */
 	::shadow .list-item {
