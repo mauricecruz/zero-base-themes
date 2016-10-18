@@ -1,4 +1,21 @@
 // ==========================================================================
+// Syntax
+// ==========================================================================
+
+// Overqualify selector because devtools is using !important
+.monospace,
+.CodeMirror-line {
+	.cm-js-string { color: @js-string !important; }
+	.cm-js-string-2 { color: @js-string !important; }
+
+	::shadow {
+		.object-value-string { color: @js-obj-string !important; }
+		.object-value-regexp { color: @js-obj-regexp !important; }
+		.object-value-symbol { color: @js-obj-regexp !important; }
+	}
+}
+
+// ==========================================================================
 // Sources Sidebar
 // ==========================================================================
 
