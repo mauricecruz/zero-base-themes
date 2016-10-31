@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.1
+* Fix toolbar animation
+* Fix toolbar icon position
+* Fix file selected/hover style
+
 ## 2.2.0
 `canary` fix a bunch of busted styles
 
