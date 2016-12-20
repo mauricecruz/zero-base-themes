@@ -86,6 +86,12 @@
 	.webkit-css-property { color: @css-property !important; }
 	.webkit-css-string { color: @css-string !important; }
 	.webkit-css-url { color: @xml-link !important; }
+
+	// overqualify because devtools authors are using !important
+	.CodeMirror {
+		.cm-css-comment { color: @css-comment !important; font-style: italic; }
+		.cm-css-string { color: @css-string !important;}
+	}
 }
 
 // HTML
@@ -182,8 +188,3 @@
 	position: relative;
 	left: 4.4px;
 }
-
-
-
-
-
