@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.2
+* Fix css/js styles on sources
+* Fix bubble colors
+
 ## 2.2.1
 * Fix toolbar animation
 * Fix toolbar icon position
