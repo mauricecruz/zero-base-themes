@@ -39,6 +39,11 @@
 	.cm-js-tag { color: @js-tag !important; }
 	.cm-js-variable { color: @js-variable !important; }
 	.cm-js-variable-2 { color: @js-variable-2 !important; }
+
+	// overqualify because devtools authors are using !important
+	.CodeMirror {
+		.cm-js-comment { color: @js-comment !important; font-style: italic; }
+	}
 }
 
 .source-frame-eval-expression{ background-color: @selection-background !important; border-color: @selection-border !important;}
