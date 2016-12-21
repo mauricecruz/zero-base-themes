@@ -3,9 +3,9 @@
 /**********************************************/
 
 
-.debug-type(@level,@color) {
+.debug-type(@type, @color) {
 
-	.@{level} {
+	.console-@{type}-level {
 		.console-message-text,
 		.console-message-url {
 			color: @color !important;
@@ -18,10 +18,10 @@
 		.section > .header .title {
 			color: @color !important;
 		}
+	}
 
-		::shadow div {
-			background-color: @color !important;
-		}
+	label::shadow .@{type} {
+		background-color: @color !important;
 	}
 }
 
@@ -83,11 +83,11 @@
 		color: @console-default-text !important;
 	}
 
-	.debug-type(console-debug-level, @filter-debug);
-	.debug-type(console-log-level, @filter-log);
-	.debug-type(console-warning-level, @filter-warning);
-	.debug-type(console-error-level, @filter-error);
-	.debug-type(console-info-level, @filter-info);
+	.debug-type(debug, @filter-debug);
+	.debug-type(log, @filter-log);
+	.debug-type(warning, @filter-warning);
+	.debug-type(error, @filter-error);
+	.debug-type(info, @filter-info);
 
 	// Children Hover
 		.outline-disclosure .stacktrace-entry:hover {
