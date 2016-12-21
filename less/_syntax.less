@@ -8,9 +8,6 @@
 	color: @global-text;
 }
 
-
-
-
 // ==========================================================================
 //  Syntax For Sources Panel
 // ==========================================================================
@@ -42,6 +39,8 @@
 
 	// overqualify because devtools authors are using !important
 	.CodeMirror {
+		.cm-js-string { color: @js-string !important; }
+		.cm-js-string-2 { color: @js-string !important; }
 		.cm-js-comment { color: @js-comment !important; font-style: italic; }
 	}
 }
@@ -178,18 +177,20 @@
 }
 
 
-
-
-
-
-
-
-
-
 .popover .parent + .children.expanded,
 #console-messages .parent + .children.expanded,
 .sidebar-pane .parent:not(.event-category) + .children.expanded {
 	border-left: 1px dashed fade(@global-text, 20%) !important;
 	position: relative;
 	left: 4.4px;
+}
+
+// Overqualify selector because devtools is using !important
+.monospace,
+.CodeMirror-line {
+	::shadow {
+		.object-value-string { color: @js-obj-string !important; }
+		.object-value-regexp { color: @js-obj-regexp !important; }
+		.object-value-symbol { color: @js-obj-regexp !important; }
+	}
 }
