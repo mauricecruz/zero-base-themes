@@ -76,3 +76,25 @@
 .request-headers-view ::shadow .parent {
 	&:extend(.request-headers-view .parent all);
 }
+
+// ==========================================================================
+// Autocomplete
+// ==========================================================================
+::shadow {
+	// overqualify because devtools authors use !important
+	div.suggest-box {
+		// replace additional
+		.suggest-box-content-item.secondary {
+			background-color: @global-background !important;
+		}
+		// replace suffix
+		.suggestion-title {
+			color: lighten(@global-text, 5%) !important;
+		}
+
+		// replace prefix
+		.query {
+			color: @global-accent !important;
+		}
+	}
+}
