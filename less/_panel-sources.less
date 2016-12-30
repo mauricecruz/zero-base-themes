@@ -30,7 +30,8 @@
 	opacity: 0.3 !important
 }
 
-.breakpoint-list li {
+.breakpoint-list li,
+::shadow .list-item:not(.label) {
 	color: @global-text !important;
 	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) !important };
 	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) !important };
@@ -51,7 +52,6 @@
 	border-top: 1px solid @selection-border !important;
 	border-bottom: 1px solid @selection-border !important;
 }
-
 
 .sidebar-pane {
 	color: @global-text;
@@ -100,7 +100,7 @@
 }
 
 // Sidebar Pane Headers
-.sidebar-pane-title {
+::shadow .expandable-view-title {
 	color: @global-text !important;
 	background: @toolbar-main !important;
 	& { border-top: 1px solid @- !important; .contrast(@toolbar-main, 5%); }
@@ -394,4 +394,9 @@ body .CodeMirror .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight) {
 	.infobar-toggle {
 		color: @global-link !important;
 	}
+}
+
+// horizontal view watch expression toolbar divider
+.view-container > .toolbar {
+	border-bottom: 1px solid @global-divider !important;
 }

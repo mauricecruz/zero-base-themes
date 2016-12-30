@@ -7,41 +7,6 @@
 	&:extend(.sidebar-pane-title all);
 }
 
-::shadow .list-item {
-	&:not(.label) {
-		&:extend(.breakpoint-list li all);
-	}
-}
-
-// horizontal view watch expression toolbar divider
-.view-container > .toolbar {
-	border-bottom: 1px solid @global-divider !important;
-}
-
-// ==========================================================================
-// Style Sidebar
-// ==========================================================================
-
-// editing style properties
-::shadow ::shadow style + .text-prompt-editing ::content .text-prompt {
-	color: @global-text !important;
-}
-
-.styles-section ::shadow .overloaded {
-	&:extend(.styles-section .overloaded);
-}
-
-
-// ==========================================================================
-// Toolbar
-// ==========================================================================
-
-// remove button styles from toolbar buttons
-::shadow ::shadow button.toolbar-button {
-	border: none !important;
-	background: none !important;
-}
-
 // ==========================================================================
 // Sidebars
 // ==========================================================================
@@ -49,15 +14,6 @@
 // Darken side panel bg
 .panel-sidebar {
 	background-color: @global-background !important;
-}
-
-
-// ==========================================================================
-// Network
-// ==========================================================================
-
-.request-headers-view ::shadow .parent {
-	&:extend(.request-headers-view .parent all);
 }
 
 // ==========================================================================

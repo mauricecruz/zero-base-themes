@@ -106,8 +106,7 @@
 	}
 }
 
-
-.request-headers-view .parent {
+.request-headers-view ::shadow .parent {
 	& { background-color: @- !important; .contrast(@global-background, 2.5%) };
 	color: @global-text !important;
 	& { border-top: 1px solid @- !important; .contrast(@global-background, 10%) };
@@ -196,12 +195,6 @@
 			padding-top: 0 !important;
 		}
 	}
-}
-
-// network view headers
-.network .request-headers-view .parent {
-	&:extend(#network-views .request-headers-view .parent);
-	margin-top: 1px !important;
 }
 
 // reduce space between network headers and subnav menu
