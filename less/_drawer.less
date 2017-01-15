@@ -53,79 +53,82 @@ input[type='range']::-webkit-slider-thumb {
 	top: -5px !important;
 }
 
-// History Tab
-.revision-history-link {
-	color: @global-accent !important;
-}
+::shadow {
+	// History Tab
+	.revision-history-link {
+		color: @global-link !important;
+	}
 
-// override readability line height
-.outline-disclosure.revision-history-drawer ol li {
-	padding-top: 2px !important;
-	line-height: 15px !important;
-}
+	// override readability line height
+	.outline-disclosure.revision-history-drawer ol li {
+		padding-top: 2px !important;
+		line-height: 15px !important;
+	}
 
-// Local modifications
-.revision-history-drawer {
+	// History
+	.tree-outline-dense {
 
-	> ol > .parent {
-		& { background-color: @- !important; .contrast(@global-background, 3%) };
-		color: @global-text !important;
-		& { border-top: 1px solid @- !important; .contrast(@global-background, 5%) };
-		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%, invert) };
-		margin: 0 !important;
-		height: 22px !important;
+		> ol > .parent {
+			& { background-color: @- !important; .contrast(@global-background, 3%) };
+			color: @global-text !important;
+			& { border-top: 1px solid @- !important; .contrast(@global-background, 5%) };
+			& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%, invert) };
+			margin: 0 !important;
+			height: 22px !important;
 
-		+ .children {
-			margin-bottom: 10px !important;
+			+ .children {
+				margin-bottom: 10px !important;
+			}
 		}
-	}
 
-	// revision timestamp node
-	.revision-history-revision {
-		color: @global-text !important;
-		& {background-color: @- !important; .contrast(@global-background, 4%) };
-		& {border-top: 1px solid @- !important; .contrast(@global-background, 8%) };
-		& {border-bottom: 1px solid @- !important; .contrast(@global-background, 3%, invert) };
-		height: 22px !important;
-		line-height: 20px !important;
-	}
+		// revision timestamp node
+		.revision-history-revision {
+			color: @global-text !important;
+			& {background-color: @- !important; .contrast(@global-background, 4%) };
+			& {border-top: 1px solid @- !important; .contrast(@global-background, 8%) };
+			& {border-bottom: 1px solid @- !important; .contrast(@global-background, 3%, invert) };
+			height: 22px !important;
+			line-height: 20px !important;
+		}
 
-	.webkit-line-number {
-		background: @cm-gutter !important;
-		border-right: 1px solid @cm-gutter-border !important;
-		padding: 1px 5px 1px 0 !important;
-		display: inline-block;
-		color: @cm-gutter-lines !important;
-	}
+		.webkit-line-number {
+			background: @cm-gutter !important;
+			border-right: 1px solid @cm-gutter-border !important;
+			padding: 1px 5px 1px 0 !important;
+			display: inline-block;
+			color: @cm-gutter-lines !important;
+		}
 
-	.source-code {
-		margin: 5px 0 15px 10px !important;
+		.source-code {
+			margin: 5px 0 15px 10px !important;
+			color: @global-text;
 
-		.revision-history-line-separator:nth-child(1) {
+			.revision-history-line-separator:nth-child(1) {
+				background-color: @global-background !important;
+			}
+		}
+
+		.revision-history-line-separator {
+			.contrast(background-color, @global-background, 1%);
+			margin-top: 4px !important;
+		}
+
+		.revision-history-line-removed,
+		.revision-history-line-added {
 			background-color: @global-background !important;
+
+			span:last-child {
+				margin-left: 2px;
+			}
 		}
-	}
 
-	.revision-history-line-separator {
-		.contrast(background-color, @global-background, 1%);
-		margin-top: 4px !important;
-	}
-
-	.revision-history-line-removed,
-	.revision-history-line-added {
-		background-color: @global-background !important;
-
-		span:last-child {
-			margin-left: 2px;
+		.revision-history-line-removed {
+			color: @history-removed-text !important;
 		}
-	}
 
-	.revision-history-line-removed {
-		color: @history-removed-text !important;
-	}
-
-	.revision-history-line-added {
-		color: @history-added-text !important;
+		.revision-history-line-added {
+			color: @history-added-text !important;
+		}
 	}
 }
 
