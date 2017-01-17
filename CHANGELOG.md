@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.2.3
+## 2.2.5
 * Fix history styles
 * Fix syntax highlighting
 * Fix checkbox alignment
