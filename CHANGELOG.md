@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.3
+* Fix history styles
+* Fix syntax highlighting
+* Fix checkbox alignment
+* Style box/text shadow helper
+
 ## 2.2.2
 * Fix css/js styles on sources
 * Fix bubble colors
