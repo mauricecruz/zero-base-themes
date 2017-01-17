@@ -304,6 +304,11 @@
 	}
 }
 
+// Icons
+::shadow ::shadow .shadow-swatch-icon {
+	background-color: @global-accent !important;
+}
+
 // ==========================================================================
 // Accessibility Inspection (Experiments)
 // ==========================================================================
@@ -354,4 +359,27 @@ div.ax-computed-name {
 	.font-usage {
 		color: @global-accent;
 	}
+}
+
+// ==========================================================================
+// Shadow Editor
+// ==========================================================================
+::shadow {
+	.shadow-editor-label {
+		color: @global-label !important;
+	}
+
+	.shadow-editor-button-left,
+	.shadow-editor-button-right {
+		.button-styles();
+	}
+
+	.shadow-editor-text-input {
+		.input-styles();
+	}
+}
+
+// slider
+::shadow ::shadow ::shadow #thumb {
+	background-color: @global-accent !important;
 }
