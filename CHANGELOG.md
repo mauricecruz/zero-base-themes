@@ -5,6 +5,7 @@
 * Fix syntax highlighting
 * Fix checkbox alignment
 * Style box/text shadow helper
+* Fix websocket frame styles
 
 ## 2.2.2
 * Fix css/js styles on sources
