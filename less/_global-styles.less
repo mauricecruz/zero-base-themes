@@ -235,3 +235,11 @@ body/deep/ input.toolbar-item {
 .widget[class*="React"] {
 	background: #fff !important;
 }
+
+// Remove text shadow from menus
+::shadow .tree-outline {
+	li.security-sidebar-origins,
+	li.profiles-tree-section {
+		text-shadow: none !important;
+	}
+}
