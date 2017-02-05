@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.6
+* Fix autocomplete styles
+* Fix breakpoint styles
+* Style performance column in sources
+* Fix network styles
+
 ## 2.2.5
 * Fix history styles
 * Fix syntax highlighting
