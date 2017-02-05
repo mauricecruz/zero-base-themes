@@ -24,33 +24,47 @@
 	border-bottom: 1px solid @global-background !important;
 }
 
-/* Breakpoints/Dom Breakpoints */
-.breakpoints-list-deactivated {
-	background-color: @- !important; .contrast(@global-background, 5%) !important;
-	opacity: 0.3 !important
+// Breakpoints
+::shadow {
+	.breakpoints-list-deactivated {
+		background-color: @- !important; .contrast(@global-background, 5%) !important;
+		opacity: 0.3 !important
+	}
+
+	.breakpoint-hit {
+		background: @selection-background !important;
+		border-top: 1px solid @selection-border !important;
+		border-bottom: 1px solid @selection-border !important;
+	}
+
+	.breakpoint-entry {
+		color: @global-text !important;
+		border-top: 1px solid @global-divider !important;
+
+		&:not(.breakpoint-hit):hover {
+			background-color: @global-hover !important;
+			border-top: 1px solid @global-divider !important;
+		}
+
+		.source-text {
+			color: @global-accent !important;
+		}
+	}
 }
 
 .breakpoint-list li,
 ::shadow .list-item:not(.label) {
 	color: @global-text !important;
-	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) !important };
-	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) !important };
+	border-top: 1px solid @global-divider !important;
 
 	&:not(.breakpoint-hit):hover {
 		background-color: @global-hover !important;
-		& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) !important };
-		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) !important };
+		border-top: 1px solid @global-divider !important;
 	}
 
 	.source-text {
 		color: @global-accent !important;
 	}
-}
-
-.breakpoint-hit {
-	background: @selection-background !important;
-	border-top: 1px solid @selection-border !important;
-	border-bottom: 1px solid @selection-border !important;
 }
 
 .sidebar-pane {
@@ -80,23 +94,16 @@
 			}
 		}
 	}
-
-	// 'paused on a js breakpoint' callstack node
-	.callstack-info.status {
-		border-top: none !important;
-		background-color: @- !important; .contrast(@global-background, 10%);
-		color: @global-warn;
-
-		.node-link {
-			color: @global-accent;
-		}
-
-	}
 }
 
-.breakpoints-deactivated .breakpoint-list {
-	background-color: rgba(0,0,0,0) !important;
-	opacity: .3 !important;
+// Paused Breakpoint
+::shadow {
+	.paused-status {
+		background-color: @toolbar-main !important;
+		color: @global-warn !important;
+		border-top: none !important;
+		border-bottom: none !important;
+	}
 }
 
 // Sidebar Pane Headers
@@ -402,5 +409,5 @@ body .CodeMirror .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight) {
 
 // horizontal view watch expression toolbar divider
 .view-container > .toolbar {
-	border-bottom: 1px solid @global-divider !important;
+	border-bottom : 1px solid @global-divider !important;
 }

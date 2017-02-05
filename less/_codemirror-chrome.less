@@ -35,10 +35,15 @@
 	//Codemirror
 	// Breakpoint Marker
 	.cm-breakpoint .CodeMirror-gutter-elt {
-		background: @global-accent;
+		background: @global-accent !important;
 		-webkit-border-image: none !important;
+		border: rgba(0,0,0,0) !important;
 		color: #000 !important;
 		font-weight: 700 !important;
+	}
+
+	.cm-breakpoint-conditional .CodeMirror-gutter-elt {
+		background: @global-warn !important;
 	}
 
 	// Edit HTML cursor / Sources Edit cursor
