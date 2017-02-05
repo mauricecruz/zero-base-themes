@@ -28,6 +28,10 @@
 	}
 }
 
+.overview-grid-cursor-area {
+	border-bottom: 1px solid @global-divider !important;
+}
+
 // Override animation from clicking console link -> network
 .highlighted-row {
 	-webkit-animation: "fadeout-revised" 2s 0s !important;
@@ -262,5 +266,17 @@
 				.highlight(hover);
 			}
 		}
+	}
+}
+
+// Waterfall Header
+.network-waterfall-header,
+.network-log-grid.data-grid .header-container {
+	border-bottom: none !important;
+	background-color: @global-toolbar !important;
+	color: @global-accent;
+
+	.sort-order-icon-container {
+		background-color: @global-toolbar !important;
 	}
 }
