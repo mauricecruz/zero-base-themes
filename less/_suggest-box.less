@@ -1,29 +1,35 @@
 ::shadow {
 	// overqualify because devtools authors use !important
-	.suggest-box {
+	div.suggest-box {
 		background-color: @global-background !important;
 		border: 2px rgba(0,0,0,.2) solid !important;
 		box-shadow: 0 8px 10px 1px rgba(0,0,0,.1) !important;
-	}
+		color: @global-text !important;
 
-	.suggest-box .suggest-box-content-item.additional {
-		background-color: @global-background !important;
-	}
+		.suggest-box-content-item {
+			&.secondary,
+			&.additional {
+				background-color: @global-background !important;
+			}
 
-	.suggest-box-content-item.source-code:hover {
-		background-color: @global-hover !important;
-		border: 1px solid rgba(0,0,0,0) !important;
-	}
+			&.source-code {
+				&:hover {
+					background-color: @global-hover !important;
+					border: 1px solid rgba(0,0,0,0) !important;
+				}
 
-	.suggest-box-content-item.source-code.selected {
-		background-color: @global-hover !important;
-	}
+				&.selected {
+					background-color: @global-hover !important;
+				}
+			}
+		}
 
-	.suggest-box .source-code .prefix {
-		color: @global-accent !important;
-	}
+		.suggestion-title {
+			color: lighten(@global-text, 5%) !important;
+		}
 
-	.suggest-box .source-code .suffix {
-		color: lighten(@global-text, 5%) !important;
+		.query {
+			color: @global-accent !important;
+		}
 	}
 }
