@@ -55,3 +55,16 @@
 	.arrow-mixin-canary(~'li::before', ~'li.expanded::before');
 }
 
+
+// ==========================================================================
+// Syntax
+// ==========================================================================
+.devtools-link,
+::shadow .devtools-link {
+	color: @global-link !important;
+}
+
+#console-messages .link,
+#console-messages .devtools-link {
+	color: @global-text;
+}
