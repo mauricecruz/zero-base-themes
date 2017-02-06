@@ -17,17 +17,41 @@
 }
 
 // ==========================================================================
-// Elements
+// Nav Arrows
 // ==========================================================================
 
-// Override old method of rendering element nav arrows
-::shadow .elements-disclosure ol:before {
+//Override old method of rendering element nav arrows
+.arrow-styles-canary() {
+	background-color: @global-arrow !important;
+	background-image: none !important;
+	-webkit-mask-repeat: no-repeat !important;
+	color: rgba(0,0,0,0) !important;
+	opacity: 1 !important;
 	-webkit-mask-image: url(Images/treeoutlineTriangles.png) !important;
 	-webkit-mask-size: 32px 24px !important;
-	-webkit-mask-position: 0 0 !important;
 
 	@media (-webkit-min-device-pixel-ratio: 1.1) {
     -webkit-mask-image: url(Images/treeoutlineTriangles_2x.png) !important;
-		-webkit-mask-position: 0 0 !important;
 	}
 }
+
+.arrow-mixin-canary(@arrow-right: ~'li.parent::before', @arrow-down: ~'li.parent.expanded::before') {
+	@{arrow-right} { -webkit-mask-position: 0 0 !important; }
+	@{arrow-down} { -webkit-mask-position: -16px 0 !important; }
+
+	@{arrow-right},
+	@{arrow-down} {
+		.arrow-styles-canary;
+	}
+}
+
+// Element Panel
+::shadow .elements-disclosure ol {
+	.arrow-mixin-canary();
+}
+
+// Console
+::shadow .tree-outline {
+	.arrow-mixin-canary(~'li::before', ~'li.expanded::before');
+}
+
