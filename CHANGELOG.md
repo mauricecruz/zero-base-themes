@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.7
+* `canary` Fix navigation arrows
+* `canary` Fix link colors
+
 ## 2.2.6
 * Fix autocomplete styles
 * Fix breakpoint styles
