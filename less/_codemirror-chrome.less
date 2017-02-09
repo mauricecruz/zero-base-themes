@@ -42,6 +42,11 @@
 		font-weight: 700 !important;
 	}
 
+	// remove invert for dark theme
+	.cm-breakpoint .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
+		-webkit-filter: invert(0) !important;
+	}
+
 	.cm-breakpoint-conditional .CodeMirror-gutter-elt {
 		background: @global-warn !important;
 	}
