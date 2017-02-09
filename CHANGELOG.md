@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.8
+* Fix call stack styles
+* Fix regexp styles in console
+* Fix breakpoint color when stacked over native dark theme
+
 ## 2.2.7
 * `canary` Fix navigation arrows
 * `canary` Fix link colors
