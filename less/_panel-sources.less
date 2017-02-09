@@ -96,6 +96,23 @@
 	}
 }
 
+::shadow .call-frame-item {
+	background-color: @global-background !important;
+
+	&:not(.async-header) {
+		border-top: 1px solid @global-divider !important;
+	}
+
+	.call-frame-item-title {
+		color: @global-text !important;
+	}
+
+	.call-frame-location {
+		color: @global-label !important;
+		background-color: @global-background !important;
+	}
+}
+
 // Paused Breakpoint
 ::shadow {
 	.paused-status {
