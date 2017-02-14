@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.2.9
+* Increase contrast of shadow root nodes
+* Fix colors on security tab
+* Update color of selected text on sources
+* Style new snippet UI
+* Fix tree navigation hover
+* Show timeline grid lines
+* Fix prev/next arrow in sources dark theme
+
 ## 2.2.8
 * Fix call stack styles
 * Fix regexp styles in console
