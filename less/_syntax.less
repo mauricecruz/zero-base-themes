@@ -112,15 +112,15 @@
 
 	.webkit-html-attribute-name { color: @xml-attribute !important;}
 	.webkit-html-attribute-value { color: @xml-string !important;}
-	.webkit-html-comment { color: @xml-comment!important;font-style:italic;}
+	.webkit-html-comment { color: @xml-comment !important;font-style:italic;}
 	.webkit-html-resource-link,
-	.webkit-html-external-link { color: @xml-link!important;}
+	.webkit-html-external-link { color: @xml-link !important;}
 	.webkit-html-tag,
 	.webkit-html-tag-name,
-	.webkit-html-close-tag-name { color: @xml-tag!important;}
+	.webkit-html-close-tag-name { color: @xml-tag !important;}
 	.webkit-html-text-node,
 	.webkit-html-css-node,
-	.webkit-html-js-node { color: @xml-js-node!important;}
+	.webkit-html-js-node { color: @xml-js-node !important;}
 	.webkit-html-pseudo-element { color: @xml-pseudo !important;}
 }
 
@@ -202,4 +202,9 @@
 	.cm-js-string { color: @js-string !important; }
 	.cm-js-string-2 { color: @js-obj-regexp !important; }
 	.object-value-function-prefix { color: @js-obj-function !important; }
+}
+
+::shadow ::shadow .webkit-html-external-link,
+::shadow ::shadow .webkit-html-resource-link {
+	color: @global-link !important;
 }
