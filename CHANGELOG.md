@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.3.1
+* Fix Network Headers styling
+
 ## 2.3.0
 * Bumping stable version to fix tree arrow
 

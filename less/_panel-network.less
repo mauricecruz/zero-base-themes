@@ -206,9 +206,19 @@
 	top: -1px !important;
 }
 
-// string header label of request payload
-::shadow .object-properties-section {
-	color: @js-obj-array !important;
+// Request Header js objects
+::shadow ::shadow {
+	.object-value-string { color: @js-obj-string !important; }
+	.object-value-regexp { color: @js-obj-regexp !important; }
+	.object-value-symbol { color: @js-obj-regexp !important; }
+	.object-properties-section .name { color: @js-obj-name !important; }
+	.object-value-number { color: @js-obj-number !important; }
+	.object-value-object { color: @js-obj-array !important; }
+}
+
+// Header Labels
+::shadow .tree-outline .header-name {
+	color: @global-label !important;
 }
 
 // Override

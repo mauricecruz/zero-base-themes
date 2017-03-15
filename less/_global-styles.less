@@ -150,6 +150,12 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 		text-shadow: none !important;
 	}
 }
+
+// Don't highlight Request Header Tree
+.request-headers-tree::shadow .tree-outline li.selected .selection {
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
 // Context Menu (New settings button and material menus)
 .soft-context-menu {
 	background: @popover-background !important;
