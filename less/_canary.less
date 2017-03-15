@@ -59,12 +59,19 @@
 // ==========================================================================
 // Syntax
 // ==========================================================================
-.devtools-link,
-::shadow .devtools-link {
-	color: @global-link !important;
-}
-
 #console-messages .link,
 #console-messages .devtools-link {
 	color: @global-text;
+}
+
+// ==========================================================================
+// Network
+// ==========================================================================
+::shadow .tree-outline .header-name {
+	color: @global-label !important;
+}
+
+// Network Timing
+.network-timing-table-header td {
+	color: @global-accent !important;
 }
