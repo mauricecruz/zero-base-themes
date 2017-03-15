@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.3.0
+* Bumping stable version to fix tree arrow
+
 ## 2.2.9
 * Increase contrast of shadow root nodes
 * Fix colors on security tab
