@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.2
+* `canary` fix suggest box
+* `canary` fix console object syntax highlighting
+* `canary` style performance tab warning box
+* `canary` fix filtered list widget
+
 ## 2.3.1
 * Fix Network Headers styling
 
