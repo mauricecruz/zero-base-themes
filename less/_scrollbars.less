@@ -90,3 +90,46 @@
 ::shadow {
 	.scrollbars();
 }
+
+::shadow ::shadow {
+		::-webkit-scrollbar,
+		.CodeMirror-scrollbar-filler,
+		.CodeMirror-gutter-filler {
+			width: @sb-thickness !important;
+			height: @sb-thickness !important;
+			background-color: @global-background !important;
+		}
+
+		::-webkit-scrollbar-track {
+
+			&:horizontal {
+				-webkit-box-shadow: inset 1px 5px 6px rgba(0,0,0,0.3) !important;
+			};
+
+			&:vertical {
+				-webkit-box-shadow: inset 4px 1px 8px 1px rgba(0,0,0,0.3) !important;
+			};
+
+		}
+
+		::-webkit-scrollbar-corner,
+		.CodeMirror-scrollbar-filler,
+		.CodeMirror-gutter-filler {
+			-webkit-box-shadow: inset 1px 5px 6px rgba(0,0,0,0.3) !important;
+		}
+
+		::-webkit-scrollbar-thumb {
+			border-radius: @sb-thumb-roundness !important;
+			background-color: @sb-thumb-color !important;
+			border: 1px solid @sb-thumb-border !important;
+
+			&:horizontal {
+				-webkit-box-shadow: inset 0 7px 1px -5px rgba(255,255,255,0.3) !important;
+			}
+
+			&:vertical {
+				-webkit-box-shadow: inset 3px 0 5px 0 rgba(255,255,255,0.3) !important;
+			}
+
+		}
+}
