@@ -24,6 +24,17 @@
 	}
 }
 
+.glyphs(@path) {
+	@standard = "@{path}.png";
+	@hiRes = "@{path}_2x.png";
+
+	-webkit-mask-image: url(@{path}.png)
+
+	@media (-webkit-min-device-pixel-ratio: 1.1) {
+    -webkit-mask-image: url(@{path}_2x.png) !important;
+	}
+}
+
 .gradient-background() {
 	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom);
 	color: @global-text !important;

@@ -161,6 +161,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	background: @popover-background !important;
 	border: 1px solid @- !important; .contrast(@popover-background, 5%);
 	color: @global-text !important;
+	box-shadow: 0 5px 10px fade(#000, 40%) !important;
 
 	&::shadow {
 		.soft-context-menu-item-mouse-over {
@@ -168,6 +169,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 			& { border-top: 1px solid @- !important; .contrast(@popover-background, 10%); }
 			& { border-bottom: 1px solid @- !important; .contrast(@popover-background, 10%); }
 			background-image: none !important;
+			color: @global-text !important;
 		}
 
 		.soft-context-menu-separator > .separator-line {
