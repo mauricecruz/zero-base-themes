@@ -201,7 +201,8 @@
 
 		.devices-list-edit,
 		.devices-list-remove {
-			-webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/toolbarButtonGlyphs.png) !important;
+			.glyphs("Images/toolbarButtonGlyphs");
+
 			background-color: @global-accent !important;
 			background-image: none !important
 		}
@@ -281,8 +282,9 @@
 
 			.edit-button,
 			.remove-button {
+				.glyphs("Images/toolbarButtonGlyphs");
+
 				background-image: none !important;
-				-webkit-mask-image: url(Images/toolbarButtonGlyphs.png);
 				background-color: @global-accent !important;
 			}
 
@@ -381,7 +383,7 @@
 
 			&-list-edit,
 			&-list-remove {
-				-webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/toolbarButtonGlyphs.png) !important;
+				.glyphs("Images/toolbarButtonGlyphs.png");
 				background-color: @global-accent !important;
 				background-image: none !important
 			}

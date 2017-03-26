@@ -25,14 +25,10 @@
 }
 
 .glyphs(@path) {
-	@standard = "@{path}.png";
-	@hiRes = "@{path}_2x.png";
-
-	-webkit-mask-image: url(@{path}.png)
-
-	@media (-webkit-min-device-pixel-ratio: 1.1) {
-    -webkit-mask-image: url(@{path}_2x.png) !important;
-	}
+	-webkit-mask-image: -webkit-image-set(
+			url("@{path}.png") 1x,
+			url("@{path}_2x.png") 2x
+		);
 }
 
 .gradient-background() {

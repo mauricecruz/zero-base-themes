@@ -3,15 +3,13 @@
 // ==========================================================================
 
 .arrow-styles() {
+	.glyphs("Images/toolbarButtonGlyphs");
+
 	background-color: @global-arrow !important;
 	background-image: none !important;
-	-webkit-mask-image: url(Images/toolbarButtonGlyphs.png) !important;
 	-webkit-mask-repeat: no-repeat !important;
 	color: rgba(0,0,0,0) !important;
 	opacity: 1 !important;
-	@media (-webkit-min-device-pixel-ratio: 1.1) {
-    -webkit-mask-image: url(Images/toolbarButtonGlyphs_2x.png) !important;
-	}
 }
 
 // Generates the styles for arrows. Defaults to the most commonly used selectors
