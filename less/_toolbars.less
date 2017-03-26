@@ -373,7 +373,7 @@ body/deep/ .dt-checkbox-text,
 	}
 
 	// hover
-	.toolbar-button:enabled.hover:not(:active) .toolbar-glyph {
+	.toolbar-button:not(.toolbar-state-on) .toolbar-glyph {
 		background-color: @glyph-hover !important;
 	}
 
@@ -403,10 +403,6 @@ body/deep/ .dt-checkbox-text,
 	.toolbar-button.toolbar-state-on .toolbar-glyph,
 	.-theme-selection-color {
 		background-color: @global-accent !important;
-	}
-
-	.toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled.hover:not(:active) {
-		border: 1px solid @global-accent !important;
 	}
 }
 
