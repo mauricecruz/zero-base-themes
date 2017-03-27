@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.3.3
+* Use correct density icons
+* Clean up glyph hover states
+* Clean up popover styles
+* Remove popover animations
+* Clean up dialog styles
+* Keep syntax highlighting on selected text
+* Fix breakpoint hit style on XHRs
+* Style timeline status indicator
+
 ## 2.3.2
 * `canary` fix suggest box
 * `canary` fix console object syntax highlighting
