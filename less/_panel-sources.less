@@ -39,11 +39,14 @@
 
 	.breakpoint-entry {
 		color: @global-text !important;
-		border-top: 1px solid @global-divider !important;
 
-		&:not(.breakpoint-hit):hover {
-			background-color: @global-hover !important;
+		&:not(.breakpoint-hit) {
 			border-top: 1px solid @global-divider !important;
+
+			&:hover {
+				background-color: @global-hover !important;
+				border-top: 1px solid @global-divider !important;
+			}
 		}
 
 		.source-text {
@@ -65,6 +68,12 @@
 	.source-text {
 		color: @global-accent !important;
 	}
+}
+
+.breakpoint-hit {
+	background: @selection-background !important;
+	border-top: 1px solid @selection-border !important;
+	border-bottom: 1px solid @selection-border !important;
 }
 
 .sidebar-pane {
