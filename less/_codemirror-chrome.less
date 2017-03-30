@@ -158,3 +158,8 @@
 .cm-readonly-highlight {
 	background-color: @-  !important; .contrast(@global-background, 5%);
 }
+
+// Selection in edit HTML
+::shadow .CodeMirror-focused .CodeMirror-selected {
+	background-color: @cm-selected !important;
+}

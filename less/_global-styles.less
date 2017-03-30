@@ -28,6 +28,11 @@
 	z-index: 0;
 }
 
+::shadow ::selection,
+::selection {
+	background: lighten(@global-selected, 45%)
+}
+
 //Panel text
 .panel-enabler-view {
 	color: @global-text;
