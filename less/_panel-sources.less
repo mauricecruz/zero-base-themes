@@ -423,15 +423,20 @@ li.breakpoint-hit .breakpoint-hit-marker {
   -webkit-mask-size: 352px 168px;
 	background: @global-accent !important;
 
-	&.smallicon-file {
+	&.smallicon-file,
+	&.smallicon-file-sync {
 		position: relative;
 		top: 2px;
 		background: @tab-label !important;
 	}
 }
 
-::shadow .selected .spritesheet-largeicons.smallicon-file:not(.icon-mask) {
-	background: @tab-label-selected !important;
+::shadow .selected .spritesheet-largeicons:not(.icon-mask) {
+	&.smallicon-file,
+	&.smallicon-file-sync {
+		background: @tab-label-selected !important;
+	}
+
 }
 
 // call stack indicator | thread position indicator | inline breakpoint
