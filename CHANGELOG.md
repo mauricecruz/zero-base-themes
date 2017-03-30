@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.3.4
+* Style persistence icons
+* Style event listener breakpoint
+*  Fix selection color of html
+* `canary` Style verbose console messages
+* `canary` Fix element editing state
+
 ## 2.3.3
 * Use correct density icons
 * Clean up glyph hover states
