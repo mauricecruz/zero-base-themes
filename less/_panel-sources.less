@@ -126,9 +126,13 @@
 ::shadow {
 	.paused-status {
 		background-color: @toolbar-main !important;
-		color: @global-warn !important;
-		border-top: none !important;
-		border-bottom: none !important;
+		color: @global-text !important;
+		border-top: 4px solid @global-divider !important;
+		border-bottom: 4px solid @global-divider !important;
+
+		.status-main {
+			color: @global-warn !important;
+		}
 	}
 }
 
@@ -410,4 +414,13 @@ li.breakpoint-hit .breakpoint-hit-marker {
 // horizontal view watch expression toolbar divider
 .view-container > .toolbar {
 	border-bottom : 1px solid @global-divider !important;
+}
+
+// call stack indicator | thread position indicator | inline breakpoint
+.spritesheet-smallicons:not(.icon-mask),
+::shadow .spritesheet-smallicons:not(.icon-mask) {
+	.glyphs("Images/smallIcons");
+
+	-webkit-mask-size: 190px 30px !important;
+	background: @global-accent !important;
 }
