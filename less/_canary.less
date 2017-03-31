@@ -96,3 +96,31 @@
 ::shadow .elements-tree-editor {
 	box-shadow: none !important;
 }
+
+
+// ==========================================================================
+// Souces Panel - Arrow Indicator
+// ==========================================================================
+::shadow .smallicon-thick-right-arrow {
+	-webkit-mask-position: -80px 50px !important;
+}
+
+
+// ==========================================================================
+// Persistence 2.0 Sources Tab Icons
+// ==========================================================================
+::shadow .spritesheet-mediumicons:not(.icon-mask) {
+  &.mediumicon-file {
+		.glyphs("Images/mediumIcons");
+		background: @tab-label !important;
+		-webkit-mask-position: -0px 32px !important;
+		position: relative;
+		top: 2px;
+	}
+}
+
+::shadow .selected .spritesheet-mediumicons:not(.icon-mask) {
+	&.mediumicon-file {
+		background: @tab-label-selected !important;
+	}
+}
