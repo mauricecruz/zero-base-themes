@@ -442,8 +442,14 @@ li.breakpoint-hit .breakpoint-hit-marker {
 // call stack indicator | thread position indicator | inline breakpoint
 .spritesheet-smallicons:not(.icon-mask),
 ::shadow .spritesheet-smallicons:not(.icon-mask) {
-	.glyphs("Images/smallIcons");
 
-	-webkit-mask-size: 190px 30px !important;
-	background: @global-accent !important;
+	&.smallicon-thick-right-arrow,
+	&.smallicon-inline-breakpoint-conditional {
+		.glyphs("Images/smallIcons");
+
+		-webkit-mask-size: 190px 30px !important;
+		background: @global-accent !important;
+	}
+
+
 }
