@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.3.4
+## 2.3.5
 * Style persistence icons
 * Style event listener breakpoint
 *  Fix selection color of html
