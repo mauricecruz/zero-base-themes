@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.6
+* Style paused error state
+* `canary` Style persistence icons
+
 ## 2.3.5
 * Style persistence icons
 * Style event listener breakpoint
