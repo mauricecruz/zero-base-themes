@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.7
+* Style radio button
+* `canary` Style devtools menu
+* `canary` Style coverage tab
+* `canary` Use blue color for console info messages
+
 ## 2.3.6
 * Style paused error state
 * `canary` Style persistence icons
