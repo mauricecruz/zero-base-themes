@@ -124,3 +124,19 @@
 		background: @tab-label-selected !important;
 	}
 }
+
+// ==========================================================================
+// Devtools Menu
+// ==========================================================================
+::shadow .soft-context-menu {
+	&:extend(.soft-context-menu all);
+
+	// repeating because this is inside shadow dom on stable
+	.soft-context-menu-item-mouse-over {
+		& { background-color: @- !important; .contrast(@popover-background, 8%); }
+		& { border-top: 1px solid @- !important; .contrast(@popover-background, 10%); }
+		& { border-bottom: 1px solid @- !important; .contrast(@popover-background, 10%); }
+		background-image: none !important;
+		color: @global-text !important;
+	}
+}
