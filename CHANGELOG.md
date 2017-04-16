@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.3.8
+* `canary` Fix inline breakpoint icon
+
 ## 2.3.7
 * Style radio button
 * `canary` Style devtools menu
