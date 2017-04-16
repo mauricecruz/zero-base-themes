@@ -140,3 +140,10 @@
 		color: @global-text !important;
 	}
 }
+
+// override for inline breakpoint icon mask
+.spritesheet-smallicons:not(.icon-mask) {
+	&.smallicon-inline-breakpoint-conditional {
+		-webkit-mask-position: -60px 90px;
+	}
+}

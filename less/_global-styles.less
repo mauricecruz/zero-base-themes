@@ -261,3 +261,46 @@ label[is="dt-radio"]::shadow ::content .dt-radio-button:checked {
 		text-shadow: none !important;
 	}
 }
+
+
+// ==========================================================================
+// Glyphs
+// ==========================================================================
+
+// Large Icons
+::shadow .spritesheet-largeicons:not(.icon-mask) {
+	&.smallicon-file,
+	&.smallicon-file-sync {
+		.glyphs("Images/toolbarButtonGlyphs");
+		-webkit-mask-size: 352px 168px;
+		background: @global-accent !important;
+	}
+}
+
+// persistence file indicator
+::shadow .spritesheet-largeicons:not(.icon-mask) {
+	&.smallicon-file,
+	&.smallicon-file-sync {
+		position: relative;
+		top: 2px;
+		background: @tab-label !important;
+	}
+}
+
+::shadow .selected .spritesheet-largeicons:not(.icon-mask) {
+	&.smallicon-file,
+	&.smallicon-file-sync {
+		background: @tab-label-selected !important;
+	}
+}
+
+// Small Icons
+// call stack indicator | thread position indicator | inline breakpoint
+.spritesheet-smallicons:not(.icon-mask),
+::shadow .spritesheet-smallicons:not(.icon-mask) {
+	&.smallicon-thick-right-arrow,
+	&.smallicon-inline-breakpoint-conditional {
+		.glyphs("Images/smallIcons");
+		background: @global-accent !important;
+	}
+}
