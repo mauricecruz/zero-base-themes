@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.9
+* extend element search to full window width
+* fix syntax colors on network tab
+* style cleanup
+
 ## 2.3.8
 * `canary` Fix inline breakpoint icon
 
