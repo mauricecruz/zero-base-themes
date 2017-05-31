@@ -410,7 +410,6 @@ body/deep/ .dt-checkbox-text,
 	color: @global-label !important;
 }
 
-
 // Application
 ::shadow .toolbar-item.checkbox {
 	color: @global-label !important;
@@ -423,4 +422,9 @@ body/deep/ .dt-checkbox-text,
 // Main Tab Navigation - Disable Selected Style and just use animation
 .insertion-point-main::shadow .tabbed-pane-header-tab.selected {
 	border-top-color: transparent !important;
+}
+
+// Menu expander
+::shadow .tabbed-pane-header-tabs-drop-down-container > .chevron-icon {
+	background-color: @tab-label !important;
 }

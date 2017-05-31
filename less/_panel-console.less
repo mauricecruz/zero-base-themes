@@ -298,6 +298,17 @@ body /deep/ .link {
 	.search-drawer-header {
 		border-bottom: 1px solid @toolbar-divider !important;
 		background: @toolbar-sub !important;
+	}
+}
 
+.console-settings-pane {
+	border-bottom: 0 !important;
+}
+
+::shadow .toolbar-input {
+	.input-styles();
+
+	input {
+		.input-styles();
 	}
 }
