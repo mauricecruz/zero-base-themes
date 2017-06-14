@@ -1,8 +1,12 @@
 // Settings in now in shadow dom
-::shadow {
+::shadow ::shadow {
 	/*************************************
 	 * Help/Settings Overlay
 	 *************************************/
+	::shadow ::shadow ::shadow .settings-window-title {
+		color: @global-text !important;
+	}
+
 
 	.help-window-main {
 		background-color: @global-background;
@@ -47,6 +51,16 @@
 			.input-styles();
 		}
 
+		select.chrome-select {
+			box-shadow: none !important;
+			text-shadow: none !important;
+			background-image: -webkit-image-set(
+				url(Images/chromeSelect.png) 1x,
+				url(Images/chromeSelect_2x.png) 2x),
+				linear-gradient(@global-background, @global-background);
+
+		}
+
 		//disabled styles
 		fieldset:disabled label {
 			color: fade(@form-label-text, 30%) !important;
@@ -80,6 +94,11 @@
 			.block-header {
 				color: @global-label !important;
 			}
+		}
+
+		.settings-info-message {
+			background-color: lighten(@global-background, 5%) !important;
+			color: @global-text !important;
 		}
 
 		.settings-list-container {
@@ -179,7 +198,7 @@
 			}
 
 			.devices-list-title {
-				opacity: 0.2 !important;
+				opacity: 0.5 !important;
 				color: @global-text !important;
 			}
 
