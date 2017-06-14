@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.4.0
+* fix styles on settings panel
+
 ## 2.3.9
 * extend element search to full window width
 * fix syntax colors on network tab
