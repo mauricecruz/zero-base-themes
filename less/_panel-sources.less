@@ -120,6 +120,15 @@
 		color: @global-label !important;
 		background-color: @global-background !important;
 	}
+
+	&.selected {
+		.highlight(selection);
+
+		.call-frame-location {
+			background-color: @global-selected !important;
+			color: @global-text !important;
+		}
+	}
 }
 
 // Paused Breakpoint
