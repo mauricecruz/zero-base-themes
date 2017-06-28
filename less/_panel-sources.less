@@ -432,3 +432,27 @@ li.breakpoint-hit .breakpoint-hit-marker {
 .view-container > .toolbar {
 	border-bottom : 1px solid @global-divider !important;
 }
+
+// ==========================================================================
+// Threads
+// ==========================================================================
+::shadow .thread-item {
+	color: @global-text !important;
+
+	&:hover {
+		.highlight(hover);
+	}
+
+	&.selected {
+		.highlight(selection);
+
+		&.hover {
+			.highlight(selection);
+		}
+	}
+
+	+ .thread-item {
+		border-top: 1px solid @global-divider !important;
+	}
+
+}
