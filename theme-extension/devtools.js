@@ -1,6 +1,6 @@
 var xhr = new XMLHttpRequest(),
 	stylesheet = 'stable.css',
-	stableVersion = 57;
+	stableVersion = 59;
 
 if (/Chrome\/(\d\d)/.exec(navigator.userAgent)[1] > stableVersion) {
 	stylesheet = 'canary.css';

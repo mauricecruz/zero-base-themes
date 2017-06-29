@@ -74,10 +74,15 @@
 // ==========================================================================
 // File/Function Dialog
 // ==========================================================================
-::shadow .filtered-list-widget {
+::shadow ::shadow .filtered-list-widget {
 	background: @dialog-background !important;
 	box-shadow: 0 5px 15px 5px rgba(0,0,0,.6) !important;
 	border: 1px solid @dialog-border !important;
+
+	.not-found-text {
+		background-color: @dialog-item-background !important;
+		color: @dialog-item-text !important;
+	}
 
 	.filtered-list-widget-prompt-element {
 		box-shadow: none !important;

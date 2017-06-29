@@ -1,21 +1,16 @@
-// ==========================================================================
-// Mixins
-// ==========================================================================
-
 .arrow-styles() {
-	.glyphs("Images/toolbarButtonGlyphs");
-
+	.glyphs("Images/treeoutlineTriangles");
 	background-color: @global-arrow !important;
 	background-image: none !important;
 	-webkit-mask-repeat: no-repeat !important;
 	color: rgba(0,0,0,0) !important;
 	opacity: 1 !important;
+	-webkit-mask-size: 32px 24px !important;
 }
 
-// Generates the styles for arrows. Defaults to the most commonly used selectors
 .arrow-mixin(@arrow-right: ~'li.parent::before', @arrow-down: ~'li.parent.expanded::before') {
-	@{arrow-right} { -webkit-mask-position: -4px -96px !important; }
-	@{arrow-down} { -webkit-mask-position: -20px -96px !important; }
+	@{arrow-right} { -webkit-mask-position: 0 0 !important; }
+	@{arrow-down} { -webkit-mask-position: -16px 0 !important; }
 
 	@{arrow-right},
 	@{arrow-down} {
@@ -23,121 +18,7 @@
 	}
 }
 
-/* ==========================================================================
-   Expand/Collapse Sections
-   ========================================================================== */
-
-// Elements Panel
+// Element Panel
 ::shadow .elements-disclosure ol {
 	.arrow-mixin();
 }
-
-// Elements Sidebar
-.styles-section.matched-styles .style-properties {
-	.arrow-mixin(~'li.parent .expand-element', ~'li.parent.expanded .expand-element');
-}
-
-// Sources Sidebar Titles
-.sidebar-pane-stack {
-	.arrow-mixin(~'.sidebar-pane-title::before', ~'.sidebar-pane-title.expanded::before');
-}
-
-// Sources Sidebar Event Listener Breakpoints
-.event-listener-breakpoints {
-	.arrow-mixin();
-
-	li.parent::before,
-	li.parent.expanded::before {
-		-webkit-mask-position: -4px -94px !important;
-	}
-}
-
-// Navigation Trees | Network Headers Items
-.outline-disclosure {
-	.arrow-mixin();
-}
-
-// Position adjustment for network headers
-.request-headers-view .outline-disclosure li.parent {
-
-	&::before,
-	&.expanded::before {
-		// -webkit-mask-position: -4px -98px !important;
-		margin: 0 4px !important;
-	}
-}
-
-// Drawer Find
-::shadow #search-results-pane-file-based .parent {
-	&::before,
-	&.expanded::before {
-		.arrow-styles;
-		margin-right: 2px !important;
-	}
-
-	&::before {
-		-webkit-mask-position: -4px -93px !important;
-	}
-
-	&.expanded::before {
-		-webkit-mask-position: -20px -93px !important;
-	}
-}
-
-// Console
-::shadow .tree-outline {
-	.arrow-mixin(~'li::before', ~'li.expanded::before');
-}
-
-// Maintain transparency for properties that don't have children
-::shadow .tree-outline li:not(.parent)::before {
-	background-color: transparent !important;
-}
-
-// Timeline Item Header
-.timeline-tree-item {
-	.arrow-mixin(~'.timeline-tree-item-expand-arrow.parent', ~'.timeline-tree-item-expand-arrow.parent.expanded');
-}
-
-// Timeline Item Content - just color arrow
-.timeline-expandable {
-
-	&.timeline-expandable-expanded .timeline-expandable-arrow {
-		-webkit-mask-position: -20px -96px !important;
-	}
-
-	.timeline-expandable-arrow{
-		.arrow-styles;
-	}
-}
-
-// ==========================================================================
-// Other Types
-// ==========================================================================
-
-
-// Sorting Columns
-.sort-order-icon {
-	.arrow-styles;
-}
-
-.sort-ascending .sort-order-icon,
-.sort-ascending.sort-order-icon {
-	-webkit-mask-position: -4px -111px !important;
-}
-
-.sort-descending .sort-order-icon,
-.sort-descending.sort-order-icon {
-	-webkit-mask-position: -20px -99px !important;
-}
-
-
-::shadow {
-
-	// selectbox arrows
-	.status-bar-select-arrow {
-		.arrow-styles;
-		-webkit-mask-position: -20px -96px !important;
-	}
-
-} // ::shadow

@@ -1,7 +1,7 @@
+// ==========================================================================
+// Sources
+// ==========================================================================
 
-/**********************************************
-/* Sources Tab
-/**********************************************/
 /*placeholder text when no file is open*/
 ::shadow .tabbed-pane-placeholder {
 	text-shadow: 0 1px 0 @global-textshadow !important;
@@ -454,5 +454,31 @@ li.breakpoint-hit .breakpoint-hit-marker {
 	+ .thread-item {
 		border-top: 1px solid @global-divider !important;
 	}
+}
 
+// ==========================================================================
+// Persistence 2.0 Sources Tab Icons
+// ==========================================================================
+::shadow .spritesheet-mediumicons:not(.icon-mask) {
+	&.mediumicon-file-sync,
+  &.mediumicon-file {
+		.glyphs("Images/mediumIcons");
+		background: @tab-label !important;
+
+	}
+
+	&.mediumicon-file {
+		-webkit-mask-position: -0px 32px !important;
+		position: relative;
+	}
+
+	&.mediumicon-file-sync {
+		-webkit-mask-position: -48px 48px !important;
+	}
+}
+
+::shadow .selected .spritesheet-mediumicons:not(.icon-mask) {
+	&.mediumicon-file {
+		background: @tab-label-selected !important;
+	}
 }

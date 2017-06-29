@@ -113,6 +113,10 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	color: @global-text !important;
 }
 
+::shadow .elements-tree-editor {
+	box-shadow: none !important;
+}
+
 // Editing Scope values
 ::shadow .editing-sub-part ::shadow .text-prompt-editing ::content * {
 	background-color: @global-background !important;
@@ -161,42 +165,42 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	background-color: transparent !important;
 	box-shadow: none !important;
 }
-// Context Menu (New settings button and material menus)
-.soft-context-menu {
+
+
+::shadow .soft-context-menu {
 	background: @popover-background !important;
 	border: 1px solid @- !important; .contrast(@popover-background, 5%);
 	color: @global-text !important;
 	box-shadow: 0 5px 10px fade(#000, 40%) !important;
 
-	&::shadow {
-		.soft-context-menu-item-mouse-over {
-			& { background-color: @- !important; .contrast(@popover-background, 8%); }
-			& { border-top: 1px solid @- !important; .contrast(@popover-background, 10%); }
-			& { border-bottom: 1px solid @- !important; .contrast(@popover-background, 10%); }
-			background-image: none !important;
+
+	.soft-context-menu-item-mouse-over {
+		& { background-color: @- !important; .contrast(@popover-background, 8%); }
+		& { border-top: 1px solid @- !important; .contrast(@popover-background, 10%); }
+		& { border-bottom: 1px solid @- !important; .contrast(@popover-background, 10%); }
+		background-image: none !important;
+		color: @global-text !important;
+	}
+
+	.soft-context-menu-separator > .separator-line {
+		border-bottom: 1px solid @- !important; .contrast(@popover-background, 5%);
+	}
+
+	.checkmark {
+		.glyphs("Images/toolbarButtonGlyphs");
+
+		-webkit-mask-position: -128px -109px;
+		-webkit-mask-size: 352px 168px;
+		background-color: @global-accent !important;
+		background-image: none !important;
+	}
+
+	// Dock options (remove blue hover)
+	.toolbar::shadow .toolbar-shadow.blue-on-hover .toolbar-item:not(.toggled-on).hover:enabled {
+		background-color: @global-hover !important;
+
+		.glyph {
 			color: @global-text !important;
-		}
-
-		.soft-context-menu-separator > .separator-line {
-			border-bottom: 1px solid @- !important; .contrast(@popover-background, 5%);
-		}
-
-		.checkmark {
-			.glyphs("Images/toolbarButtonGlyphs");
-
-			-webkit-mask-position: -128px -109px;
-			-webkit-mask-size: 352px 168px;
-			background-color: @global-accent !important;
-			background-image: none !important;
-		}
-
-		// Dock options (remove blue hover)
-		.toolbar::shadow .toolbar-shadow.blue-on-hover .toolbar-item:not(.toggled-on).hover:enabled {
-			background-color: @global-hover !important;
-
-			.glyph {
-				color: @global-text !important;
-			}
 		}
 	}
 }
@@ -303,5 +307,21 @@ label[is="dt-radio"]::shadow ::content .dt-radio-button:checked {
 	&.smallicon-inline-breakpoint-conditional {
 		.glyphs("Images/smallIcons");
 		background: @global-accent !important;
+	}
+}
+
+.cm-inline-breakpoint {
+	-webkit-mask-position: -60px 90px !important;
+}
+
+// override for disabled inline breakpoints
+.cm-execution-line-tail + .CodeMirror-widget {
+	background-color: transparent !important;
+}
+
+::shadow {
+	.selected-call-frame-icon,
+	.selected-thread-icon {
+		-webkit-mask-position: -80px 50px !important;
 	}
 }

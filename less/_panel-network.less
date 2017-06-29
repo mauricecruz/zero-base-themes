@@ -1,6 +1,7 @@
-/**********************************************
-/* Network Tab (uses _tables.less for list of nodes)
-/**********************************************/
+// ==========================================================================
+// Network
+// ==========================================================================
+
 #network-container {
 	border-top: none !important;
 }
@@ -293,4 +294,16 @@
 	.sort-order-icon-container {
 		background-color: @global-toolbar !important;
 	}
+}
+
+// Network Timing Popover
+::shadow {
+	.network-timing-table tr { color: @global-text !important; }
+	.network-timing-table-header td { color: @global-accent !important; }
+	.network-timing-bar-title { color: @global-text !important; }
+}
+
+// Film Strip
+::shadow .film-strip-view {
+	color: @global-text !important;
 }
