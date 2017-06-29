@@ -143,40 +143,6 @@
 // ==========================================================================
 // Syntax for Elements Panel & Console
 // ==========================================================================
-::shadow {
-
-	// HTML
-	// ==========================================================================
-
-
-	// JS & CSS use codemirror selectors and html for the inline edits
-	.syntax-js();
-	.syntax-css();
-	.syntax-html();
-
-	// CSS
-	// ==========================================================================
-
-
-	// // Javascript
-	// // ==========================================================================
-	// .section .properties .name,
-	// .event-properties .name,
-	// .console-formatted-object .name { color: @js-obj-name !important; }
-	// .console-formatted-object,
-	// .console-formatted-array { color: @js-obj-array !important; }
-	// .console-formatted-function { color: @js-obj-function !important; }
-	// .console-formatted-number { color: @js-obj-number !important; }
-	// .console-formatted-boolean { color: @js-obj-boolean !important; }
-	// .console-object-preview { color: @js-obj-preview !important; }
-	// .console-formatted-regexp { color: @js-obj-regexp !important; }
-	// .console-formatted-string { color: @js-obj-string !important; }
-	// .console-formatted-undefined { color: @js-obj-undefined !important; }
-	// .json .title { color: @global-text !important;}
-	// .json .separator { color: darken(@global-text, 35%) !important;}
-}
-
-
 .popover .parent + .children.expanded,
 #console-messages .parent + .children.expanded,
 .sidebar-pane .parent:not(.event-category) + .children.expanded {
@@ -204,9 +170,6 @@
 	.object-value-function-prefix { color: @js-obj-function !important; }
 }
 
-::shadow {
-	.object-value-function-prefix { color: @js-obj-function !important; }
-}
 
 ::shadow ::shadow .webkit-html-external-link,
 ::shadow ::shadow .webkit-html-resource-link {
@@ -216,4 +179,13 @@
 .devtools-link,
 ::shadow .devtools-link {
 	color: @global-link !important;
+}
+
+::shadow,
+::shadow ::shadow {
+	.syntax-js();
+	.syntax-css();
+	.syntax-html();
+
+	.object-value-function-prefix { color: @js-obj-function !important; }
 }

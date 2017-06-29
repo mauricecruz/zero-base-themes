@@ -1,7 +1,7 @@
 /* ==========================================================================
    Popovers
    ========================================================================== */
-.popover-container ::shadow .widget {
+.vbox.no-pointer-events::shadow .widget {
 	min-height: 0 !important;
 	border-width: 0 !important;
 	background: @popover-background !important;
@@ -18,15 +18,11 @@
 		-webkit-mask-position: 0 -19px;
 	}
 
-	.popover-content {
+	.object-popover-content {
 		border-radius: 3px !important;
 		color: @global-text !important;
 
-		.function {
-			color: @popover-title !important;
-		}
-
-		.source-frame-popover-tree {
+		.object-popover-tree {
 			border-top: 1px solid @popover-tree-border !important;
 		}
 
