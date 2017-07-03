@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.1
+* Fix popover styles
+* Fix callstack highlighting
+
 ## 2.4.0
 * fix styles on settings panel
 
