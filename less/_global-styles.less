@@ -196,6 +196,36 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	}
 }
 
+// Console context dropdown
+::shadow .console-context {
+	background-color: transparent !important;
+
+	&.warning::shadow .title {
+		color: @global-warn !important;
+	}
+}
+
+::shadow .widget::shadow .context-list {
+	background: @popover-background !important;
+	border: 1px solid @- !important; .contrast(@popover-background, 5%);
+	color: @global-text !important;
+	box-shadow: 0 5px 10px fade(#000, 40%) !important;
+
+	.context.selected {
+		& { background-color: @- !important; .contrast(@popover-background, 8%); }
+		& { border-top: 1px solid @- !important; .contrast(@popover-background, 10%); }
+		& { border-bottom: 1px solid @- !important; .contrast(@popover-background, 10%); }
+
+		.title {
+			color: @global-text !important;
+		}
+
+		.subtitle {
+			color: @global-label !important;
+		}
+	}
+}
+
 // Tooltips
 ::shadow .tooltip {
 	background: @- !important; .contrast(@global-background, 3%);

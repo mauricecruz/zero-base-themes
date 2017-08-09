@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.2
+* Fix console filter selection ui
+* Fix console context selection
+
 ## 2.4.1
 * Fix popover styles
 * Fix callstack highlighting
