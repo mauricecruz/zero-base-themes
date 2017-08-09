@@ -186,15 +186,6 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 		border-bottom: 1px solid @- !important; .contrast(@popover-background, 5%);
 	}
 
-	.checkmark {
-		.glyphs("Images/toolbarButtonGlyphs");
-
-		-webkit-mask-position: -128px -109px;
-		-webkit-mask-size: 352px 168px;
-		background-color: @global-accent !important;
-		background-image: none !important;
-	}
-
 	// Dock options (remove blue hover)
 	.toolbar::shadow .toolbar-shadow.blue-on-hover .toolbar-item:not(.toggled-on).hover:enabled {
 		background-color: @global-hover !important;
@@ -307,6 +298,12 @@ label[is="dt-radio"]::shadow ::content .dt-radio-button:checked {
 	&.smallicon-inline-breakpoint-conditional {
 		.glyphs("Images/smallIcons");
 		background: @global-accent !important;
+	}
+
+	&.smallicon-checkmark {
+		.glyphs("Images/smallIcons");
+		background: @global-accent !important;
+		-webkit-mask-position: -20px 90px !important;
 	}
 }
 
