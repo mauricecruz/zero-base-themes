@@ -112,6 +112,16 @@
 		border-top: 1px solid @global-divider !important;
 	}
 
+	&.async-header .call-frame-item-title {
+		background: @global-background !important;
+
+		.call-frame-title-text {
+			color: @global-warn !important;
+			font-weight: normal !important;
+		}
+
+	}
+
 	.call-frame-item-title {
 		color: @global-text !important;
 	}
@@ -151,6 +161,12 @@
 			}
 		}
 	}
+}
+
+// Blackbox Indicator
+::shadow .blackboxed-message {
+	background-color: @toolbar-main !important;
+	color: @global-text !important;
 }
 
 // Sidebar Pane Headers
