@@ -26,6 +26,10 @@ module.exports = function(grunt) {
 		},
 		less: {
 			generate: {
+				options: {
+					compress: true,
+					ieCompat: false
+				},
 				files: {
 					'theme-extension/stable.css': 'less/build-stable.less',
 					'theme-extension/canary.css': 'less/build-canary.less',

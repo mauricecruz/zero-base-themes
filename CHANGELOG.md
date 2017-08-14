@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.4.9
+* Minify stylesheets
+
 ## 2.4.8
 * Fix console filter selection ui
 * Fix console context selection
