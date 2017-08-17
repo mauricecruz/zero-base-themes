@@ -3,7 +3,7 @@
 // ==========================================================================
 
 /*placeholder text when no file is open*/
-::shadow .tabbed-pane-placeholder {
+.tabbed-pane-placeholder {
 	text-shadow: 0 1px 0 @global-textshadow !important;
 	color: @sources-placeholder-text !important;
 }
@@ -25,38 +25,36 @@
 }
 
 // Breakpoints
-::shadow {
-	.breakpoints-list-deactivated {
-		background-color: @- !important; .contrast(@global-background, 5%) !important;
-		opacity: 0.3 !important
-	}
+.breakpoints-list-deactivated {
+	background-color: @- !important; .contrast(@global-background, 5%) !important;
+	opacity: 0.3 !important
+}
 
-	.breakpoint-hit {
-		background: @selection-background !important;
-		border-top: 1px solid @selection-border !important;
-		border-bottom: 1px solid @selection-border !important;
-	}
+.breakpoint-hit {
+	background: @selection-background !important;
+	border-top: 1px solid @selection-border !important;
+	border-bottom: 1px solid @selection-border !important;
+}
 
-	.breakpoint-entry {
-		color: @global-text !important;
+.breakpoint-entry {
+	color: @global-text !important;
 
-		&:not(.breakpoint-hit) {
+	&:not(.breakpoint-hit) {
+		border-top: 1px solid @global-divider !important;
+
+		&:hover {
+			background-color: @global-hover !important;
 			border-top: 1px solid @global-divider !important;
-
-			&:hover {
-				background-color: @global-hover !important;
-				border-top: 1px solid @global-divider !important;
-			}
 		}
+	}
 
-		.source-text {
-			color: @global-accent !important;
-		}
+	.source-text {
+		color: @global-accent !important;
 	}
 }
 
 .breakpoint-list li,
-::shadow .list-item:not(.label) {
+.list-item:not(.label) {
 	color: @global-text !important;
 	border-top: 1px solid @global-divider !important;
 
@@ -80,7 +78,7 @@
 	color: @global-text;
 
 	/* Call Stack */
-	::shadow .list-item {
+	.list-item {
 
 		.title,
 		.subtitle {
@@ -105,7 +103,7 @@
 	}
 }
 
-::shadow .call-frame-item {
+.call-frame-item {
 	background-color: @global-background !important;
 
 	&:not(.async-header) {
@@ -142,35 +140,33 @@
 }
 
 // Paused Breakpoint
-::shadow {
-	.paused-status {
-		background-color: @toolbar-main !important;
-		color: @global-text !important;
-		border-top: 4px solid @global-divider !important;
-		border-bottom: 4px solid @global-divider !important;
+.paused-status {
+	background-color: @toolbar-main !important;
+	color: @global-text !important;
+	border-top: 4px solid @global-divider !important;
+	border-bottom: 4px solid @global-divider !important;
+
+	.status-main {
+		color: @global-warn !important;
+	}
+
+	&.error-reason {
+		color: @global-error !important;
 
 		.status-main {
-			color: @global-warn !important;
-		}
-
-		&.error-reason {
 			color: @global-error !important;
-
-			.status-main {
-				color: @global-error !important;
-			}
 		}
 	}
 }
 
 // Blackbox Indicator
-::shadow .blackboxed-message {
+.blackboxed-message {
 	background-color: @toolbar-main !important;
 	color: @global-text !important;
 }
 
 // Sidebar Pane Headers
-::shadow .expandable-view-title {
+.expandable-view-title {
 	color: @global-text !important;
 	background: @toolbar-main !important;
 	& { border-top: 1px solid @- !important; .contrast(@toolbar-main, 5%); }
@@ -328,23 +324,21 @@ li.breakpoint-hit .breakpoint-hit-marker {
 }
 
 // Notification bar (for mismatch/blackbox notices)
-::shadow {
-	.infobar {
-		& {border-bottom: 2px solid @- !important; .contrast(@global-background, 10%);}
-		& {background-color: @- !important; .contrast(@global-background, 5%);}
-	}
+.infobar {
+	& {border-bottom: 2px solid @- !important; .contrast(@global-background, 10%);}
+	& {background-color: @- !important; .contrast(@global-background, 5%);}
+}
 
-	.infobar-info {
-		color: @global-text !important;
-	}
+.infobar-info {
+	color: @global-text !important;
+}
 
-	.infobar-warning {
-		color: @global-warn !important;
-	}
+.infobar-warning {
+	color: @global-warn !important;
+}
 
-	.source-frame-infobar-toggle-link {
-		color: @global-accent !important;
-	}
+.source-frame-infobar-toggle-link {
+	color: @global-accent !important;
 }
 
 // style hover for watches
@@ -414,19 +408,18 @@ li.breakpoint-hit .breakpoint-hit-marker {
 	background-color: @- !important; .contrast(@glyph-inactive, 50%);
 }
 
-::shadow .event-listener-button {
+.event-listener-button {
 	.button-styles()
 }
 
-::shadow .tree-outline-disclosure .name { color: @js-obj-name !important; }
-
+.tree-outline-disclosure .name { color: @js-obj-name !important; }
 
 // ==========================================================================
 // Sources Tree Navigation
 // ==========================================================================
 
 // remove bg from selected menu item
-::shadow .tree-outline li {
+.tree-outline li {
 	background-color: rgba(0,0,0,0) !important;
 }
 
@@ -434,7 +427,7 @@ li.breakpoint-hit .breakpoint-hit-marker {
 // Sources Info Bar
 // ==========================================================================
 
-::shadow .infobar-info {
+.infobar-info {
 	background-color: @toolbar-sub !important;
 	border-bottom: 1px solid @toolbar-divider !important;
 	color: @global-text !important;
@@ -452,7 +445,7 @@ li.breakpoint-hit .breakpoint-hit-marker {
 // ==========================================================================
 // Threads
 // ==========================================================================
-::shadow .thread-item {
+.thread-item {
 	color: @global-text !important;
 
 	&:hover {
@@ -475,7 +468,7 @@ li.breakpoint-hit .breakpoint-hit-marker {
 // ==========================================================================
 // Persistence 2.0 Sources Tab Icons
 // ==========================================================================
-::shadow .spritesheet-mediumicons:not(.icon-mask) {
+.spritesheet-mediumicons:not(.icon-mask) {
 	&.mediumicon-file-sync,
   &.mediumicon-file {
 		.glyphs("Images/mediumIcons");
@@ -493,7 +486,7 @@ li.breakpoint-hit .breakpoint-hit-marker {
 	}
 }
 
-::shadow .selected .spritesheet-mediumicons:not(.icon-mask) {
+.selected .spritesheet-mediumicons:not(.icon-mask) {
 	&.mediumicon-file {
 		background: @tab-label-selected !important;
 	}

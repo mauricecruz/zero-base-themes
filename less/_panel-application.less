@@ -3,7 +3,7 @@
 // ==========================================================================
 
 // Backgrounds
-.panel.resources .insertion-point-main ::shadow ::shadow {
+.panel.resources .insertion-point-main {
 	.widget,
 	.report-content-box {
 		background-color: @global-background;
@@ -15,12 +15,12 @@
 		border-bottom: 1px solid @global-divider;
 	}
 
-	::shadow .toolbar-render-as-links * {
+	.toolbar-render-as-links * {
 		color: @global-link;
 	}
 }
 
-::shadow .tree-outline li.storage-group-list-item {
+.tree-outline li.storage-group-list-item {
 	border: 1px solid @global-divider;
 	background-color: @- !important; .contrast(@global-background, 5%);
 }
@@ -96,78 +96,75 @@ border-bottom: none !important;
 // ==========================================================================
 // Service Workers
 // ==========================================================================
+.service-workers-settings {
+	border-bottom: none !important;
+	background: @toolbar-main !important;
+	border-bottom: 1px solid @toolbar-divider !important;
+}
 
-::shadow {
-	.service-workers-settings {
-		border-bottom: none !important;
-		background: @toolbar-main !important;
-		border-bottom: 1px solid @toolbar-divider !important;
-	}
+.service-workers-versions-mode-tab {
+	background-color: @toolbar-main !important;
+}
 
-	.service-workers-versions-mode-tab {
-		background-color: @toolbar-main !important;
-	}
+.service-workers-versions-mode-tab,
+.service-workers-versions-panel,
+.service-workers-registration-header {
+	border: none !important;
+}
 
-	.service-workers-versions-mode-tab,
-	.service-workers-versions-panel,
-	.service-workers-registration-header {
+.service-worker-client-focus {
+	color: @global-link !important;
+}
+
+.service-workers-origin-title {
+	color: @global-text !important;
+}
+
+.service-workers-registration {
+	border: 1px solid @global-divider !important;
+	color: @global-text !important;
+}
+
+.service-workers-registration-content {
+	color: @global-text !important;
+}
+
+.service-workers-versions-table-row-title {
+	color: @global-label !important;
+}
+
+.service-workers-versions-table-running-status-inspect {
+	color: @xml-link !important;
+}
+
+.service-workers-versions-mode-tab {
+	&-list {
 		border: none !important;
 	}
 
-	.service-worker-client-focus {
-		color: @global-link !important;
+	&-selected {
+		background: @selection-background !important;
 	}
 
-	.service-workers-origin-title {
-		color: @global-text !important;
+	&-disabled {
+		background-color: @toolbar-sub !important;
 	}
 
-	.service-workers-registration {
-		border: 1px solid @global-divider !important;
-		color: @global-text !important;
+	&-text-disabled {
+		color: @- !important; .contrast(@global-text, 30%, invert);
 	}
+}
 
-	.service-workers-registration-content {
-		color: @global-text !important;
-	}
+.service-workers-update-button,
+.service-workers-push-button,
+.service-workers-delete-button,
+.service-workers-start-button,
+.service-workers-stop-button {
+	opacity: 1;
+	background-color: @glyph-inactive;
 
-	.service-workers-versions-table-row-title {
-		color: @global-label !important;
-	}
-
-	.service-workers-versions-table-running-status-inspect {
-		color: @xml-link !important;
-	}
-
-	.service-workers-versions-mode-tab {
-		&-list {
-			border: none !important;
-		}
-
-		&-selected {
-			background: @selection-background !important;
-		}
-
-		&-disabled {
-			background-color: @toolbar-sub !important;
-		}
-
-		&-text-disabled {
-			color: @- !important; .contrast(@global-text, 30%, invert);
-		}
-	}
-
-	.service-workers-update-button,
-	.service-workers-push-button,
-	.service-workers-delete-button,
-	.service-workers-start-button,
-	.service-workers-stop-button {
-		opacity: 1;
-		background-color: @glyph-inactive;
-
-		&:hover { background-color: @glyph-hover; }
-		&:active { background-color: @glyph-active; }
-	}
+	&:hover { background-color: @glyph-hover; }
+	&:active { background-color: @glyph-active; }
 }
 
 // ==========================================================================

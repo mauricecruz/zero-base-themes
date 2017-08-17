@@ -1,44 +1,40 @@
-/************************************************
-/* Status bar
-/************************************************/
+// ==========================================================================
+// Status Bar
+// ==========================================================================
 
-//Select boxes
-.toolbar::shadow {
+// style select box
+select.toolbar-item,
+select.toolbar-item:hover {
+	color: @global-text !important;
+	text-shadow: none !important;
+	border-left: 1px solid @toolbar-divider;
+	border-right: 1px solid @toolbar-divider;
+	border-top: none !important;
+	border-bottom: none !important;
+	background: inherit !important;
+}
 
-	// style select box
-	select.toolbar-item,
-	select.toolbar-item:hover {
-		color: @global-text !important;
-		text-shadow: none !important;
-		border-left: 1px solid @toolbar-divider;
-		border-right: 1px solid @toolbar-divider;
-		border-top: none !important;
-		border-bottom: none !important;
-		background: inherit !important;
+select.toolbar-item {
+	margin-right: -17px !important;
+
+	optgroup {
+		background-color: @-; .contrast(@global-background, 5%);
 	}
 
-	select.toolbar-item {
-		margin-right: -17px !important;
-
-		optgroup {
-			background-color: @-; .contrast(@global-background, 5%);
-		}
-
-		option {
-			background-color: @global-background !important;
-		}
+	option {
+		background-color: @global-background !important;
 	}
+}
 
-	// move arrow away from edge
-	.toolbar-select-arrow {
-		.glyphs("Images/toolbarButtonGlyphs");
+// move arrow away from edge
+.toolbar-select-arrow {
+	.glyphs("Images/toolbarButtonGlyphs");
 
-		position: relative !important;
-		right: 10px !important;
-		background-image: none !important;
-		-webkit-mask-position: -20px -96px !important;
-		background-color: @global-arrow !important;
-	}
+	position: relative !important;
+	right: 10px !important;
+	background-image: none !important;
+	-webkit-mask-position: -20px -96px !important;
+	background-color: @global-arrow !important;
 }
 
 .status-bar-items {
@@ -68,16 +64,13 @@ button.garbage-collect-status-bar-item:active .glyph,
 button.glue-async-status-bar-item:active .glyph,
 .filters-toggle.toggled-shown .glyph,
 
-::shadow {
-	.toggled-on .long-click-glyph {
-		background-color: @glyph-active !important;
-	}
-
-	.long-click-glyph {
-		background-color: @glyph-inactive !important;
-	}
+.toggled-on .long-click-glyph {
+	background-color: @glyph-active !important;
 }
 
+.long-click-glyph {
+	background-color: @glyph-inactive !important;
+}
 
 .toolbar-background button.status-bar-item .glyph,
 .toolbar-background button.status-bar-item .long-click-glyph {
@@ -145,7 +138,7 @@ label.checkbox,
 }
 
 .resources-toolbar,
-::shadow .search-toolbar-summary {
+.search-toolbar-summary {
 	background: @toolbar-sub !important;
 	border-top: 1px solid @global-background !important;
 	color: @global-text !important;
@@ -167,7 +160,7 @@ label.checkbox,
 }
 
 // pretty much all label text in the status bars
-html /deep/ .component-root {
+html .component-root {
 	color: @global-text !important;
 }
 

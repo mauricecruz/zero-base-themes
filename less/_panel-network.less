@@ -111,7 +111,7 @@
 	}
 }
 
-.request-headers-view ::shadow .parent {
+.request-headers-view .parent {
 	& { background-color: @- !important; .contrast(@global-background, 2.5%) };
 	color: @global-text !important;
 	& { border-top: 1px solid @- !important; .contrast(@global-background, 10%) };
@@ -195,7 +195,7 @@
 .network-details-view-tall-header {
 	margin-top: 0 !important;
 
-	.network-item-view::shadow {
+	.network-item-view {
 		.tabbed-pane-header {
 			padding-top: 0 !important;
 		}
@@ -207,22 +207,8 @@
 	top: -1px !important;
 }
 
-// Request Header js objects
-::shadow {
-	.object-value-string-quote { color: @js-obj-string !important; }
-}
-
-::shadow ::shadow {
-	.object-value-string { color: @js-obj-string !important; }
-	.object-value-regexp { color: @js-obj-regexp !important; }
-	.object-value-symbol { color: @js-obj-regexp !important; }
-	.object-properties-section .name { color: @js-obj-name !important; }
-	.object-value-number { color: @js-obj-number !important; }
-	.object-value-object { color: @js-obj-array !important; }
-}
-
 // Header Labels
-::shadow .tree-outline .header-name {
+.tree-outline .header-name {
 	color: @global-label !important;
 }
 
@@ -245,7 +231,7 @@
 // ==========================================================================
 // Filmstrip (also used in network)
 // ==========================================================================
-::shadow .filmstrip-dialog-label {
+.filmstrip-dialog-label {
 	color: @global-text !important;
 }
 
@@ -256,30 +242,24 @@
 .network-blocked-urls {
 	border-top: none !important;
 
-	&::shadow {
+	// Header for blocked urls
+	.toolbar {
+		border-bottom: none !important;
 
-		// Header for blocked urls
-		.toolbar {
-			border-bottom: none !important;
-
-			&::shadow {
-
-				.toolbar-shadow {
-					background-image: linear-gradient(@tab-color-top,@tab-color-bottom) !important;
-				}
-
-				.toolbar-text {
-					color: @global-text !important;
-				}
-			}
+		.toolbar-shadow {
+			background-image: linear-gradient(@tab-color-top,@tab-color-bottom) !important;
 		}
 
-		.blocked-url {
+		.toolbar-text {
 			color: @global-text !important;
+		}
+	}
 
-			&:hover {
-				.highlight(hover);
-			}
+	.blocked-url {
+		color: @global-text !important;
+
+		&:hover {
+			.highlight(hover);
 		}
 	}
 }
@@ -297,17 +277,14 @@
 }
 
 // Network Timing Popover
-::shadow {
-	.network-timing-table tr { color: @global-text !important; }
-	.network-timing-table-header td { color: @global-accent !important; }
-	.network-timing-bar-title { color: @global-text !important; }
-}
+.network-timing-table tr { color: @global-text !important; }
+.network-timing-table-header td { color: @global-accent !important; }
+.network-timing-bar-title { color: @global-text !important; }
 
 // Film Strip
-::shadow .film-strip-view {
+.film-strip-view {
 	color: @global-text !important;
 }
-
 
 // HTML preview
 .request-view.html {

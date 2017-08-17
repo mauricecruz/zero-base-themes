@@ -1,87 +1,82 @@
-/***********************/
-/* Tabbed Panes
-/***********************/
+// ==========================================================================
+// Toolbars
+// ==========================================================================
 
-::shadow {
+.tabbed-pane-header {
+	background: @toolbar-main;
+	box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
+	border-bottom: 1px solid @global-background !important;
+	border: none;
+}
 
-	.tabbed-pane-header {
-		background: @toolbar-main;
-		box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
-		border-bottom: 1px solid @global-background !important;
-		border: none;
-	}
+.tabbed-pane-header-tab {
+	border-color: transparent !important;
+	border-image: none !important;
+	border-left: none !important;
+	border-right: none !important;
+	border-top: 2px solid rgba(0,0,0,0) !important;
+	cursor: pointer !important;
+	margin: 0 !important;
+	margin-bottom: 1px !important;
+	margin-top: 0 !important;
 
-	.tabbed-pane-header-tab {
-		border-color: transparent !important;
-		border-image: none !important;
-		border-left: none !important;
-		border-right: none !important;
-		border-top: 2px solid rgba(0,0,0,0) !important;
-		cursor: pointer !important;
-		margin: 0 !important;
-		margin-bottom: 1px !important;
-		margin-top: 0 !important;
-
-		&:hover {
-			color: @tab-label-selected !important;
-			background-color: rgba(0,0,0,0) !important;
-		}
-
-		&.selected {
-			background: none !important;
-			border-top: 2px solid @tab-highlighted !important;
-			color: @tab-label-selected !important;
-			font-size: 1em;
-		}
-	}
-
-	//main nav tabs
-	.tabbed-pane-header-contents {
-		box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
-		color: @tab-label !important;
-	}
-
-	// drop-down hook when viewport is short
-	.tabbed-pane-header-tabs-drop-down-container {
+	&:hover {
+		color: @tab-label-selected !important;
 		background-color: rgba(0,0,0,0) !important;
-
-		> .glyph {
-			background-color: @tab-label !important;
-		}
 	}
 
-	// drawer background color
-	.tabbed-pane-content {
-		background-color: @global-background !important;
+	&.selected {
+		background: none !important;
+		border-top: 2px solid @tab-highlighted !important;
+		color: @tab-label-selected !important;
+		font-size: 1em;
 	}
+}
 
-	// drawer (search) form labels (does this belong here?)
-	.search-drawer-header label.search-config-label {
-		color: @form-label-text !important;
+//main nav tabs
+.tabbed-pane-header-contents {
+	box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
+	color: @tab-label !important;
+}
+
+// drop-down hook when viewport is short
+.tabbed-pane-header-tabs-drop-down-container {
+	background-color: rgba(0,0,0,0) !important;
+
+	> .glyph {
+		background-color: @tab-label !important;
 	}
+}
 
-	.status-bar-item[disabled] {
-		opacity: 0.5 !important;
-	}
+// drawer background color
+.tabbed-pane-content {
+	background-color: @global-background !important;
+}
 
-	// sidebar borders
-	.shadow-split-view.hbox.shadow-split-view-first-is-sidebar > .shadow-split-view-sidebar:not(.maximized) {
-		border-right: 2px solid @global-divider !important;
-	}
+// drawer (search) form labels (does this belong here?)
+.search-drawer-header label.search-config-label {
+	color: @form-label-text !important;
+}
 
-	.shadow-split-view.hbox > .shadow-split-view-sidebar:not(.maximized) {
-		border-left: 2px solid @global-divider !important;
-	}
+.status-bar-item[disabled] {
+	opacity: 0.5 !important;
+}
 
-	.shadow-split-view.vbox > .shadow-split-view-resizer > .shadow-split-view-resizer-border {
-		border-top: none !important;
-	}
+// sidebar borders
+.shadow-split-view.hbox.shadow-split-view-first-is-sidebar > .shadow-split-view-sidebar:not(.maximized) {
+	border-right: 2px solid @global-divider !important;
+}
 
-} //::shadow
+.shadow-split-view.hbox > .shadow-split-view-sidebar:not(.maximized) {
+	border-left: 2px solid @global-divider !important;
+}
+
+.shadow-split-view.vbox > .shadow-split-view-resizer > .shadow-split-view-resizer-border {
+	border-top: none !important;
+}
 
 // Adjust the height of the main navigation
-.inspector-view-tabbed-pane.tabbed-pane::shadow {
-
+.inspector-view-tabbed-pane.tabbed-pane {
 	.tabbed-pane-header {
 		flex: 0 0 @tab-main-toolbar-height !important;
 	}
@@ -99,7 +94,7 @@
 }
 
 // isolate just the status bar and not the toolbar left/right components
-.panel .status-bar::shadow .status-bar-shadow {
+.panel .status-bar .status-bar-shadow {
 	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
 	box-shadow: inset 0 1px 0 lighten(@tab-color-top,7%), inset 0 -1px 0 darken(@tab-color-bottom,10%);
 	border-bottom: none !important;
@@ -229,7 +224,7 @@ select.tabbed-pane-header-tabs-drop-down-select{
 	color: @global-accent !important;
 }
 
-body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
+body .inspector-view-toolbar.toolbar .toolbar-button-theme {
 	background-color: @glyph-inactive !important;
 }
 
@@ -242,65 +237,60 @@ body .inspector-view-toolbar.toolbar::shadow .toolbar-button-theme {
 	border-bottom: 1px solid @toolbar-divider !important;
 }
 
-::shadow {
-	// glyph states
-	.toolbar-item > .glyph,
-	.toolbar-item > .glyph:active,
-	.filter-toolbar-item.toggled-shown .glyph,
-	button.toolbar-item.toggled-on .glyph {
-		background-color: @glyph-active !important;
-	}
+// glyph states
+.toolbar-item > .glyph,
+.toolbar-item > .glyph:active,
+.filter-toolbar-item.toggled-shown .glyph,
+button.toolbar-item.toggled-on .glyph {
+	background-color: @glyph-active !important;
+}
 
-	.filter-toolbar-item.toggled-shown {
-		background-color: rgba(0,0,0,0) !important;
-	}
+.filter-toolbar-item.toggled-shown {
+	background-color: rgba(0,0,0,0) !important;
+}
 
-	.toolbar-item > .glyph,
-	button.toolbar-item.toggled-off .glyph {
-		background-color: @glyph-inactive !important;
-	}
+.toolbar-item > .glyph,
+button.toolbar-item.toggled-off .glyph {
+	background-color: @glyph-inactive !important;
+}
 
-	// error/warning counts on toolbar
-	.toolbar-counter-item {
-		color: @global-text !important;
-	}
+// error/warning counts on toolbar
+.toolbar-counter-item {
+	color: @global-text !important;
+}
 
-	// border from sidebar in elements panel
-	// replaces ".shadow-split-view.hbox > .shadow-split-view-sidebar:not(.maximized)"
-	.shadow-split-widget.hbox > .shadow-split-widget-sidebar:not(.maximized) {
-		border-left: 2px solid @global-divider !important;
-	}
+// border from sidebar in elements panel
+// replaces ".shadow-split-view.hbox > .shadow-split-view-sidebar:not(.maximized)"
+.shadow-split-widget.hbox > .shadow-split-widget-sidebar:not(.maximized) {
+	border-left: 2px solid @global-divider !important;
+}
 
-	// divider for network details
-	.shadow-split-widget.hbox.shadow-split-widget-first-is-sidebar > .shadow-split-widget-sidebar:not(.maximized) {
-		border-right: 2px solid @global-divider !important;
-	}
+// divider for network details
+.shadow-split-widget.hbox.shadow-split-widget-first-is-sidebar > .shadow-split-widget-sidebar:not(.maximized) {
+	border-right: 2px solid @global-divider !important;
+}
 
-	// show/hide button in sources
-	.shadow-split-widget button.sidebar-show-hide-button {
-		background-color: @glyph-inactive !important;
-	}
+// show/hide button in sources
+.shadow-split-widget button.sidebar-show-hide-button {
+	background-color: @glyph-inactive !important;
+}
 
-	// Floating pause/play overlay
-	::shadow .toolbar-shadow.floating {
-		background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-		border: 1px solid @global-divider !important;
-		box-shadow: inset 0 0 4px 0 #000 !important;
+// Floating pause/play overlay
+.toolbar-shadow.floating {
+	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	border: 1px solid @global-divider !important;
+	box-shadow: inset 0 0 4px 0 #000 !important;
 
-		.toolbar-item {
-			background-color: @global-hover !important;
+	.toolbar-item {
+		background-color: @global-hover !important;
 
-			&:hover {
-				background-color: @- !important; .contrast(@global-hover, 10%);
-			}
+		&:hover {
+			background-color: @- !important; .contrast(@global-hover, 10%);
 		}
 	}
-
-} //::shadow
-
+}
 // status bar error|warn counts override
-body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
-
+body .inspector-view-toolbar.status-bar .status-bar-item {
 	.status-bar-counter {
 		color: @global-text !important;
 
@@ -310,108 +300,99 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 	}
 }
 
-::shadow {
-	.tabbed-pane-tab-slider {
-		background-color: @tab-highlighted !important;
-		bottom: 0 !important;
-		top: 0 !important;
-	}
+.tabbed-pane-tab-slider {
+	background-color: @tab-highlighted !important;
+	bottom: 0 !important;
+	top: 0 !important;
+}
 
-	.tabbed-pane-header-tab {
-		color: @tab-label !important;
-	}
-
+.tabbed-pane-header-tab {
+	color: @tab-label !important;
 }
 
 // footer statusbar text
-::shadow .toolbar-item {
+.toolbar-item {
 	color: @global-text !important;
 }
 
 // toolbar labels
 
 .dt-checkbox-text,
-body/deep/ .dt-checkbox-text,
 ::content .dt-checkbox-text {
 	color: @global-text !important;
 	margin-bottom: 3px !important;
 }
 
 // Network filter when a filter is applied but options are hidden
-::shadow .toolbar-item.toggled-active .glyph {
+.toolbar-item.toggled-active .glyph {
 	background-color: @global-accent !important;
 }
 
-
 // Drag-drop toolbars
-.inspector-view-tabbed-pane::shadow .tabbed-pane-header-contents {
+.inspector-view-tabbed-pane .tabbed-pane-header-contents {
 	.tabbed-pane-header-tab.selected,
 	.tabbed-pane-header-tab {
 		border-top: none !important;
 	}
 }
 
-::shadow .tabbed-pane-tab-slider {
+.tabbed-pane-tab-slider {
 	//remove top border
 	border-top: none !important;
 }
 
-::shadow .tabbed-pane-header-tab,
-::shadow .tabbed-pane-header-tab.selected {
+.tabbed-pane-header-tab,
+.tabbed-pane-header-tab.selected {
 	background: none !important;
 }
 
-::shadow .toolbar-divider {
+.toolbar-divider {
 	background-color: @toolbar-divider !important;
 }
 
 // glyph
-::shadow {
-	// off
-	.toolbar-glyph {
-		background-color: @glyph-inactive !important;
-	}
+// off
+.toolbar-glyph {
+	background-color: @glyph-inactive !important;
+}
 
-	// hover
-	.toolbar-button:not(.toolbar-state-on) .toolbar-glyph {
-		background-color: @glyph-hover !important;
-	}
+// hover
+.toolbar-button:not(.toolbar-state-on) .toolbar-glyph {
+	background-color: @glyph-hover !important;
+}
 
-	// on
-	.toolbar-state-on.toolbar-button:enabled:not(:active) .toolbar-glyph,
-	.toolbar-button.toolbar-state-on .toolbar-glyph {
-		background-color: @glyph-active !important;
-	}
+// on
+.toolbar-state-on.toolbar-button:enabled:not(:active) .toolbar-glyph,
+.toolbar-button.toolbar-state-on .toolbar-glyph {
+	background-color: @glyph-active !important;
+}
 
-	//override for v49
-	.toolbar-state-on .record-toolbar-item.toolbar-glyph,
-	.toolbar-state-active .filter-toolbar-item.toolbar-glyph,
-	.toolbar-state-active .block-toolbar-item.toolbar-glyph {
-		background-color: @glyph-inactive !important;
-	}
+//override for v49
+.toolbar-state-on .record-toolbar-item.toolbar-glyph,
+.toolbar-state-active .filter-toolbar-item.toolbar-glyph,
+.toolbar-state-active .block-toolbar-item.toolbar-glyph {
+	background-color: @glyph-inactive !important;
 }
 
 // hover states for toolbar menu icons
-::shadow ::shadow {
-	button.toolbar-button {
-		border: none !important;
-		background: none !important;
-	}
-
-	.toolbar-button:enabled.hover:not(:active) .toolbar-glyph,
-	.toolbar-button:enabled.hover:not(:active) .toolbar-dropdown-arrow,
-	.toolbar-button.toolbar-state-on .toolbar-glyph,
-	.-theme-selection-color {
-		background-color: @global-accent !important;
-	}
+button.toolbar-button {
+	border: none !important;
+	background: none !important;
 }
 
-::shadow .toolbar-shadow .toolbar-text {
+.toolbar-button:enabled.hover:not(:active) .toolbar-glyph,
+.toolbar-button:enabled.hover:not(:active) .toolbar-dropdown-arrow,
+.toolbar-button.toolbar-state-on .toolbar-glyph,
+.-theme-selection-color {
+	background-color: @global-accent !important;
+}
+
+.toolbar-shadow .toolbar-text {
 	color: @global-label !important;
 }
 
 // Application
-::shadow .toolbar-item.checkbox {
+.toolbar-item.checkbox {
 	color: @global-label !important;
 
 	&:hover {
@@ -420,12 +401,12 @@ body/deep/ .dt-checkbox-text,
 }
 
 // Main Tab Navigation - Disable Selected Style and just use animation
-.insertion-point-main::shadow .tabbed-pane-header-tab.selected {
+.insertion-point-main .tabbed-pane-header-tab.selected {
 	border-top-color: transparent !important;
 }
 
 // Menu expander
-::shadow .tabbed-pane-header-tabs-drop-down-container > .chevron-icon {
+.tabbed-pane-header-tabs-drop-down-container > .chevron-icon {
 	background-color: @tab-label !important;
 }
 

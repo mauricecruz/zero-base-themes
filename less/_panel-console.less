@@ -1,7 +1,6 @@
-/**********************************************/
-/* Console
-/**********************************************/
-
+// ==========================================================================
+// Console
+// ==========================================================================
 
 .debug-type(@type, @color) {
 
@@ -29,7 +28,7 @@
 		}
 	}
 
-	label::shadow .@{type} {
+	label .@{type} {
 		background-color: @color !important;
 	}
 }
@@ -172,76 +171,15 @@
 // js syntax
 .console-object-preview .name { color: @js-obj-name !important; }
 
-.object-value-object,
-.object-value-map,
-.object-value-set,
-.object-value-iterator,
-.object-value-generator,
-.object-value-node,
-.object-value-array {
-	color: @js-obj-array !important;
+
+// remove top border
+.shadow-split-widget.vbox > .shadow-split-widget-sidebar:not(.maximized) {
+	border-top: none !important;
 }
 
-.object-value-number,
-.object-value-boolean { color: @js-obj-boolean !important; }
-
-
-.object-value-function { color: @js-obj-function !important; }
-.object-value-function::before { color: @global-text !important; }
-
-.object-value-string { color: @js-obj-string !important; }
-.object-value-null { color: @js-obj-array !important; }
-.object-value-number { color: @js-obj-number !important; }
-.object-value-calculate-value-button { color: @js-obj-array !important;}
-.object-value-error { color: @global-error !important; }
-
-.object-value-regexp { color: @js-obj-regexp !important; }
-
-::shadow ::shadow,
-::shadow {
-	.object-properties-section-separator { color: @global-text !important; }
-	.object-properties-section .name { color: @js-obj-name !important; }
-	.object-properties-section .number { color: @js-obj-number !important; }
-
-	// js syntax
-	.console-object-preview .name { color: @js-obj-name !important; }
-
-	.object-value-object,
-	.object-value-map,
-	.object-value-set,
-	.object-value-iterator,
-	.object-value-generator,
-	.object-value-node,
-	.object-value-array {
-		color: @js-obj-array !important;
-	}
-
-	.object-value-number,
-	.object-value-boolean { color: @js-obj-boolean !important; }
-
-
-	.object-value-function { color: @js-obj-function !important; }
-	.object-value-function::before { color: @global-text !important; }
-
-	.object-value-string { color: @js-obj-string !important; }
-	.object-value-regexp { color: @js-obj-regexp !important; }
-	.object-value-null { color: @js-obj-array !important; }
-	.object-value-number { color: @js-obj-number !important; }
-	.object-value-calculate-value-button { color: @js-obj-array !important;}
-	.object-value-error { color: @global-error !important; }
-
-
-	// remove top border
-	.shadow-split-widget.vbox > .shadow-split-widget-sidebar:not(.maximized) {
-		border-top: none !important;
-	}
-
-} //::shadow
-
-body /deep/ .link {
+body.link {
 	color: @xml-link !important;
 }
-
 
 // fix Emulation labels (these selector hooks sucks. might be temporary)
 .overrides-view label,
@@ -253,20 +191,19 @@ body /deep/ .link {
 }
 
 // Object property name
-::shadow .object-properties-section-name,
+.object-properties-section-name,
 .console-view-object-properties-section span {
 	color: @js-obj-array !important;
 }
 
-
 // ==========================================================================
 // Console Panel - Network Conditions
 // ==========================================================================
-::shadow .network-config-title {
+.network-config-title {
 	color: @global-label;
 }
 
-::shadow .panel-section-separator {
+.panel-section-separator {
 	background: @global-divider;
 }
 
@@ -274,16 +211,14 @@ body /deep/ .link {
 // Console Panel - Sensors
 // ==========================================================================
 
-::shadow {
-	.sensors-group-title,
-	.latlong-title,
-	.orientation-axis-input-container {
-		color: @global-label;
-	}
+.sensors-group-title,
+.latlong-title,
+.orientation-axis-input-container {
+	color: @global-label;
+}
 
-	.sensors-view input {
-		.input-styles();
-	}
+.sensors-view input {
+	.input-styles();
 }
 
 // ==========================================================================
@@ -291,23 +226,21 @@ body /deep/ .link {
 // ==========================================================================
 
 // remove white borders
-::shadow {
-	.search-drawer-header label.search-config-label:first-of-type {
-		border-left: 0 !important;
-		border-bottom: 1px solid @toolbar-divider !important;
-	}
+.search-drawer-header label.search-config-label:first-of-type {
+	border-left: 0 !important;
+	border-bottom: 1px solid @toolbar-divider !important;
+}
 
-	.search-drawer-header {
-		border-bottom: 1px solid @toolbar-divider !important;
-		background: @toolbar-sub !important;
-	}
+.search-drawer-header {
+	border-bottom: 1px solid @toolbar-divider !important;
+	background: @toolbar-sub !important;
 }
 
 .console-settings-pane {
 	border-bottom: 0 !important;
 }
 
-::shadow .toolbar-input {
+.toolbar-input {
 	.input-styles();
 
 	input {

@@ -264,12 +264,10 @@
 	color: @global-text !important;
 }
 
-
-::shadow .flame-chart-selected-element {
+.flame-chart-selected-element {
 	border-color: @global-selected !important;
 	background-color: fade(@global-selected, 60%) !important;
 }
-
 
 // timeline layers
 .layer-tree.outline-disclosure li,
@@ -277,15 +275,7 @@
 	color: @global-text !important;
 }
 
-.layer-detail-view .table {
-
-	td {
-
-	}
-}
-
 .timeline-layers-view-properties {
-
 	table tr{
 		// key
 		td:nth-child(1) {
@@ -296,7 +286,6 @@
 			color: @global-text !important;
 		}
 	}
-
 
 	td {
 		border: 1px solid @global-divider !important;
@@ -345,7 +334,7 @@
 .timeline.panel .status-pane-container.tinted {
 	background-color: fade(@global-background, 70%) !important;
 
-	::shadow .timeline-status-dialog {
+	.timeline-status-dialog {
 		background-color: @dialog-background !important;
 		border: 1px solid @dialog-border !important;
 		box-shadow: 0 5px 25px 0 @- !important; .contrast(@global-background, 10%, invert);
@@ -374,14 +363,12 @@
 	color: @global-text !important;
 }
 
-::shadow {
-	.timeline-status-dialog .progress .indicator {
-		background-color: @global-accent !important;
-	}
+.timeline-status-dialog .progress .indicator {
+	background-color: @global-accent !important;
+}
 
-	.status-dialog-line .label {
-		color: @global-label !important;
-	}
+.status-dialog-line .label {
+	color: @global-label !important;
 }
 
 // Performance Tab

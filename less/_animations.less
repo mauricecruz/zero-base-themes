@@ -41,12 +41,12 @@
 
 .show-child-highlighter-animations(@choice) when (@choice = true) {
 		/*-- HIGHLIGHT CHILDREN --*/
-	.panel.elements ::shadow .parent + .children {
+	.elements-disclosure .parent + .children {
 		transition: .5s ease-in .25s;
 	}
 
-	.panel.elements ::shadow .hovered,
-	.panel.elements ::shadow .selected {
+	.elements-disclosure .hovered,
+	.elements-disclosure .selected {
 		&.parent.expanded + .children > li:last-of-type .webkit-html-tag.close {
 			transition: opacity .5s ease-in-out .25s;
 		}

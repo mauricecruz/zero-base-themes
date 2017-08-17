@@ -1,8 +1,8 @@
-/**********************************************
-/* Element - Edit HTML
-/**********************************************/
+// ==========================================================================
+//  Edit HTML
+// ==========================================================================
 
-::shadow .source-code .CodeMirror{
+.source-code .CodeMirror{
 	outline: none !important;
 	border: 1px solid @- !important; .contrast(@global-background, 5%);
 	border-radius: 5px;
@@ -12,34 +12,30 @@
 	color: @global-text !important;
 }
 
-/**********************************************
-/* Element Highlighter
-/**********************************************/
+// ==========================================================================
+//  Element Highlighter
+// ==========================================================================
+.elements-disclosure {
+	ol {
+		.arrow-mixin();
+	}
 
-// overqualify to override chrome selector
-.panel.elements #elements-content .CodeMirror {
-	outline: none !important;
-}
+	ol:focus li.selected .selection,
+	li.selected .selection {
+		outline: 1px solid @eh-highlight-outline !important;
+		background-color: @eh-highlight-background !important;
+	}
 
-.panel.elements ::shadow,
-.panel.console ::shadow {
+	// "== $0" text after selector
+	li.selected:after {
+		color: @global-text !important;
+	}
 
-	.outline-disclosure, // remove when stable no longer uses it
-	.elements-disclosure {
-
-		ol:focus li.selected .selection,
-		li.selected .selection {
-			outline: 1px solid @eh-highlight-outline !important;
-			background-color: @eh-highlight-background !important;
-		}
-
-		li.hovered:not(.selected) .selection {
-			border-radius: 0 !important;
-			background-color: @eh-hover-background !important;
-			border-top: 1px solid @eh-hover-outline !important;
-			border-bottom: 1px solid @eh-hover-outline !important;
-		}
-
+	li.hovered:not(.selected) .selection {
+		border-radius: 0 !important;
+		background-color: @eh-hover-background !important;
+		border-top: 1px solid @eh-hover-outline !important;
+		border-bottom: 1px solid @eh-hover-outline !important;
 	}
 }
 
@@ -51,84 +47,69 @@
 // ==========================================================================
 // Animation Inspection
 // ==========================================================================
-::shadow {
 
-	::shadow button {
-		border: none;
-		background: none;
+.animation-playback-rate-button {
+	.button-styles();
+	border-radius: unset !important;
+
+	&.selected {
+		color: @global-accent !important;
 	}
+}
 
-	.animation-playback-rate-button {
-		.button-styles();
-		border-radius: unset !important;
+.animation-timeline-header:after {
+	background-color: @global-background !important;
+	border-right: 1px solid @global-divider !important;
+}
 
-		&.selected {
-			color: @global-accent !important;
-		}
+.animation-buffer-preview {
+	background-color: lighten(@global-background, 5%) !important;
+
+	&.selected {
+		border: 1px solid @global-accent !important;
 	}
+}
 
-	.animation-timeline-header:after {
-		background-color: @global-background !important;
-		border-right: 1px solid @global-divider !important;
-	}
+.animation-timeline-buffer,
+.animation-timeline-buffer-hint {
+	border-bottom: 1px solid @toolbar-divider !important;
+}
 
-	.animation-buffer-preview {
-		background-color: lighten(@global-background, 5%) !important;
+.animation-timeline-header,
+.animation-timeline-toolbar-container {
+	border-bottom: 1px solid @toolbar-divider !important;
+}
 
-		&.selected {
-			border: 1px solid @global-accent !important;
-		}
-	}
+.toolbar-divider {
+	background-color: @toolbar-item-divider !important;
+}
 
-	.animation-timeline-buffer,
-	.animation-timeline-buffer-hint {
-		border-bottom: 1px solid @toolbar-divider !important;
-	}
+.animation-controls,
+.animation-timeline-buffer:empty ~ .animation-timeline-buffer-hint,
+.animation-timeline-buffer:not(:empty) ~ .animation-timeline-rows:empty ~ .animation-timeline-rows-hint {
+	color: @global-text !important;
+}
 
-	.animation-timeline-header,
-	.animation-timeline-toolbar-container {
-		border-bottom: 1px solid @toolbar-divider !important;
-	}
+.animation-node-description {
+	background-color: @global-background !important;
+	border-bottom: 1px solid @global-divider !important;
+}
 
-	::shadow .toolbar-divider {
-		background-color: @toolbar-item-divider !important;
-	}
+.animation-node-row {
+	border-bottom: 1px dashed @global-divider !important;
+}
 
-	.animation-controls,
-	.animation-timeline-buffer:empty ~ .animation-timeline-buffer-hint,
-	.animation-timeline-buffer:not(:empty) ~ .animation-timeline-rows:empty ~ .animation-timeline-rows-hint {
-		color: @global-text !important;
-	}
+.animation-buffer-preview.selected > svg > line {
+	stroke: @global-text !important;
+}
 
-	.animation-node-description {
-		background-color: @global-background !important;
-		border-bottom: 1px solid @global-divider !important;
-	}
-
-	.animation-node-row {
-		border-bottom: 1px dashed @global-divider !important;
-	}
-
-	.animation-buffer-preview.selected > svg > line {
-		stroke: @global-text !important;
-	}
-
-	rect.animation-timeline-grid-line {
-		fill: @global-divider !important;
-	}
+rect.animation-timeline-grid-line {
+	fill: @global-divider !important;
 }
 
 // Syntax Highlighting
-::shadow ::shadow,
-.monospace::shadow {
-	.node-label-name { color: @xml-tag !important; }
-	.node-label-id,
-	.node-label-class,
-	.node-label-pseudo { color: @css-def !important; }
-}
+.node-label-name { color: @xml-tag !important; }
 
-
-// "== $0" text after selector
-::shadow .elements-disclosure li.selected:after {
-	color: @global-text !important;
-}
+.node-label-id,
+.node-label-class,
+.node-label-pseudo { color: @css-def !important; }

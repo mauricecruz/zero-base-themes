@@ -52,7 +52,6 @@
 	}
 
 	// Edit HTML cursor / Sources Edit cursor
-	::shadow .CodeMirror-cursor,
 	.CodeMirror-cursor {
 		border-left: 1px solid @cm-cursor !important;
 	}
@@ -143,7 +142,6 @@
 	}
 
 // Editing Dom Nodes or Snippet Filenames
-#-blink-dev-tools ::shadow .editing,
 #-blink-dev-tools .editing {
 	background-color: @global-background !important;
 	outline: 1px solid @eh-editing-outline !important;
@@ -160,6 +158,6 @@
 }
 
 // Selection in edit HTML
-::shadow .CodeMirror-focused .CodeMirror-selected {
+.CodeMirror-focused .CodeMirror-selected {
 	background-color: @cm-selected !important;
 }

@@ -31,7 +31,6 @@
 		color: @style-edit-mode-selector-text !important;
 	}
 
-	::shadow .overloaded,
 	.overloaded,
 	.inactive ,
 	.disabled ,
@@ -42,7 +41,7 @@
 }
 
 // editing style properties
-::shadow ::shadow style + .text-prompt-editing ::content .text-prompt {
+style + .text-prompt-editing ::content .text-prompt {
 	color: @global-text !important;
 }
 
@@ -172,11 +171,9 @@
 }
 
 // Buttons for Sidebar Options
-::shadow {
-	.pin-toolbar-item.toggled-on,
-	.animation-toolbar-item.toggled-on {
-		background-color: rgba(0,0,0,0);
-	}
+.pin-toolbar-item.toggled-on,
+.animation-toolbar-item.toggled-on {
+	background-color: rgba(0,0,0,0);
 }
 
 // Animation Controls
@@ -192,13 +189,13 @@
 }
 
 // event listeners section borders
-::shadow .event-listener-tree > li {
+.event-listener-tree > li {
 	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
 	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
 	margin-top: 0 !important;
 }
 
-::shadow .event-listener-tree .name {
+.event-listener-tree .name {
 	color: @js-obj-name !important;
 }
 
@@ -208,7 +205,7 @@
 	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
 	margin-top: 0 !important;
 
-	&::shadow .object-properties-section {
+	.object-properties-section {
 		color: @global-text !important;
 	}
 }
@@ -219,7 +216,7 @@
 }
 
 // Sources - Call stack item
-::shadow .list-item:hover {
+.list-item:hover {
 	background-color: @global-hover !important;
 }
 
@@ -258,7 +255,7 @@
 }
 
 // Custom Element Button
-.toolbar-gray-toggled::shadow .class-toolbar-item {
+.toolbar-gray-toggled .class-toolbar-item {
 	color: @glyph-inactive !important;
 
 	&.toggled-on {
@@ -285,23 +282,20 @@
 
 
 // button options near filter
-::shadow {
+.toolbar-button:not(.toolbar-has-glyph):not(.toolbar-has-dropdown):not(.menu-toolbar-item).hover {
+	background-color: rgba(0,0,0,0) !important;
+}
 
-	.toolbar-button:not(.toolbar-has-glyph):not(.toolbar-has-dropdown):not(.menu-toolbar-item).hover {
-		background-color: rgba(0,0,0,0) !important;
-	}
+.toolbar-button.toolbar-state-on {
+	background-color: rgba(0,0,0,0) !important;
 
-	.toolbar-button.toolbar-state-on {
-		background-color: rgba(0,0,0,0) !important;
-
-		.toolbar-text {
-			color: @global-accent !important;
-		}
+	.toolbar-text {
+		color: @global-accent !important;
 	}
 }
 
 // Icons
-::shadow ::shadow .shadow-swatch-icon {
+.shadow-swatch-icon {
 	background-color: @global-accent !important;
 }
 
@@ -313,10 +307,9 @@ div.ax-computed-name {
 	border-bottom: 1px solid @global-divider !important;
 }
 
-::shadow {
-	.ax-name { color: @js-obj-name !important; }
-	.ax-role { color: @global-text !important; }
-}
+
+.ax-name { color: @js-obj-name !important; }
+.ax-role { color: @global-text !important; }
 
 // ui for selected elements with no a11y exposed
 .ax-ignored-node-pane {
@@ -324,8 +317,8 @@ div.ax-computed-name {
 }
 
 // Property rules in table view (styles)
-::shadow .property-trace-value,
-::shadow .property-trace-selector {
+.property-trace-value,
+.property-trace-selector {
 	color: @global-text !important;
 }
 
@@ -341,7 +334,7 @@ div.ax-computed-name {
 
 // Fonts section header should be styled the same as .sidebar-separator, but
 // there isn't a good selector hook for it. Attaching to parent class.
-.style-panes-wrapper ::shadow .title {
+.style-panes-wrapper .title {
 	background-color: @style-section !important;
 	color: @style-selector-text !important;
 	text-shadow: none !important;
@@ -349,7 +342,7 @@ div.ax-computed-name {
 	border-bottom: none !important;
 }
 
-::shadow .font-stats-item {
+.font-stats-item {
 	color: @global-text;
 
 	.font-usage {
@@ -360,27 +353,25 @@ div.ax-computed-name {
 // ==========================================================================
 // Shadow Editor
 // ==========================================================================
-::shadow {
-	.shadow-editor-label {
-		color: @global-label !important;
-	}
+.shadow-editor-label {
+	color: @global-label !important;
+}
 
-	.shadow-editor-button-left,
-	.shadow-editor-button-right {
-		.button-styles();
-	}
+.shadow-editor-button-left,
+.shadow-editor-button-right {
+	.button-styles();
+}
 
-	.shadow-editor-text-input {
-		.input-styles();
-	}
+.shadow-editor-text-input {
+	.input-styles();
 }
 
 // slider
-::shadow ::shadow ::shadow #thumb {
+#thumb {
 	background-color: @global-accent !important;
 }
 
 // Event Listener Breakpoints
-::shadow .breakpoint-hit .breakpoint-hit-marker {
+.breakpoint-hit .breakpoint-hit-marker {
 	background: @global-selected !important;
 }

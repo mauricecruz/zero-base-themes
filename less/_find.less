@@ -2,35 +2,31 @@
 // Find Module [ctrl+shift+F / cmd+shift+F]
 // ========================================================================== */
 
-::shadow {
-	width: 100%;
+// filename header
+.search-result {
+	background-color: @find-header-background !important;
+	color: @global-text !important;
+	& { border-top: 1px solid @- !important; .contrast(@find-header-background, 5%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@find-header-background, 5%, invert) };
+	line-height: 18px !important;
+	margin: 0 !important;
+}
 
-	// filename header
-	.search-result {
-		background-color: @find-header-background !important;
-		color: @global-text !important;
-		& { border-top: 1px solid @- !important; .contrast(@find-header-background, 5%) };
-		& { border-bottom: 1px solid @- !important; .contrast(@find-header-background, 5%, invert) };
-		line-height: 18px !important;
-		margin: 0 !important;
+// link to show more matches found in file
+.show-more-matches {
+	color: @global-accent !important;
+}
+
+.parent {
+
+	// filepath/name //
+	.search-result-file-name {
+		color: @find-header-text !important;
 	}
 
-	// link to show more matches found in file
-	.show-more-matches {
-		color: @global-accent !important;
-	}
-
-	.parent {
-
-		// filepath/name //
-		.search-result-file-name {
-			color: @find-header-text !important;
-		}
-
-		// count after filepath
-		.search-result-matches-count {
-			color: @- !important; .contrast(@global-accent, 5%, invert);
-		}
+	// count after filepath
+	.search-result-matches-count {
+		color: @- !important; .contrast(@global-accent, 5%, invert);
 	}
 }
 
@@ -39,7 +35,7 @@
 // ========================================================================== */
 
 // input textbox
-::shadow .search-config-search {
+.search-config-search {
 	&:focus {
 		outline: none !important;
 	}
@@ -50,8 +46,8 @@
 }
 
 // [global] highlighted search input
-::shadow #search-results-pane-file-based .search-match .highlighted-match,
-::shadow .highlighted-search-result,
+#search-results-pane-file-based .search-match .highlighted-match,
+.highlighted-search-result,
 .highlighted-search-result,
 .webkit-highlighted-line.webkit-line-content {
 	color: @find-highlight-text !important;
@@ -66,12 +62,12 @@
 // ========================================================================== */
 
 // buttons (i.e. cancel)
-::shadow .search-action-button {
+.search-action-button {
 	.button-styles();
 }
 
 
-::shadow .toolbar-search-control {
+.toolbar-search-control {
 	background-color: @form-input-background !important;
 	border: 1px solid @form-input-border !important;
 
@@ -98,12 +94,12 @@
 }
 
 // search/replace input textbox
-::shadow .search-replace.toolbar-replace-control {
+.search-replace.toolbar-replace-control {
 	.input-styles();
 }
 
 // Find Module inside file in sources panel
-::shadow .search-bar {
+.search-bar {
 	background-color: @- !important; .contrast(@global-background, 15%);
 	border-top: none !important;
 	border-bottom: none !important;
@@ -116,24 +112,19 @@
 
 // ==========================================================================
 // Glyphs
-// ========================================================================== */
+// ==========================================================================
 
 // Button text in sources
-::shadow ::shadow {
-	.regex-search-toolbar-item.toggled-on .toolbar-button-text,
-	.case-sensitive-search-toolbar-item.toggled-on .toolbar-button-text {
-		color: @glyph-active !important;
-	}
+.regex-search-toolbar-item.toggled-on .toolbar-button-text,
+.case-sensitive-search-toolbar-item.toggled-on .toolbar-button-text {
+	color: @glyph-active !important;
 }
-
 
 // ==========================================================================
 // Global Find
 // ==========================================================================
-::shadow {
-
 	// Gutter w/ line numbers
-	::shadow .search-match-line-number {
+	search-match-line-number {
 		background: @cm-gutter !important;
 		border-right: 1px solid @cm-gutter-border !important;
 		padding: 1px 5px 1px 0 !important;
@@ -141,7 +132,7 @@
 		color: @cm-gutter-lines !important;
 	}
 
-	::shadow li.search-match .highlighted-match  {
+	li.search-match .highlighted-match  {
 		color: @find-highlight-text !important;
 		border-radius: 2px !important;
 		font-size: 1em !important;
@@ -150,69 +141,61 @@
 	}
 
 	// hover over line in global find
-	::shadow .search-match:hover {
+	search-match:hover {
 		.highlight(hover)
 	}
 
 	// text color of find contents
-	::shadow .search-match-content {
+	search-match-content {
 		color: @global-text !important;
 	}
 
-	::shadow {
+	// filename header
+	.search-result {
+		background-color: @find-header-background !important;
+		color: @global-text !important;
+		& { border-top: 1px solid @- !important; .contrast(@find-header-background, 5%) };
+		& { border-bottom: 1px solid @- !important; .contrast(@find-header-background, 5%, invert) };
+		line-height: 18px !important;
+		margin: 0 !important;
+	}
+
+	// link to show more matches found in file
+	.show-more-matches {
+		color: @global-accent !important;
+	}
+
+	.parent {
+
+		// hover over filename header
+		&:hover {
+			& { background-color: @- !important; .contrast(@global-background, 5%) };
+			& { color: @- !important; .contrast(@global-text, 5%) };
+		}
+
+		// filepath/name //
+		.search-result-file-name {
+			color: @find-header-text !important;
+		}
+
+		// count after filepath
+		.search-result-matches-count {
+			color: @- !important; .contrast(@global-accent, 5%, invert);
+		}
+	}
+
+.toolbar-search {
+	width: 100%;
+
+	td {
 		width: 100%;
+	}
 
-		// filename header
-		.search-result {
-			background-color: @find-header-background !important;
-			color: @global-text !important;
-			& { border-top: 1px solid @- !important; .contrast(@find-header-background, 5%) };
-			& { border-bottom: 1px solid @- !important; .contrast(@find-header-background, 5%, invert) };
-			line-height: 18px !important;
-			margin: 0 !important;
-		}
-
-		// link to show more matches found in file
-		.show-more-matches {
-			color: @global-accent !important;
-		}
-
-		.parent {
-
-			// hover over filename header
-			&:hover {
-				& { background-color: @- !important; .contrast(@global-background, 5%) };
-				& { color: @- !important; .contrast(@global-text, 5%) };
-			}
-
-			// filepath/name //
-			.search-result-file-name {
-				color: @find-header-text !important;
-			}
-
-			// count after filepath
-			.search-result-matches-count {
-				color: @- !important; .contrast(@global-accent, 5%, invert);
-			}
-		}
+	button.search-action-button {
+		width: 75px;
 	}
 }
 
-// [TODO] Set element search to 100% width in v58. Remove when v59 lands.
-::shadow {
-	.toolbar-search {
-		width: 100%;
-
-		td {
-			width: 100%;
-		}
-
-		button.search-action-button {
-			width: 75px;
-		}
-	}
-
-	.toolbar-search-control {
-		width: 100%;
-	}
+.toolbar-search-control {
+	width: 100%;
 }

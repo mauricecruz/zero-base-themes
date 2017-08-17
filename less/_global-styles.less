@@ -28,7 +28,6 @@
 	z-index: 0;
 }
 
-::shadow ::selection,
 ::selection {
 	background: lighten(@global-selected, 45%)
 }
@@ -100,8 +99,8 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 }
 
 // Editing Dom Nodes or Snippet Filenames
-::shadow ::shadow style + .text-prompt-editing,
-::shadow .text-prompt-editing ,
+style + .text-prompt-editing,
+.text-prompt-editing ,
 .editing {
 	box-shadow: none !important;
 	background-color: @global-background !important;
@@ -109,26 +108,18 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	color: @global-text !important;
 }
 
-::shadow .text-prompt-editing > ::content * {
+.text-prompt-editing > ::content * {
 	color: @global-text !important;
 }
 
-::shadow .elements-tree-editor {
+.elements-tree-editor {
 	box-shadow: none !important;
 }
 
 // Editing Scope values
-::shadow .editing-sub-part ::shadow .text-prompt-editing ::content * {
+.editing-sub-part .text-prompt-editing ::content * {
 	background-color: @global-background !important;
 	color: @global-text !important;
-}
-
-// ----- Material Design ------
-.material {
-
-	.elements-topbar {
-		background: @filter-background !important;
-	}
 }
 
 // Tree Directories
@@ -136,38 +127,36 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	background-color: @global-background !important;
 }
 
-::shadow {
-	.tree-outline li {
-		color: @global-text !important;
-		background-color: @table-primary !important;
+.tree-outline li {
+	color: @global-text !important;
+	background-color: @table-primary !important;
 
-		&.odd-row + .children li,
-		&.odd-row {
-			background-color: @table-secondary !important;
-		}
-
-		&:hover:not(.selected) .selection {
-			.highlight(hover);
-		}
-
-		&.selected .selection {
-			.highlight(selection);
-		}
+	&.odd-row + .children li,
+	&.odd-row {
+		background-color: @table-secondary !important;
 	}
 
-	li.audits-sidebar-results {
-		text-shadow: none !important;
+	&:hover:not(.selected) .selection {
+		.highlight(hover);
+	}
+
+	&.selected .selection {
+		.highlight(selection);
 	}
 }
 
+li.audits-sidebar-results {
+	text-shadow: none !important;
+}
+
 // Don't highlight Request Header Tree
-.request-headers-tree::shadow .tree-outline li.selected .selection {
+.request-headers-tree .tree-outline li.selected .selection {
 	background-color: transparent !important;
 	box-shadow: none !important;
 }
 
 
-::shadow .soft-context-menu {
+.soft-context-menu {
 	background: @popover-background !important;
 	border: 1px solid @- !important; .contrast(@popover-background, 5%);
 	color: @global-text !important;
@@ -187,7 +176,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	}
 
 	// Dock options (remove blue hover)
-	.toolbar::shadow .toolbar-shadow.blue-on-hover .toolbar-item:not(.toggled-on).hover:enabled {
+	.toolbar .toolbar-shadow.blue-on-hover .toolbar-item:not(.toggled-on).hover:enabled {
 		background-color: @global-hover !important;
 
 		.glyph {
@@ -197,15 +186,15 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 }
 
 // Console context dropdown
-::shadow .console-context {
+.console-context {
 	background-color: transparent !important;
 
-	&.warning::shadow .title {
+	&.warning .title {
 		color: @global-warn !important;
 	}
 }
 
-::shadow .widget::shadow .context-list {
+.widget .context-list {
 	background: @popover-background !important;
 	border: 1px solid @- !important; .contrast(@popover-background, 5%);
 	color: @global-text !important;
@@ -227,7 +216,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 }
 
 // Tooltips
-::shadow .tooltip {
+.tooltip {
 	background: @- !important; .contrast(@global-background, 3%);
 	border: 1px solid @global-background;
 	color: @global-text !important;
@@ -238,35 +227,25 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 }
 
 // Buttons
-::shadow {
-	.chrome-select:extend(.chrome-select all) {};
+.chrome-select:extend(.chrome-select all) {};
 
-	.text-button,
-	[is="text-button"] {
-		.button-styles();
-	}
+.text-button,
+[is="text-button"] {
+	.button-styles();
 }
 
-::shadow ::shadow,
-::shadow ::shadow ::shadow {
-	.text-button,
-	[is="text-button"] {
-		.button-styles();
-	}
-}
-
-::shadow ol.children.shadow-root.expanded {
+ol.children.shadow-root.expanded {
 	border-left: 1px dashed @- !important; .contrast(@global-background, 10%);
 }
 
 // ==========================================================================
 // Forms
 // ==========================================================================
-body/deep/ input.toolbar-item {
+input.toolbar-item {
 	.input-styles()
 }
 
-label[is="dt-radio"]::shadow ::content .dt-radio-button:checked {
+label[is="dt-radio"] ::content .dt-radio-button:checked {
 		border: 0 !important;
 		background: url("Images/radioDot.png") center center no-repeat @global-accent !important;
 }
@@ -281,7 +260,7 @@ label[is="dt-radio"]::shadow ::content .dt-radio-button:checked {
 }
 
 // Remove text shadow from menus
-::shadow .tree-outline {
+.tree-outline {
 	li.security-sidebar-origins,
 	li.profiles-tree-section {
 		text-shadow: none !important;
@@ -294,7 +273,7 @@ label[is="dt-radio"]::shadow ::content .dt-radio-button:checked {
 // ==========================================================================
 
 // Large Icons
-::shadow .spritesheet-largeicons:not(.icon-mask) {
+.spritesheet-largeicons:not(.icon-mask) {
 	&.smallicon-file,
 	&.smallicon-file-sync {
 		.glyphs("Images/toolbarButtonGlyphs");
@@ -304,7 +283,7 @@ label[is="dt-radio"]::shadow ::content .dt-radio-button:checked {
 }
 
 // persistence file indicator
-::shadow .spritesheet-largeicons:not(.icon-mask) {
+.spritesheet-largeicons:not(.icon-mask) {
 	&.smallicon-file,
 	&.smallicon-file-sync {
 		position: relative;
@@ -313,7 +292,7 @@ label[is="dt-radio"]::shadow ::content .dt-radio-button:checked {
 	}
 }
 
-::shadow .selected .spritesheet-largeicons:not(.icon-mask) {
+.selected .spritesheet-largeicons:not(.icon-mask) {
 	&.smallicon-file,
 	&.smallicon-file-sync {
 		background: @tab-label-selected !important;
@@ -322,8 +301,7 @@ label[is="dt-radio"]::shadow ::content .dt-radio-button:checked {
 
 // Small Icons
 // call stack indicator | thread position indicator | inline breakpoint
-.spritesheet-smallicons:not(.icon-mask),
-::shadow .spritesheet-smallicons:not(.icon-mask) {
+.spritesheet-smallicons:not(.icon-mask) {
 	&.smallicon-thick-right-arrow,
 	&.smallicon-inline-breakpoint-conditional {
 		.glyphs("Images/smallIcons");
@@ -346,9 +324,7 @@ label[is="dt-radio"]::shadow ::content .dt-radio-button:checked {
 	background-color: transparent !important;
 }
 
-::shadow {
-	.selected-call-frame-icon,
-	.selected-thread-icon {
-		-webkit-mask-position: -80px 50px !important;
-	}
+.selected-call-frame-icon,
+.selected-thread-icon {
+	-webkit-mask-position: -80px 50px !important;
 }
