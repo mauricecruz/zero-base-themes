@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.5.0
+* Fix Sidebar Elements Panel
+
 ## 2.4.9
 * Minify stylesheets
 

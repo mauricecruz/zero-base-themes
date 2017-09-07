@@ -3,11 +3,12 @@
 // ==========================================================================
 
 // Each selector section
-.styles-section {
+::shadow .styles-section {
 	padding: 4px 0 !important;
 	margin: 0 10px;
 	border-top: 1px solid @style-separator !important;
 	border-bottom: none !important;
+	color: @global-text !important;
 
 	&:first-child{
 		border-top: none !important;
@@ -39,15 +40,15 @@
 		opacity: .5 !important;
 	}
 
+	.monospace {
+		color: @style-selector-text !important;
+	}
+
 }
 
 // editing style properties
 ::shadow ::shadow style + .text-prompt-editing ::content .text-prompt {
 	color: @global-text !important;
-}
-
-.styles-section.monospace {
-	color: @style-selector-text !important;
 }
 
 .sidebar-pane {
@@ -90,12 +91,12 @@
 }
 
 .styles-section.first-styles-section,
-.sidebar-separator + .styles-section {
+::shadow .sidebar-separator + .styles-section {
 	border-top: none !important;
 }
 
 // Style Section Headers
-.sidebar-separator {
+::shadow .sidebar-separator {
 	background-color: @style-section !important;
 	color: @style-selector-text !important;
 	text-shadow: none !important;
@@ -106,18 +107,14 @@
 
 // Pseudo State Displays
 .styles-animations-controls-pane.expanded,
-.styles-element-state-pane {
+::shadow ::shadow .styles-element-state-pane {
 	background: @- !important; .contrast(@global-background,6%);
 	padding: 4px 0 !important;
 	border-bottom: 1px solid @global-divider !important;
 }
 
-.styles-element-state-pane.expanded {
+::shadow ::shadow .styles-element-state-pane.expanded {
 	margin-top: 0 !important;
-}
-
-.styles-animations-controls-pane.expanded {
-	height: 68px !important;
 }
 
 // Sections with nested objects
@@ -144,7 +141,7 @@
 	background-color: @glyph-active !important;
 }
 
-.styles-sidebar-pane-toolbar {
+::shadow .styles-sidebar-pane-toolbar {
 	border-bottom: 1px solid @style-separator !important;
 }
 
@@ -163,7 +160,7 @@
 }
 
 // Force State
-.styles-element-state-pane {
+::shadow ::shadow .styles-element-state-pane {
 	color: @global-text !important;
 
 	> div {
@@ -230,24 +227,24 @@
 
 
 // CSS that matches selected item
-.selector-matches { color: @css-builtin !important; }
+::shadow .selector-matches { color: @css-builtin !important; }
 
 
 // CSS Selector
 .webkit-css-property,
-.styles-section .properties > li .webkit-css-property { color: @css-property !important; font-weight:400;}
+::shadow .styles-section .properties > li .webkit-css-property { color: @css-property !important; font-weight:400;}
 
 
 // Highlighted Filtered Element (Filter box)
-.styles-section .style-properties li.filter-match,
-.styles-section .simple-selector.filter-match {
+::shadow .styles-section .style-properties li.selector-match,
+::shadow .styles-section .simple-selector.selector-match {
 	background-color: @global-selected !important;
 	box-shadow: 0 0 0 1px @selection-border !important;
 	border-radius: 2px;
 }
 
 // Custom Element Form
-.styles-element-classes-pane {
+::shadow ::shadow .styles-element-classes-pane {
 	background-color: @global-background !important;
 	border-bottom: 1px solid @global-divider !important;
 
@@ -278,14 +275,14 @@
 }
 
 // Sidebar Pane Hover Options
-.sidebar-pane-section-toolbar {
+::shadow .sidebar-pane-section-toolbar {
 	background-color: @- !important; .contrast(@global-background, 2%);
 
 }
 
 
 // button options near filter
-::shadow {
+::shadow ::shadow {
 
 	.toolbar-button:not(.toolbar-has-glyph):not(.toolbar-has-dropdown):not(.menu-toolbar-item).hover {
 		background-color: rgba(0,0,0,0) !important;
@@ -330,7 +327,7 @@ div.ax-computed-name {
 }
 
 // css selector in header
-.sidebar-separator > span.monospace {
+::shadow .sidebar-separator > span.monospace {
 	background: transparent !important;
 	border: none !important;
 }
@@ -339,7 +336,7 @@ div.ax-computed-name {
 // Sidebar - Rendered Fonts
 // ==========================================================================
 
-// Fonts section header should be styled the same as .sidebar-separator, but
+// Fonts section header should be styled the same as ::shadow .sidebar-separator, but
 // there isn't a good selector hook for it. Attaching to parent class.
 .style-panes-wrapper ::shadow .title {
 	background-color: @style-section !important;

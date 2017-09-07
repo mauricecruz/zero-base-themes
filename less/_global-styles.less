@@ -33,6 +33,10 @@
 	background: lighten(@global-selected, 45%)
 }
 
+#-blink-dev-tools {
+	color: @global-text !important;
+}
+
 //Panel text
 .panel-enabler-view {
 	color: @global-text;
@@ -101,7 +105,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 
 // Editing Dom Nodes or Snippet Filenames
 ::shadow ::shadow style + .text-prompt-editing,
-::shadow .text-prompt-editing ,
+::shadow ::shadow ::shadow .text-prompt-editing ,
 .editing {
 	box-shadow: none !important;
 	background-color: @global-background !important;
@@ -136,7 +140,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	background-color: @global-background !important;
 }
 
-::shadow {
+::shadow :not(.read-only)::shadow {
 	.tree-outline li {
 		color: @global-text !important;
 		background-color: @table-primary !important;
