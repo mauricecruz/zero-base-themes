@@ -105,12 +105,20 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 
 // Editing Dom Nodes or Snippet Filenames
 ::shadow ::shadow style + .text-prompt-editing,
-::shadow ::shadow ::shadow .text-prompt-editing ,
+::shadow ::shadow ::shadow .text-prompt-editing,
 .editing {
 	box-shadow: none !important;
 	background-color: @global-background !important;
 	outline: 1px solid @eh-editing-outline !important;
 	color: @global-text !important;
+}
+
+::shadow ::shadow ::shadow .text-prompt-editing ::content .text-prompt {
+	color: @global-text !important;
+
+	.auto-complete-text {
+		color: fade(@global-text, 30%) !important;
+	}
 }
 
 ::shadow .text-prompt-editing > ::content * {
