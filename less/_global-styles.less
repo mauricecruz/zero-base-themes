@@ -148,11 +148,18 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	background-color: @global-background !important;
 }
 
+
+
 ::shadow :not(.read-only)::shadow {
+	// Computed Properties Table
 	.tree-outline li {
 		&.odd-row + .children li,
 		&.odd-row {
 			background-color: @table-secondary !important;
+		}
+
+		&[role="treeitem"]:not(.odd-row):hover {
+			background-color: transparent !important;
 		}
 
 		&:hover:not(.selected) .selection {
@@ -175,13 +182,11 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 	box-shadow: none !important;
 }
 
-
 ::shadow .soft-context-menu {
 	background: @popover-background !important;
 	border: 1px solid @- !important; .contrast(@popover-background, 5%);
 	color: @global-text !important;
 	box-shadow: 0 5px 10px fade(#000, 40%) !important;
-
 
 	.soft-context-menu-item-mouse-over {
 		& { background-color: @- !important; .contrast(@popover-background, 8%); }
