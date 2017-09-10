@@ -1,6 +1,5 @@
 function isStable() {
 	return +/Chrome\/(\d\d)/.exec(navigator.userAgent)[1] === stableVersion
-
 }
 
 const stableVersion = 61;
