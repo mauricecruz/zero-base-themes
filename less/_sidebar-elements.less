@@ -200,7 +200,7 @@
 }
 
 // Properties section
-.properties-widget-section {
+::shadow .properties-widget-section {
 	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
 	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
 	margin-top: 0 !important;
@@ -387,9 +387,4 @@ div.ax-computed-name {
 	background-color: @style-section !important;
 	border-top: 0 !important;
 	border-bottom: 0 !important;
-}
-
-// Computed Properties Table
-::shadow .computed-properties::shadow .tree-outline li:hover {
-	background-color: transparent !important;
 }

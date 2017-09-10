@@ -12,13 +12,8 @@
 	}
 
 	/*-- currently selected element --*/
-	.selected {
-		.base-storage-tree-element-title,
-		.base-storage-tree-element-subtitle,
-		.base-navigator-tree-element-title {
-			color: @selection-text !important;
-			text-shadow: none !important;
-		}
+	::shadow ::shadow .tree-element-title {
+		color: @selection-text !important;
 	}
 
 	.sidebar li {
