@@ -136,6 +136,17 @@
 		outline: 1px solid @selection-border !important;
 	}
 
+	// outline when you hold 'cmd' when on a breakpoint
+	.cm-execution-line-outline {
+		outline: 1px solid @selection-border !important;
+	}
+
+	.CodeMirror .source-frame-continue-to-location,
+	.CodeMirror .source-frame-continue-to-location:hover {
+		background-color: @selection-background  !important;
+		outline: 1px solid @selection-border !important;
+	}
+
 	.CodeMirror-linenumber {border-right: none !important;}
 
 	.cm-line-without-source-mapping {
