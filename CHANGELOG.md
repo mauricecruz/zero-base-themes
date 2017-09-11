@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.1
+* Element panel fixes
+* Prep for implementation change
+
 ## 2.5.0
 * Fix Sidebar Elements Panel
 
