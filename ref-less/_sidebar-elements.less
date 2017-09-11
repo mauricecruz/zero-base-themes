@@ -1,17 +1,23 @@
 // ==========================================================================
-// Elements/Sources Right Sidebar
+// Elements Sidebar
 // ==========================================================================
 
-// Each selector section
+
+// Styles
+// ==========================================================================
 .styles-section {
 	padding: 4px 0 !important;
 	margin: 0 10px;
 	border-top: 1px solid @style-separator !important;
-	border-bottom: none !important;
+	border-bottom: 0 !important;
 	color: @global-text !important;
 
 	&:first-child {
-		border-top: none !important;
+		border-top: 0 !important;
+	}
+
+	&[data-keyboard-focus]:focus {
+		background-color: rgba(0, 0, 0, 0) !important;
 	}
 
 	// Elements CSS Sidebar Readonly
@@ -21,48 +27,93 @@
 		padding-left: 10px !important;
 		padding-right: 10px !important;
 	}
+}
 
-	.value {
-		color: @style-value !important;
-	}
-
-	// edit mode
-	.child-editing,
-	.header .subtitle {
-		color: @style-edit-mode-selector-text !important;
-	}
-
+:host-context(.styles-section) {
 	.overloaded,
 	.inactive,
 	.disabled,
 	.not-parsed-ok {
 		opacity: 0.5 !important;
 	}
-
-	.monospace {
-		color: @style-selector-text !important;
-	}
 }
 
-// editing style properties
-style + .text-prompt-editing ::content .text-prompt {
+// Styles Filter Bar
+.styles-sidebar-pane-toolbar-container {
+	background-color: @global-background !important;
 	color: @global-text !important;
 }
 
-.sidebar-pane {
-	.section.expanded {
+.styles-sidebar-pane-toolbar {
+	border-bottom: 1px solid @style-separator !important;
+}
 
-		// Elements -> Event Listeners
-		> .header {
-			border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom, 10%, invert);
-		}
+.styles-filter-engaged {
+	background-color: fade(@global-selected, 50%) !important;
+}
 
-		// Sources -> Watch Expressions
-		> .properties-tree {
-			background-color: @- !important; .contrast(@global-background, 2%);
-		}
+.filter-match {
+	background-color: @global-selected !important;
+	box-shadow: 0 0 0 1px @selection-border !important;
+	border-radius: 2px;
+}
+:host-context(.styles-pane-toolbar) {
+	.toolbar-state-off:hover .toolbar-text {
+		color: @glyph-hover !important;
+	}
+
+	.toolbar-state-on .toolbar-text {
+		color: @glyph-active !important;
 	}
 }
+
+.styles-element-state-pane {
+	background-color: @- !important; .contrast(@global-background, 5%);
+	padding: 4px 0 !important;
+	border-bottom: 1px solid @global-divider !important;
+	color: @global-text !important;
+
+	&.expanded {
+		margin-top: 0 !important;
+	}
+}
+
+// override to remove bg from filter button hovers
+.toolbar-toggled-gray button.toolbar-button.toolbar-state-on {
+	background-color: transparent !important;
+}
+
+// Style Section Headers
+.sidebar-separator {
+	background-color: @style-section !important;
+	color: @style-selector-text !important;
+	border-top: none !important;
+	border-bottom: none !important;
+}
+
+// sidebar separator titles of nodes
+.node-label-name { color: @xml-tag !important; }
+
+.node-label-id,
+.node-label-class,
+.node-label-pseudo { color: @css-def !important; }
+
+
+
+// .sidebar-pane {
+// 	.section.expanded {
+//
+// 		// Elements -> Event Listeners
+// 		> .header {
+// 			border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom, 10%, invert);
+// 		}
+//
+// 		// Sources -> Watch Expressions
+// 		> .properties-tree {
+// 			background-color: @- !important; .contrast(@global-background, 2%);
+// 		}
+// 	}
+// }
 
 // Metrics
 // ========================================================================== */
@@ -88,32 +139,6 @@ style + .text-prompt-editing ::content .text-prompt {
 	}
 }
 
-.styles-section.first-styles-section,
-.sidebar-separator + .styles-section {
-	border-top: none !important;
-}
-
-// Style Section Headers
-.sidebar-separator {
-	background-color: @style-section !important;
-	color: @style-selector-text !important;
-	text-shadow: none !important;
-	border-top: none !important;
-	border-bottom: none !important;
-}
-
-// Pseudo State Displays
-.styles-animations-controls-pane.expanded,
-.styles-element-state-pane {
-	background: @- !important; .contrast(@global-background,6%);
-	padding: 4px 0 !important;
-	border-bottom: 1px solid @global-divider !important;
-}
-
-.styles-element-state-pane.expanded {
-	margin-top: 0 !important;
-}
-
 // Sections with nested objects
 .sidebar-pane-stack .event-category,
 .sidebar-pane .section {
@@ -122,64 +147,46 @@ style + .text-prompt-editing ::content .text-prompt {
 	margin-top: 0 !important;
 }
 
-// Editable Media Query on Elements Panel
-.styles-section-title .media-list.media-matches .media.editable-media,
-.styles-section-title .media-list {
-	color: @- !important; .contrast(@global-text, 25%, invert);
-
-	&.media-matches .media.editable-media .media-text {
-		color: @global-text !important;
-	}
-}
-
-// Magnifying glyph in computed panel when hovering over rule
-.computed-style-trace-button > .glyph {
-	background-color: @glyph-active !important;
-}
-
-.styles-sidebar-pane-toolbar {
-	border-bottom: 1px solid @style-separator !important;
-}
-
-.metrics-and-styles .metrics {
+.style-panes-wrapper > div:not(:first-child) {
 	border-top: 1px solid @style-separator !important;
 }
 
-// Filter Module
-.styles-filter-engaged {
-	background-color: fade(@global-selected, 50%) !important;
-}
+// Editable Media Query on Elements Panel
+// .styles-section-title .media-list.media-matches .media.editable-media,
+// .styles-section-title .media-list {
+// 	color: @- !important; .contrast(@global-text, 25%, invert);
+//
+// 	&.media-matches .media.editable-media .media-text {
+// 		color: @global-text !important;
+// 	}
+// }
 
-.styles-sidebar-pane-filter-box > input {
-	color: @global-text !important;
-}
+// Magnifying glyph in computed panel when hovering over rule
+// .computed-style-trace-button > .glyph {
+// 	background-color: @glyph-active !important;
+// }
 
-// Force State
-.styles-element-state-pane {
-	color: @global-text !important;
+// .styles-sidebar-pane-filter-box > input {
+// 	color: @global-text !important;
+// }
 
-	> div {
-		margin: 0 4px 2px !important;
-	}
-}
+// // Buttons for Sidebar Options
+// .pin-toolbar-item.toggled-on,
+// .animation-toolbar-item.toggled-on {
+// 	background-color: rgba(0, 0, 0, 0);
+// }
+//
+// // Animation Controls
+// .styles-animations-controls-pane {
+// 	background: @- !important; .contrast(@global-background,6%);
+// 	color: @global-text !important;
+// 	border-bottom: 1px solid @style-separator !important;
+// }
 
-// Buttons for Sidebar Options
-.pin-toolbar-item.toggled-on,
-.animation-toolbar-item.toggled-on {
-	background-color: rgba(0, 0, 0, 0);
-}
-
-// Animation Controls
-.styles-animations-controls-pane {
-	background: @- !important; .contrast(@global-background,6%);
-	color: @global-text !important;
-	border-bottom: 1px solid @style-separator !important;
-}
-
-// adjust position of animation slider
-.styles-animations-controls-pane > * {
-	margin: 3px 4px !important;
-}
+// // adjust position of animation slider
+// .styles-animations-controls-pane > * {
+// 	margin: 3px 4px !important;
+// }
 
 // event listeners section borders
 .event-listener-tree > li {
@@ -225,14 +232,6 @@ style + .text-prompt-editing ::content .text-prompt {
 .webkit-css-property,
 .styles-section .properties > li .webkit-css-property {
 	color: @css-property !important; font-weight: 400;
-}
-
-// Highlighted Filtered Element (Filter box)
-.styles-section .style-properties li.selector-match,
-.styles-section .simple-selector.selector-match {
-	background-color: @global-selected !important;
-	box-shadow: 0 0 0 1px @selection-border !important;
-	border-radius: 2px;
 }
 
 // Custom Element Form
