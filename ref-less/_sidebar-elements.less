@@ -57,6 +57,7 @@
 	box-shadow: 0 0 0 1px @selection-border !important;
 	border-radius: 2px;
 }
+
 :host-context(.styles-pane-toolbar) {
 	.toolbar-state-off:hover .toolbar-text {
 		color: @glyph-hover !important;
@@ -69,13 +70,8 @@
 
 .styles-element-state-pane {
 	background-color: @- !important; .contrast(@global-background, 5%);
-	padding: 4px 0 !important;
 	border-bottom: 1px solid @global-divider !important;
 	color: @global-text !important;
-
-	&.expanded {
-		margin-top: 0 !important;
-	}
 }
 
 // override to remove bg from filter button hovers
@@ -89,6 +85,11 @@
 	color: @style-selector-text !important;
 	border-top: none !important;
 	border-bottom: none !important;
+
+	> span.monospace {
+		background: transparent !important;
+		border: none !important;
+	}
 }
 
 // sidebar separator titles of nodes
@@ -98,7 +99,22 @@
 .node-label-class,
 .node-label-pseudo { color: @css-def !important; }
 
+// Editing Styles
+// ==========================================================================
 
+// property name
+.text-prompt-root.text-prompt-editing ::content .webkit-css-property.text-prompt {
+	color: @css-property !important;
+}
+
+// selector
+.selector.being-edited {
+	color: @css-def !important;
+}
+
+.text-prompt-root.text-prompt-editing ::content .text-prompt {
+	color: @global-text !important;
+}
 
 // .sidebar-pane {
 // 	.section.expanded {
@@ -119,15 +135,7 @@
 // ========================================================================== */
 
 .metrics {
-	& { border-top: 1px solid @- !important; .contrast(@global-background, 5%) }
-	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%) }
-	margin-top: 5px !important;
-	color: #222222;
-
-	// Give position bottom border some space to render. Currently a UI bug in native devtools.
-	.position {
-		margin: 0 0 -16px 0 !important;
-	}
+	color: @global-background !important;
 
 	.position,
 	.margin:not([style^=background-color]),
@@ -147,10 +155,45 @@
 	margin-top: 0 !important;
 }
 
+// Override table filter below metrics
 .style-panes-wrapper > div:not(:first-child) {
 	border-top: 1px solid @style-separator !important;
 }
 
+// Filter bar text
+.styles-sidebar-pane-filter-box > input {
+	color: @global-text !important;
+}
+
+:host(.toolbar-item) .dt-checkbox-text {
+	color: @global-text !important;
+}
+
+.property-value-text {
+	color: @global-text !important;
+}
+
+// Computed Properties
+:host(.computed-properties) .tree-outline li:hover {
+	background-color: transparent !important;
+
+	&.odd-row {
+		background-color: @table-secondary !important;
+	}
+}
+
+// highlight selected style (not working??)
+.highlight-line-modification {
+	animation: source-line-modification-background-fadeout-revised 0.4s 0s;
+}
+
+
+// Event Listeners
+// ==========================================================================
+
+.view-container > .toolbar {
+	border-bottom: 1px solid @global-divider;
+}
 // Editable Media Query on Elements Panel
 // .styles-section-title .media-list.media-matches .media.editable-media,
 // .styles-section-title .media-list {
@@ -164,10 +207,6 @@
 // Magnifying glyph in computed panel when hovering over rule
 // .computed-style-trace-button > .glyph {
 // 	background-color: @glyph-active !important;
-// }
-
-// .styles-sidebar-pane-filter-box > input {
-// 	color: @global-text !important;
 // }
 
 // // Buttons for Sidebar Options
@@ -307,12 +346,6 @@ div.ax-computed-name {
 .property-trace-value,
 .property-trace-selector {
 	color: @global-text !important;
-}
-
-// css selector in header
-.sidebar-separator > span.monospace {
-	background: transparent !important;
-	border: none !important;
 }
 
 // ==========================================================================

@@ -109,7 +109,7 @@ body.dock-to-right:not(.undocked):not(.overlay-contents) {
 
 // Editing Dom Nodes or Snippet Filenames
 style + .text-prompt-editing,
-.text-prompt-editing ,
+.text-prompt-editing,
 .editing {
 	box-shadow: none !important;
 	background-color: @global-background !important;
@@ -119,10 +119,6 @@ style + .text-prompt-editing,
 
 // Weird edit state where you add an attribute, but delete the text and retype
 .being-edited.editing font {
-  color: @global-text !important;
-}
-
-.text-prompt-editing > ::content * {
 	color: @global-text !important;
 }
 
