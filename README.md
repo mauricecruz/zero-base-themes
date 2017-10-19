@@ -1,5 +1,14 @@
-# Only Supporting Stable Channel (Temporarily)
+# Update (2017-10-18)
+The fix to continue support for custom devtools themes landed in m62. The new method injects the custom stylesheet into every shadow root that gets rendered. This caused devtools to be super sluggish especially with the shadow piercing combinators. I haven't finished refactoring the styles, but I decided to release it early to address some of the performance and style issues.
 
+### How You Can Help
+Please file issues for anything that seems broken/unstyled.
+
+I'm trying to prune as much css as possible to improve performance. Haven't figured out a good way of verifying if a selector is was removed/deprecated by the Chrome Team other than searching the code base. And that's a slow and painful process.
+
+If you want to pitch in with the cleanup, feel free to create pull requests.
+
+# Only Supporting Stable Channel (Temporarily)
 The css combinators used to override the devtools CSS is deprecated and support will be removed from Chrome in m63 (~ December 2017). The [Chrome Team will continue to support custom themes](https://bugs.chromium.org/p/chromium/issues/detail?id=709732&can=2&q=709732) by changing the implementation.
 
 The implementation change requires a rewrite of this theme. During this time, only stable channel will be supported.
@@ -24,7 +33,7 @@ Zero Base Themes is built on LESS. Grunt is used to listen for changes to LESS f
 
 5. chrome://flags (make sure `Enable Developer Tools experiments` is enabled).
 
-6. In Chome Dev Tools > Settings (cog icon or `Shift+?`) > Experiments > Allow custom UI themes.
+6. In Chrome Dev Tools > Settings (cog icon or `Shift+?`) > Experiments > Allow custom UI themes.
 
 7. Close and reopen the dev tools.
 
