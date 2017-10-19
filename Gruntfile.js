@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'theme-extension/stable.css': 'less/build-stable.less',
-					'theme-extension/canary.css': 'ref-less/build-canary.less',
+					'theme-extension/canary.css': 'less/build-canary.less',
 				}
 			},
 			build: {
@@ -41,13 +41,13 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'theme-extension/stable.css': 'less/build-stable.less',
-					'theme-extension/canary.css': 'ref-less/build-canary.less',
+					'theme-extension/canary.css': 'less/build-canary.less',
 				}
 			}
 		},
 		watch: {
 			canary: {
-				files: ['less/*.less','themes/*.less', 'ref-less/*.less'],
+				files: ['less/*.less','themes/*.less'],
 				tasks: ['less:generate']
 			},
 		}

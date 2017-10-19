@@ -2,7 +2,7 @@ function isStable() {
 	return +/Chrome\/(\d\d)/.exec(navigator.userAgent)[1] === stableVersion
 }
 
-const stableVersion = 61;
+const stableVersion = 62;
 const stylesheet = isStable() ? 'stable.css' : 'canary.css'
 
 fetch(`/${stylesheet}`)
