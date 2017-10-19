@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0
+* Removed all shadow piercing combinators
+* Updated scrollbars styles
+
 ## 2.5.1
 * Element panel fixes
 * Prep for implementation change
