@@ -2,6 +2,18 @@
 // Elements Sidebar
 // ==========================================================================
 
+:host-context(.panel.elements) {
+	.shadow-split-widget.hbox > .shadow-split-widget-sidebar:not(.maximized) {
+		border-left: 1px solid @global-divider !important;
+	}
+}
+
+.elements-tree-header {
+	border-top: 1px solid @global-divider !important;
+	border-bottom: 1px solid @global-divider !important;
+	color: @global-text !important;
+	background-color: @toolbar-main !important;
+}
 
 // Styles
 // ==========================================================================
