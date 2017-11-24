@@ -55,6 +55,16 @@ li.search-match .search-match-content {
 	border: 1px solid @form-input-border !important;
 }
 
+:host-context(.search-results) {
+	// filename header
+	.search-result {
+		background-color: @find-header-background !important;
+		color: @global-text !important;
+		border: 1px solid @- !important; .contrast(@find-header-background, 5%);
+		border-left: 0;
+		border-right: 0;
+	}
+}
 // [global] highlighted search input
 :host-context(#-blink-dev-tools) li.search-match .highlighted-match,
 .highlighted-search-result,
@@ -63,7 +73,7 @@ li.search-match .search-match-content {
 	border-radius: 2px !important;
 	font-size: 1em !important;
 	background-color: @find-highlight-background !important;
-	box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 4px 0px !important;
+	box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 4px 0 !important;
 }
 
 // ==========================================================================
@@ -152,23 +162,9 @@ li.search-match:hover {
 	.highlight(hover) !important;
 }
 
-li.search-match .devtools-link {
-	background: @global-background !important;
-}
-
 // text color of find contents
 search-match-content {
 	color: @global-text !important;
-}
-
-// filename header
-.search-result {
-	background-color: @find-header-background !important;
-	color: @global-text !important;
-	& { border-top: 1px solid @- !important; .contrast(@find-header-background, 5%) };
-	& { border-bottom: 1px solid @- !important; .contrast(@find-header-background, 5%, invert) };
-	line-height: 18px !important;
-	margin: 0 !important;
 }
 
 // link to show more matches found in file
