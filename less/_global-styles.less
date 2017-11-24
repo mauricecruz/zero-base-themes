@@ -235,8 +235,6 @@ li.audits-sidebar-results {
 }
 
 // Buttons
-.chrome-select:extend(.chrome-select all) {};
-
 .text-button,
 [is="text-button"] {
 	.button-styles();
@@ -335,4 +333,19 @@ label[is="dt-radio"] ::content .dt-radio-button:checked {
 .selected-call-frame-icon,
 .selected-thread-icon {
 	-webkit-mask-position: -80px 50px !important;
+}
+
+// ==========================================================================
+// Form Elements
+// ==========================================================================
+.dt-checkbox-text {
+	color: @global-text !important;
+}
+
+.chrome-select {
+	.input-styles();
+	background-image: none !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	padding-right: 0;
 }

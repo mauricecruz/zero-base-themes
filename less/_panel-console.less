@@ -1,6 +1,22 @@
 // ==========================================================================
 // Console
 // ==========================================================================
+.console-view {
+	background-color: @toolbar-sub !important;
+
+	> .toolbar {
+		border-bottom: 1px solid @global-divider !important;
+	}
+}
+
+.console-settings-pane {
+	border-bottom: 1px solid @global-divider !important;
+}
+
+.toolbar-input {
+	.input-styles();
+}
+
 .debug-type(@type, @color) {
 	.console-@{type}-level {
 		.console-message-text,
@@ -175,6 +191,7 @@
 	color: @global-label;
 }
 
+.network-config-ua-custom input,
 .sensors-view input {
 	.input-styles();
 }
