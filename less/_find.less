@@ -63,6 +63,12 @@ li.search-match .search-match-content {
 		border: 1px solid @- !important; .contrast(@find-header-background, 5%);
 		border-left: 0;
 		border-right: 0;
+
+		&:hover {
+			.search-result-file-name {
+				color: @global-text !important;
+			}
+		}
 	}
 }
 // [global] highlighted search input
