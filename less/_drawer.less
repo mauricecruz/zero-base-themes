@@ -281,3 +281,66 @@
 		border-left: 1px solid @global-divider !important;
 	}
 }
+
+// ==========================================================================
+// Animations
+// ==========================================================================
+:host(.animations-timeline) {
+	.animation-timeline-buffer,
+	.animation-timeline-buffer-hint,
+	.animation-timeline-header,
+	.animation-timeline-toolbar-container {
+		border-bottom: 1px solid @global-divider !important;
+	}
+
+	.animation-timeline-header::after {
+		background-color: @global-background !important;
+		border-right-color: @global-divider !important;
+	}
+
+	.animation-timeline-toolbar-container {
+		background-color: @toolbar-sub !important;
+	}
+
+	.animation-controls,
+	.animation-name {
+		color: @global-text !important;
+	}
+
+	.animation-node-description {
+		background-color: @global-background !important;
+		border-bottom-color: @global-divider !important;
+	}
+
+	.animation-node-row {
+		border-bottom-color: @global-divider !important;
+	}
+
+	.animation-timeline-rows-hint,
+	.animation-timeline-buffer-hint {
+		color: @global-text !important;
+	}
+
+	.animation-timeline-rows {
+		background-color: @global-background !important;
+	}
+
+	.animation-buffer-preview {
+		background-color: @- !important; .contrast(@global-background, 10%);
+
+		&.selected {
+			box-shadow: 0 0 0 1px @global-accent !important;
+		}
+	}
+
+	.animation-playback-rate-button {
+		background-color: @form-button-background !important;
+		color: @form-button-text !important;
+		border-color: @form-button-border !important;
+
+		&.selected {
+			border-color: @global-accent !important;
+			color: @global-accent !important;
+		}
+	}
+}
