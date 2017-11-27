@@ -161,6 +161,7 @@
 .panel:not(.network) .resources-dividers-label-bar {
 	background: transparent !important;
 	border-bottom:1px solid @- !important; .contrast(@tab-color-bottom, 10%, invert);
+	color: @global-text !important;
 }
 
 // X axis guide for records || also used in network visualization
@@ -177,6 +178,8 @@
 }
 
 #timeline-overview-container {
+	background-color: @global-background !important;
+
 	canvas {
 		background-color: transparent !important;
 	}
