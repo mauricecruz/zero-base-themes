@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.1
+* Style cleanup
+
 ## 3.0
 * Removed all shadow piercing combinators
 * Updated scrollbars styles
