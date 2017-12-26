@@ -1,6 +1,7 @@
-/**********************************************/
-/* Tables
-/**********************************************/
+// ==========================================================================
+// Tables
+// ==========================================================================
+
 .data-grid {
 	border: 1px solid @- !important; .contrast(@global-background, 5%, invert);
 	background-color: transparent !important;
@@ -37,7 +38,6 @@
 		}
 
 		tr {
-
 			&:nth-child(odd) {
 				background-color: @table-primary !important;
 			}
@@ -46,7 +46,7 @@
 				background-color: @table-secondary !important;
 			}
 
-			&:not(.selected):not(.filler):hover{
+			&:not(.selected):not(.filler):hover {
 				background-color: @global-hover !important;
 				outline: 1px solid @- !important; .contrast(@global-hover, 7%);
 			}
@@ -57,7 +57,7 @@
 			}
 
 			.editing * {
-				color: #FFF !important;
+				color: #fff !important;
 				background-color: @global-background !important;
 			}
 		}

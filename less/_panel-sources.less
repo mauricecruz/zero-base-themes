@@ -27,7 +27,7 @@
 // Breakpoints
 .breakpoints-list-deactivated {
 	background-color: @- !important; .contrast(@global-background, 5%) !important;
-	opacity: 0.3 !important
+	opacity: 0.3 !important;
 }
 
 .breakpoint-hit {
@@ -83,7 +83,6 @@
 
 	/* Call Stack */
 	.list-item {
-
 		.title,
 		.subtitle {
 			color: @global-text !important;
@@ -121,7 +120,6 @@
 			color: @global-warn !important;
 			font-weight: normal !important;
 		}
-
 	}
 
 	.call-frame-item-title {
@@ -182,7 +180,7 @@
 	}
 }
 
-.sidebar-pane-stack > .sidebar-pane.visible:nth-last-of-type(1){
+.sidebar-pane-stack > .sidebar-pane.visible:nth-last-of-type(1) {
 	border-bottom: none !important;
 }
 
@@ -203,7 +201,6 @@ li.breakpoint-hit .breakpoint-hit-marker {
 
 	// Color Format Dropdown
 	> select {
-
 		> option,
 		> hr {
 			color: @global-text !important;
@@ -217,11 +214,9 @@ li.breakpoint-hit .breakpoint-hit-marker {
 			-webkit-mask-repeat: no-repeat !important;
 			-webkit-mask-image: url(Images/paneSettingsButtons.png) !important;
 		}
-
 	}
 
 	.pane-title-button {
-
 		// State Panel Toggle
 		&.element-state {
 			-webkit-mask-image: url(Images/paneElementStateButtons.png) !important;
@@ -232,7 +227,7 @@ li.breakpoint-hit .breakpoint-hit-marker {
 		}
 
 		&.animations-controls {
-			background-color: rgba(0,0,0,1) !important;
+			background-color: rgba(0, 0, 0, 1) !important;
 		}
 
 		// Add Element Button
@@ -241,8 +236,6 @@ li.breakpoint-hit .breakpoint-hit-marker {
 		&.add {
 			background-color: @- !important; .contrast(@global-background, 40%);
 		}
-
-
 	}
 }
 
@@ -270,7 +263,6 @@ li.breakpoint-hit .breakpoint-hit-marker {
 
 //Alternate Buttons
 .alternate-status-bar-buttons-bar {
-
 	.scripts-pause,
 	.scripts-long-resume,
 	.status-bar-item {
@@ -284,13 +276,12 @@ li.breakpoint-hit .breakpoint-hit-marker {
 	}
 }
 
-
 // Fix event listener breakpoint item style
 .event-listener-breakpoints.properties-tree li {
 	height: auto !important;
 	padding-top: 0 !important;
 
-	&:before {
+	&::before {
 		-webkit-mask-position: -4px -93px !important;
 	}
 
@@ -319,18 +310,18 @@ li.breakpoint-hit .breakpoint-hit-marker {
 
 // snippet that pops up when stepping into code that shows you values of variables
 .text-editor-value-decoration {
-	& {background-color: @- !important; .contrast(@global-background, 5%)};
+	& { background-color: @- !important; .contrast(@global-background, 5%) }
 	color: @global-text !important;
 	padding: 0 5px;
 	border-radius: 2px !important;
-	& {box-shadow: 0 1px 0 0 @- !important; .contrast(@global-background, 5%)};
-	& {border-top: 1px solid @- !important; .contrast(@global-background, 2.5%, invert)};
+	& { box-shadow: 0 1px 0 0 @- !important; .contrast(@global-background, 5%) }
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 2.5%, invert) }
 }
 
 // Notification bar (for mismatch/blackbox notices)
 .infobar {
-	& {border-bottom: 2px solid @- !important; .contrast(@global-background, 10%);}
-	& {background-color: @- !important; .contrast(@global-background, 5%);}
+	& { border-bottom: 2px solid @- !important; .contrast(@global-background, 10%); }
+	& { background-color: @- !important; .contrast(@global-background, 5%); }
 }
 
 .infobar-info {
@@ -349,7 +340,6 @@ li.breakpoint-hit .breakpoint-hit-marker {
 .watch-expression-header:hover {
 	background-color: @global-hover !important;
 }
-
 
 // Watch Panel Hover
 .watch-expression .primitive-value:hover,
@@ -397,7 +387,6 @@ li.breakpoint-hit .breakpoint-hit-marker {
 // Event Listener Tree
 // ==========================================================================
 .event-listener-tree {
-
 	> li {
 		border-top: none !important;
 	}
@@ -424,7 +413,7 @@ li.breakpoint-hit .breakpoint-hit-marker {
 
 // remove bg from selected menu item
 .tree-outline li {
-	background-color: rgba(0,0,0,0) !important;
+	background-color: rgba(0, 0, 0, 0) !important;
 }
 
 // ==========================================================================
@@ -443,7 +432,7 @@ li.breakpoint-hit .breakpoint-hit-marker {
 
 // horizontal view watch expression toolbar divider
 .view-container > .toolbar {
-	border-bottom : 1px solid @global-divider !important;
+	border-bottom: 1px solid @global-divider !important;
 }
 
 // ==========================================================================
@@ -474,14 +463,13 @@ li.breakpoint-hit .breakpoint-hit-marker {
 // ==========================================================================
 .spritesheet-mediumicons:not(.icon-mask) {
 	&.mediumicon-file-sync,
-  &.mediumicon-file {
+	&.mediumicon-file {
 		.glyphs("Images/mediumIcons");
 		background: @tab-label !important;
-
 	}
 
 	&.mediumicon-file {
-		-webkit-mask-position: -0px 32px !important;
+		-webkit-mask-position: -0 32px !important;
 		position: relative;
 	}
 

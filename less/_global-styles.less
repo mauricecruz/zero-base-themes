@@ -12,6 +12,7 @@
 #console-messages,
 // sources
 .tabbed-pane-content,
+.panel-enabler-view {
 // #console-messages,
 // #console-view,
 // #network-views .CodeMirror-lines,
@@ -22,7 +23,6 @@
 // .help-window-main,
 // .panel .split-view-contents,
 // .panel,
-.panel-enabler-view {
 // .profiles-sidebar-tree-box,
 // .resource-view .script-view, // network -> response bg
 // .sidebar-overlay,
@@ -37,11 +37,11 @@
 }
 
 ::selection {
-	background: lighten(@global-selected, 45%)
+	background: lighten(@global-selected, 45%);
 }
 
 label {
-  color: @global-label !important;
+	color: @global-label !important;
 }
 
 .caution {
@@ -55,9 +55,7 @@ label {
 
 // Panel Tree Selections
 .panel {
-
 	.sidebar-tree-item {
-
 		&.selected {
 			background-color: @selection-background !important;
 			color: @selection-text !important;
@@ -73,7 +71,6 @@ label {
 		.disclosure-button {
 			background-color: @global-arrow !important;
 		}
-
 	}
 
 	.status-bar {
@@ -155,7 +152,6 @@ style + .text-prompt-editing,
 	}
 }
 
-
 li.audits-sidebar-results {
 	text-shadow: none !important;
 }
@@ -166,13 +162,11 @@ li.audits-sidebar-results {
 	box-shadow: none !important;
 }
 
-
 .soft-context-menu {
 	background: @popover-background !important;
 	border: 1px solid @- !important; .contrast(@popover-background, 5%);
 	color: @global-text !important;
 	box-shadow: 0 5px 10px fade(#000, 40%) !important;
-
 
 	.soft-context-menu-item-mouse-over {
 		& { background-color: @- !important; .contrast(@popover-background, 8%); }
@@ -255,8 +249,8 @@ input.toolbar-item {
 }
 
 label[is="dt-radio"] ::content .dt-radio-button:checked {
-		border: 0 !important;
-		background: url("Images/radioDot.png") center center no-repeat @global-accent !important;
+	border: 0 !important;
+	background: url("Images/radioDot.png") center center no-repeat @global-accent !important;
 }
 
 // ==========================================================================
@@ -275,7 +269,6 @@ label[is="dt-radio"] ::content .dt-radio-button:checked {
 		text-shadow: none !important;
 	}
 }
-
 
 // ==========================================================================
 // Glyphs
@@ -362,5 +355,5 @@ label[is="dt-radio"] ::content .dt-radio-button:checked {
 }
 
 .data-grid-data-grid-node {
-  color: @global-text !important;
+	color: @global-text !important;
 }

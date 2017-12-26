@@ -1,12 +1,12 @@
-/***************************************************
-/* Dialog Boxes
-/* -------------------------------------------
-/* Search Functions/Selectors in File [Ctrl+Shift+O]
-/***************************************************/
+// ==========================================================================
+// Dialog Boxes
+// Search Functions/Selectors in File [Ctrl+Shift+O]
+// ==========================================================================
+
 .filtered-item-list-dialog,
 .dialog {
 	background: @dialog-background !important;
-	box-shadow: 0 5px 15px 5px rgba(0,0,0,.6) !important;
+	box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.6) !important;
 	border: 1px solid @dialog-border !important;
 
 	.fill {
@@ -15,7 +15,7 @@
 
 	.selected {
 		background-color: @selection-background !important;
-		box-shadow: inset 0 1px 5px 0 rgba(0,0,0,.3) !important;
+		box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.3) !important;
 		color: @- !important; .contrast(@dialog-item-text, 10%);
 	}
 
@@ -30,8 +30,8 @@
 
 .filtered-item-list-dialog-item {
 	background-color: @dialog-item-background !important;
-	& { border-top: 1px solid @- !important; .contrast(@dialog-item-background, 5%) };
-	& { border-bottom: 1px solid @- !important; .contrast(@dialog-item-background, 10%) };
+	& { border-top: 1px solid @- !important; .contrast(@dialog-item-background, 5%) }
+	& { border-bottom: 1px solid @- !important; .contrast(@dialog-item-background, 10%) }
 
 	.filtered-item-list-dialog-subtitle {
 		color: @- !important; .contrast(@dialog-item-text, 40%, invert);
@@ -39,7 +39,7 @@
 
 	&:not(.selected):hover {
 		background-color: @hover-background !important;
-		box-shadow: inset 0 1px 5px 0 rgba(0,0,0,.5) !important;
+		box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.5) !important;
 	}
 
 	.filtered-item-list-dialog-title,
@@ -54,7 +54,7 @@
 
 //bg of new file dialog
 .filtered-item-list-dialog > div.container {
-	background-color: @global-background !important
+	background-color: @global-background !important;
 }
 
 // button styles
@@ -68,7 +68,7 @@
 // ==========================================================================
 .filtered-list-widget {
 	background: @dialog-background !important;
-	box-shadow: 0 5px 15px 5px rgba(0,0,0,.6) !important;
+	box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.6) !important;
 	border: 1px solid @dialog-border !important;
 
 	.not-found-text {
@@ -88,8 +88,8 @@
 
 	.filtered-list-widget-item {
 		background-color: @dialog-item-background !important;
-		& { border-top: 1px solid @- !important; .contrast(@dialog-item-background, 5%) };
-		& { border-bottom: 1px solid @- !important; .contrast(@dialog-item-background, 10%) };
+		& { border-top: 1px solid @- !important; .contrast(@dialog-item-background, 5%) }
+		& { border-bottom: 1px solid @- !important; .contrast(@dialog-item-background, 10%) }
 
 		&.selected {
 			background-color: @selection-background !important;
