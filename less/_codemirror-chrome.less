@@ -129,9 +129,18 @@ span.cm-token-highlight::before {
 	color: @selection-text !important;
 }
 
-.cm-execution-line {
+.cm-execution-line-outline {
 	background-color: @selection-background !important;
 	outline: 1px solid @selection-border !important;
+}
+
+.CodeMirror-persist-highlight {
+	background-color: @global-background !important;
+	border: 1px solid @selection-border !important;
+}
+
+.source-frame-continue-to-location {
+	background-color: @selection-background !important;
 }
 
 .CodeMirror-linenumber {
