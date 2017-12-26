@@ -1,7 +1,7 @@
 /* ==========================================================================
    Popovers
    ========================================================================== */
-.vbox.no-pointer-events .widget {
+:host(.vbox.no-pointer-events) .widget {
 	min-height: 0 !important;
 	border-width: 0 !important;
 	background: @popover-background !important;
@@ -43,13 +43,11 @@
 			color: @global-text !important;
 			text-shadow: 0 1px 1px lighten(@global-background, 5%);
 		}
-
 	}
 
 	a.undefined {
 		color: @xml-link !important;
 	}
-
 }
 
 .webkit-line-content .text-editor-overlay-highlight {
