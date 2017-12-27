@@ -32,6 +32,18 @@
 .overview-grid-cursor-area {
 	border-bottom: 1px solid @global-divider !important;
 }
+
+:host(.split-widget) .shadow-split-widget-sidebar {
+	border-left: 1px solid @global-divider !important;
+}
+
+.network-timing-table {
+	color: @global-text !important;
+}
+
+.network-timing-table-header td {
+	color: @global-accent !important;
+}
 //
 // // Override animation from clicking console link -> network
 // .highlighted-row {
@@ -362,11 +374,6 @@
 
 	.network-log-grid.data-grid tr.selected {
 		color: @global-text !important;
-	}
-
-	.network-waterfall-header {
-		background-color: @toolbar-main !important;
-		color: @global-accent !important;
 	}
 }
 
