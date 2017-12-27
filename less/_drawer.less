@@ -1,115 +1,3 @@
-// // ==========================================================================
-// // Drawer
-// // ==========================================================================
-//
-// .search-drawer-header label.search-config-label,
-// .drawer .settings-tab label,
-// #drawer-footer td label {
-// 	text-shadow: none !important;
-// 	color: @form-label-text !important;
-// }
-//
-// .overrides-view {
-// 	.tabbed-pane-header-tab {
-// 		color: @form-label-text !important;
-// 	}
-//
-// 	.tabbed-pane-content {
-// 		color: @form-label-text !important;
-//
-// 		:disabled {
-// 			color: fade(@form-label-text, 30%) !important;
-// 		}
-// 	}
-//
-// 	input,
-// 	select {
-// 		.input-styles();
-// 	}
-//
-// 	// add padding to overrides content panel
-// 	.tabbed-pane-content {
-// 		padding: 10px;
-// 	}
-//
-// 	// remove padding from top so menu displays well
-// 	.tabbed-pane-header {
-// 		padding-top: 0 !important;
-// 	}
-// }
-//
-// // Resolution Slider
-// input[type="range"]::-webkit-slider-runnable-track {
-// 	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
-// 	height: 5px !important;
-// 	text-align: center !important;
-// 	margin: 10px 0 !important;
-// }
-//
-// input[type='range']::-webkit-slider-thumb {
-// 	position: relative !important;
-// 	top: -5px !important;
-// }
-//
-// // History Tab
-// .revision-history-link {
-// 	color: @global-link !important;
-// }
-//
-// // override readability line height
-// .outline-disclosure.revision-history-drawer ol li {
-// 	padding-top: 2px !important;
-// 	line-height: 15px !important;
-// }
-//
-// // [Screen] Emulation Tab
-// .help-footnote {
-// 	border-top: none !important;
-//
-// 	a {
-// 		color: @global-accent;
-// 	}
-// }
-//
-// button.overrides-swap {
-// 	.button-styles();
-// }
-//
-// // Change the color of the emulation checkboxes to theme color
-// .overrides-activate-device #tab-device .tabbed-pane-header-tab-title::after,
-// .overrides-activate-media #tab-media .tabbed-pane-header-tab-title::after,
-// .overrides-activate-network #tab-network .tabbed-pane-header-tab-title::after,
-// .overrides-activate-sensors #tab-sensors .tabbed-pane-header-tab-title::after {
-// 	color: @global-accent !important;
-// }
-//
-// // Emulation Tab
-// .overrides-device button {
-// 	.button-styles();
-// }
-//
-//
-// // ==========================================================================
-// // Network Panel
-// // ==========================================================================
-//
-// .network-config-ua label[is="dt-radio"] {
-// 	color: @global-label !important;
-// }
-//
-// .network-config-ua input:not(.dt-radio-button) {
-// 	.input-styles();
-// }
-//
-// // ==========================================================================
-// // Sensors Panel
-// // ==========================================================================
-//
-// .sensors-view input[type=text] {
-// 	.input-styles();
-// }
-
-
 // ==========================================================================
 // Changes Panel
 // ==========================================================================
@@ -322,9 +210,9 @@
 	// revision timestamp node
 	.revision-history-revision {
 		color: @global-text !important;
-		& {background-color: @- !important; .contrast(@global-background, 4%) }
-		& {border-top: 1px solid @- !important; .contrast(@global-background, 8%) }
-		& {border-bottom: 1px solid @- !important; .contrast(@global-background, 3%, invert) }
+		& { background-color: @- !important; .contrast(@global-background, 4%) }
+		& { border-top: 1px solid @- !important; .contrast(@global-background, 8%) }
+		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 3%, invert) }
 		height: 22px !important;
 		line-height: 20px !important;
 	}
