@@ -195,3 +195,17 @@
 .sensors-view input {
 	.input-styles();
 }
+
+// ==========================================================================
+// Console Sidebar
+// ==========================================================================
+
+:host(.insertion-point-sidebar) {
+	.list {
+		background-color: @global-background !important;
+	}
+
+	.context-item.selected {
+		.highlight(selection) !important;
+	}
+}
