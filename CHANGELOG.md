@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.3
+* Update styles on setting panel
+* Clean up styles on timeline panel
+
 ## 3.0.2
 * Style cleanup
 
