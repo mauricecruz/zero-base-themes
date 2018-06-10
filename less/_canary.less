@@ -14,18 +14,3 @@
 #console-messages .devtools-link {
 	color: @global-text;
 }
-
-// ==========================================================================
-// Toolbar
-// ==========================================================================
-
-// re-enable panel slider for dark theme
-:host-context(.-theme-with-dark-background) .tabbed-pane-tab-slider {
-	display: block;
-	height: 2px !important;
-}
-
-// disable stable styles for highlighting tab
-.tabbed-pane-header-tab.selected {
-	border-top-color: transparent !important;
-}
