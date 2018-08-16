@@ -1,79 +1,12 @@
-// ==========================================================================
-// Toolbars
-// ==========================================================================
-.tabbed-pane-header {
-	background: @toolbar-main !important;
-	border-bottom: 1px solid @global-background !important;
-	border: none;
-
-	.chevron-icon {
-		background-color: @tab-label !important;
-
-		&:hover {
-			background-color: @tab-label-selected !important;
-		}
-	}
-}
-
-.tabbed-pane-header-tab {
-	background: none !important;
-	border: 0 !important;
-	color: @tab-label !important;
-	cursor: pointer !important;
-	margin: 0 !important;
-	margin-bottom: 1px !important;
-
-	&:hover {
-		color: @tab-label-selected !important;
-		background-color: rgba(0, 0, 0, 0) !important;
-	}
-
-	&.selected {
-		background: none !important;
-		color: @tab-label-selected !important;
-	}
-}
-
-// Glyphs
-.toolbar-button:enabled.hover:not(:active) .toolbar-glyph,
-.toolbar-button.toolbar-state-on .toolbar-glyph {
-	background-color: @global-accent !important;
-}
-
 .toolbar-divider {
-	background-color: @global-divider !important;
+	background-color: @toolbar-item-divider !important;
 }
 
-// Fix Quick Sources Selected Indicator
-:host-context(#sources-panel-sources-view) .tabbed-pane-header-tab {
-	position: relative;
-	top: 1px;
+.toolbar-item {
+	color: @global-text !important;
 }
 
-// drop-down hook when viewport is short
-.tabbed-pane-header-tabs-drop-down-container {
-	background-color: rgba(0, 0, 0, 0) !important;
-}
-
-// Main Toolbar
-// ==========================================================================
-:host(.insertion-point-main) {
-	.tabbed-pane-header {
-		border-bottom: 1px solid @global-background !important;
-	}
-
-	.tabbed-pane-header-tab,
-	.tabbed-pane-header-tab.selected {
-		border-top: 0 !important;
-	}
-}
-
-.tabbed-pane-tab-slider {
-	background-color: @tab-highlighted !important;
-	top: 0 !important;
-}
-
-// Secondary Toolbars
+// secondary toolbars
 :host-context(.panel.timeline),
 :host-context(.console-view) {
 	.toolbar-shadow {
@@ -86,12 +19,56 @@
 	border: 1px solid @form-button-border !important;
 }
 
+.toolbar-button.emulate-active {
+	background-color: transparent !important;
+}
+
+.tabbed-pane-tab-slider {
+	background-color: var(--accent-color) !important;
+	top: 0 !important;
+}
+
+// enable slider for dark theme
 :host-context(.-theme-with-dark-background) .tabbed-pane-tab-slider {
 	display: block !important;
 	height: 2px !important;
 }
 
-// disable stable styles for highlighting tab
-.tabbed-pane-header-tab.selected {
-	border-top-color: transparent !important;
+.tabbed-pane-header-tab {
+	color: @tab-label !important;
+
+	&:hover {
+		color: var(--tab-selected-fg-color) !important;
+	}
+
+	&.dragging {
+		background-color: @global-background !important;
+	}
+
+	&.selected .tabbed-pane-header-tab-title {
+		color: @tab-label-selected !important;
+	}
+}
+
+// drop-down hook when viewport is short
+.tabbed-pane-header-tabs-drop-down-container {
+	background-color: transparent !important;
+
+	&:hover .chevron-icon {
+		background-color: @tab-label-selected !important;
+	}
+
+	.chevron-icon {
+		background-color: @tab-label !important;
+	}
+}
+
+.tabbed-pane-header {
+	border-bottom: 1px solid @toolbar-divider !important;
+}
+
+// glyphs
+:not(.toolbar-render-as-links) .toolbar-button:enabled:hover:not(:active) .toolbar-glyph,
+.toolbar-button.toolbar-state-on .toolbar-glyph {
+	background-color: @global-accent !important;
 }
