@@ -42,13 +42,15 @@
 .show-child-highlighter-animations(@choice) when (@choice = true) {
 		/*-- HIGHLIGHT CHILDREN --*/
 	.elements-disclosure .parent + .children {
-		transition: .5s ease-in .25s;
+
+		transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
 	}
 
 	.elements-disclosure .hovered,
 	.elements-disclosure .selected {
 		&.parent.expanded + .children > li:last-of-type .webkit-html-tag.close {
-			transition: opacity .5s ease-in-out .25s;
+			transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 		}
 	}
 }
