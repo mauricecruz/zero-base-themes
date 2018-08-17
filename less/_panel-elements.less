@@ -69,5 +69,15 @@
 			color: @crumb-selected-text !important;
 			cursor: default;
 		}
+
+		&.collapsed {
+			color: @global-text !important;
+		}
 	}
+}
+
+.force-white-icons [is=ui-icon].spritesheet-largeicons,
+[is=ui-icon].icon-mask.gutter-menu-icon {
+	background: @global-text !important;
+	background-color: @global-text !important;
 }
