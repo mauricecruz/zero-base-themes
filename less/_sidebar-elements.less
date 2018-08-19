@@ -178,11 +178,33 @@
 }
 
 // Computed Properties
-:host(.computed-properties) .tree-outline li:hover {
-	background-color: transparent !important;
+:host(.computed-properties) .tree-outline li {
+	&:hover {
+		background-color: transparent !important;
+	}
 
 	&.odd-row {
 		background-color: @table-secondary !important;
+	}
+
+	.property-trace {
+		margin-top: 5px;
+	}
+
+	.trace-link {
+		color: @global-label;
+	}
+
+	.property-trace-inactive .property-trace-value {
+		opacity: 0.5 !important;
+
+		&::before {
+			border-color: @global-text;
+		}
+	}
+
+	.tree-outline ol.children.expanded {
+		margin-right: 5px;
 	}
 }
 
