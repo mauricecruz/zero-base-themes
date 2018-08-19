@@ -209,18 +209,31 @@
 .object-properties-section .number { color: @js-obj-number !important; }
 .object-properties-section-separator { color: @global-text !important; }
 .object-value-boolean { color: @js-obj-boolean !important; }
-.object-value-calculate-value-button { color: @js-obj-array !important; }
+.object-value-calculate-value-button { color: @js-obj-value !important; }
 .object-value-error { color: @global-error !important; }
 .object-value-function { color: @js-obj-function !important; }
 .object-value-function::before { color: @global-text !important; }
 .object-value-null { color: @js-obj-array !important; }
 .object-value-number { color: @js-obj-number !important; }
-.object-value-object { color: @js-obj-array !important; }
+.object-value-object { color: @js-obj-value !important; }
 .object-value-regexp { color: @js-obj-regexp !important; }
 .object-value-string { color: @js-obj-string !important; }
 .object-value-string-quote { color: @js-obj-string !important; }
 .object-value-symbol { color: @js-obj-regexp !important; }
+.object-value-internal\#scope { color: @js-obj-value !important; }
+.object-value-internal\#scopeList { color: @js-obj-value !important; }
 
 .devtools-link {
 	color: @global-link !important;
 }
+
+// node titles used sidebar separators and breadcrumbs
+.node-label-name { color: @xml-tag !important; }
+
+.node-label-id,
+.node-label-class,
+.node-label-pseudo { color: @css-def !important; }
+
+// Syntax in navigation trees
+.tree-outline-disclosure .name { color: @js-obj-name !important; }
+.tree-outline-disclosure .value:not([class*="object-value"]) { color: @js-obj-value !important; }
