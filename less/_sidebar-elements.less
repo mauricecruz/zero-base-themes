@@ -2,39 +2,38 @@
 // Elements Sidebar
 // ==========================================================================
 
-:host-context(.panel.elements) {
-	.shadow-split-widget.hbox > .shadow-split-widget-sidebar:not(.maximized) {
-		border-left: 1px solid @global-divider !important;
-	}
-}
-
-.elements-tree-header {
-	border-top: 1px solid @global-divider !important;
-	border-bottom: 1px solid @global-divider !important;
-	color: @global-text !important;
-	background-color: @toolbar-main !important;
-}
+// :host-context(.panel.elements) {
+// 	.shadow-split-widget.hbox > .shadow-split-widget-sidebar:not(.maximized) {
+// 		border-left: 1px solid @global-divider !important;
+// 	}
+// }
+//
+// .elements-tree-header {
+// 	border-top: 1px solid @global-divider !important;
+// 	border-bottom: 1px solid @global-divider !important;
+// 	color: @global-text !important;
+// 	background-color: @toolbar-main !important;
+// }
 
 // Styles
 // ==========================================================================
 .styles-section {
 	padding: 4px 0 !important;
 	margin: 0 10px;
-	border-top: 1px solid @style-separator !important;
 	border-bottom: 0 !important;
 	color: @global-text !important;
 
-	&:first-child {
-		border-top: 0 !important;
+	+ .styles-section {
+		border-top: 1px solid @style-separator !important;
 	}
 
 	&[data-keyboard-focus]:focus {
-		background-color: rgba(0, 0, 0, 0) !important;
+		background-color: transparent !important;
 	}
 
 	// Elements CSS Sidebar Readonly
 	&.read-only:not(.computed-style) {
-		background-color: @- !important; .contrast(@global-background, 5%);
+		background-color: @style-readonly !important;
 		margin: 0;
 		padding-left: 10px !important;
 		padding-right: 10px !important;
@@ -71,6 +70,10 @@
 }
 
 :host-context(.styles-pane-toolbar) {
+	.toolbar-button:hover {
+		background-color: transparent !important;
+	}
+
 	.toolbar-state-off:hover .toolbar-text {
 		color: @glyph-hover !important;
 	}
@@ -103,13 +106,6 @@
 		border: none !important;
 	}
 }
-
-// sidebar separator titles of nodes
-.node-label-name { color: @xml-tag !important; }
-
-.node-label-id,
-.node-label-class,
-.node-label-pseudo { color: @css-def !important; }
 
 // Editing Styles
 // ==========================================================================
@@ -155,7 +151,7 @@
 	.padding:not([style^=background-color]),
 	.margin:not([style^=background-color]),
 	.content:not([style^=background-color]) {
-		background-color: #888 !important;
+		background-color: @style-metrics-background !important;
 	}
 }
 
