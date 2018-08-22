@@ -34,16 +34,18 @@
 //Codemirror
 // Breakpoint Marker
 .cm-breakpoint .CodeMirror-gutter-elt {
-	background: @global-accent !important;
-	-webkit-border-image: none !important;
-	border: transparent !important;
-	color: #000 !important;
+	-webkit-filter: @cm-breakpoint-color;
+	color: @cm-breakpoint-text !important;
 	font-weight: 700 !important;
 }
 
-// remove invert for dark theme
+// breakpoint color
 .cm-breakpoint .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
-	-webkit-filter: invert(0) !important;
+	-webkit-filter: @cm-breakpoint-color !important;
+}
+
+.CodeMirror-gutter-wrapper:not(.CodeMirror-activeline-gutter) .cm-breakpoint + .CodeMirror-line {
+	border-right: 0 !important;
 }
 
 .cm-breakpoint-conditional .CodeMirror-gutter-elt {
@@ -141,10 +143,6 @@ span.cm-token-highlight::before {
 
 .source-frame-continue-to-location {
 	background-color: @selection-background !important;
-}
-
-.CodeMirror-linenumber {
-	border-right: none !important;
 }
 
 .cm-line-without-source-mapping {

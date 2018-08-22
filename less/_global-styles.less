@@ -1,110 +1,50 @@
-/**********************************************
-/* DevTool Chrome
-/**********************************************/
-
 // GLOBAL BACKGROUND COLOR
-// elements-panel
-.panel.elements,
-// elements-sidebar
-.styles-pane,
+.panel.elements, // elements-panel
+.styles-pane, // elements-sidebar
 .metrics,
-// console
 #console-messages,
-// sources
-.tabbed-pane-content,
+.tabbed-pane-content, // sources
 .panel-enabler-view {
-// #console-messages,
-// #console-view,
-// #network-views .CodeMirror-lines,
-// #script-view-fallback,
-// .console-view-wrapper,
-// .dialog .fill,
-// .drawer .revision-history-drawer,
-// .help-window-main,
-// .panel .split-view-contents,
-// .panel,
-// .profiles-sidebar-tree-box,
-// .resource-view .script-view, // network -> response bg
-// .sidebar-overlay,
-// .split-view-vertical .sidebar-pane.composite .properties-tree,
-// .styles-section.read-only,
-// .tabbed-pane-content,
-// .tabbed-pane-content.has-no-tabs
-// .timeline-records-title,
-// .timeline-records-list,
-// #timeline-overview-sidebar
 	background-color: @global-background !important;
 }
 
+.CodeMirror .CodeMirror-selected,
+.CodeMirror-focused .CodeMirror-selected,
+:focus.selected {
+	background-color: @global-selected !important;
+
+	.inactive & {
+		background-color: @global-selected !important;
+	}
+}
+
+.tabbed-pane .CodeMirror-focused .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight),
+.CodeMirror-focused .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight),
+div.CodeMirror .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight) {
+	color: @global-text !important;
+}
+
+.CodeMirror .CodeMirror-line::selection,
+.CodeMirror .CodeMirror-line > span::selection,
+.CodeMirror .CodeMirror-line > span > span::selection {
+	background: @global-selected !important;
+	color: unset !important;
+}
+
 ::selection {
-	background: lighten(@global-selected, 45%);
+	background: lighten(@global-selected, 45%) !important;
 }
 
-label {
-	color: @global-label !important;
+[class*="platform-"] {
+	color: @global-text !important;
 }
 
-.caution {
-	color: @global-warn !important;
+.status-bar {
+	border-bottom: 1px solid @tab-color-top;
 }
 
-//Panel text
-.panel-enabler-view {
-	color: @global-text;
-}
-
-// Panel Tree Selections
-.panel {
-	.sidebar-tree-item {
-		&.selected {
-			background-color: @selection-background !important;
-			color: @selection-text !important;
-			box-shadow: inset 0 1px 0 0 @selection-border, inset 0 -1px 0 0 @selection-border;
-		}
-
-		&:not(.selected):hover {
-			background-color: @hover-background !important;
-			color: @hover-text !important;
-			box-shadow: inset 0 1px 0 0 @hover-border, inset 0 -1px 0 0 @hover-border;
-		}
-
-		.disclosure-button {
-			background-color: @global-arrow !important;
-		}
-	}
-
-	.status-bar {
-		border-bottom: 1px solid @tab-color-top;
-	}
-
-	.status-bar-text {
-		color: @global-text !important;
-	}
-}
-
-body.dock-to-right.inactive:not(.undocked):not(.overlay-contents),
-body.dock-to-right:not(.undocked):not(.overlay-contents) {
-	border-left: transparent !important;
-}
-
-.split-view.vbox > .split-view-sidebar.split-view-contents-second:not(.maximized) {
-	border-top: none !important;
-}
-
-// Buttons
-.tabbed-pane-content .settings-tab-text-button {
-	.button-styles();
-}
-
-// Remove border lines
-.split-view.vbox > .split-view-resizer > .split-view-resizer-border,
-.split-view.hbox > .split-view-resizer > .split-view-resizer-border {
-	border: none !important;
-}
-
-// Remove background from sidebars
-.sidebar {
-	background: none !important;
+.status-bar-text {
+	color: @global-text !important;
 }
 
 // Editing Dom Nodes or Snippet Filenames
@@ -117,48 +57,20 @@ style + .text-prompt-editing,
 	color: @global-text !important;
 }
 
+// Delete if/when https://bugs.chromium.org/p/chromium/issues/detail?id=875668
+div.editing,
+div.editing *,
+span.editing,
+span.editing * {
+	color: @global-text !important;
+}
+
 // Weird edit state where you add an attribute, but delete the text and retype
 .being-edited.editing font {
 	color: @global-text !important;
 }
 
 .elements-tree-editor {
-	box-shadow: none !important;
-}
-
-// Editing Scope values
-.editing-sub-part .text-prompt-editing ::content * {
-	background-color: @global-background !important;
-	color: @global-text !important;
-}
-
-// Tree Directories
-.panel-sidebar {
-	background-color: @global-background !important;
-}
-
-.tree-outline li {
-	&.odd-row + .children li,
-	&.odd-row {
-		background-color: @table-secondary !important;
-	}
-
-	&:hover:not(.selected) .selection {
-		.highlight(hover);
-	}
-
-	&.selected .selection {
-		.highlight(selection);
-	}
-}
-
-li.audits-sidebar-results {
-	text-shadow: none !important;
-}
-
-// Don't highlight Request Header Tree
-.request-headers-tree .tree-outline li.selected .selection {
-	background-color: transparent !important;
 	box-shadow: none !important;
 }
 
@@ -254,84 +166,6 @@ label[is="dt-radio"] ::content .dt-radio-button:checked {
 }
 
 // ==========================================================================
-// 3rd Party Extension
-// ==========================================================================
-
-// React - paint bg white
-.widget[class*="React"] {
-	background: #fff !important;
-}
-
-// Remove text shadow from menus
-.tree-outline {
-	li.security-sidebar-origins,
-	li.profiles-tree-section {
-		text-shadow: none !important;
-	}
-}
-
-// ==========================================================================
-// Glyphs
-// ==========================================================================
-
-// Large Icons
-.spritesheet-largeicons:not(.icon-mask) {
-	&.smallicon-file,
-	&.smallicon-file-sync {
-		.glyphs("Images/toolbarButtonGlyphs");
-		-webkit-mask-size: 352px 168px;
-		background: @global-accent !important;
-	}
-}
-
-// persistence file indicator
-.spritesheet-largeicons:not(.icon-mask) {
-	&.smallicon-file,
-	&.smallicon-file-sync {
-		position: relative;
-		top: 2px;
-		background: @tab-label !important;
-	}
-}
-
-.selected .spritesheet-largeicons:not(.icon-mask) {
-	&.smallicon-file,
-	&.smallicon-file-sync {
-		background: @tab-label-selected !important;
-	}
-}
-
-// Small Icons
-// call stack indicator | thread position indicator | inline breakpoint
-.spritesheet-smallicons:not(.icon-mask) {
-	&.smallicon-thick-right-arrow,
-	&.smallicon-inline-breakpoint-conditional {
-		.glyphs("Images/smallIcons");
-		background: @global-accent !important;
-	}
-
-	&.smallicon-checkmark {
-		.glyphs("Images/smallIcons");
-		background: @global-accent !important;
-		-webkit-mask-position: -20px 90px !important;
-	}
-}
-
-.cm-inline-breakpoint {
-	-webkit-mask-position: -60px 90px !important;
-}
-
-// override for disabled inline breakpoints
-.cm-execution-line-tail + .CodeMirror-widget {
-	background-color: transparent !important;
-}
-
-.selected-call-frame-icon,
-.selected-thread-icon {
-	-webkit-mask-position: -80px 50px !important;
-}
-
-// ==========================================================================
 // Form Elements
 // ==========================================================================
 .dt-checkbox-text {
@@ -356,4 +190,31 @@ label[is="dt-radio"] ::content .dt-radio-button:checked {
 
 .data-grid-data-grid-node {
 	color: @global-text !important;
+}
+
+.panel {
+	background-color: @global-background !important;
+}
+
+// item selection
+ol:focus li.selected .selection,
+li.selected .selection {
+	outline: 1px solid @eh-highlight-outline !important;
+	background-color: @eh-highlight-background !important;
+}
+
+// Navigation
+.tree-outline li.profiles-tree-section {
+	text-shadow: none !important;
+}
+
+.navigator-fs-tree-item:not(.has-mapped-files),
+.navigator-fs-folder-tree-item:not(.has-mapped-files) {
+	filter: none !important;
+	opacity: 1 !important;
+
+	.tree-element-title,
+	.icons-container {
+		opacity: 0.5 !important;
+	}
 }

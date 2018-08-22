@@ -28,6 +28,10 @@
 	top: 0 !important;
 }
 
+.toolbar-input {
+	.input-styles();
+}
+
 // enable slider for dark theme
 :host-context(.-theme-with-dark-background) .tabbed-pane-tab-slider {
 	display: block !important;
@@ -43,6 +47,10 @@
 
 	&.dragging {
 		background-color: @global-background !important;
+	}
+
+	&.selected {
+		background-color: transparent !important;
 	}
 
 	&.selected .tabbed-pane-header-tab-title {

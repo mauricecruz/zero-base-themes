@@ -26,9 +26,9 @@
 
 .glyphs(@path) {
 	-webkit-mask-image: -webkit-image-set(
-			url("@{path}.png") 1x,
-			url("@{path}_2x.png") 2x
-		);
+		url("@{path}.png") 1x,
+		url("@{path}_2x.png") 2x
+	);
 }
 
 .gradient-background() {
@@ -42,7 +42,7 @@
 	color: @form-input-text !important;
 
 	&:disabled {
-		opacity: .3 !important;
+		opacity: 0.3 !important;
 	}
 
 	&:focus {
@@ -73,14 +73,13 @@
 	@-: darken(@color, @percent);
 }
 
-
 // Navigation Arrows
 .arrow-styles() {
 	.glyphs("Images/treeoutlineTriangles");
 	background-color: @global-arrow !important;
 	background-image: none !important;
 	-webkit-mask-repeat: no-repeat !important;
-	color: rgba(0,0,0,0) !important;
+	color: rgba(0, 0, 0, 0) !important;
 	opacity: 1 !important;
 	-webkit-mask-size: 32px 24px !important;
 }

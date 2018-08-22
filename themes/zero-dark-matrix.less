@@ -136,6 +136,8 @@
 @cm-lines-no-sourcemap : lighten(@global-background, 1%);
 @cm-selected           : @global-selected;
 @cm-whitespace         : lighten(@global-background, 5%);
+@cm-breakpoint-color   : hue-rotate(245deg) brightness(2.5) saturate(1);
+@cm-breakpoint-text    : #000;
 
 // Element Highlighter
 @eh-base-color          : @global-selected;
@@ -155,6 +157,7 @@
 @style-value                  : #ccc;
 @style-readonly               : lighten(@global-background, 5%);
 @style-metrics-background     : #888;
+@style-toolbar-background     : fade(lighten(@global-background, 20%), 10%);
 
 // Filters
 @filter-background   : lighten(@global-background,5%);
@@ -188,6 +191,7 @@
 // Local Modifications
 @history-added-text  : #7EB17E;
 @history-removed-text: @global-error;
+@history-line-divider: lighten(@global-background, 1%);
 
 // Screencast
 @screencast-viewport       : lighten(@global-background, 10%);
@@ -237,11 +241,12 @@
 @timeline-progress-pane       : fade(lighten(@global-background,30%), 50%);
 @timeline-resources-divider   : lighten(@global-background, 3%);
 
-
-
 // Popovers
 @popover-background       : lighten(@global-background, 5%);
 @popover-details-row-title: #49a6d2;
 @popover-details-title    : #db0;
 @popover-title            : #ff8b3e;
 @popover-tree-border      : #888;
+
+// Navigation
+@nav-item-background: lighten(@global-background, 5%);

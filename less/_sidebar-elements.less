@@ -39,7 +39,7 @@
 
 // Styles Filter Bar
 .styles-sidebar-pane-toolbar-container {
-	background-color: @global-background !important;
+	background-color: @toolbar-sub !important;
 	color: @global-text !important;
 }
 
@@ -63,6 +63,10 @@
 	border-radius: 2px;
 }
 
+.toolbar-text {
+	color: @global-label !important;
+}
+
 :host-context(.styles-pane-toolbar) {
 	.toolbar-button:hover {
 		background-color: transparent !important;
@@ -80,10 +84,13 @@
 // ".hov" and ".cls" slideout menu
 .styles-element-classes-pane,
 .styles-element-state-pane {
-	background-color: @- !important;
-	.contrast(@global-background, 5%);
+	background-color: @global-toolbar !important;
 	border-bottom: 1px solid @global-divider !important;
 	color: @global-text !important;
+}
+
+.styles-element-classes-pane .new-class-input {
+	.input-styles();
 }
 
 // override to remove bg from filter button hovers
@@ -144,7 +151,7 @@
 
 // Filter bar text
 .styles-sidebar-pane-filter-box > input {
-	color: @global-text !important;
+	.input-styles();
 }
 
 .property-value-text {

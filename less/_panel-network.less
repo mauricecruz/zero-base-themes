@@ -1,34 +1,7 @@
-// // ==========================================================================
-// // Network
-// // ==========================================================================
-//
-// #network-container {
-// 	border-top: none !important;
-// }
-//
-// #network-container:not(.brief-mode) .network-log-grid.data-grid td.name-column:hover {
-// 	text-decoration: none !important;
-// }
-//
-// .data-grid {
-// 	border: none !important;
-//
-// 	th.sort-ascending,
-// 	th.sort-descending,
-// 	th.sortable,
-// 	.timeline-column {
-// 		& { border-right: 1px solid @- !important; .contrast(@global-background, 10%) !important };
-// 	}
-//
-// 	.network-timeline-grid .resources-divider-label {
-// 		color: @global-text !important;
-// 	}
-//
-// 	.network-timeline-grid .resources-divider {
-// 		border-right: 1px solid rgba(51,51,51,.8);
-// 	}
-// }
-//
+// ==========================================================================
+// Network
+// ==========================================================================
+
 .overview-grid-cursor-area {
 	border-bottom: 1px solid @global-divider !important;
 }
@@ -45,21 +18,27 @@
 	color: @global-label !important;
 }
 
+.network-waterfall-header {
+	border-bottom: 0 !important;
+
+	&:hover {
+		background-color: transparent !important;
+	}
+}
+
 :host(.request-headers-tree) .tree-outline .header-name {
 	color: @global-label !important;
 }
 
-.panel.network {
+:host-context(.network-item-view) {
 	.toolbar {
 		background-color: @toolbar-sub !important;
+		border-top: 1px solid @toolbar-divider !important;
 		border-bottom: 1px solid @toolbar-divider !important;
 	}
+}
 
-	.filter-bar {
-		background-color: @toolbar-sub !important;
-		border-bottom: 1px solid @toolbar-divider !important;
-	}
-
+.panel.network {
 	.filter-bitset-filter {
 		li {
 			text-shadow: none !important;
@@ -85,23 +64,8 @@
 		background-color: @toolbar-item-divider !important;
 	}
 
-	.network-film-strip {
-		border-bottom: 1px solid @global-divider !important;
-		background-color: @global-background !important;
-		color: @global-text !important;
-	}
-
 	#network-overview-container {
 		border-bottom: 1px solid @global-divider !important;
-	}
-
-	#network-overview-panel {
-		background-color: @global-background !important;
-	}
-
-	.resources-dividers-label-bar {
-		background-color: @toolbar-sub !important;
-		color: @global-text !important;
 	}
 
 	.network-summary-bar {
@@ -117,32 +81,5 @@
 	.network-status-pane {
 		background-color: @global-background !important;
 		color: @global-label !important;
-	}
-
-	.network-log-grid.data-grid tr.selected {
-		color: @global-text !important;
-	}
-}
-
-.shadow-split-widget-first-is-sidebar {
-	background-color: @global-background !important;
-}
-
-// Network Headers Tab
-.request-headers-tree {
-	padding-left: 0 !important;
-}
-
-:host(.request-headers-tree) {
-	.tree-outline {
-		padding-left: 0;
-	}
-
-	.tree-outline > .parent {
-		padding-left: 5px;
-		color: @global-text !important;
-		background: @toolbar-main !important;
-		& { border-top: 1px solid @- !important; .contrast(@toolbar-main, 5%); }
-		& { border-bottom: 1px solid @- !important; .contrast(@toolbar-main, 5%, invert); }
 	}
 }

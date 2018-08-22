@@ -205,6 +205,7 @@
 	color: @js-obj-array !important;
 }
 
+
 .object-properties-section .name { color: @js-obj-name !important; }
 .object-properties-section .number { color: @js-obj-number !important; }
 .object-properties-section-separator { color: @global-text !important; }
@@ -234,6 +235,10 @@
 .node-label-class,
 .node-label-pseudo { color: @css-def !important; }
 
-// Syntax in navigation trees
+// syntax in navigation trees
 .tree-outline-disclosure .name { color: @js-obj-name !important; }
-.tree-outline-disclosure .value:not([class*="object-value"]) { color: @js-obj-value !important; }
+
+// eager evaluation preview
+.object-properties-preview { color: @js-obj-value !important; }
+.object-description { color: @js-obj-value !important; }
+.object-properties-preview .name { color: @js-obj-name !important; }

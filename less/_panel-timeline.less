@@ -126,12 +126,11 @@
 	.title {
 		color: @- !important; .contrast(@global-text, 10%, invert);
 	}
-
 }
 
-.timeline-curtain-left,
-.timeline-curtain-right {
-	background: hsla(0, 0, 40%, 0.5) !important
+.window-curtain-left,
+.window-curtain-right {
+	background: hsla(0, 0, 40%, 0.3) !important;
 }
 
 .timeline-expandable {
@@ -336,16 +335,20 @@
 // Timeline Recording Overlay
 .timeline.panel .status-pane-container.tinted {
 	background-color: fade(@global-background, 70%) !important;
+}
 
-	.timeline-status-dialog {
-		background-color: @dialog-background !important;
-		border: 1px solid @dialog-border !important;
-		box-shadow: 0 5px 25px 0 @- !important; .contrast(@global-background, 10%, invert);
-		color: @global-text !important;
+.timeline-status-dialog {
+	background-color: @dialog-background !important;
+	border: 1px solid @dialog-border !important;
+	box-shadow: 0 5px 25px 0 @- !important; .contrast(@global-background, 10%, invert);
+	color: @global-text !important;
 
-		.stop-button button {
-			.button-styles();
-		}
+	.stop-button button {
+		.button-styles();
+	}
+
+	.indicator-container {
+		background-color: @global-background !important;
 	}
 }
 
@@ -393,4 +396,14 @@
 .panel.timeline > .toolbar {
 	background: @global-background !important;
 	border-bottom: 1px solid @global-divider !important;
+}
+
+#timeline-overview-panel .overview-strip .timeline-overview-strip-title {
+	background-color: fade(@global-background, 70%) !important;
+	color: @global-label !important;
+}
+
+#memory-graphs-container .timeline-memory-header {
+	background-color: @toolbar-sub !important;
+	border-bottom: 0 !important;
 }

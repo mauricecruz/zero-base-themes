@@ -29,3 +29,18 @@
 .source-code.event-properties .name {
 	color: @js-obj-name !important;
 }
+
+.profile-launcher-target-list {
+	border: 1px solid @global-divider !important;
+}
+
+.profile-isolate-item {
+	&:hover {
+		.highlight(hover)
+	}
+
+	&.selected {
+		border-color: transparent !important;
+		.highlight(selection)
+	}
+}

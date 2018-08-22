@@ -1,4 +1,4 @@
-.help-window-main {
+.settings-window-main {
 	background-color: @global-background !important;
 
 	header {
@@ -29,7 +29,7 @@
 	color: @global-text !important;
 }
 
-:host-context(.help-window-main) {
+:host-context(.settings-window-main) {
 	.header {
 		border-bottom: 1px solid @global-divider;
 	}
@@ -45,6 +45,7 @@
 	}
 
 	.tabbed-pane-header {
+		background-color: @global-background !important;
 		background-image: none !important;
 		box-shadow: none !important;
 		margin-top: -10px !important;
@@ -208,7 +209,7 @@
 	}
 }
 
-.help-window-main {
+.settings-window-main {
 	.folder-exclude-pattern input {
 		.input-styles();
 	}

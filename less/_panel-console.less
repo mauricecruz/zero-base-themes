@@ -13,10 +13,6 @@
 	border-bottom: 1px solid @global-divider !important;
 }
 
-.toolbar-input {
-	.input-styles();
-}
-
 .debug-type(@type, @color) {
 	.console-@{type}-level {
 		.console-message-text,
@@ -59,9 +55,10 @@
 
 .console-adjacent-user-command-result {
 	color: @global-text !important;
-	& { background-color: @- !important; .contrast(@global-background, 2%) }
-	& { border-top: 1px solid @- !important; .contrast(@global-background, 3%) }
-	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 2%, invert) }
+
+	& { background-color: @- !important; .contrast(@global-background, 2%); }
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 3%); }
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 2%, invert); }
 }
 
 // results with tree navigation
@@ -157,7 +154,9 @@
 }
 
 // js syntax
-.console-object-preview .name { color: @js-obj-name !important; }
+.console-object-preview .name {
+	color: @js-obj-name !important;
+}
 
 // remove top border
 .shadow-split-widget.vbox > .shadow-split-widget-sidebar:not(.maximized) {
@@ -208,4 +207,22 @@
 	.context-item.selected {
 		.highlight(selection) !important;
 	}
+}
+
+:host-context(.insertion-point-sidebar) {
+	.tree-outline li:hover:not(.selected) .selection {
+		.highlight(hover) !important;
+	}
+
+	// don't show child highlighter
+	.parent.selected.expanded + .children,
+	.parent.hovered.expanded + .children {
+		box-shadow: none !important;
+		border: 0 !important;
+		padding-bottom: 0 !important;
+	}
+}
+
+.console-settings-pane {
+	background-color: @toolbar-sub !important;
 }
