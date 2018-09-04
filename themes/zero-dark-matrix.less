@@ -250,3 +250,19 @@
 
 // Navigation
 @nav-item-background: lighten(@global-background, 5%);
+
+
+// Lighthouse Audits
+.lh-root {
+		--lh-bg-color: @global-background !important;
+}
+
+.lh-category {
+	--report-border-color: @global-divider !important;
+}
+
+.lh-vars {
+	--body-background-color: @global-background !important;
+	--header-color: @global-accent !important;
+	--subheader-color: @global-label !important;
+}
