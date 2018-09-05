@@ -31,18 +31,20 @@
 	opacity: 0.5 !important;
 }
 
-//Codemirror
+// Codemirror
 // Breakpoint Marker
 .cm-breakpoint .CodeMirror-gutter-elt {
-	-webkit-filter: @cm-breakpoint-color;
+	filter: @cm-breakpoint-color;
 	color: @cm-breakpoint-text !important;
 	font-weight: 700 !important;
 }
 
 // breakpoint color
+.cm-inline-breakpoint,
 .cm-breakpoint .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
-	-webkit-filter: @cm-breakpoint-color !important;
+	filter: @cm-breakpoint-color !important;
 }
+
 
 .CodeMirror-gutter-wrapper:not(.CodeMirror-activeline-gutter) .cm-breakpoint + .CodeMirror-line {
 	border-right: 0 !important;
