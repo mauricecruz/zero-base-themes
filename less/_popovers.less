@@ -10,14 +10,6 @@
 		0 2px 2px 0 rgba(0, 0, 0, 0.2),
 		0 1px 4px 0 rgba(0, 0, 0, 0.37) !important;
 
-	&.bottom-left-arrow .arrow {
-		-webkit-mask-position: 0 -19px;
-	}
-
-	&.bottom-right-arrow .arrow {
-		-webkit-mask-position: 0 -19px;
-	}
-
 	.object-popover-content {
 		border-radius: 3px !important;
 		color: @global-text !important;
@@ -156,4 +148,9 @@
 
 .stack-preview-async-selection {
 	color: @global-text !important;
+}
+
+:host-context(.-theme-with-dark-background) .arrow,
+.spritesheet-arrowicons {
+	filter: brightness(19%);
 }

@@ -97,6 +97,10 @@ span.CodeMirror-selectedtext {
 	padding: 2px !important;
 }
 
+.cm-search-highlight.cm-column-with-selection {
+	color: #000 !important;
+}
+
 .cm-line-with-selection .cm-column-with-selection.cm-search-highlight::before {
 	background-color: @global-accent !important;
 	border-radius: 2px !important;
@@ -111,9 +115,8 @@ span.cm-token-highlight::before {
 	border-color: @global-accent !important;
 }
 
-.cm-line-with-selection span.cm-column-with-selection {
-	color: #000 !important;
-	background-color: @global-accent !important;
+.cm-execution-line.cm-line-with-selection span.cm-column-with-selection {
+	background-color: @global-background !important;
 }
 
 .cm-whitespace::before {
