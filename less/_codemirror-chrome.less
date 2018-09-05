@@ -133,14 +133,19 @@ span.cm-token-highlight::before {
 	color: @selection-text !important;
 }
 
+.cm-execution-line .CodeMirror-linenumber {
+	border-right: none !important;
+}
+
 .cm-execution-line-outline {
 	background-color: @selection-background !important;
 	outline: 1px solid @selection-border !important;
 }
 
-.CodeMirror-persist-highlight {
-	background-color: @global-background !important;
-	border: 1px solid @selection-border !important;
+// Highlight currently evaluated context
+.cm-execution-line-tail {
+	border: 1px solid @global-accent !important;
+	background: @selection-background !important;
 }
 
 .source-frame-continue-to-location {
@@ -149,6 +154,16 @@ span.cm-token-highlight::before {
 
 .cm-line-without-source-mapping {
 	background-color: @cm-lines-no-sourcemap !important;
+}
+
+.source-frame-eval-expression {
+	background-color: @selection-background !important;
+	border-color: @selection-border !important;
+}
+
+.cm-execution-line .source-frame-eval-expression {
+	background-color: @selection-background !important;
+	border-color: @global-accent !important;
 }
 
 // Editing Dom Nodes or Snippet Filenames
