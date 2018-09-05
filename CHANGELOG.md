@@ -1,5 +1,16 @@
 # Changelog
 
+## 3.0.5
+* Integrate custom variables into theme template
+* Improve breakpoint affordance
+* Improve highlighted text when paused in sources panel
+* Cleanup popover arrows
+* Style lighthouse audits
+
+## 3.0.4
+* Support Canary channel again
+* Use tab slider animations for dark and light theme
+
 ## 3.0.3
 * Update styles on setting panel
 * Clean up styles on timeline panel
