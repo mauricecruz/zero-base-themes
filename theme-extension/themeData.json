@@ -1,0 +1,51 @@
+[
+	{
+		"id": "zero-dark-matrix",
+		"name": "Zero Dark Matrix",
+		"colors": ["#f0874f", "#49a5d2", "#88aed5", "#e3b959", "#89f5a2", "#49a5d2"]
+	},
+	{
+		"id": "panda",
+		"name": "Panda Syntax",
+		"colors": ["#19f9d8", "#45A9F9", "#FF2C6D", "#B084EB", "#FFB86C", "#FF75B5"]
+	},
+	{
+		"id": "dark-soda-monokai",
+		"name": "Dark Soda Monokai",
+		"colors": [
+			"hsl( 80, 76%, 53%)",
+			"hsl(340, 95%, 56%)",
+			"hsl( 53, 66%, 71%)",
+			"hsl( 21, 86%, 59%)",
+			"hsl(338, 95%, 56%)",
+			"hsl(203, 41%, 62%)"
+		]
+	},
+	{
+		"id": "obsidian-snake",
+		"name": "Obsidian Snake",
+		"colors": ["#B3B689", "#93C763", "#4e87bf", "#8CBBAD", "#EC7600", "#7CCADD"]
+	},
+	{
+		"id": "s10wen-monokai",
+		"name": "s10wen Monokai",
+		"colors": [
+			"hsl( 78,  92%, 47%)",
+			"hsl(340,  95%, 56%)",
+			"hsl(187,  71%, 68%)",
+			"hsl(262, 100%, 73%)",
+			"hsl( 53,  66%, 71%)",
+			"#ff54e8"
+		]
+	},
+	{
+		"id": "tomorrow-night-bright",
+		"name": "Tomorrow Night (Bright)",
+		"colors": ["#e78c45", "#d54e53", "#7aa6da", "#b9ca4a", "#6aedff", "#ff9635"]
+	},
+	{
+		"id": "tomorrow-night",
+		"name": "Tomorrow Night",
+		"colors": ["#de935f", "#cc6666", "#b5bd68", "#b094bb", "#81a2be", "#ff9635"]
+	}
+]
