@@ -246,3 +246,43 @@
 @popover-title            : #ff8b3e;
 @popover-tree-border      : #888;
 
+// missing vars
+@toolbar-main:@global-divider;
+@toolbar-sub:darken(@global-toolbar, 5%);
+@toolbar-divider:@global-divider;
+@toolbar-item-divider:@global-divider;
+
+@cm-breakpoint-color:@global-warn;
+@cm-breakpoint-text:@global-text;
+
+@history-line-divider:@global-divider;
+
+@global-link:@global-accent;
+@global-toolbar:lighten(@global-background, 5%);
+@filter-verbose:@echo;
+
+@style-readonly:lighten(@global-background, 5%);
+@style-toolbar-background:@global-background;
+@style-section:@global-background;
+@style-metrics-background:@global-background;
+
+@glyph-hover:lighten(@global-background, 45%);
+@js-obj-value: @css-comment;
+
+// Navigation
+@nav-item-background:lighten(@global-background, 5%);
+
+// Lighthouse Audits
+.lh-root {
+    --lh-bg-color: @global-background !important;
+}
+
+.lh-category {
+--report-border-color: @global-divider !important;
+}
+
+.lh-vars {
+--body-background-color: @global-background !important;
+--header-color: @global-accent !important;
+--subheader-color: @global-label !important;
+}

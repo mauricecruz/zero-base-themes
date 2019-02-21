@@ -22,13 +22,38 @@ Zero Base Themes is built on LESS. Grunt is used to listen for changes to LESS f
 
 7.  Close and reopen the dev tools.
 
-## Contributing to Template Source
-
-All template files are located in the `/less` directory. Files beginning with an `_` indicate template partials. Any addition/removal of template partials should be reflected in the build file.
-
 ## Changing Themes
 
-Copy `/themes/_theme-template.less` and modify color values accordingly. Rename the file and save in the `/themes` directory. Specify the theme of your choice in `config.less`.
+The theme selector is available here: `Window > Extensions > DevTools Theme: Zero Dark Matrix > Details > Extension Options` or click the icon in the address bar and select `Options`.
+
+Select a theme and hit save. Re-open dev tools.
+
+## Contributing to Template Source
+
+All template files are located in the `/less` directory. Files beginning with an `_` indicate template partials. Any addition/removal of template partials should be reflected in the build file found in `less/theme-builds`.
+
+
+## Adding themes
+
+1. Copy `/themes/_theme-template.less` and modify color values accordingly. Rename the file and save in the `/themes` directory.
+
+2. Add the theme to `/themeData.json` using the following format (colors represents the main colors of the theme and will appear as swatches in the options panel):
+    ```json
+    {
+		"id": "custom-theme-name",
+		"name": "Custom Theme Name",
+		"colors": ["#f0874f", "#49a5d2", "#88aed5", "#e3b959", "#89f5a2", "#49a5d2"]
+	}
+    ```
+3. Add a new "theme-build" to `less/theme_builds` for stable and canary versions of Chrome
+
+    ```less
+    @import "less/config";
+    @import "../../themes/custom-theme-name";
+    @import "less/partials/_build-stable";
+    @import "less/partials/_canary";
+    ```
+4. Complile LESS files using `grunt` and `load unpacked` extension in Chrome.
 
 # Alternatives
 

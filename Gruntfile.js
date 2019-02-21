@@ -1,24 +1,23 @@
 module.exports = function(grunt) {
-
 	/* Load Plugins */
 
-	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-compress');
-	grunt.loadNpmTasks('grunt-bump');
+	grunt.loadNpmTasks("grunt-contrib-less");
+	grunt.loadNpmTasks("grunt-contrib-watch");
+	grunt.loadNpmTasks("grunt-contrib-compress");
+	grunt.loadNpmTasks("grunt-bump");
 
 	grunt.initConfig({
-		pkg: '<json:package.json>',
+		pkg: "<json:package.json>",
 		compress: {
 			main: {
 				options: {
-					archive: 'theme-extension.zip',
-					mode: 'zip'
+					archive: "theme-extension.zip",
+					mode: "zip"
 				},
 				files: [
 					{
-						cwd: 'theme-extension/',
-						src: '**/*',
+						cwd: "theme-extension/",
+						src: "**/*",
 						expand: true
 					}
 				]
@@ -30,29 +29,53 @@ module.exports = function(grunt) {
 					compress: true,
 					ieCompat: false
 				},
-				files: {
-					'theme-extension/stable.css': 'less/build-stable.less',
-					'theme-extension/canary.css': 'less/build-canary.less',
-				}
+				files: [
+					{
+						expand: true,
+						cwd: "less/theme-builds",
+						src: ["*.stable.less"],
+						dest: "theme-extension/",
+						ext: ".stable.css"
+					},
+					{
+						expand: true,
+						cwd: "less/theme-builds",
+						src: ["*.canary.less"],
+						dest: "theme-extension/",
+						ext: ".canary.css"
+					}
+				]
 			},
 			build: {
 				options: {
 					compress: true
 				},
-				files: {
-					'theme-extension/stable.css': 'less/build-stable.less',
-					'theme-extension/canary.css': 'less/build-canary.less',
-				}
+				files: [
+					{
+						expand: true,
+						cwd: "less/theme-builds",
+						src: ["*.stable.less"],
+						dest: "theme-extension/",
+						ext: ".stable.css"
+					},
+					{
+						expand: true,
+						cwd: "less/theme-builds",
+						src: ["*.canary.less"],
+						dest: "theme-extension/",
+						ext: ".canary.css"
+					}
+				]
 			}
 		},
 		watch: {
 			canary: {
-				files: ['less/*.less','themes/*.less'],
-				tasks: ['less:generate']
-			},
+				files: ["less/**/*.less", "themes/*.less"],
+				tasks: ["less:generate"]
+			}
 		}
 	});
 
-	grunt.registerTask('default', ['less:generate']);
-	grunt.registerTask('package', ['less:build', 'compress']);
+	grunt.registerTask("default", ["less:generate"]);
+	grunt.registerTask("package", ["less:build", "compress"]);
 };
