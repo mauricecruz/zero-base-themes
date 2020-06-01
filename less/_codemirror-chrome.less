@@ -33,25 +33,22 @@
 
 // Codemirror
 // Breakpoint Marker
-.cm-breakpoint .CodeMirror-gutter-elt {
+.cm-breakpoint .breakpoint-element:before {
 	filter: @cm-breakpoint-color;
-	color: @cm-breakpoint-text !important;
-	font-weight: 700 !important;
+}
+
+.cm-breakpoint.cm-breakpoint-disabled .breakpoint-element:before {
+	filter: unset;
 }
 
 // breakpoint color
-.cm-inline-breakpoint,
-.cm-breakpoint .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
-	filter: @cm-breakpoint-color !important;
+.cm-breakpoint:not(.cm-breakpoint-disabled) .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
+	color: @global-accent !important;
 }
 
 
 .CodeMirror-gutter-wrapper:not(.CodeMirror-activeline-gutter) .cm-breakpoint + .CodeMirror-line {
 	border-right: 0 !important;
-}
-
-.cm-breakpoint-conditional .CodeMirror-gutter-elt {
-	background: @global-warn !important;
 }
 
 // Edit HTML cursor / Sources Edit cursor

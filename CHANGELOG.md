@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.7
+* Fix breakpoint colors and styles
+ 
 ## 3.0.6
 * Fix expanded arrow rendering
 
