@@ -1,8 +1,7 @@
 {
   "name": "zero-base-themes",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Chrome Devtools themes using the Zero-Base Template",
-  "main": "Gruntfile.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mauricecruz/zero-base-themes.git"
@@ -16,7 +15,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "gulp": "^4.0.2"
+  },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-bump": "^0.8.0",

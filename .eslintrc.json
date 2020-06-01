@@ -1,0 +1,13 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+  },
+  "plugins": [
+    "prettier",
+  ],
+  "extends": [
+    "plugin:prettier/recommended",
+    "prettier/standard",
+  ],
+}
