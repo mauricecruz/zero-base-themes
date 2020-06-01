@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.6
+* Fix expanded arrow rendering
+
 ## 3.0.5
 * Integrate custom variables into theme template
 * Improve breakpoint affordance

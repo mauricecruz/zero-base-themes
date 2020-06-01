@@ -72,24 +72,3 @@
 .contrast(@color, @percent, @invert: false) when (@invert = false) and (@theme-type = light), (@invert = invert) and (@theme-type = dark) {
 	@-: darken(@color, @percent);
 }
-
-// Navigation Arrows
-.arrow-styles() {
-	.glyphs("Images/treeoutlineTriangles");
-	background-color: @global-arrow !important;
-	background-image: none !important;
-	-webkit-mask-repeat: no-repeat !important;
-	color: rgba(0, 0, 0, 0) !important;
-	opacity: 1 !important;
-	-webkit-mask-size: 32px 24px !important;
-}
-
-.arrow-mixin(@arrow-right: ~'li.parent::before', @arrow-down: ~'li.parent.expanded::before') {
-	@{arrow-right} { -webkit-mask-position: 0 0 !important; }
-	@{arrow-down} { -webkit-mask-position: -16px 0 !important; }
-
-	@{arrow-right},
-	@{arrow-down} {
-		.arrow-styles;
-	}
-}
