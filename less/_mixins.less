@@ -75,13 +75,8 @@
 
 // Navigation Arrows
 .arrow-styles() {
-	.glyphs("Images/treeoutlineTriangles");
 	background-color: @global-arrow !important;
-	background-image: none !important;
-	-webkit-mask-repeat: no-repeat !important;
-	color: rgba(0, 0, 0, 0) !important;
-	opacity: 1 !important;
-	-webkit-mask-size: 32px 24px !important;
+
 }
 
 .arrow-mixin(@arrow-right: ~'li.parent::before', @arrow-down: ~'li.parent.expanded::before') {
